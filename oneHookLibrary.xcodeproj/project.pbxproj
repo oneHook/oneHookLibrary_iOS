@@ -1,0 +1,533 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D3FE00011AC50788004D4BD2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3FEFFFF1AC50788004D4BD2 /* Main.storyboard */; };
+		D3FE00031AC50788004D4BD2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3FE00021AC50788004D4BD2 /* Images.xcassets */; };
+		D3FE00061AC50788004D4BD2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3FE00041AC50788004D4BD2 /* LaunchScreen.xib */; };
+		D3FE001E1AC507E3004D4BD2 /* OHButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FE001D1AC507E3004D4BD2 /* OHButton.m */; };
+		D3FE002E1AC50AEA004D4BD2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3FE002D1AC50AEA004D4BD2 /* QuartzCore.framework */; };
+		D3FE00311AC50B70004D4BD2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3FE00301AC50B70004D4BD2 /* CoreGraphics.framework */; };
+		D3FE00331AC50BE3004D4BD2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3FE00321AC50BE3004D4BD2 /* Foundation.framework */; };
+		D3FE00801AC50D5B004D4BD2 /* CircularRevealAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FE002B1AC50AB7004D4BD2 /* CircularRevealAnimationController.m */; };
+		D3FE00811AC50D68004D4BD2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3FE00301AC50B70004D4BD2 /* CoreGraphics.framework */; };
+		D3FE00821AC50D6C004D4BD2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3FE00321AC50BE3004D4BD2 /* Foundation.framework */; };
+		D3FE00831AC50D71004D4BD2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3FE002D1AC50AEA004D4BD2 /* QuartzCore.framework */; };
+		D3FE008C1AC5109F004D4BD2 /* OHBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FE00271AC50A7A004D4BD2 /* OHBaseViewController.m */; };
+		D3FE009B1AC5E55D004D4BD2 /* OHCircularButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FE00911AC5DA0D004D4BD2 /* OHCircularButton.m */; };
+		D3FE009C1AC5E675004D4BD2 /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FE00951AC5E02F004D4BD2 /* UIImage+Color.m */; };
+		D3FEFFF81AC50788004D4BD2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FEFFF71AC50788004D4BD2 /* main.m */; };
+		D3FEFFFB1AC50788004D4BD2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FEFFFA1AC50788004D4BD2 /* AppDelegate.m */; };
+		D3FEFFFE1AC50788004D4BD2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FEFFFD1AC50788004D4BD2 /* ViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D3FE00841AC50D7B004D4BD2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D3FEFFEA1AC50788004D4BD2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D3FE00671AC50D35004D4BD2;
+			remoteInfo = "oneHook-library";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D3FE00661AC50D35004D4BD2 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		D33BA5F31ADA2D9000DF885A /* OHCommonDimensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OHCommonDimensions.h; sourceTree = "<group>"; };
+		D3FE00001AC50788004D4BD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D3FE00021AC50788004D4BD2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../Images.xcassets; sourceTree = "<group>"; };
+		D3FE00051AC50788004D4BD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		D3FE001C1AC507E3004D4BD2 /* OHButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHButton.h; sourceTree = "<group>"; };
+		D3FE001D1AC507E3004D4BD2 /* OHButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHButton.m; sourceTree = "<group>"; };
+		D3FE00261AC50A7A004D4BD2 /* OHBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHBaseViewController.h; sourceTree = "<group>"; };
+		D3FE00271AC50A7A004D4BD2 /* OHBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHBaseViewController.m; sourceTree = "<group>"; };
+		D3FE002A1AC50AB7004D4BD2 /* CircularRevealAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircularRevealAnimationController.h; sourceTree = "<group>"; };
+		D3FE002B1AC50AB7004D4BD2 /* CircularRevealAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircularRevealAnimationController.m; sourceTree = "<group>"; };
+		D3FE002D1AC50AEA004D4BD2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D3FE00301AC50B70004D4BD2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D3FE00321AC50BE3004D4BD2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D3FE00681AC50D35004D4BD2 /* liboneHook-library.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "liboneHook-library.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3FE00891AC50E9C004D4BD2 /* OneHookFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OneHookFoundation.h; sourceTree = "<group>"; };
+		D3FE008A1AC50F0F004D4BD2 /* OHAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OHAnimation.h; sourceTree = "<group>"; };
+		D3FE008B1AC50F8F004D4BD2 /* OHMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OHMacros.h; sourceTree = "<group>"; };
+		D3FE00901AC5DA0D004D4BD2 /* OHCircularButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHCircularButton.h; sourceTree = "<group>"; };
+		D3FE00911AC5DA0D004D4BD2 /* OHCircularButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHCircularButton.m; sourceTree = "<group>"; };
+		D3FE00941AC5E02F004D4BD2 /* UIImage+Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Color.h"; sourceTree = "<group>"; };
+		D3FE00951AC5E02F004D4BD2 /* UIImage+Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Color.m"; sourceTree = "<group>"; };
+		D3FE00971AC5E0A0004D4BD2 /* OHColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OHColor.h; sourceTree = "<group>"; };
+		D3FEFFF21AC50788004D4BD2 /* oneHookLibrary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = oneHookLibrary.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3FEFFF61AC50788004D4BD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3FEFFF71AC50788004D4BD2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D3FEFFF91AC50788004D4BD2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../AppDelegate.h; sourceTree = "<group>"; };
+		D3FEFFFA1AC50788004D4BD2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ../AppDelegate.m; sourceTree = "<group>"; };
+		D3FEFFFC1AC50788004D4BD2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = ../ViewController.h; sourceTree = "<group>"; };
+		D3FEFFFD1AC50788004D4BD2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = ../ViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D3FE00651AC50D35004D4BD2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3FE00831AC50D71004D4BD2 /* QuartzCore.framework in Frameworks */,
+				D3FE00821AC50D6C004D4BD2 /* Foundation.framework in Frameworks */,
+				D3FE00811AC50D68004D4BD2 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3FEFFEF1AC50788004D4BD2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3FE00331AC50BE3004D4BD2 /* Foundation.framework in Frameworks */,
+				D3FE00311AC50B70004D4BD2 /* CoreGraphics.framework in Frameworks */,
+				D3FE002E1AC50AEA004D4BD2 /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D3FE001B1AC507D7004D4BD2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D3FE00931AC5E020004D4BD2 /* View+ */,
+				D3FE001C1AC507E3004D4BD2 /* OHButton.h */,
+				D3FE001D1AC507E3004D4BD2 /* OHButton.m */,
+				D3FE00901AC5DA0D004D4BD2 /* OHCircularButton.h */,
+				D3FE00911AC5DA0D004D4BD2 /* OHCircularButton.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D3FE001F1AC50889004D4BD2 /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				D3FE00021AC50788004D4BD2 /* Images.xcassets */,
+				D3FEFFF91AC50788004D4BD2 /* AppDelegate.h */,
+				D3FEFFFA1AC50788004D4BD2 /* AppDelegate.m */,
+				D3FEFFFF1AC50788004D4BD2 /* Main.storyboard */,
+				D3FE00041AC50788004D4BD2 /* LaunchScreen.xib */,
+				D3FEFFFC1AC50788004D4BD2 /* ViewController.h */,
+				D3FEFFFD1AC50788004D4BD2 /* ViewController.m */,
+			);
+			path = Demo;
+			sourceTree = "<group>";
+		};
+		D3FE00201AC50A13004D4BD2 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				D3FE00291AC50AA2004D4BD2 /* Animator */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		D3FE00211AC50A21004D4BD2 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D3FE00251AC50A70004D4BD2 /* Base */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D3FE00251AC50A70004D4BD2 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				D3FE00261AC50A7A004D4BD2 /* OHBaseViewController.h */,
+				D3FE00271AC50A7A004D4BD2 /* OHBaseViewController.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		D3FE00291AC50AA2004D4BD2 /* Animator */ = {
+			isa = PBXGroup;
+			children = (
+				D3FE002A1AC50AB7004D4BD2 /* CircularRevealAnimationController.h */,
+				D3FE002B1AC50AB7004D4BD2 /* CircularRevealAnimationController.m */,
+			);
+			path = Animator;
+			sourceTree = "<group>";
+		};
+		D3FE002F1AC50B06004D4BD2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D3FE00321AC50BE3004D4BD2 /* Foundation.framework */,
+				D3FE00301AC50B70004D4BD2 /* CoreGraphics.framework */,
+				D3FE002D1AC50AEA004D4BD2 /* QuartzCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D3FE00881AC50E79004D4BD2 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				D3FE00891AC50E9C004D4BD2 /* OneHookFoundation.h */,
+				D3FE008A1AC50F0F004D4BD2 /* OHAnimation.h */,
+				D3FE008B1AC50F8F004D4BD2 /* OHMacros.h */,
+				D3FE00971AC5E0A0004D4BD2 /* OHColor.h */,
+				D33BA5F31ADA2D9000DF885A /* OHCommonDimensions.h */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+		D3FE00931AC5E020004D4BD2 /* View+ */ = {
+			isa = PBXGroup;
+			children = (
+				D3FE00941AC5E02F004D4BD2 /* UIImage+Color.h */,
+				D3FE00951AC5E02F004D4BD2 /* UIImage+Color.m */,
+			);
+			path = "View+";
+			sourceTree = "<group>";
+		};
+		D3FEFFE91AC50788004D4BD2 = {
+			isa = PBXGroup;
+			children = (
+				D3FEFFF41AC50788004D4BD2 /* oneHookLibrary */,
+				D3FEFFF31AC50788004D4BD2 /* Products */,
+				D3FE002F1AC50B06004D4BD2 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D3FEFFF31AC50788004D4BD2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D3FEFFF21AC50788004D4BD2 /* oneHookLibrary.app */,
+				D3FE00681AC50D35004D4BD2 /* liboneHook-library.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D3FEFFF41AC50788004D4BD2 /* oneHookLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				D3FE00881AC50E79004D4BD2 /* Headers */,
+				D3FE00211AC50A21004D4BD2 /* ViewControllers */,
+				D3FE00201AC50A13004D4BD2 /* Animations */,
+				D3FE001F1AC50889004D4BD2 /* Demo */,
+				D3FE001B1AC507D7004D4BD2 /* Views */,
+				D3FEFFF51AC50788004D4BD2 /* Supporting Files */,
+			);
+			path = oneHookLibrary;
+			sourceTree = "<group>";
+		};
+		D3FEFFF51AC50788004D4BD2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D3FEFFF61AC50788004D4BD2 /* Info.plist */,
+				D3FEFFF71AC50788004D4BD2 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D3FE00671AC50D35004D4BD2 /* oneHook-library */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D3FE00791AC50D35004D4BD2 /* Build configuration list for PBXNativeTarget "oneHook-library" */;
+			buildPhases = (
+				D3FE00641AC50D35004D4BD2 /* Sources */,
+				D3FE00651AC50D35004D4BD2 /* Frameworks */,
+				D3FE00661AC50D35004D4BD2 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "oneHook-library";
+			productName = "oneHook-library";
+			productReference = D3FE00681AC50D35004D4BD2 /* liboneHook-library.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		D3FEFFF11AC50788004D4BD2 /* oneHookLibrary */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D3FE00151AC50788004D4BD2 /* Build configuration list for PBXNativeTarget "oneHookLibrary" */;
+			buildPhases = (
+				D3FEFFEE1AC50788004D4BD2 /* Sources */,
+				D3FEFFEF1AC50788004D4BD2 /* Frameworks */,
+				D3FEFFF01AC50788004D4BD2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D3FE00851AC50D7B004D4BD2 /* PBXTargetDependency */,
+			);
+			name = oneHookLibrary;
+			productName = oneHookLibrary;
+			productReference = D3FEFFF21AC50788004D4BD2 /* oneHookLibrary.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D3FEFFEA1AC50788004D4BD2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = "oneHook inc";
+				TargetAttributes = {
+					D3FE00671AC50D35004D4BD2 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					D3FEFFF11AC50788004D4BD2 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+				};
+			};
+			buildConfigurationList = D3FEFFED1AC50788004D4BD2 /* Build configuration list for PBXProject "oneHookLibrary" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D3FEFFE91AC50788004D4BD2;
+			productRefGroup = D3FEFFF31AC50788004D4BD2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D3FEFFF11AC50788004D4BD2 /* oneHookLibrary */,
+				D3FE00671AC50D35004D4BD2 /* oneHook-library */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D3FEFFF01AC50788004D4BD2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3FE00011AC50788004D4BD2 /* Main.storyboard in Resources */,
+				D3FE00061AC50788004D4BD2 /* LaunchScreen.xib in Resources */,
+				D3FE00031AC50788004D4BD2 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D3FE00641AC50D35004D4BD2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3FE008C1AC5109F004D4BD2 /* OHBaseViewController.m in Sources */,
+				D3FE009C1AC5E675004D4BD2 /* UIImage+Color.m in Sources */,
+				D3FE009B1AC5E55D004D4BD2 /* OHCircularButton.m in Sources */,
+				D3FE00801AC50D5B004D4BD2 /* CircularRevealAnimationController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3FEFFEE1AC50788004D4BD2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3FE001E1AC507E3004D4BD2 /* OHButton.m in Sources */,
+				D3FEFFFE1AC50788004D4BD2 /* ViewController.m in Sources */,
+				D3FEFFFB1AC50788004D4BD2 /* AppDelegate.m in Sources */,
+				D3FEFFF81AC50788004D4BD2 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D3FE00851AC50D7B004D4BD2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D3FE00671AC50D35004D4BD2 /* oneHook-library */;
+			targetProxy = D3FE00841AC50D7B004D4BD2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D3FE00041AC50788004D4BD2 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D3FE00051AC50788004D4BD2 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		D3FEFFFF1AC50788004D4BD2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D3FE00001AC50788004D4BD2 /* Base */,
+			);
+			name = Main.storyboard;
+			path = ..;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D3FE00131AC50788004D4BD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D3FE00141AC50788004D4BD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D3FE00161AC50788004D4BD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = oneHookLibrary/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D3FE00171AC50788004D4BD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = oneHookLibrary/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		D3FE007A1AC50D35004D4BD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		D3FE007B1AC50D35004D4BD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D3FE00151AC50788004D4BD2 /* Build configuration list for PBXNativeTarget "oneHookLibrary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3FE00161AC50788004D4BD2 /* Debug */,
+				D3FE00171AC50788004D4BD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D3FE00791AC50D35004D4BD2 /* Build configuration list for PBXNativeTarget "oneHook-library" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3FE007A1AC50D35004D4BD2 /* Debug */,
+				D3FE007B1AC50D35004D4BD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D3FEFFED1AC50788004D4BD2 /* Build configuration list for PBXProject "oneHookLibrary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3FE00131AC50788004D4BD2 /* Debug */,
+				D3FE00141AC50788004D4BD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D3FEFFEA1AC50788004D4BD2 /* Project object */;
+}
