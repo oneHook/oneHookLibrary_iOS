@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D309EC1E1ADA455F00858EF2 /* UIImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = D309EC1C1ADA454800858EF2 /* UIImageEffects.m */; };
 		D309EC1F1ADA456100858EF2 /* UIImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = D309EC1C1ADA454800858EF2 /* UIImageEffects.m */; };
+		D38303E81AE9A3C1003AE826 /* OHHamburgerButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D38303E71AE9A3C1003AE826 /* OHHamburgerButton.m */; };
 		D3FE00011AC50788004D4BD2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3FEFFFF1AC50788004D4BD2 /* Main.storyboard */; };
 		D3FE00031AC50788004D4BD2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3FE00021AC50788004D4BD2 /* Images.xcassets */; };
 		D3FE00061AC50788004D4BD2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3FE00041AC50788004D4BD2 /* LaunchScreen.xib */; };
@@ -54,6 +55,8 @@
 		D309EC1B1ADA454800858EF2 /* UIImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageEffects.h; sourceTree = "<group>"; };
 		D309EC1C1ADA454800858EF2 /* UIImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageEffects.m; sourceTree = "<group>"; };
 		D33BA5F31ADA2D9000DF885A /* OHCommonDimensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OHCommonDimensions.h; sourceTree = "<group>"; };
+		D38303E61AE9A3C1003AE826 /* OHHamburgerButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHHamburgerButton.h; sourceTree = "<group>"; };
+		D38303E71AE9A3C1003AE826 /* OHHamburgerButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHHamburgerButton.m; sourceTree = "<group>"; };
 		D3FE00001AC50788004D4BD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D3FE00021AC50788004D4BD2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../Images.xcassets; sourceTree = "<group>"; };
 		D3FE00051AC50788004D4BD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -133,6 +136,8 @@
 				D3FE001D1AC507E3004D4BD2 /* OHButton.m */,
 				D3FE00901AC5DA0D004D4BD2 /* OHCircularButton.h */,
 				D3FE00911AC5DA0D004D4BD2 /* OHCircularButton.m */,
+				D38303E61AE9A3C1003AE826 /* OHHamburgerButton.h */,
+				D38303E71AE9A3C1003AE826 /* OHHamburgerButton.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -363,6 +368,7 @@
 			files = (
 				D3FE001E1AC507E3004D4BD2 /* OHButton.m in Sources */,
 				D3FEFFFE1AC50788004D4BD2 /* ViewController.m in Sources */,
+				D38303E81AE9A3C1003AE826 /* OHHamburgerButton.m in Sources */,
 				D3FEFFFB1AC50788004D4BD2 /* AppDelegate.m in Sources */,
 				D309EC1F1ADA456100858EF2 /* UIImageEffects.m in Sources */,
 				D3FEFFF81AC50788004D4BD2 /* main.m in Sources */,
