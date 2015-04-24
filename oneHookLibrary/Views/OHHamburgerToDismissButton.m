@@ -7,9 +7,9 @@
 //
 
 #import <QuartzCore/QuartzCore.h>
-#import "OHHamburgerButton.h"
+#import "OHHamburgerToDismissButton.h"
 
-@interface OHHamburgerButton () {
+@interface OHHamburgerToDismissButton () {
 }
 
 @property (strong, nonatomic) CAShapeLayer *topLayer;
@@ -24,7 +24,7 @@
 #define STROKE_WIDTH self.frame.size.width * 0.6
 #define degreesToRadians(degrees) ((degrees) / 180.0 * M_PI)
 
-@implementation OHHamburgerButton
+@implementation OHHamburgerToDismissButton
 
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];

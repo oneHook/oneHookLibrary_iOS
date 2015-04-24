@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface OHHamburgerButton : UIButton
+@interface OHHamburgerToDismissButton : UIButton
 
 @property (assign, nonatomic) BOOL showMenu;
 
