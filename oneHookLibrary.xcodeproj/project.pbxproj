@@ -10,6 +10,7 @@
 		D309EC1E1ADA455F00858EF2 /* UIImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = D309EC1C1ADA454800858EF2 /* UIImageEffects.m */; };
 		D309EC1F1ADA456100858EF2 /* UIImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = D309EC1C1ADA454800858EF2 /* UIImageEffects.m */; };
 		D38303E81AE9A3C1003AE826 /* OHHamburgerButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D38303E71AE9A3C1003AE826 /* OHHamburgerButton.m */; };
+		D38303E91AE9C575003AE826 /* OHHamburgerButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D38303E71AE9A3C1003AE826 /* OHHamburgerButton.m */; };
 		D3FE00011AC50788004D4BD2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3FEFFFF1AC50788004D4BD2 /* Main.storyboard */; };
 		D3FE00031AC50788004D4BD2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3FE00021AC50788004D4BD2 /* Images.xcassets */; };
 		D3FE00061AC50788004D4BD2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3FE00041AC50788004D4BD2 /* LaunchScreen.xib */; };
@@ -356,6 +357,7 @@
 			files = (
 				D3FE008C1AC5109F004D4BD2 /* OHBaseViewController.m in Sources */,
 				D3FE009C1AC5E675004D4BD2 /* UIImage+Color.m in Sources */,
+				D38303E91AE9C575003AE826 /* OHHamburgerButton.m in Sources */,
 				D3FE009B1AC5E55D004D4BD2 /* OHCircularButton.m in Sources */,
 				D309EC1E1ADA455F00858EF2 /* UIImageEffects.m in Sources */,
 				D3FE00801AC50D5B004D4BD2 /* CircularRevealAnimationController.m in Sources */,
