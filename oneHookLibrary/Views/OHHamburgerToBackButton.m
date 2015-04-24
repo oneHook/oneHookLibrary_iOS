@@ -61,7 +61,13 @@
     return path;
 }
 
+- (void)clicked:(UITapGestureRecognizer *)rec {
+    self.showMenu = !self.showMenu;
+}
+
 - (void)commonInit {
+    [self addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clicked:)]];
+
     self.topLayer = [[CAShapeLayer alloc] init];
     self.middleLayer = [[CAShapeLayer alloc] init];
     self.bottomLayer = [[CAShapeLayer alloc] init];
@@ -153,10 +159,11 @@
 
     if (self.showMenu) {
         CATransform3D translation = CATransform3DMakeTranslation(NORMALIZE(-4), 0, 0);
-        topTransform.toValue = [NSValue valueWithCATransform3D:CATransform3DRotate(translation, -0.7853975, 0, 0, 1)];
+        CGFloat angle = -0.35;
+        topTransform.toValue = [NSValue valueWithCATransform3D:CATransform3DRotate(translation, angle, 0, 0, 1)];
         topTransform.beginTime = CACurrentMediaTime() + 0.25;
 
-        bottomTransform.toValue = [NSValue valueWithCATransform3D:CATransform3DRotate(translation, 0.7853975, 0, 0, 1)];
+        bottomTransform.toValue = [NSValue valueWithCATransform3D:CATransform3DRotate(translation, -angle, 0, 0, 1)];
         bottomTransform.beginTime = CACurrentMediaTime() + 0.25;
 
     } else {
