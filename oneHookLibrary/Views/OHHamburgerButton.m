@@ -19,6 +19,7 @@
 
 @end
 
+#define NORMALIZE(v) (v / 54.0) * self.frame.size.width
 #define LINE_WIDTH 4
 #define STROKE_WIDTH self.frame.size.width * 0.6
 #define degreesToRadians(degrees) ((degrees) / 180.0 * M_PI)
@@ -43,21 +44,21 @@
 
 - (CGMutablePathRef)shortPath {
     CGMutablePathRef path = CGPathCreateMutable();
-    CGPathMoveToPoint(path, nil, 2, 2);
-    CGPathAddLineToPoint(path, nil, 28, 2);
+    CGPathMoveToPoint(path, nil, NORMALIZE(2), NORMALIZE(2));
+    CGPathAddLineToPoint(path, nil, NORMALIZE(28), NORMALIZE(2));
     return path;
 }
 
 - (CGMutablePathRef)outline {
     CGMutablePathRef path = CGPathCreateMutable();
-    CGPathMoveToPoint(path, nil, 10, 27);
-    CGPathAddCurveToPoint(path, nil, 12.00, 27.00, 28.02, 27.00, 40, 27);
-    CGPathAddCurveToPoint(path, nil, 55.92, 27.00, 50.47, 2.00, 27, 2);
-    CGPathAddCurveToPoint(path, nil, 13.16, 2.00, 2.00, 13.16, 2, 27);
-    CGPathAddCurveToPoint(path, nil, 2.00, 40.84, 13.16, 52.00, 27, 52);
-    CGPathAddCurveToPoint(path, nil, 40.84, 52.00, 52.00, 40.84, 52, 27);
-    CGPathAddCurveToPoint(path, nil, 52.00, 13.16, 42.39, 2.00, 27, 2);
-    CGPathAddCurveToPoint(path, nil, 13.16, 2.00, 2.00, 13.16, 2, 27);
+    CGPathMoveToPoint(path, nil, NORMALIZE(10), NORMALIZE(27));
+    CGPathAddCurveToPoint(path, nil, NORMALIZE(12.00), NORMALIZE(27.00), NORMALIZE(28.02), NORMALIZE(27.00), NORMALIZE(40), NORMALIZE(27));
+    CGPathAddCurveToPoint(path, nil, NORMALIZE(55.92), NORMALIZE(27.00), NORMALIZE(50.47), NORMALIZE(2.00), NORMALIZE(27), NORMALIZE(2));
+    CGPathAddCurveToPoint(path, nil, NORMALIZE(13.16), NORMALIZE(2.00), NORMALIZE(2.00), NORMALIZE(13.16), NORMALIZE(2), NORMALIZE(27));
+    CGPathAddCurveToPoint(path, nil, NORMALIZE(2.00), NORMALIZE(40.84), NORMALIZE(13.16), NORMALIZE(52.00), NORMALIZE(27), NORMALIZE(52));
+    CGPathAddCurveToPoint(path, nil, NORMALIZE(40.84), NORMALIZE(52.00), NORMALIZE(52.00), NORMALIZE(40.84), NORMALIZE(52), NORMALIZE(27));
+    CGPathAddCurveToPoint(path, nil, NORMALIZE(52.00), NORMALIZE(13.16), NORMALIZE(42.39), NORMALIZE(2.00), NORMALIZE(27), NORMALIZE(2));
+    CGPathAddCurveToPoint(path, nil, NORMALIZE(13.16), NORMALIZE(2.00), NORMALIZE(2.00), NORMALIZE(13.16), NORMALIZE(2), NORMALIZE(27));
     return path;
 }
 
@@ -82,12 +83,12 @@
         layer.fillColor = nil;
         layer.strokeColor = [UIColor blackColor].CGColor;
         [self.layer addSublayer:layer];
-        layer.lineWidth = 4;
+        layer.lineWidth = NORMALIZE(4);
         layer.masksToBounds = YES;
 
-        layer.miterLimit = 4;
+        layer.miterLimit = NORMALIZE(4);
         layer.lineCap = kCALineCapRound;
-        CGPathRef strokingPath = CGPathCreateCopyByStrokingPath(layer.path, nil, 4, kCGLineCapRound, kCGLineJoinMiter, 4);
+        CGPathRef strokingPath = CGPathCreateCopyByStrokingPath(layer.path, nil, NORMALIZE(4), kCGLineCapRound, kCGLineJoinMiter, NORMALIZE(4));
         layer.bounds = CGPathGetPathBoundingBox(strokingPath);
 
         //        let strokingPath = CGPathCreateCopyByStrokingPath(layer.path, nil, 4, kCGLineCapRound, kCGLineJoinMiter, 4)
@@ -101,14 +102,14 @@
     CGFloat hamburgerStrokeEnd = 0.111;
 
     self.topLayer.anchorPoint = CGPointMake(28.0 / 30.0, 0.5);
-    self.topLayer.position = CGPointMake(40, 18);
+    self.topLayer.position = CGPointMake(NORMALIZE(40), NORMALIZE(18));
 
-    self.middleLayer.position = CGPointMake(27, 27);
+    self.middleLayer.position = CGPointMake(NORMALIZE(27), NORMALIZE(27));
     self.middleLayer.strokeStart = hamburgerStrokeStart;
     self.middleLayer.strokeEnd = hamburgerStrokeEnd;
 
     self.bottomLayer.anchorPoint = CGPointMake(28.0 / 30.0, 0.5);
-    self.bottomLayer.position = CGPointMake(40, 36);
+    self.bottomLayer.position = CGPointMake(NORMALIZE(40), NORMALIZE(36));
 }
 
 - (void)layoutSubviews {
@@ -159,7 +160,7 @@
     CABasicAnimation *bottomTransform = [topTransform copy];
 
     if (self.showMenu) {
-        CATransform3D translation = CATransform3DMakeTranslation(-4, 0, 0);
+        CATransform3D translation = CATransform3DMakeTranslation(NORMALIZE(-4), 0, 0);
         topTransform.toValue = [NSValue valueWithCATransform3D:CATransform3DRotate(translation, -0.7853975, 0, 0, 1)];
         topTransform.beginTime = CACurrentMediaTime() + 0.25;
 
