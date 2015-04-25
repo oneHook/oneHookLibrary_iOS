@@ -61,13 +61,7 @@
     return path;
 }
 
-- (void)clicked:(UITapGestureRecognizer *)rec {
-    self.showMenu = !self.showMenu;
-}
-
 - (void)commonInit {
-    [self addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clicked:)]];
-
     self.topLayer = [[CAShapeLayer alloc] init];
     self.middleLayer = [[CAShapeLayer alloc] init];
     self.bottomLayer = [[CAShapeLayer alloc] init];
