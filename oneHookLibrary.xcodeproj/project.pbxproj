@@ -16,6 +16,7 @@
 		D32848171AEC273800DE7CD3 /* OHHamburgerButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D32848161AEC273800DE7CD3 /* OHHamburgerButton.m */; };
 		D383040C1AE9F4CE003AE826 /* OHTableViewWIthCardEffectController.m in Sources */ = {isa = PBXBuildFile; fileRef = D383040B1AE9F4CE003AE826 /* OHTableViewWIthCardEffectController.m */; };
 		D383040D1AE9F5B4003AE826 /* OHTableViewWIthCardEffectController.m in Sources */ = {isa = PBXBuildFile; fileRef = D383040B1AE9F4CE003AE826 /* OHTableViewWIthCardEffectController.m */; };
+		D3C0F99E1AEC7A3E00C4F7EA /* OHHamburgerButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D32848161AEC273800DE7CD3 /* OHHamburgerButton.m */; };
 		D3FE00031AC50788004D4BD2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3FE00021AC50788004D4BD2 /* Images.xcassets */; };
 		D3FE001E1AC507E3004D4BD2 /* OHButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FE001D1AC507E3004D4BD2 /* OHButton.m */; };
 		D3FE002E1AC50AEA004D4BD2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3FE002D1AC50AEA004D4BD2 /* QuartzCore.framework */; };
@@ -386,6 +387,7 @@
 			files = (
 				D3FE008C1AC5109F004D4BD2 /* OHBaseViewController.m in Sources */,
 				D3FE009C1AC5E675004D4BD2 /* UIImage+Color.m in Sources */,
+				D3C0F99E1AEC7A3E00C4F7EA /* OHHamburgerButton.m in Sources */,
 				D383040D1AE9F5B4003AE826 /* OHTableViewWIthCardEffectController.m in Sources */,
 				D3FE009B1AC5E55D004D4BD2 /* OHCircularButton.m in Sources */,
 				D309EC1E1ADA455F00858EF2 /* UIImageEffects.m in Sources */,

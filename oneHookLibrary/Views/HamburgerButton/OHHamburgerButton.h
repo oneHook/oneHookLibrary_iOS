@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface OHHamburgerButton : UIView
+@interface OHHamburgerButton : UIButton
 
 typedef enum {
     kHamburgerButtonTransitionToBack,
