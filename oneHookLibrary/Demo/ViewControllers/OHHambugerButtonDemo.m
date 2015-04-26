@@ -7,8 +7,6 @@
 //
 
 #import "OHHambugerButtonDemo.h"
-#import "OHHamburgerToBackButton.h"
-#import "OHHamburgerToDismissButton.h"
 #import "OHHamburgerButton.h"
 
 @interface OHHambugerButtonDemo ()
@@ -29,29 +27,32 @@
     self.hamburgerButtons = [[NSMutableArray alloc] init];
 
     for (int i = 1; i < 5; i++) {
-        OHHamburgerToBackButton *b = (OHHamburgerToBackButton *)[self.view viewWithTag:(100 + i)];
+        OHHamburgerButton *b = (OHHamburgerButton *)[self.view viewWithTag:(100 + i)];
+        b.hamburgerButtonStyle = kHamburgerButtonStyleCircle;
         [self.hamburgerToBackButtons addObject:b];
         [b addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clicked:)]];
     }
 
     for (int i = 1; i < 5; i++) {
-        OHHamburgerToDismissButton *b = (OHHamburgerToDismissButton *)[self.view viewWithTag:(200 + i)];
+        OHHamburgerButton *b = (OHHamburgerButton *)[self.view viewWithTag:(200 + i)];
+        b.hamburgerButtonStyle = kHamburgerButtonStyleClear;
         [self.hamburgerToDismissButtons addObject:b];
         [b addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clicked:)]];
     }
 
     for (int i = 1; i < 5; i++) {
         OHHamburgerButton *b = (OHHamburgerButton *)[self.view viewWithTag:(300 + i)];
+        b.hamburgerButtonColor = [UIColor redColor];
         [self.hamburgerButtons addObject:b];
         [b addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clicked:)]];
     }
 }
 
 - (void)clicked:(UITapGestureRecognizer *)rec {
-    for (OHHamburgerToBackButton *b in self.hamburgerToBackButtons) {
+    for (OHHamburgerButton *b in self.hamburgerToBackButtons) {
         b.showMenu = !b.showMenu;
     }
-    for (OHHamburgerToDismissButton *b in self.hamburgerToDismissButtons) {
+    for (OHHamburgerButton *b in self.hamburgerToDismissButtons) {
         b.showMenu = !b.showMenu;
     }
     for (OHHamburgerButton *b in self.hamburgerButtons) {

@@ -47,9 +47,17 @@
     return self;
 }
 
+- (void)setHamburgerButtonColor:(UIColor *)hamburgerButtonColor
+{
+    _hamburgerButtonColor = hamburgerButtonColor;
+    self.topLayer.strokeColor = hamburgerButtonColor.CGColor;
+    self.middleLayer.strokeColor = hamburgerButtonColor.CGColor;
+    self.bottomLayer.strokeColor = hamburgerButtonColor.CGColor;
+}
+
 - (void)commonInit {
     /* apply default hamburger button style */
-    self.hamburgerButtonColor = [UIColor blackColor];
+    _hamburgerButtonColor = [UIColor blackColor];
     self.hamburgerButtonStrokeWidthConstant = 0.6f;
     self.hamburgerButtonStyle = kHamburgerButtonStyleCircle;
     self.hamburgerButtonTransitionTo = kHamburgerButtonTransitionToBack;

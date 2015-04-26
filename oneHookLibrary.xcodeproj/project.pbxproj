@@ -14,11 +14,8 @@
 		D328480D1AEC1B9500DE7CD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D328480B1AEC1B9500DE7CD3 /* Main.storyboard */; };
 		D32848101AEC209900DE7CD3 /* OHHambugerButtonDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = D328480F1AEC209900DE7CD3 /* OHHambugerButtonDemo.m */; };
 		D32848171AEC273800DE7CD3 /* OHHamburgerButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D32848161AEC273800DE7CD3 /* OHHamburgerButton.m */; };
-		D38303E81AE9A3C1003AE826 /* OHHamburgerToDismissButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D38303E71AE9A3C1003AE826 /* OHHamburgerToDismissButton.m */; };
-		D38303E91AE9C575003AE826 /* OHHamburgerToDismissButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D38303E71AE9A3C1003AE826 /* OHHamburgerToDismissButton.m */; };
 		D383040C1AE9F4CE003AE826 /* OHTableViewWIthCardEffectController.m in Sources */ = {isa = PBXBuildFile; fileRef = D383040B1AE9F4CE003AE826 /* OHTableViewWIthCardEffectController.m */; };
 		D383040D1AE9F5B4003AE826 /* OHTableViewWIthCardEffectController.m in Sources */ = {isa = PBXBuildFile; fileRef = D383040B1AE9F4CE003AE826 /* OHTableViewWIthCardEffectController.m */; };
-		D38304101AE9FA20003AE826 /* OHHamburgerToBackButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D383040F1AE9FA20003AE826 /* OHHamburgerToBackButton.m */; };
 		D3FE00031AC50788004D4BD2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3FE00021AC50788004D4BD2 /* Images.xcassets */; };
 		D3FE001E1AC507E3004D4BD2 /* OHButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FE001D1AC507E3004D4BD2 /* OHButton.m */; };
 		D3FE002E1AC50AEA004D4BD2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3FE002D1AC50AEA004D4BD2 /* QuartzCore.framework */; };
@@ -68,12 +65,8 @@
 		D32848151AEC273800DE7CD3 /* OHHamburgerButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHHamburgerButton.h; sourceTree = "<group>"; };
 		D32848161AEC273800DE7CD3 /* OHHamburgerButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHHamburgerButton.m; sourceTree = "<group>"; };
 		D33BA5F31ADA2D9000DF885A /* OHCommonDimensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OHCommonDimensions.h; sourceTree = "<group>"; };
-		D38303E61AE9A3C1003AE826 /* OHHamburgerToDismissButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHHamburgerToDismissButton.h; sourceTree = "<group>"; };
-		D38303E71AE9A3C1003AE826 /* OHHamburgerToDismissButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHHamburgerToDismissButton.m; sourceTree = "<group>"; };
 		D383040A1AE9F4CE003AE826 /* OHTableViewWIthCardEffectController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHTableViewWIthCardEffectController.h; sourceTree = "<group>"; };
 		D383040B1AE9F4CE003AE826 /* OHTableViewWIthCardEffectController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHTableViewWIthCardEffectController.m; sourceTree = "<group>"; };
-		D383040E1AE9FA20003AE826 /* OHHamburgerToBackButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHHamburgerToBackButton.h; sourceTree = "<group>"; };
-		D383040F1AE9FA20003AE826 /* OHHamburgerToBackButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHHamburgerToBackButton.m; sourceTree = "<group>"; };
 		D3FE00021AC50788004D4BD2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../Images.xcassets; sourceTree = "<group>"; };
 		D3FE001C1AC507E3004D4BD2 /* OHButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHButton.h; sourceTree = "<group>"; };
 		D3FE001D1AC507E3004D4BD2 /* OHButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHButton.m; sourceTree = "<group>"; };
@@ -177,10 +170,6 @@
 				D3FE001D1AC507E3004D4BD2 /* OHButton.m */,
 				D3FE00901AC5DA0D004D4BD2 /* OHCircularButton.h */,
 				D3FE00911AC5DA0D004D4BD2 /* OHCircularButton.m */,
-				D38303E61AE9A3C1003AE826 /* OHHamburgerToDismissButton.h */,
-				D38303E71AE9A3C1003AE826 /* OHHamburgerToDismissButton.m */,
-				D383040E1AE9FA20003AE826 /* OHHamburgerToBackButton.h */,
-				D383040F1AE9FA20003AE826 /* OHHamburgerToBackButton.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -397,7 +386,6 @@
 			files = (
 				D3FE008C1AC5109F004D4BD2 /* OHBaseViewController.m in Sources */,
 				D3FE009C1AC5E675004D4BD2 /* UIImage+Color.m in Sources */,
-				D38303E91AE9C575003AE826 /* OHHamburgerToDismissButton.m in Sources */,
 				D383040D1AE9F5B4003AE826 /* OHTableViewWIthCardEffectController.m in Sources */,
 				D3FE009B1AC5E55D004D4BD2 /* OHCircularButton.m in Sources */,
 				D309EC1E1ADA455F00858EF2 /* UIImageEffects.m in Sources */,
@@ -409,9 +397,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D38304101AE9FA20003AE826 /* OHHamburgerToBackButton.m in Sources */,
 				D3FE001E1AC507E3004D4BD2 /* OHButton.m in Sources */,
-				D38303E81AE9A3C1003AE826 /* OHHamburgerToDismissButton.m in Sources */,
 				D383040C1AE9F4CE003AE826 /* OHTableViewWIthCardEffectController.m in Sources */,
 				D32848101AEC209900DE7CD3 /* OHHambugerButtonDemo.m in Sources */,
 				D32848171AEC273800DE7CD3 /* OHHamburgerButton.m in Sources */,
