@@ -101,7 +101,7 @@
                             </view>
                             <view tag="303" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2qU-a6-qLJ" customClass="OHHamburgerButton">
                                 <rect key="frame" x="135" y="381" width="64" height="64"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <view tag="304" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cXG-XG-Lv3" customClass="OHHamburgerButton">
                                 <rect key="frame" x="222" y="363" width="100" height="100"/>

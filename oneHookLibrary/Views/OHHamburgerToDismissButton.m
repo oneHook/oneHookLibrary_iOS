@@ -126,8 +126,8 @@
         strokeStart.timingFunction = [CAMediaTimingFunction functionWithControlPoints:0.25:-0.4:0.5:1];
 
         strokeEnd.toValue = [NSNumber numberWithDouble:menuStrokeEnd];
-        strokeStart.duration = 0.6f;
-        strokeStart.timingFunction = [CAMediaTimingFunction functionWithControlPoints:0.25:-0.4:0.5:1];
+        strokeEnd.duration = 0.6f;
+        strokeEnd.timingFunction = [CAMediaTimingFunction functionWithControlPoints:0.25:-0.4:0.5:1];
 
     } else {
         strokeStart.toValue = [NSNumber numberWithDouble:hamburgerStrokeStart];
@@ -137,8 +137,8 @@
         strokeStart.fillMode = kCAFillModeBackwards;
 
         strokeEnd.toValue = [NSNumber numberWithDouble:hamburgerStrokeEnd];
-        strokeStart.duration = 0.6f;
-        strokeStart.timingFunction = [CAMediaTimingFunction functionWithControlPoints:0.25:0.3:0.5:0.9];
+        strokeEnd.duration = 0.6f;
+        strokeEnd.timingFunction = [CAMediaTimingFunction functionWithControlPoints:0.25:0.3:0.5:0.9];
     }
 
     [self applyAnimationWithLayer:self.middleLayer animation:strokeStart];

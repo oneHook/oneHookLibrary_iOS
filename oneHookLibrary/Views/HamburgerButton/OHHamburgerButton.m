@@ -10,8 +10,14 @@
 #import "OHHamburgerButton.h"
 
 #define LENGTH self.bounds.size.width
-#define STORKE_PADDING (0.20f * LENGTH)
-#define STROKE_LENGTH (LENGTH - 2 * STORKE_PADDING)
+#define STROKE_PADDING (0.20f * LENGTH)
+#define STROKE_LENGTH (LENGTH - 2 * STROKE_PADDING)
+#define STROKE_WIDTH (self.hamburgerButtonStrokeWidthConstant * LENGTH / 8)
+
+#define HAMBURGER_STROKE_START 0.0f
+#define HAMBURGER_STROKE_END 0.125f
+#define CIRCLE_STROKE_START 0.325f
+#define CIRCLE_STROKE_END 1.0f
 
 @interface OHHamburgerButton () {
 }
@@ -22,11 +28,6 @@
 @property NSArray *layers;
 
 @end
-
-#define NORMALIZE(v) (v / 54.0) * self.frame.size.width
-#define LINE_WIDTH 4
-#define STROKE_WIDTH self.frame.size.width * 0.6
-#define degreesToRadians(degrees) ((degrees) / 180.0 * M_PI)
 
 @implementation OHHamburgerButton
 
@@ -49,7 +50,7 @@
 - (void)commonInit {
     /* apply default hamburger button style */
     self.hamburgerButtonColor = [UIColor blackColor];
-    self.hamburgerButtonStrokeWidthConstant = 0.5f;
+    self.hamburgerButtonStrokeWidthConstant = 0.6f;
     self.hamburgerButtonStyle = kHamburgerButtonStyleCircle;
     self.hamburgerButtonTransitionTo = kHamburgerButtonTransitionToBack;
 
@@ -67,7 +68,7 @@
         layer.fillColor = nil;
         layer.strokeColor = self.hamburgerButtonColor.CGColor;
         [self.layer addSublayer:layer];
-        layer.lineWidth = self.hamburgerButtonStrokeWidthConstant * LENGTH / 8;
+        layer.lineWidth = STROKE_WIDTH;
         layer.miterLimit = LENGTH / 8;
         layer.lineCap = kCALineCapRound;
         layer.masksToBounds = YES;
@@ -75,21 +76,19 @@
         layer.bounds = CGPathGetPathBoundingBox(strokingPath);
         layer.actions = @{ @"strokeStart" : [NSNull null],
                            @"strokeEnd" : [NSNull null],
+                           @"strokeColor" : [NSNull null],
                            @"transform" : [NSNull null] };
     }
 
-    CGFloat hamburgerStrokeStart = 0.028;
-    CGFloat hamburgerStrokeEnd = 0.111;
+    self.topLayer.anchorPoint = CGPointMake(0.87, 0.5);
+    self.topLayer.position = CGPointMake(LENGTH - STROKE_PADDING + STROKE_WIDTH / 2 - 0.085 * LENGTH, LENGTH / 3);
 
-    self.topLayer.anchorPoint = CGPointMake(0.9333, 0.5);
-    self.topLayer.position = CGPointMake(LENGTH - STORKE_PADDING, LENGTH / 3);
+    self.middleLayer.position = CGPointMake(LENGTH / 2, LENGTH / 2);
+    self.middleLayer.strokeStart = HAMBURGER_STROKE_START;
+    self.middleLayer.strokeEnd = HAMBURGER_STROKE_END;
 
-    self.middleLayer.position = CGPointMake(NORMALIZE(27), NORMALIZE(27));
-    self.middleLayer.strokeStart = hamburgerStrokeStart;
-    self.middleLayer.strokeEnd = hamburgerStrokeEnd;
-
-    self.bottomLayer.anchorPoint = CGPointMake(0.9333, 0.5);
-    self.bottomLayer.position = CGPointMake(LENGTH - STORKE_PADDING, LENGTH * 2 / 3);
+    self.bottomLayer.anchorPoint = CGPointMake(0.87, 0.5);
+    self.bottomLayer.position = CGPointMake(LENGTH - STROKE_PADDING + STROKE_WIDTH / 2 - 0.085 * LENGTH, LENGTH * 2 / 3);
 }
 
 - (CGMutablePathRef)shortPath {
@@ -101,14 +100,10 @@
 
 - (CGMutablePathRef)outline {
     CGMutablePathRef path = CGPathCreateMutable();
-    CGPathMoveToPoint(path, nil, NORMALIZE(10), NORMALIZE(27));
-    CGPathAddCurveToPoint(path, nil, NORMALIZE(12.00), NORMALIZE(27.00), NORMALIZE(28.02), NORMALIZE(27.00), NORMALIZE(40), NORMALIZE(27));
-    CGPathAddCurveToPoint(path, nil, NORMALIZE(55.92), NORMALIZE(27.00), NORMALIZE(50.47), NORMALIZE(2.00), NORMALIZE(27), NORMALIZE(2));
-    CGPathAddCurveToPoint(path, nil, NORMALIZE(13.16), NORMALIZE(2.00), NORMALIZE(2.00), NORMALIZE(13.16), NORMALIZE(2), NORMALIZE(27));
-    CGPathAddCurveToPoint(path, nil, NORMALIZE(2.00), NORMALIZE(40.84), NORMALIZE(13.16), NORMALIZE(52.00), NORMALIZE(27), NORMALIZE(52));
-    CGPathAddCurveToPoint(path, nil, NORMALIZE(40.84), NORMALIZE(52.00), NORMALIZE(52.00), NORMALIZE(40.84), NORMALIZE(52), NORMALIZE(27));
-    CGPathAddCurveToPoint(path, nil, NORMALIZE(52.00), NORMALIZE(13.16), NORMALIZE(42.39), NORMALIZE(2.00), NORMALIZE(27), NORMALIZE(2));
-    CGPathAddCurveToPoint(path, nil, NORMALIZE(13.16), NORMALIZE(2.00), NORMALIZE(2.00), NORMALIZE(13.16), NORMALIZE(2), NORMALIZE(27));
+    CGPathMoveToPoint(path, nil, STROKE_PADDING, LENGTH / 2);
+    CGPathAddCurveToPoint(path, nil, STROKE_PADDING, LENGTH / 2, LENGTH * 0.5, LENGTH / 2, LENGTH - STROKE_PADDING, LENGTH / 2);
+    CGPathAddCurveToPoint(path, nil, LENGTH * 1.02, LENGTH / 2, LENGTH * 0.95, 0, LENGTH / 2, STROKE_WIDTH / 2);
+    CGPathAddArc(path, nil, LENGTH / 2, LENGTH / 2, LENGTH / 2 - STROKE_WIDTH / 2, 3 * M_PI / 2, 3 * M_PI / 2 - 2 * M_PI - 1, YES);
     return path;
 }
 
@@ -117,39 +112,46 @@
 
 - (void)setShowMenu:(BOOL)showMenu {
     _showMenu = showMenu;
-
-    CGFloat menuStrokeStart = 0.325;
-    CGFloat menuStrokeEnd = 0.9;
-    CGFloat hamburgerStrokeStart = 0.028;
-    CGFloat hamburgerStrokeEnd = 0.111;
-
     CABasicAnimation *strokeStart = [[CABasicAnimation alloc] init];
     strokeStart.keyPath = @"strokeStart";
     CABasicAnimation *strokeEnd = [[CABasicAnimation alloc] init];
     strokeEnd.keyPath = @"strokeEnd";
+    CABasicAnimation *strokeColor = [[CABasicAnimation alloc] init];
+    strokeColor.keyPath = @"strokeColor";
     if (_showMenu) {
-        strokeStart.toValue = [NSNumber numberWithDouble:menuStrokeStart];
+        strokeStart.toValue = [NSNumber numberWithDouble:CIRCLE_STROKE_START];
         strokeStart.duration = 0.5f;
         strokeStart.timingFunction = [CAMediaTimingFunction functionWithControlPoints:0.25:-0.4:0.5:1];
 
-        strokeEnd.toValue = [NSNumber numberWithDouble:menuStrokeEnd];
-        strokeStart.duration = 0.6f;
-        strokeStart.timingFunction = [CAMediaTimingFunction functionWithControlPoints:0.25:-0.4:0.5:1];
+        strokeEnd.toValue = [NSNumber numberWithDouble:CIRCLE_STROKE_END];
+        strokeEnd.duration = 0.6f;
+        strokeEnd.timingFunction = [CAMediaTimingFunction functionWithControlPoints:0.25:-0.4:0.5:1];
+
+        strokeColor.toValue = (id)[UIColor clearColor].CGColor;
+        strokeColor.duration = 0.6f;
+        strokeColor.timingFunction = [CAMediaTimingFunction functionWithControlPoints:0.25:-0.4:0.5:1];
 
     } else {
-        strokeStart.toValue = [NSNumber numberWithDouble:hamburgerStrokeStart];
+        strokeStart.toValue = [NSNumber numberWithDouble:HAMBURGER_STROKE_START];
         strokeStart.duration = 0.5f;
         strokeStart.timingFunction = [CAMediaTimingFunction functionWithControlPoints:0.25:0:0.5:1.2];
         strokeStart.beginTime = CACurrentMediaTime() + 0.1;
         strokeStart.fillMode = kCAFillModeBackwards;
 
-        strokeEnd.toValue = [NSNumber numberWithDouble:hamburgerStrokeEnd];
-        strokeStart.duration = 0.6f;
-        strokeStart.timingFunction = [CAMediaTimingFunction functionWithControlPoints:0.25:0.3:0.5:0.9];
+        strokeEnd.toValue = [NSNumber numberWithDouble:HAMBURGER_STROKE_END];
+        strokeEnd.duration = 0.6f;
+        strokeEnd.timingFunction = [CAMediaTimingFunction functionWithControlPoints:0.25:0.3:0.5:0.9];
+
+        strokeColor.toValue = (id)self.hamburgerButtonColor.CGColor;
+        strokeColor.duration = 0.6f;
+        strokeColor.timingFunction = [CAMediaTimingFunction functionWithControlPoints:0.25:-0.4:0.5:1];
     }
 
     [self applyAnimationWithLayer:self.middleLayer animation:strokeStart];
     [self applyAnimationWithLayer:self.middleLayer animation:strokeEnd];
+    if (self.hamburgerButtonStyle == kHamburgerButtonStyleClear) {
+        [self applyAnimationWithLayer:self.middleLayer animation:strokeColor];
+    }
 
     CABasicAnimation *topTransform = [[CABasicAnimation alloc] init];
     topTransform.keyPath = @"transform";
@@ -160,7 +162,7 @@
     CABasicAnimation *bottomTransform = [topTransform copy];
 
     if (self.showMenu) {
-        CATransform3D translation = CATransform3DMakeTranslation(NORMALIZE(-4), 0, 0);
+        CATransform3D translation = CATransform3DMakeTranslation(-STROKE_WIDTH, 0, 0);
         topTransform.toValue = [NSValue valueWithCATransform3D:CATransform3DRotate(translation, -0.7853975, 0, 0, 1)];
         topTransform.beginTime = CACurrentMediaTime() + 0.25;
 
