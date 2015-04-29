@@ -30,6 +30,11 @@
 /** Double: Device Orientation **/
 #define DEVICE_ORIENTATION ([[UIDevice currentDevice] orientation])
 
+#define IS_LANDSCAPE UIDeviceOrientationIsLandscape(DEVICE_ORIENTATION)
+#define IS_PORTRAIT !UIDeviceOrientationIsLandscape(DEVICE_ORIENTATION)
+#define STATUS_BAR_HEIGHT (IS_LANDSCAPE ? 0 : [UIApplication sharedApplication].statusBarFrame.size.height)
+#define NAVIGATION_BAR_HEIGHT self.navigationController.navigationBar.frame.size.height
+
 /** String: Simulator **/
 #define DEVICE_SIMULATOR @"Simulator"
 
@@ -40,25 +45,25 @@
 #define IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
 
 /** BOOL: Detect if device is an iPhone 5 **/
-#define IS_IPHONE_5                                                            \
-  (IS_IPHONE                                                                   \
-       ? CGSizeEqualToSize([[UIScreen mainScreen] preferredMode].size,         \
-                           CGSizeMake(640, 1136))                              \
-             ? YES                                                             \
-             : NO                                                              \
-       : NO)
+#define IS_IPHONE_5                                                      \
+    (IS_IPHONE                                                           \
+         ? CGSizeEqualToSize([[UIScreen mainScreen] preferredMode].size, \
+                             CGSizeMake(640, 1136))                      \
+               ? YES                                                     \
+               : NO                                                      \
+         : NO)
 
 /** BOOL: IS_RETINA **/
-#define IS_RETINA                                                              \
-  ([[UIScreen mainScreen] respondsToSelector:@selector(scale)] &&              \
-   [[UIScreen mainScreen] scale] == 2)
+#define IS_RETINA                                                   \
+    ([[UIScreen mainScreen] respondsToSelector:@selector(scale)] && \
+     [[UIScreen mainScreen] scale] == 2)
 
 /** BOOL: Detect if device is the Simulator **/
 #define IS_SIMULATOR (TARGET_IPHONE_SIMULATOR)
 
 /** grabbing application delegate **/
-#define ApplicationDelegate                                                    \
-  ((AppDelegate *)[[UIApplication sharedApplication] delegate])
+#define ApplicationDelegate \
+    ((AppDelegate *)[[UIApplication sharedApplication] delegate])
 
 /** grabbing user defaults **/
 #define UserDefaults [NSUserDefaults standardUserDefaults]
@@ -76,16 +81,16 @@
 #define MainScreen [UIScreen mainScreen]
 
 /** show network activity indicator **/
-#define ShowNetworkActivityIndicator()                                         \
-  [UIApplication sharedApplication].networkActivityIndicatorVisible = YES
+#define ShowNetworkActivityIndicator() \
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES
 
 /** hide network activity indicator **/
-#define HideNetworkActivityIndicator()                                         \
-  [UIApplication sharedApplication].networkActivityIndicatorVisible = NO
+#define HideNetworkActivityIndicator() \
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO
 
 /** check if network activity indicator is visible **/
-#define NetworkActivityIndicatorVisible(x)                                     \
-  [UIApplication sharedApplication].networkActivityIndicatorVisible = x
+#define NetworkActivityIndicatorVisible(x) \
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = x
 
 /** screen width **/
 #define ScreenWidth [[UIScreen mainScreen] bounds].size.width
@@ -121,28 +126,28 @@
 #define RectSetY(f, y) CGRectMake(RectX(f), y, RectWidth(f), RectHeight(f))
 #define RectSetSize(f, w, h) CGRectMake(RectX(f), RectY(f), w, h)
 #define RectSetOrigin(f, x, y) CGRectMake(x, y, RectWidth(f), RectHeight(f))
-#define DATE_COMPONENTS                                                        \
-  NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit
-#define TIME_COMPONENTS                                                        \
-  NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit
-#define RGB(r, g, b)                                                           \
-  [UIColor colorWithRed:r / 255.0 green:g / 255.0 blue:b / 255.0 alpha:1.0]
-#define RGBA(r, g, b, a)                                                       \
-  [UIColor colorWithRed:r / 255.0 green:g / 255.0 blue:b / 255.0 alpha:a]
+#define DATE_COMPONENTS \
+    NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit
+#define TIME_COMPONENTS \
+    NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit
+#define RGB(r, g, b) \
+    [UIColor colorWithRed:r / 255.0 green:g / 255.0 blue:b / 255.0 alpha:1.0]
+#define RGBA(r, g, b, a) \
+    [UIColor colorWithRed:r / 255.0 green:g / 255.0 blue:b / 255.0 alpha:a]
 
 /** obtain UIColor from hex **/
-#define HEXRGB(rgbValue)                                                       \
-  [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16)) / 255.0         \
-                  green:((float)((rgbValue & 0xFF00) >> 8)) / 255.0            \
-                   blue:((float)(rgbValue & 0xFF)) / 255.0                     \
-                  alpha:1.0]
+#define HEXRGB(rgbValue)                                                 \
+    [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16)) / 255.0 \
+                    green:((float)((rgbValue & 0xFF00) >> 8)) / 255.0    \
+                     blue:((float)(rgbValue & 0xFF)) / 255.0             \
+                    alpha:1.0]
 
 /** obtain UIColor from hex with alpha **/
-#define HEXRGBA(rgbValue, a)                                                   \
-  [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16)) / 255.0         \
-                  green:((float)((rgbValue & 0xFF00) >> 8)) / 255.0            \
-                   blue:((float)(rgbValue & 0xFF)) / 255.0                     \
-                  alpha:a]
+#define HEXRGBA(rgbValue, a)                                             \
+    [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16)) / 255.0 \
+                    green:((float)((rgbValue & 0xFF00) >> 8)) / 255.0    \
+                     blue:((float)(rgbValue & 0xFF)) / 255.0             \
+                    alpha:a]
 
 #define DEGREES_TO_RADIANS(angle) (angle / 180.0 * M_PI)
 
