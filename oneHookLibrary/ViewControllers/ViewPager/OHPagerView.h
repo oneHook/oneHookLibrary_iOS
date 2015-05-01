@@ -31,4 +31,6 @@
 @property (assign, nonatomic) id<OHPagerViewDatasource> datasource;
 @property (assign, nonatomic) id<OHPagerViewDelegate> delegate;
 
+- (void)gotoPageAtIndex:(NSInteger)index animated:(BOOL)animated;
+
 @end

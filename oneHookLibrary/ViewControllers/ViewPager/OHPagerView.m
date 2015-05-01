@@ -41,7 +41,7 @@
 
     self.selectedIndex = 0;
 
-    [self reloadData];
+    //    [self reloadData];
 }
 
 - (void)setDatasource:(id<OHPagerViewDatasource>)datasource {
@@ -57,12 +57,17 @@
         self.views = [[NSMutableArray alloc] init];
     }
     /* TODO may want to purge all existing vcs */
-    [self.views removeAllObjects];
+    //    [self.views removeAllObjects];
     NSInteger numPages = [self.datasource numberOfPagesInPager:self];
     for (int i = 0; i < numPages; i++) {
         [self.views addObject:[NSNull null]];
     }
-    self.scrollView.contentOffset = CGPointMake(0, 0);
+    self.scrollView.contentOffset = CGPointMake(PAGE_WIDTH * self.selectedIndex, 0);
+    [self invalidatePages:self.selectedIndex];
+}
+
+- (void)gotoPageAtIndex:(NSInteger)index animated:(BOOL)animated {
+    [self.scrollView setContentOffset:CGPointMake(index * PAGE_WIDTH, 0) animated:animated];
 }
 
 - (void)layoutSubviews {
@@ -78,6 +83,7 @@
 }
 
 - (void)invalidatePages:(NSInteger)currIndex {
+    NSLog(@"invalidate pages %@ %@", self, self.views);
     NSInteger totalPages = [self.datasource numberOfPagesInPager:self];
     for (int i = 0; i < totalPages; i++) {
         if (i == currIndex - 1) {
@@ -111,12 +117,12 @@
 }
 
 - (void)loadViewControllerAt:(NSInteger)index {
-    NSLog(@"obtain view at %ld", index);
-    UIView *vc = [self.datasource pagerView:self viewControllerAtIndex:index];
-    [self.scrollView addSubview:vc];
-    vc.frame = CGRectMake(PAGE_WIDTH * index, 0, PAGE_WIDTH, self.bounds.size.height);
-    [self.views replaceObjectAtIndex:index withObject:vc];
+    UIView *view = [self.datasource pagerView:self viewControllerAtIndex:index];
+    [self.scrollView addSubview:view];
+    view.frame = CGRectMake(PAGE_WIDTH * index, 0, PAGE_WIDTH, self.bounds.size.height);
+    [self.views replaceObjectAtIndex:index withObject:view];
     [self.delegate pagerView:self viewAddedAt:index];
+    NSLog(@"obtain view at %ld %f %f", index, PAGE_WIDTH, self.bounds.size.height);
 }
 
 #pragma marks - UIScrollViewDelegate
@@ -125,6 +131,7 @@
     if (!_sized) {
         return;
     }
+    NSLog(@"CONTENT OFFSET X %f", scrollView.contentOffset.x);
     NSInteger currIndex = roundf(scrollView.contentOffset.x / PAGE_WIDTH);
     [self invalidatePages:currIndex];
 }
