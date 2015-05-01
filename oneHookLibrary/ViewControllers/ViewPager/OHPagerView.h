@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "OHHorizontalScrollView.h"
 
 @class OHPagerView;
 
@@ -28,6 +29,7 @@
 
 @property (assign, nonatomic) NSInteger selectedIndex;
 
+@property (strong, nonatomic) OHHorizontalScrollView *scrollView;
 @property (assign, nonatomic) id<OHPagerViewDatasource> datasource;
 @property (assign, nonatomic) id<OHPagerViewDelegate> delegate;
 
