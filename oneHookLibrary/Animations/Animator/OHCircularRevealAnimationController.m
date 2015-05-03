@@ -8,9 +8,17 @@
 //
 
 #import "OneHookFoundation.h"
-#import "CircularRevealAnimationController.h"
+#import "OHCircularRevealAnimationController.h"
 
-@implementation CircularRevealAnimationController
+@implementation OHCircularRevealAnimationController
+
+- (id)init {
+    self = [super init];
+    if (self) {
+        self.animationDuration = 0.25f;
+    }
+    return self;
+}
 
 - (NSTimeInterval)transitionDuration:
         (id<UIViewControllerContextTransitioning>)transitionContext {
@@ -57,7 +65,7 @@
     maskLayer.path = newPath;
 
     [CATransaction begin];
-    [CATransaction setAnimationDuration:0.25f];
+    [CATransaction setAnimationDuration:self.animationDuration];
     [CATransaction setCompletionBlock:^{
     CGPathRelease(oldPath);
     [transitionContext completeTransition:YES];
@@ -102,7 +110,7 @@
     layer.path = newPath;
 
     [CATransaction begin];
-    [CATransaction setAnimationDuration:OHAnimationLong];
+    [CATransaction setAnimationDuration:self.animationDuration];
     [CATransaction setCompletionBlock:^{
     CGPathRelease(newPath);
     CGPathRelease(oldPath);

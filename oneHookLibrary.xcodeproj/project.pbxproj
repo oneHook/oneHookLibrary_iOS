@@ -28,7 +28,7 @@
 		D3FE002E1AC50AEA004D4BD2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3FE002D1AC50AEA004D4BD2 /* QuartzCore.framework */; };
 		D3FE00311AC50B70004D4BD2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3FE00301AC50B70004D4BD2 /* CoreGraphics.framework */; };
 		D3FE00331AC50BE3004D4BD2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3FE00321AC50BE3004D4BD2 /* Foundation.framework */; };
-		D3FE00801AC50D5B004D4BD2 /* CircularRevealAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FE002B1AC50AB7004D4BD2 /* CircularRevealAnimationController.m */; };
+		D3FE00801AC50D5B004D4BD2 /* OHCircularRevealAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FE002B1AC50AB7004D4BD2 /* OHCircularRevealAnimationController.m */; };
 		D3FE00811AC50D68004D4BD2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3FE00301AC50B70004D4BD2 /* CoreGraphics.framework */; };
 		D3FE00821AC50D6C004D4BD2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3FE00321AC50BE3004D4BD2 /* Foundation.framework */; };
 		D3FE00831AC50D71004D4BD2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3FE002D1AC50AEA004D4BD2 /* QuartzCore.framework */; };
@@ -85,8 +85,8 @@
 		D3FE001D1AC507E3004D4BD2 /* OHButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHButton.m; sourceTree = "<group>"; };
 		D3FE00261AC50A7A004D4BD2 /* OHBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHBaseViewController.h; sourceTree = "<group>"; };
 		D3FE00271AC50A7A004D4BD2 /* OHBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHBaseViewController.m; sourceTree = "<group>"; };
-		D3FE002A1AC50AB7004D4BD2 /* CircularRevealAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircularRevealAnimationController.h; sourceTree = "<group>"; };
-		D3FE002B1AC50AB7004D4BD2 /* CircularRevealAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircularRevealAnimationController.m; sourceTree = "<group>"; };
+		D3FE002A1AC50AB7004D4BD2 /* OHCircularRevealAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHCircularRevealAnimationController.h; sourceTree = "<group>"; };
+		D3FE002B1AC50AB7004D4BD2 /* OHCircularRevealAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHCircularRevealAnimationController.m; sourceTree = "<group>"; };
 		D3FE002D1AC50AEA004D4BD2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		D3FE00301AC50B70004D4BD2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		D3FE00321AC50BE3004D4BD2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -241,8 +241,8 @@
 		D3FE00291AC50AA2004D4BD2 /* Animator */ = {
 			isa = PBXGroup;
 			children = (
-				D3FE002A1AC50AB7004D4BD2 /* CircularRevealAnimationController.h */,
-				D3FE002B1AC50AB7004D4BD2 /* CircularRevealAnimationController.m */,
+				D3FE002A1AC50AB7004D4BD2 /* OHCircularRevealAnimationController.h */,
+				D3FE002B1AC50AB7004D4BD2 /* OHCircularRevealAnimationController.m */,
 			);
 			path = Animator;
 			sourceTree = "<group>";
@@ -420,7 +420,7 @@
 				D383040D1AE9F5B4003AE826 /* OHTableViewWIthCardEffectController.m in Sources */,
 				D3FE009B1AC5E55D004D4BD2 /* OHCircularButton.m in Sources */,
 				D309EC1E1ADA455F00858EF2 /* UIImageEffects.m in Sources */,
-				D3FE00801AC50D5B004D4BD2 /* CircularRevealAnimationController.m in Sources */,
+				D3FE00801AC50D5B004D4BD2 /* OHCircularRevealAnimationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -535,6 +535,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = oneHookLibrary/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -545,6 +546,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = oneHookLibrary/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

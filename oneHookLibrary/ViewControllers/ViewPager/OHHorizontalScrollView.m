@@ -30,8 +30,9 @@
             // vertical, return true; else false
             return fabs(velocity.y) > fabs(velocity.x);
         }
-    } else
+    } else {
         return YES;
+    }
 }
 
 @end

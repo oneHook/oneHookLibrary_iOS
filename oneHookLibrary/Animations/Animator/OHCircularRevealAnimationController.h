@@ -9,10 +9,11 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 
-@interface CircularRevealAnimationController
+@interface OHCircularRevealAnimationController
     : NSObject <UIViewControllerAnimatedTransitioning>
 
 @property (assign, nonatomic) BOOL isPresenting;
 @property (assign, nonatomic) CGRect buttonPosition;
+@property (assign, nonatomic) double animationDuration;
 
 @end
