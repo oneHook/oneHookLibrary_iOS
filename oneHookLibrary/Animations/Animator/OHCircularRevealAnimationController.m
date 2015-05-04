@@ -71,6 +71,9 @@
     [transitionContext completeTransition:YES];
     }];
     CABasicAnimation *ba = [CABasicAnimation animationWithKeyPath:@"path"];
+    if (self.timingFunction) {
+        ba.timingFunction = self.timingFunction;
+    }
     ba.fillMode = kCAFillModeForwards;
     ba.fromValue = (__bridge id)oldPath;
     ba.toValue = (__bridge id)newPath;
@@ -122,6 +125,9 @@
     }];
     CABasicAnimation *ba = [CABasicAnimation animationWithKeyPath:@"path"];
 
+    if (self.timingFunction) {
+        ba.timingFunction = self.timingFunction;
+    }
     ba.fillMode = kCAFillModeForwards;
     ba.fromValue = (__bridge id)oldPath;
     ba.toValue = (__bridge id)newPath;
