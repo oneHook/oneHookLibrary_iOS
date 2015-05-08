@@ -39,8 +39,6 @@
     self.backgroundColor = [UIColor whiteColor];
 
     self.selectedIndex = 0;
-
-    //    [self reloadData];
 }
 
 - (void)setDatasource:(id<OHPagerViewDatasource>)datasource {
@@ -55,58 +53,70 @@
     if (self.views == nil) {
         self.views = [[NSMutableArray alloc] init];
     }
-    /* TODO may want to purge all existing vcs */
-    //    [self.views removeAllObjects];
+    for (int i = 0; i < self.views.count; i++) {
+        UIView *view = [self.views objectAtIndex:i];
+        if (![view isEqual:[NSNull null]]) {
+            [self.delegate pagerView:self viewPurgedAt:i];
+            [view removeFromSuperview];
+        }
+    }
     NSInteger numPages = [self.datasource numberOfPagesInPager:self];
     for (int i = 0; i < numPages; i++) {
         [self.views addObject:[NSNull null]];
     }
-    self.scrollView.contentOffset = CGPointMake(PAGE_WIDTH * self.selectedIndex, 0);
-    [self invalidatePages:self.selectedIndex];
 }
 
 - (void)gotoPageAtIndex:(NSInteger)index animated:(BOOL)animated {
+    self.selectedIndex = index;
     [self.scrollView setContentOffset:CGPointMake(index * PAGE_WIDTH, 0) animated:animated];
 }
 
 - (void)layoutSubviews {
-    self.scrollView.frame = self.bounds;
     [self onSizeChanged];
+    [self.scrollView setContentOffset:CGPointMake(self.selectedIndex * PAGE_WIDTH, 0) animated:NO];
 }
 
 - (void)onSizeChanged {
-    _sized = YES;
+    if (!_sized) {
+        _sized = YES;
+        [self reloadData];
+    }
+    self.scrollView.frame = self.bounds;
     NSInteger numPages = [self.datasource numberOfPagesInPager:self];
     self.scrollView.contentSize = CGSizeMake(self.bounds.size.width * numPages, self.bounds.size.height);
-    [self reloadData];
+    for (int i = 0; i < numPages; i++) {
+        if (![[self.views objectAtIndex:i] isEqual:[NSNull null]]) {
+            UIView *view = [self.views objectAtIndex:i];
+            view.frame = CGRectMake(PAGE_WIDTH * i, 0, PAGE_WIDTH, self.bounds.size.height);
+        }
+    }
+    [self invalidatePages:self.selectedIndex];
 }
 
 - (void)invalidatePages:(NSInteger)currIndex {
-    //    NSLog(@"invalidate pages %@ %@", self, self.views);
     NSInteger totalPages = [self.datasource numberOfPagesInPager:self];
     for (int i = 0; i < totalPages; i++) {
         if (i == currIndex - 1) {
             if ([[self.views objectAtIndex:i] isEqual:[NSNull null]]) {
-                [self loadViewControllerAt:i];
+                [self loadViewAt:i];
             }
         } else if (i == currIndex) {
             if ([[self.views objectAtIndex:i] isEqual:[NSNull null]]) {
-                [self loadViewControllerAt:i];
+                [self loadViewAt:i];
             }
         } else if (i == currIndex + 1) {
             if ([[self.views objectAtIndex:i] isEqual:[NSNull null]]) {
-                [self loadViewControllerAt:i];
+                [self loadViewAt:i];
             }
         } else {
             if (![[self.views objectAtIndex:i] isEqual:[NSNull null]]) {
-                [self purgeViewControllerAt:i];
+                [self purgeViewAt:i];
             }
         }
     }
 }
 
-- (void)purgeViewControllerAt:(NSInteger)index {
-    //    NSLog(@"purse view at %ld", index);
+- (void)purgeViewAt:(NSInteger)index {
     UIView *v = [self.views objectAtIndex:index];
     if (![v isEqual:[NSNull null]]) {
         [v removeFromSuperview];
@@ -115,7 +125,7 @@
     }
 }
 
-- (void)loadViewControllerAt:(NSInteger)index {
+- (void)loadViewAt:(NSInteger)index {
     UIView *view = [self.datasource pagerView:self viewControllerAtIndex:index];
     [self.scrollView addSubview:view];
     view.frame = CGRectMake(PAGE_WIDTH * index, 0, PAGE_WIDTH, self.bounds.size.height);
@@ -127,11 +137,9 @@
 #pragma marks - UIScrollViewDelegate
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    NSLog(@"%f %f", scrollView.contentOffset.x, scrollView.contentOffset.y);
     if (!_sized) {
         return;
     }
-    //    NSLog(@"CONTENT OFFSET X %f", scrollView.contentOffset.x);
     NSInteger currIndex = roundf(scrollView.contentOffset.x / PAGE_WIDTH);
     [self invalidatePages:currIndex];
 }
