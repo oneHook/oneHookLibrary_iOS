@@ -9,6 +9,8 @@
 #ifndef oneHookLibrary_OHCommonDimensions_h
 #define oneHookLibrary_OHCommonDimensions_h
 
+#define NAVIGATION_BAR_ICON_SIZE 44
+
 #define FAB_LENGTH_SMALL 32
 #define FAB_LENGTH_MEDIUM 48
 #define FAB_LENGTH_LARGE 64

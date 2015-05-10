@@ -13,8 +13,9 @@
     : NSObject <UIViewControllerAnimatedTransitioning>
 
 @property (assign, nonatomic) BOOL isPresenting;
-@property (assign, nonatomic) CGRect buttonPosition;
 @property (assign, nonatomic) double animationDuration;
 @property (strong, nonatomic) CAMediaTimingFunction *timingFunction;
+
+@property (assign, nonatomic) CGRect buttonPosition;
 
 @end

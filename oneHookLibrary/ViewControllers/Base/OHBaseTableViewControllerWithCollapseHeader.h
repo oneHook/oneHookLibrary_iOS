@@ -12,6 +12,7 @@
 
 @property (strong, nonatomic) UITableView *tableView;
 @property (strong, nonatomic) UIView *headerView;
+@property (strong, nonatomic) UIView *navigationBarBackground;
 
 - (UIView *)onCreateHeaderView;
 - (CGFloat)headerViewHight;

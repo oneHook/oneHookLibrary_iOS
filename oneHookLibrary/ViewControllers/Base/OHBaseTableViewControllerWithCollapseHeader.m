@@ -13,14 +13,13 @@
     CGFloat _headerHeight;
 }
 
-@property (strong, nonatomic) UIView *navigationBarBackground;
-
 @end
 
 @implementation OHBaseTableViewControllerWithCollapseHeader
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     /* setup table view */
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.tableView = [[UITableView alloc] init];
@@ -38,24 +37,11 @@
         self.tableView.contentOffset = CGPointMake(0, -_headerHeight);
     }
     [self.view addSubview:self.tableView];
+    [self.view bringSubviewToFront:self.headerView];
 
     self.navigationBarBackground = [[UIView alloc] init];
-    self.navigationBarBackground.backgroundColor = [UIColor redColor];
+    self.navigationBarBackground.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.navigationBarBackground];
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-
-    /* 
-     * Make navigation bar transparent.
-     */
-    [self.navigationController.navigationBar setBackgroundImage:[UIImage new]
-                                                  forBarMetrics:UIBarMetricsDefault];
-    self.navigationController.navigationBar.shadowImage = [UIImage new];
-    self.navigationController.navigationBar.translucent = YES;
-    self.navigationController.view.backgroundColor = [UIColor clearColor];
-    self.navigationController.navigationBar.backgroundColor = [UIColor clearColor];
 }
 
 - (void)viewWillLayoutSubviews {
@@ -79,7 +65,6 @@
 
 - (void)invalidateHeaderViewPosition:(CGFloat)tableViewContentOffset {
     CGFloat yOffset = tableViewContentOffset + _headerHeight;
-    NSLog(@"%f", yOffset);
     self.headerView.frame = CGRectMake(0, MIN(0, -yOffset), self.view.bounds.size.width, MAX(_headerHeight - yOffset, _headerHeight));
 
     CGFloat navigationBarAlpha = yOffset / _headerHeight;
