@@ -22,6 +22,8 @@
 		D3846F8F1AF318D400E6FF78 /* OHPagerView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3846F8D1AF2A81200E6FF78 /* OHPagerView.m */; };
 		D3A3BA3F1AF433E2005F38E2 /* OHHorizontalScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A3BA3E1AF433E2005F38E2 /* OHHorizontalScrollView.m */; };
 		D3A3BA401AF43413005F38E2 /* OHHorizontalScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A3BA3E1AF433E2005F38E2 /* OHHorizontalScrollView.m */; };
+		D3A8BC2B1B0A672E004FF5A3 /* NSDate+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A8BC2A1B0A672E004FF5A3 /* NSDate+Utility.m */; };
+		D3A8BC2C1B0A67E0004FF5A3 /* NSDate+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A8BC2A1B0A672E004FF5A3 /* NSDate+Utility.m */; };
 		D3C0F99E1AEC7A3E00C4F7EA /* OHHamburgerButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D32848161AEC273800DE7CD3 /* OHHamburgerButton.m */; };
 		D3FC55E11B0011890043F02A /* OHRotatingRevealAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FC55E01B0011890043F02A /* OHRotatingRevealAnimationController.m */; };
 		D3FC55E21B0012DD0043F02A /* OHRotatingRevealAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FC55E01B0011890043F02A /* OHRotatingRevealAnimationController.m */; };
@@ -82,6 +84,8 @@
 		D3846F8D1AF2A81200E6FF78 /* OHPagerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHPagerView.m; sourceTree = "<group>"; };
 		D3A3BA3D1AF433E2005F38E2 /* OHHorizontalScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHHorizontalScrollView.h; sourceTree = "<group>"; };
 		D3A3BA3E1AF433E2005F38E2 /* OHHorizontalScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHHorizontalScrollView.m; sourceTree = "<group>"; };
+		D3A8BC291B0A672E004FF5A3 /* NSDate+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Utility.h"; sourceTree = "<group>"; };
+		D3A8BC2A1B0A672E004FF5A3 /* NSDate+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Utility.m"; sourceTree = "<group>"; };
 		D3FC55DF1B0011890043F02A /* OHRotatingRevealAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHRotatingRevealAnimationController.h; sourceTree = "<group>"; };
 		D3FC55E01B0011890043F02A /* OHRotatingRevealAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHRotatingRevealAnimationController.m; sourceTree = "<group>"; };
 		D3FE00021AC50788004D4BD2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../Images.xcassets; sourceTree = "<group>"; };
@@ -135,6 +139,7 @@
 		D309EC191ADA454800858EF2 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				D3A8BC241B0A6657004FF5A3 /* Date */,
 				D309EC1A1ADA454800858EF2 /* Graphics */,
 			);
 			path = Utility;
@@ -187,6 +192,15 @@
 				D3A3BA3E1AF433E2005F38E2 /* OHHorizontalScrollView.m */,
 			);
 			path = ViewPager;
+			sourceTree = "<group>";
+		};
+		D3A8BC241B0A6657004FF5A3 /* Date */ = {
+			isa = PBXGroup;
+			children = (
+				D3A8BC291B0A672E004FF5A3 /* NSDate+Utility.h */,
+				D3A8BC2A1B0A672E004FF5A3 /* NSDate+Utility.m */,
+			);
+			path = Date;
 			sourceTree = "<group>";
 		};
 		D3FE001B1AC507D7004D4BD2 /* Views */ = {
@@ -418,6 +432,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3846F8F1AF318D400E6FF78 /* OHPagerView.m in Sources */,
+				D3A8BC2C1B0A67E0004FF5A3 /* NSDate+Utility.m in Sources */,
 				D3FE008C1AC5109F004D4BD2 /* OHBaseViewController.m in Sources */,
 				D3FC55E21B0012DD0043F02A /* OHRotatingRevealAnimationController.m in Sources */,
 				D3A3BA401AF43413005F38E2 /* OHHorizontalScrollView.m in Sources */,
@@ -436,6 +451,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3846F8E1AF2A81200E6FF78 /* OHPagerView.m in Sources */,
+				D3A8BC2B1B0A672E004FF5A3 /* NSDate+Utility.m in Sources */,
 				D3FE001E1AC507E3004D4BD2 /* OHButton.m in Sources */,
 				D3FC55E11B0011890043F02A /* OHRotatingRevealAnimationController.m in Sources */,
 				D3A3BA3F1AF433E2005F38E2 /* OHHorizontalScrollView.m in Sources */,
