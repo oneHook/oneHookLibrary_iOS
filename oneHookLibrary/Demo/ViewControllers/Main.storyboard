@@ -99,10 +99,10 @@
             </objects>
             <point key="canvasLocation" x="221.5" y="211.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Button Demo View Controller-->
         <scene sceneID="uSM-TD-zyt">
             <objects>
-                <viewController id="WZg-23-5Hw" sceneMemberID="viewController">
+                <viewController id="WZg-23-5Hw" customClass="OHButtonDemoViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="t6F-lY-wZu"/>
                         <viewControllerLayoutGuide type="bottom" id="RNQ-2d-uc8"/>
