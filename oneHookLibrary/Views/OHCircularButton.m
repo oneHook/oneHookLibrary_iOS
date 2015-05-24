@@ -19,6 +19,22 @@
 
 #define SHADOW_OPACITY 0.3f
 
+- (id)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self doInit];
+    }
+    return self;
+}
+
+- (id)initWithCoder:(NSCoder *)aDecoder {
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        [self doInit];
+    }
+    return self;
+}
+
 - (id)init {
     self = [super init];
     if (self) {
@@ -42,6 +58,10 @@
 
     [self.button addTarget:self action:@selector(onPressed) forControlEvents:UIControlEventTouchDown];
     [self.button addTarget:self action:@selector(onRelease) forControlEvents:UIControlEventTouchCancel];
+
+    [self setButtonBackgroundWithNormalState:[UIColor whiteColor] pressedState:[UIColor grayColor] disabledState:[UIColor grayColor]];
+    [self setButtonTextColorWithNormalState:[UIColor blackColor] pressedState:[UIColor whiteColor] disabledState:[UIColor whiteColor]];
+    [self setButtonTextWithAllState:@"HELLO"];
 }
 
 - (void)onPressed {
@@ -76,7 +96,7 @@
     [self.button setAttributedTitle:disabledText forState:UIControlStateDisabled];
 }
 
-- (void)setButtonTextWithAllState:text {
+- (void)setButtonTextWithAllState:(NSString *)text {
     [self.button setTitle:text forState:UIControlStateNormal];
 }
 

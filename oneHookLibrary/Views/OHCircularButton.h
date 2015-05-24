@@ -18,7 +18,7 @@
 - (void)setButtonBackgroundWithNormalState:(UIColor *)normalColor pressedState:(UIColor *)pressedColor disabledState:(UIColor *)disabledColor;
 - (void)setButtonTextColorWithNormalState:(UIColor *)normalColor pressedState:(UIColor *)pressedColor disabledState:(UIColor *)disabledColor;
 
-- (void)setButtonTextWithAllState:text;
+- (void)setButtonTextWithAllState:(NSString *)text;
 - (void)setButtonTextWithNormalState:(NSString *)normalText pressedState:(NSString *)pressedText disabledState:(NSString *)disabledText;
 - (void)setButtonAttributedTextWithNormalState:(NSAttributedString *)normalText pressedState:(NSAttributedString *)pressedText disabledState:(NSAttributedString *)disabledText;
 @end
