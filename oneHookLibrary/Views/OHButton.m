@@ -49,7 +49,7 @@
             [self setTitleColor:self.primaryColor forState:UIControlStateNormal];
             [self setTitleColor:self.primaryColor forState:UIControlStateHighlighted];
             [self setTitleColor:self.primaryColor forState:UIControlStateDisabled];
-            self.backgroundColor = self.backgroundColor;
+            self.backgroundColor = self.buttonBackgroundColor;
             self.layer.borderWidth = 2;
             self.layer.borderColor = self.secondaryColor.CGColor;
             break;
@@ -82,8 +82,8 @@
     [self setButtonStyle:_buttonStyle];
 }
 
-- (void)setBackgroundColor:(UIColor *)backgroundColor {
-    _backgroundColor = backgroundColor;
+- (void)setButtonBackgroundColor:(UIColor *)buttonBackgroundColor {
+    _buttonBackgroundColor = buttonBackgroundColor;
     [self setButtonStyle:_buttonStyle];
 }
 @end
