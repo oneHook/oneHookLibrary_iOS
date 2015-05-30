@@ -47,7 +47,7 @@
     switch (_buttonStyle) {
         case kButtonStyleSolid:
             [self setTitleColor:self.primaryColor forState:UIControlStateNormal];
-            [self setTitleColor:self.primaryColor forState:UIControlStateHighlighted];
+            [self setTitleColor:[self.primaryColor colorWithAlphaComponent:0.5] forState:UIControlStateHighlighted];
             [self setTitleColor:self.primaryColor forState:UIControlStateDisabled];
             self.backgroundColor = self.buttonBackgroundColor;
             self.layer.borderWidth = 2;
@@ -55,7 +55,7 @@
             break;
         case kButtonStyleStroke:
             [self setTitleColor:self.primaryColor forState:UIControlStateNormal];
-            [self setTitleColor:self.primaryColor forState:UIControlStateHighlighted];
+            [self setTitleColor:[self.primaryColor colorWithAlphaComponent:0.5] forState:UIControlStateHighlighted];
             [self setTitleColor:self.primaryColor forState:UIControlStateDisabled];
             self.backgroundColor = [UIColor clearColor];
             self.layer.borderWidth = 2;
@@ -64,7 +64,7 @@
         default:
         case kButtonStyleDefault:
             [self setTitleColor:self.primaryColor forState:UIControlStateNormal];
-            [self setTitleColor:self.primaryColor forState:UIControlStateHighlighted];
+            [self setTitleColor:[self.primaryColor colorWithAlphaComponent:0.5] forState:UIControlStateHighlighted];
             [self setTitleColor:self.primaryColor forState:UIControlStateDisabled];
             self.backgroundColor = [UIColor clearColor];
             self.layer.borderWidth = 0;
