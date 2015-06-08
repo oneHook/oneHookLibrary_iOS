@@ -24,6 +24,7 @@
 		D383040D1AE9F5B4003AE826 /* OHTableViewWIthCardEffectController.m in Sources */ = {isa = PBXBuildFile; fileRef = D383040B1AE9F4CE003AE826 /* OHTableViewWIthCardEffectController.m */; };
 		D3846F8E1AF2A81200E6FF78 /* OHPagerView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3846F8D1AF2A81200E6FF78 /* OHPagerView.m */; };
 		D3846F8F1AF318D400E6FF78 /* OHPagerView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3846F8D1AF2A81200E6FF78 /* OHPagerView.m */; };
+		D38FA04B1B255A68002F5C4F /* OHSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = D38FA04A1B255A68002F5C4F /* OHSegmentedControl.m */; };
 		D3A3BA3F1AF433E2005F38E2 /* OHHorizontalScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A3BA3E1AF433E2005F38E2 /* OHHorizontalScrollView.m */; };
 		D3A3BA401AF43413005F38E2 /* OHHorizontalScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A3BA3E1AF433E2005F38E2 /* OHHorizontalScrollView.m */; };
 		D3A7A98A1B18F88E002158DC /* OHConfettiScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A7A9891B18F88E002158DC /* OHConfettiScreen.m */; };
@@ -90,6 +91,8 @@
 		D383040B1AE9F4CE003AE826 /* OHTableViewWIthCardEffectController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHTableViewWIthCardEffectController.m; sourceTree = "<group>"; };
 		D3846F8C1AF2A81200E6FF78 /* OHPagerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHPagerView.h; sourceTree = "<group>"; };
 		D3846F8D1AF2A81200E6FF78 /* OHPagerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHPagerView.m; sourceTree = "<group>"; };
+		D38FA0491B255A68002F5C4F /* OHSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHSegmentedControl.h; sourceTree = "<group>"; };
+		D38FA04A1B255A68002F5C4F /* OHSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHSegmentedControl.m; sourceTree = "<group>"; };
 		D3A3BA3D1AF433E2005F38E2 /* OHHorizontalScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHHorizontalScrollView.h; sourceTree = "<group>"; };
 		D3A3BA3E1AF433E2005F38E2 /* OHHorizontalScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHHorizontalScrollView.m; sourceTree = "<group>"; };
 		D3A7A9881B18F88E002158DC /* OHConfettiScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHConfettiScreen.h; sourceTree = "<group>"; };
@@ -234,6 +237,8 @@
 				D3FE001D1AC507E3004D4BD2 /* OHButton.m */,
 				D3FE00901AC5DA0D004D4BD2 /* OHCircularButton.h */,
 				D3FE00911AC5DA0D004D4BD2 /* OHCircularButton.m */,
+				D38FA0491B255A68002F5C4F /* OHSegmentedControl.h */,
+				D38FA04A1B255A68002F5C4F /* OHSegmentedControl.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -485,6 +490,7 @@
 				D32848101AEC209900DE7CD3 /* OHHambugerButtonDemo.m in Sources */,
 				D32848171AEC273800DE7CD3 /* OHHamburgerButton.m in Sources */,
 				D323D4611B12280800C3B0D0 /* UIImage+Color.m in Sources */,
+				D38FA04B1B255A68002F5C4F /* OHSegmentedControl.m in Sources */,
 				D323D4651B122DFC00C3B0D0 /* OHButtonDemoViewController.m in Sources */,
 				D309EC1F1ADA456100858EF2 /* UIImageEffects.m in Sources */,
 				D3FEFFF81AC50788004D4BD2 /* main.m in Sources */,
