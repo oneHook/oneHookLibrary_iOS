@@ -96,18 +96,23 @@
 }
 
 - (void)onTooltipViewClicked:(UITapGestureRecognizer*)rec {
-    [self animateDismiss];
+    [self.delegate onTooltipViewClicked:self];
 }
 
 - (void)animateReveal
 {
+    [CATransaction begin];
     CABasicAnimation* animation = [CABasicAnimation animationWithKeyPath:@"opacity"];
     animation.fromValue = [NSNumber numberWithFloat:0.0f];
     animation.toValue = [NSNumber numberWithFloat:1.0f];
     animation.duration = 0.3f;
     animation.removedOnCompletion = YES;
     animation.fillMode = kCAFillModeForwards;
+    [CATransaction setCompletionBlock:^{
+        [self.delegate onTooltipViewRevealed:self];
+    }];
     [_containerLayer addAnimation:animation forKey:@"alphaanimation"];
+    [CATransaction commit];
 }
 
 - (void)animateDismiss
@@ -120,7 +125,7 @@
     animation.removedOnCompletion = YES;
     animation.fillMode = kCAFillModeForwards;
     [CATransaction setCompletionBlock:^{
-        [self removeFromSuperview];
+        [self.delegate onTooltipViewDismissed:self];
     }];
     [_containerLayer addAnimation:animation forKey:@"alphaanimation"];
     [CATransaction commit];
