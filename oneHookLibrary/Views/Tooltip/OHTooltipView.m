@@ -32,6 +32,15 @@
     return self;
 }
 
+- (void)setContentView:(UIView *)contentView
+{
+    if(_contentView) {
+        [_contentView removeFromSuperview];
+    }
+    _contentView = contentView;
+    [self addSubview:_contentView];
+}
+
 - (void)commonInit
 {
     self.userInteractionEnabled = YES;
@@ -43,7 +52,7 @@
     /* Create your translucent black layer and set its opacity */
     _blackLayer = [CALayer layer];
     _blackLayer.backgroundColor = [UIColor blackColor].CGColor;
-    _blackLayer.opacity = 0.8f;
+    _blackLayer.opacity = 0.9f;
     
     [_containerLayer addSublayer:_blackLayer];
     
@@ -66,12 +75,16 @@
 
 - (void)setFocusArea:(CGRect)focusArea
 {
-    _focusArea = focusArea;
+    CGFloat centerX = focusArea.origin.x + focusArea.size.width / 2;
+    CGFloat centerY = focusArea.origin.y + focusArea.size.height / 2;
+    CGFloat length = MAX(focusArea.size.width, focusArea.size.height) * 1.2;
+    
+    _focusArea = CGRectMake(centerX - length / 2, centerY - length / 2, length, length);
     
     // When you create a path, remember that origin is in upper left hand
     // corner, so you have to treat it as if it has an anchor point of 0.0,
     // 0.0
-    UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:focusArea];
+    UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:_focusArea];
     
     // Append a rectangular path around the mask layer so that
     // we can use the even/odd fill rule to invert the mask

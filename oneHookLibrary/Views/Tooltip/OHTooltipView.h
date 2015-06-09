@@ -10,6 +10,7 @@
 
 @interface OHTooltipView : UIView
 
+@property (strong, nonatomic) UIView* contentView;
 @property (assign, nonatomic) CGRect focusArea;
 
 - (void)animateReveal;
