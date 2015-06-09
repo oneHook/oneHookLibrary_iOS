@@ -83,9 +83,15 @@
     return [CAEmitterLayer class];
 }
 
+
+- (void) startEmitting {
+    _confettiEmitter.birthRate = 2.0f;
+}
+
 static NSTimeInterval const kDecayStepInterval = 0.1;
 - (void) decayStep {
     _confettiEmitter.birthRate -=_decayAmount;
+    NSLog(@"%f", _confettiEmitter.birthRate);
     if (_confettiEmitter.birthRate < 0) {
         _confettiEmitter.birthRate = 0;
     } else {

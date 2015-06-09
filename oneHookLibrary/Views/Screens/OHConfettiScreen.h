@@ -12,4 +12,8 @@
 
 - (void)setConfettiImage:(UIImage*)image;
 
+- (void) startEmitting;
+- (void) decayOverTime:(NSTimeInterval)interval;
+- (void) stopEmitting;
+
 @end
