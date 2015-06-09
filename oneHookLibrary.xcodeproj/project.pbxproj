@@ -25,6 +25,8 @@
 		D3846F8E1AF2A81200E6FF78 /* OHPagerView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3846F8D1AF2A81200E6FF78 /* OHPagerView.m */; };
 		D3846F8F1AF318D400E6FF78 /* OHPagerView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3846F8D1AF2A81200E6FF78 /* OHPagerView.m */; };
 		D38FA04B1B255A68002F5C4F /* OHSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = D38FA04A1B255A68002F5C4F /* OHSegmentedControl.m */; };
+		D38FA04F1B26776D002F5C4F /* OHTooltipView.m in Sources */ = {isa = PBXBuildFile; fileRef = D38FA04E1B26776D002F5C4F /* OHTooltipView.m */; };
+		D38FA0501B267B2F002F5C4F /* OHTooltipView.m in Sources */ = {isa = PBXBuildFile; fileRef = D38FA04E1B26776D002F5C4F /* OHTooltipView.m */; };
 		D3A3BA3F1AF433E2005F38E2 /* OHHorizontalScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A3BA3E1AF433E2005F38E2 /* OHHorizontalScrollView.m */; };
 		D3A3BA401AF43413005F38E2 /* OHHorizontalScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A3BA3E1AF433E2005F38E2 /* OHHorizontalScrollView.m */; };
 		D3A7A98A1B18F88E002158DC /* OHConfettiScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A7A9891B18F88E002158DC /* OHConfettiScreen.m */; };
@@ -93,6 +95,8 @@
 		D3846F8D1AF2A81200E6FF78 /* OHPagerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHPagerView.m; sourceTree = "<group>"; };
 		D38FA0491B255A68002F5C4F /* OHSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHSegmentedControl.h; sourceTree = "<group>"; };
 		D38FA04A1B255A68002F5C4F /* OHSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHSegmentedControl.m; sourceTree = "<group>"; };
+		D38FA04D1B26776D002F5C4F /* OHTooltipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHTooltipView.h; sourceTree = "<group>"; };
+		D38FA04E1B26776D002F5C4F /* OHTooltipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHTooltipView.m; sourceTree = "<group>"; };
 		D3A3BA3D1AF433E2005F38E2 /* OHHorizontalScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHHorizontalScrollView.h; sourceTree = "<group>"; };
 		D3A3BA3E1AF433E2005F38E2 /* OHHorizontalScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHHorizontalScrollView.m; sourceTree = "<group>"; };
 		D3A7A9881B18F88E002158DC /* OHConfettiScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHConfettiScreen.h; sourceTree = "<group>"; };
@@ -209,6 +213,15 @@
 			path = ViewPager;
 			sourceTree = "<group>";
 		};
+		D38FA04C1B26775F002F5C4F /* Tooltip */ = {
+			isa = PBXGroup;
+			children = (
+				D38FA04D1B26776D002F5C4F /* OHTooltipView.h */,
+				D38FA04E1B26776D002F5C4F /* OHTooltipView.m */,
+			);
+			path = Tooltip;
+			sourceTree = "<group>";
+		};
 		D3A7A9871B18F88E002158DC /* Screens */ = {
 			isa = PBXGroup;
 			children = (
@@ -230,6 +243,7 @@
 		D3FE001B1AC507D7004D4BD2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D38FA04C1B26775F002F5C4F /* Tooltip */,
 				D3A7A9871B18F88E002158DC /* Screens */,
 				D32848141AEC272D00DE7CD3 /* HamburgerButton */,
 				D3FE00931AC5E020004D4BD2 /* View+ */,
@@ -460,6 +474,7 @@
 			files = (
 				D3846F8F1AF318D400E6FF78 /* OHPagerView.m in Sources */,
 				D3A8BC2C1B0A67E0004FF5A3 /* NSDate+Utility.m in Sources */,
+				D38FA0501B267B2F002F5C4F /* OHTooltipView.m in Sources */,
 				D3FE008C1AC5109F004D4BD2 /* OHBaseViewController.m in Sources */,
 				D323D4621B122DD900C3B0D0 /* OHButton.m in Sources */,
 				D3FC55E21B0012DD0043F02A /* OHRotatingRevealAnimationController.m in Sources */,
@@ -487,6 +502,7 @@
 				D3FC55E11B0011890043F02A /* OHRotatingRevealAnimationController.m in Sources */,
 				D3A3BA3F1AF433E2005F38E2 /* OHHorizontalScrollView.m in Sources */,
 				D383040C1AE9F4CE003AE826 /* OHTableViewWIthCardEffectController.m in Sources */,
+				D38FA04F1B26776D002F5C4F /* OHTooltipView.m in Sources */,
 				D32848101AEC209900DE7CD3 /* OHHambugerButtonDemo.m in Sources */,
 				D32848171AEC273800DE7CD3 /* OHHamburgerButton.m in Sources */,
 				D323D4611B12280800C3B0D0 /* UIImage+Color.m in Sources */,
