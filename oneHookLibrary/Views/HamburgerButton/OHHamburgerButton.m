@@ -61,17 +61,23 @@
     self.hamburgerButtonStrokeWidthConstant = 0.6f;
     self.hamburgerButtonStyle = kHamburgerButtonStyleCircle;
     self.hamburgerButtonTransitionTo = kHamburgerButtonTransitionToBack;
-
+    
     /* Creating all layers */
     self.topLayer = [[CAShapeLayer alloc] init];
     self.middleLayer = [[CAShapeLayer alloc] init];
     self.bottomLayer = [[CAShapeLayer alloc] init];
     self.layers = @[ self.topLayer, self.middleLayer, self.bottomLayer ];
-
-    self.topLayer.path = [self shortPath];
-    self.middleLayer.path = [self outline];
-    self.bottomLayer.path = [self shortPath];
-
+    
+    CGPathRef path1 = [self createShortPath];
+    CGPathRef path3 = [self createShortPath];
+    CGPathRef path2 = [self createOutline];
+    self.topLayer.path = path1;
+    self.middleLayer.path = path2;
+    self.bottomLayer.path = path3;
+    CGPathRelease(path1);
+    CGPathRelease(path2);
+    CGPathRelease(path3);
+    
     for (CAShapeLayer *layer in self.layers) {
         layer.fillColor = nil;
         layer.strokeColor = self.hamburgerButtonColor.CGColor;
@@ -87,26 +93,26 @@
                            @"strokeColor" : [NSNull null],
                            @"transform" : [NSNull null] };
     }
-
+    
     self.topLayer.anchorPoint = CGPointMake(0.87, 0.5);
     self.topLayer.position = CGPointMake(LENGTH - STROKE_PADDING + STROKE_WIDTH / 2 - 0.085 * LENGTH, LENGTH / 3);
-
+    
     self.middleLayer.position = CGPointMake(LENGTH / 2, LENGTH / 2);
     self.middleLayer.strokeStart = HAMBURGER_STROKE_START;
     self.middleLayer.strokeEnd = HAMBURGER_STROKE_END;
-
+    
     self.bottomLayer.anchorPoint = CGPointMake(0.87, 0.5);
     self.bottomLayer.position = CGPointMake(LENGTH - STROKE_PADDING + STROKE_WIDTH / 2 - 0.085 * LENGTH, LENGTH * 2 / 3);
 }
 
-- (CGMutablePathRef)shortPath {
+- (CGMutablePathRef)createShortPath {
     CGMutablePathRef path = CGPathCreateMutable();
     CGPathMoveToPoint(path, nil, 0, 0);
     CGPathAddLineToPoint(path, nil, STROKE_LENGTH, 0);
     return path;
 }
 
-- (CGMutablePathRef)outline {
+- (CGMutablePathRef)createOutline {
     CGMutablePathRef path = CGPathCreateMutable();
     CGPathMoveToPoint(path, nil, STROKE_PADDING, LENGTH / 2);
     CGPathAddCurveToPoint(path, nil, STROKE_PADDING, LENGTH / 2, LENGTH * 0.5, LENGTH / 2, LENGTH - STROKE_PADDING, LENGTH / 2);
@@ -130,61 +136,61 @@
         strokeStart.toValue = [NSNumber numberWithDouble:CIRCLE_STROKE_START];
         strokeStart.duration = 0.5f;
         strokeStart.timingFunction = [CAMediaTimingFunction functionWithControlPoints:0.25:-0.4:0.5:1];
-
+        
         strokeEnd.toValue = [NSNumber numberWithDouble:CIRCLE_STROKE_END];
         strokeEnd.duration = 0.6f;
         strokeEnd.timingFunction = [CAMediaTimingFunction functionWithControlPoints:0.25:-0.4:0.5:1];
-
+        
         strokeColor.toValue = (id)[UIColor clearColor].CGColor;
         strokeColor.duration = 0.6f;
         strokeColor.timingFunction = [CAMediaTimingFunction functionWithControlPoints:0.25:-0.4:0.5:1];
-
+        
     } else {
         strokeStart.toValue = [NSNumber numberWithDouble:HAMBURGER_STROKE_START];
         strokeStart.duration = 0.5f;
         strokeStart.timingFunction = [CAMediaTimingFunction functionWithControlPoints:0.25:0:0.5:1.2];
         strokeStart.beginTime = CACurrentMediaTime() + 0.1;
         strokeStart.fillMode = kCAFillModeBackwards;
-
+        
         strokeEnd.toValue = [NSNumber numberWithDouble:HAMBURGER_STROKE_END];
         strokeEnd.duration = 0.6f;
         strokeEnd.timingFunction = [CAMediaTimingFunction functionWithControlPoints:0.25:0.3:0.5:0.9];
-
+        
         strokeColor.toValue = (id)self.hamburgerButtonColor.CGColor;
         strokeColor.duration = 0.6f;
         strokeColor.timingFunction = [CAMediaTimingFunction functionWithControlPoints:0.25:-0.4:0.5:1];
     }
-
+    
     [self applyAnimationWithLayer:self.middleLayer animation:strokeStart];
     [self applyAnimationWithLayer:self.middleLayer animation:strokeEnd];
     if (self.hamburgerButtonStyle == kHamburgerButtonStyleClear) {
         [self applyAnimationWithLayer:self.middleLayer animation:strokeColor];
     }
-
+    
     CABasicAnimation *topTransform = [[CABasicAnimation alloc] init];
     topTransform.keyPath = @"transform";
     topTransform.duration = 0.4;
     topTransform.timingFunction = [CAMediaTimingFunction functionWithControlPoints:0.5:-0.8:0.5:1.85];
     topTransform.fillMode = kCAFillModeBackwards;
-
+    
     CABasicAnimation *bottomTransform = [topTransform copy];
-
+    
     if (self.showMenu) {
         CATransform3D translation = CATransform3DMakeTranslation(-STROKE_WIDTH, 0, 0);
         topTransform.toValue = [NSValue valueWithCATransform3D:CATransform3DRotate(translation, -0.7853975, 0, 0, 1)];
         topTransform.beginTime = CACurrentMediaTime() + 0.25;
-
+        
         bottomTransform.toValue = [NSValue valueWithCATransform3D:CATransform3DRotate(translation, 0.7853975, 0, 0, 1)];
         bottomTransform.beginTime = CACurrentMediaTime() + 0.25;
-
+        
     } else {
         topTransform.toValue = [NSValue valueWithCATransform3D:CATransform3DIdentity];
         topTransform.beginTime = CACurrentMediaTime() + 0.25;
-
+        
         bottomTransform.toValue = [NSValue valueWithCATransform3D:CATransform3DIdentity];
         bottomTransform.beginTime = CACurrentMediaTime() + 0.25;
     }
-
+    
     [self applyAnimationWithLayer:self.topLayer animation:topTransform];
     [self applyAnimationWithLayer:self.bottomLayer animation:bottomTransform];
 }
@@ -194,7 +200,7 @@
     if (c.fromValue == nil) {
         c.fromValue = [layer.presentationLayer valueForKeyPath:c.keyPath];
     }
-
+    
     [layer addAnimation:c forKey:c.keyPath];
     [layer setValue:c.toValue forKey:c.keyPath];
 }
