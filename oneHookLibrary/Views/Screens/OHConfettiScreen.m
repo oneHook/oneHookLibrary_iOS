@@ -12,7 +12,7 @@
 
 @implementation OHConfettiScreen {
     __weak CAEmitterLayer *_confettiEmitter;
-    __weak CAEmitterCell *_emitterCell;
+    UIImage* _confettiImage;
     CGFloat _decayAmount;
 }
 
@@ -45,31 +45,39 @@
     _confettiEmitter.emitterPosition = CGPointMake(self.bounds.size.width /2, 0);
     _confettiEmitter.emitterSize = self.bounds.size;
     _confettiEmitter.emitterShape = kCAEmitterLayerLine;
-    
-    __strong CAEmitterCell* cell = [CAEmitterCell emitterCell];
-    _emitterCell = cell;
-    _emitterCell.name = @"confetti";
-    _emitterCell.birthRate = 15;
-    _emitterCell.lifetime = 5.0;
-    _emitterCell.color = [[UIColor colorWithRed:0.6 green:0.6 blue:0.6 alpha:1.0] CGColor];
-    _emitterCell.redRange = 0.8;
-    _emitterCell.blueRange = 0.8;
-    _emitterCell.greenRange = 0.8;
-    
-    _emitterCell.velocity = 250;
-    _emitterCell.velocityRange = 50;
-    _emitterCell.emissionRange = (CGFloat) M_PI_2;
-    _emitterCell.emissionLongitude = (CGFloat) M_PI;
-    _emitterCell.yAcceleration = 150;
-    _emitterCell.scale = 1.0;
-    _emitterCell.scaleRange = 0.2;
-    _emitterCell.spinRange = 10.0;
-    _confettiEmitter.emitterCells = [NSArray arrayWithObject:_emitterCell];  
+}
+
+- (void)setColors:(NSArray *)colors
+{
+    NSInteger count = colors.count;
+    NSMutableArray* cells = [[NSMutableArray alloc] init];
+    for(UIColor* color in colors) {
+        CAEmitterCell* cell = [CAEmitterCell emitterCell];
+        cell.name = @"confetti";
+        cell.birthRate = 15 / count;
+        cell.lifetime = 5.0;
+        cell.color = color.CGColor;
+        cell.redRange = 0;
+        cell.blueRange = 0;
+        cell.greenRange = 0;
+        
+        cell.velocity = 250;
+        cell.velocityRange = 50;
+        cell.emissionRange = (CGFloat) M_PI_2;
+        cell.emissionLongitude = (CGFloat) M_PI;
+        cell.yAcceleration = 150;
+        cell.scale = 1.0;
+        cell.scaleRange = 0.2;
+        cell.spinRange = 10.0;
+        cell.contents = (__bridge id) [_confettiImage CGImage];
+        [cells addObject:cell];
+    }
+    _confettiEmitter.emitterCells = cells;
 }
 
 - (void)setConfettiImage:(UIImage *)image
 {
-    _emitterCell.contents = (__bridge id) [image CGImage];
+    _confettiImage = image;
 }
 
 - (void)layoutSubviews

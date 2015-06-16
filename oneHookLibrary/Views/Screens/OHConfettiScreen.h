@@ -11,6 +11,7 @@
 @interface OHConfettiScreen : UIView
 
 - (void)setConfettiImage:(UIImage*)image;
+- (void)setColors:(NSArray*)colors;
 
 - (void) startEmitting;
 - (void) decayOverTime:(NSTimeInterval)interval;
