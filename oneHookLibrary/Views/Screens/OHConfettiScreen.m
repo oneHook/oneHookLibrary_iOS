@@ -45,6 +45,8 @@
     _confettiEmitter.emitterPosition = CGPointMake(self.bounds.size.width /2, 0);
     _confettiEmitter.emitterSize = self.bounds.size;
     _confettiEmitter.emitterShape = kCAEmitterLayerLine;
+    _confettiEmitter.beginTime = CACurrentMediaTime();
+    _confettiEmitter.birthRate = 0;
 }
 
 - (void)setColors:(NSArray *)colors
@@ -93,6 +95,7 @@
 
 
 - (void) startEmitting {
+    _confettiEmitter.beginTime = CACurrentMediaTime();
     _confettiEmitter.birthRate = 2.0f;
 }
 
