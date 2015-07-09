@@ -9,6 +9,8 @@
 #ifndef oneHookLibrary_OHMacros_h
 #define oneHookLibrary_OHMacros_h
 
+#define OLDER_VERSION ([[[UIDevice currentDevice] systemVersion] floatValue] < 8.0)
+
 /** String: Identifier **/
 #define DEVICE_IDENTIFIER ( ( IS_IPAD ) ? DEVICE_IPAD : ( IS_IPHONE ) ? DEVICE_IPHONE , DEVICE_SIMULATOR )
 
