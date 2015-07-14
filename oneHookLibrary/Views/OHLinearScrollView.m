@@ -8,31 +8,45 @@
 
 #import "OHLinearScrollView.h"
 
+#define PADDING self.padding
+
+@interface OHLinearScrollView() {
+    CGFloat _lastWidth;
+}
+
+@property (strong, nonatomic) NSMutableArray* viewOrders;
+
+@end
+
 @implementation OHLinearScrollView
 
 - (id)initWithOrientation:(OHLinearScrollViewOrientation)orientation {
     self = [super init];
     if(self) {
+        _lastWidth = 0;
         self.orientation = orientation;
         self.contentView = [[UIView alloc] init];
+        self.viewOrders = [[NSMutableArray alloc] init];
         [self addSubview:self.contentView];
     }
     return self;
 }
 
-- (void)layoutSubviews {
-    [super layoutSubviews];
-    
-    static CGFloat lastWidth = 0;
-    if(lastWidth != self.bounds.size.width) {
-        lastWidth = self.bounds.size.width;
+- (void)doLayout {
+
+    if(_lastWidth != self.bounds.size.width) {
+        NSLog(@"layout linear scroll view");
+        _lastWidth = self.bounds.size.width;
         CGFloat contentLength = 0;
-        for(UIView* view in self.contentView.subviews) {
+        for(UIView* view in self.viewOrders) {
             if(self.orientation == OHLinearScrollViewOrientationHorizontal) {
                 view.frame = CGRectMake(contentLength, 0, view.bounds.size.width, self.bounds.size.height);
                 contentLength += view.bounds.size.width;
             } else {
-                view.frame = CGRectMake(0, contentLength, self.bounds.size.width, view.bounds.size.height);
+                view.frame = CGRectMake(0,
+                                        contentLength,
+                                        self.bounds.size.width - self.contentInset.left - self.contentInset.right,
+                                        view.bounds.size.height);
                 contentLength += view.bounds.size.height;
             }
         }
@@ -41,9 +55,14 @@
             self.contentView.frame = CGRectMake(0, 0, contentLength, self.frame.size.height);
         } else {
             self.contentSize = CGSizeMake(0, contentLength);
-            self.contentView.frame = CGRectMake(0, 0, self.frame.size.width, contentLength);
+            self.contentView.frame = CGRectMake(0, 0, self.frame.size.width - self.contentInset.left - self.contentInset.right, contentLength);
         }
     }
+}
+
+- (void)addViewToOrder:(UIView *)view
+{
+    [self.viewOrders addObject:view];
 }
 
 @end
