@@ -35,7 +35,6 @@
 - (void)doLayout {
 
     if(_lastWidth != self.bounds.size.width) {
-        NSLog(@"layout linear scroll view");
         _lastWidth = self.bounds.size.width;
         CGFloat contentLength = 0;
         for(UIView* view in self.viewOrders) {
@@ -43,11 +42,13 @@
                 view.frame = CGRectMake(contentLength, 0, view.bounds.size.width, self.bounds.size.height);
                 contentLength += view.bounds.size.width;
             } else {
+                CGFloat marginTop = view.bounds.origin.y;
+                view.bounds = CGRectMake(0, 0, view.bounds.size.width, view.bounds.size.height);
                 view.frame = CGRectMake(0,
-                                        contentLength,
+                                        contentLength + marginTop,
                                         self.bounds.size.width - self.contentInset.left - self.contentInset.right,
                                         view.bounds.size.height);
-                contentLength += view.bounds.size.height;
+                contentLength += view.bounds.size.height + marginTop;
             }
         }
         if(self.orientation == OHLinearScrollViewOrientationHorizontal) {
