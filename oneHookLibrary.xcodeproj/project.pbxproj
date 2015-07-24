@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C3EB79D1B54755C005DF938 /* OHLinearScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3EB79C1B54755C005DF938 /* OHLinearScrollView.m */; };
+		4C3EB79E1B547A96005DF938 /* OHLinearScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3EB79C1B54755C005DF938 /* OHLinearScrollView.m */; };
+		4C98AA901B56E16A000B6D9C /* UIColor+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C98AA8F1B56E16A000B6D9C /* UIColor+Utility.m */; };
+		4C98AA911B56E98A000B6D9C /* UIColor+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C98AA8F1B56E16A000B6D9C /* UIColor+Utility.m */; };
 		D309EC1E1ADA455F00858EF2 /* UIImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = D309EC1C1ADA454800858EF2 /* UIImageEffects.m */; };
 		D309EC1F1ADA456100858EF2 /* UIImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = D309EC1C1ADA454800858EF2 /* UIImageEffects.m */; };
 		D323D4601B12278F00C3B0D0 /* OHCircularButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FE00911AC5DA0D004D4BD2 /* OHCircularButton.m */; };
@@ -76,6 +80,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4C3EB79B1B54755C005DF938 /* OHLinearScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHLinearScrollView.h; sourceTree = "<group>"; };
+		4C3EB79C1B54755C005DF938 /* OHLinearScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHLinearScrollView.m; sourceTree = "<group>"; };
+		4C98AA8E1B56E16A000B6D9C /* UIColor+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Utility.h"; sourceTree = "<group>"; };
+		4C98AA8F1B56E16A000B6D9C /* UIColor+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Utility.m"; sourceTree = "<group>"; };
 		D309EC1B1ADA454800858EF2 /* UIImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageEffects.h; sourceTree = "<group>"; };
 		D309EC1C1ADA454800858EF2 /* UIImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageEffects.m; sourceTree = "<group>"; };
 		D323D4631B122DFC00C3B0D0 /* OHButtonDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHButtonDemoViewController.h; sourceTree = "<group>"; };
@@ -171,6 +179,8 @@
 			children = (
 				D309EC1B1ADA454800858EF2 /* UIImageEffects.h */,
 				D309EC1C1ADA454800858EF2 /* UIImageEffects.m */,
+				4C98AA8E1B56E16A000B6D9C /* UIColor+Utility.h */,
+				4C98AA8F1B56E16A000B6D9C /* UIColor+Utility.m */,
 			);
 			path = Graphics;
 			sourceTree = "<group>";
@@ -266,6 +276,8 @@
 				D3FE00911AC5DA0D004D4BD2 /* OHCircularButton.m */,
 				D38FA0491B255A68002F5C4F /* OHSegmentedControl.h */,
 				D38FA04A1B255A68002F5C4F /* OHSegmentedControl.m */,
+				4C3EB79B1B54755C005DF938 /* OHLinearScrollView.h */,
+				4C3EB79C1B54755C005DF938 /* OHLinearScrollView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -495,9 +507,11 @@
 				D3A3BA401AF43413005F38E2 /* OHHorizontalScrollView.m in Sources */,
 				D379E5161AF07EA7004D523C /* OHBaseTableViewControllerWithCollapseHeader.m in Sources */,
 				D36F72A01B62EC4700C75D05 /* OHCompactActionSheetController.m in Sources */,
+				4C98AA911B56E98A000B6D9C /* UIColor+Utility.m in Sources */,
 				D3FE009C1AC5E675004D4BD2 /* UIImage+Color.m in Sources */,
 				D3A7A98B1B18F9E8002158DC /* OHConfettiScreen.m in Sources */,
 				D3C0F99E1AEC7A3E00C4F7EA /* OHHamburgerButton.m in Sources */,
+				4C3EB79E1B547A96005DF938 /* OHLinearScrollView.m in Sources */,
 				D383040D1AE9F5B4003AE826 /* OHTableViewWIthCardEffectController.m in Sources */,
 				D3FE009B1AC5E55D004D4BD2 /* OHCircularButton.m in Sources */,
 				D309EC1E1ADA455F00858EF2 /* UIImageEffects.m in Sources */,
@@ -513,6 +527,7 @@
 				D323D4601B12278F00C3B0D0 /* OHCircularButton.m in Sources */,
 				D3A8BC2B1B0A672E004FF5A3 /* NSDate+Utility.m in Sources */,
 				D3FE001E1AC507E3004D4BD2 /* OHButton.m in Sources */,
+				4C98AA901B56E16A000B6D9C /* UIColor+Utility.m in Sources */,
 				D3A7A98A1B18F88E002158DC /* OHConfettiScreen.m in Sources */,
 				D3FC55E11B0011890043F02A /* OHRotatingRevealAnimationController.m in Sources */,
 				D3A3BA3F1AF433E2005F38E2 /* OHHorizontalScrollView.m in Sources */,
@@ -525,6 +540,7 @@
 				D38FA04B1B255A68002F5C4F /* OHSegmentedControl.m in Sources */,
 				D323D4651B122DFC00C3B0D0 /* OHButtonDemoViewController.m in Sources */,
 				D309EC1F1ADA456100858EF2 /* UIImageEffects.m in Sources */,
+				4C3EB79D1B54755C005DF938 /* OHLinearScrollView.m in Sources */,
 				D3FEFFF81AC50788004D4BD2 /* main.m in Sources */,
 				D379E5151AF07D0B004D523C /* OHBaseTableViewControllerWithCollapseHeader.m in Sources */,
 				D32848011AEC1B3F00DE7CD3 /* AppDelegate.m in Sources */,
