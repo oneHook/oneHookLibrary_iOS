@@ -8,9 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
+@class OHCompactActionSheetController;
+
+@protocol OHCompactActionSheetControllerDelegate <NSObject>
+
+- (void)actionSheetController:(OHCompactActionSheetController*)controller indexSelected:(NSInteger)index itemTitle:(NSString*)title;
+
+@end
+
 @interface OHCompactActionSheetController : NSObject <UIActionSheetDelegate>
 
 - (id)initWithTitle:(NSString*)title message:(NSString*)message options:(NSArray*)options;
 - (void)presentInViewController:(UIViewController*)controller;
+
+@property (weak, nonatomic) id <OHCompactActionSheetControllerDelegate> delegate;
 
 @end

@@ -33,14 +33,15 @@
 {
     if([UIAlertController class]) {
         UIAlertController* alertController = [UIAlertController alertControllerWithTitle:_title message:_message preferredStyle:UIAlertControllerStyleActionSheet];
-        
+        NSInteger index = 0;
         for(NSString* option in _options) {
             [alertController addAction:[UIAlertAction actionWithTitle:option style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-                
+                [self.delegate actionSheetController:self indexSelected:index itemTitle:option];
             }]];
+            index++;
         }
         [alertController addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
-            
+            [self.delegate actionSheetController:self indexSelected:index itemTitle:@"Cancel"];
         }]];
         [controller presentViewController:alertController animated:YES completion:^{
             
@@ -59,7 +60,11 @@
 
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-    NSLog(@"clicked %ld", buttonIndex);
+    if(actionSheet.cancelButtonIndex == buttonIndex) {
+        [self.delegate actionSheetController:self indexSelected:buttonIndex itemTitle:@"Cancel"];
+    } else {
+        [self.delegate actionSheetController:self indexSelected:buttonIndex itemTitle:[_options objectAtIndex:buttonIndex]];
+    }
 }
 
 
