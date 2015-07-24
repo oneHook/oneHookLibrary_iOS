@@ -18,6 +18,8 @@
 		D328480D1AEC1B9500DE7CD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D328480B1AEC1B9500DE7CD3 /* Main.storyboard */; };
 		D32848101AEC209900DE7CD3 /* OHHambugerButtonDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = D328480F1AEC209900DE7CD3 /* OHHambugerButtonDemo.m */; };
 		D32848171AEC273800DE7CD3 /* OHHamburgerButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D32848161AEC273800DE7CD3 /* OHHamburgerButton.m */; };
+		D36F729F1B62EADF00C75D05 /* OHCompactActionSheetController.m in Sources */ = {isa = PBXBuildFile; fileRef = D36F729E1B62EADF00C75D05 /* OHCompactActionSheetController.m */; };
+		D36F72A01B62EC4700C75D05 /* OHCompactActionSheetController.m in Sources */ = {isa = PBXBuildFile; fileRef = D36F729E1B62EADF00C75D05 /* OHCompactActionSheetController.m */; };
 		D379E5151AF07D0B004D523C /* OHBaseTableViewControllerWithCollapseHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = D379E5141AF07D0B004D523C /* OHBaseTableViewControllerWithCollapseHeader.m */; };
 		D379E5161AF07EA7004D523C /* OHBaseTableViewControllerWithCollapseHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = D379E5141AF07D0B004D523C /* OHBaseTableViewControllerWithCollapseHeader.m */; };
 		D383040C1AE9F4CE003AE826 /* OHTableViewWIthCardEffectController.m in Sources */ = {isa = PBXBuildFile; fileRef = D383040B1AE9F4CE003AE826 /* OHTableViewWIthCardEffectController.m */; };
@@ -87,6 +89,8 @@
 		D32848151AEC273800DE7CD3 /* OHHamburgerButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHHamburgerButton.h; sourceTree = "<group>"; };
 		D32848161AEC273800DE7CD3 /* OHHamburgerButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHHamburgerButton.m; sourceTree = "<group>"; };
 		D33BA5F31ADA2D9000DF885A /* OHCommonDimensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OHCommonDimensions.h; sourceTree = "<group>"; };
+		D36F729D1B62EADF00C75D05 /* OHCompactActionSheetController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHCompactActionSheetController.h; sourceTree = "<group>"; };
+		D36F729E1B62EADF00C75D05 /* OHCompactActionSheetController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHCompactActionSheetController.m; sourceTree = "<group>"; };
 		D379E5131AF07D0B004D523C /* OHBaseTableViewControllerWithCollapseHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHBaseTableViewControllerWithCollapseHeader.h; sourceTree = "<group>"; };
 		D379E5141AF07D0B004D523C /* OHBaseTableViewControllerWithCollapseHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHBaseTableViewControllerWithCollapseHeader.m; sourceTree = "<group>"; };
 		D383040A1AE9F4CE003AE826 /* OHTableViewWIthCardEffectController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHTableViewWIthCardEffectController.h; sourceTree = "<group>"; };
@@ -193,6 +197,15 @@
 			path = HamburgerButton;
 			sourceTree = "<group>";
 		};
+		D36F729C1B62EAC200C75D05 /* CompactActionSheet */ = {
+			isa = PBXGroup;
+			children = (
+				D36F729D1B62EADF00C75D05 /* OHCompactActionSheetController.h */,
+				D36F729E1B62EADF00C75D05 /* OHCompactActionSheetController.m */,
+			);
+			path = CompactActionSheet;
+			sourceTree = "<group>";
+		};
 		D38304091AE9F4B6003AE826 /* TableViewEffect */ = {
 			isa = PBXGroup;
 			children = (
@@ -280,6 +293,7 @@
 		D3FE00211AC50A21004D4BD2 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				D36F729C1B62EAC200C75D05 /* CompactActionSheet */,
 				D3846F8B1AF2A80200E6FF78 /* ViewPager */,
 				D3FE00251AC50A70004D4BD2 /* Base */,
 			);
@@ -480,6 +494,7 @@
 				D3FC55E21B0012DD0043F02A /* OHRotatingRevealAnimationController.m in Sources */,
 				D3A3BA401AF43413005F38E2 /* OHHorizontalScrollView.m in Sources */,
 				D379E5161AF07EA7004D523C /* OHBaseTableViewControllerWithCollapseHeader.m in Sources */,
+				D36F72A01B62EC4700C75D05 /* OHCompactActionSheetController.m in Sources */,
 				D3FE009C1AC5E675004D4BD2 /* UIImage+Color.m in Sources */,
 				D3A7A98B1B18F9E8002158DC /* OHConfettiScreen.m in Sources */,
 				D3C0F99E1AEC7A3E00C4F7EA /* OHHamburgerButton.m in Sources */,
@@ -504,6 +519,7 @@
 				D383040C1AE9F4CE003AE826 /* OHTableViewWIthCardEffectController.m in Sources */,
 				D38FA04F1B26776D002F5C4F /* OHTooltipView.m in Sources */,
 				D32848101AEC209900DE7CD3 /* OHHambugerButtonDemo.m in Sources */,
+				D36F729F1B62EADF00C75D05 /* OHCompactActionSheetController.m in Sources */,
 				D32848171AEC273800DE7CD3 /* OHHamburgerButton.m in Sources */,
 				D323D4611B12280800C3B0D0 /* UIImage+Color.m in Sources */,
 				D38FA04B1B255A68002F5C4F /* OHSegmentedControl.m in Sources */,
