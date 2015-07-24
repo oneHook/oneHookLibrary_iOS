@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface OHCompactActionSheetController : NSObject
+@interface OHCompactActionSheetController : NSObject <UIActionSheetDelegate>
 
 - (id)initWithTitle:(NSString*)title message:(NSString*)message options:(NSArray*)options;
 - (void)presentInViewController:(UIViewController*)controller;

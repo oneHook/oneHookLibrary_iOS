@@ -31,16 +31,35 @@
 
 - (void)presentInViewController:(UIViewController *)controller
 {
-    UIAlertController* alertController = [UIAlertController alertControllerWithTitle:_title message:_message preferredStyle:UIAlertControllerStyleActionSheet];
-    
-    for(NSString* option in _options) {
-        [alertController addAction:[UIAlertAction actionWithTitle:option style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+    if([UIAlertController class]) {
+        UIAlertController* alertController = [UIAlertController alertControllerWithTitle:_title message:_message preferredStyle:UIAlertControllerStyleActionSheet];
+        
+        for(NSString* option in _options) {
+            [alertController addAction:[UIAlertAction actionWithTitle:option style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+                
+            }]];
+        }
+        [alertController addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
             
         }]];
+        [controller presentViewController:alertController animated:YES completion:^{
+            
+        }];
+    } else {
+        UIActionSheet* sheet = [[UIActionSheet alloc] init];
+        sheet.title = _title;
+        sheet.delegate = self;
+        for(NSString* option in _options) {
+            [sheet addButtonWithTitle:option];
+        }
+        sheet.cancelButtonIndex = [sheet addButtonWithTitle:@"Cancel"];
+        [sheet showInView:controller.view];
     }
-    [controller presentViewController:alertController animated:YES completion:^{
-        
-    }];
+}
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    NSLog(@"clicked %ld", buttonIndex);
 }
 
 
