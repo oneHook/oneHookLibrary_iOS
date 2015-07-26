@@ -23,5 +23,6 @@
 @property (strong, nonatomic) UIColor *primaryColor;
 @property (strong, nonatomic) UIColor *secondaryColor;
 @property (strong, nonatomic) UIColor *buttonBackgroundColor;
+@property (assign, nonatomic) BOOL shouldIncreaseHitArea;
 
 @end
