@@ -12,8 +12,12 @@
 
 + (UIColor*)colorWithColor:(UIColor*)color alpha:(CGFloat)alpha
 {
-    const CGFloat* colors = CGColorGetComponents( color.CGColor);
-    return RGBA(colors[0], colors[1], colors[2], alpha);
+    CGFloat red;
+    CGFloat green;
+    CGFloat blue;
+    CGFloat nah;
+    [color getRed:&red green:&green blue:&blue alpha:&nah];
+    return RGBA(red * 255, green * 255, blue * 255, alpha);
 }
 
 @end
