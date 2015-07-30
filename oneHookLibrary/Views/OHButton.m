@@ -35,6 +35,7 @@
 }
 
 - (void)commonInit {
+    self.shouldIncreaseHitArea = NO;
     self.primaryColor = [UIColor blackColor];
     self.secondaryColor = [UIColor grayColor];
     self.backgroundColor = [UIColor grayColor];
@@ -86,4 +87,24 @@
     _buttonBackgroundColor = buttonBackgroundColor;
     [self setButtonStyle:_buttonStyle];
 }
+
+- (void)setShouldIncreaseHitArea:(BOOL)shouldIncreaseHitArea
+{
+    _shouldIncreaseHitArea = shouldIncreaseHitArea;
+    if(shouldIncreaseHitArea) {
+        self.contentEdgeInsets = UIEdgeInsetsMake(-10, -10, -10, -10);
+    } else {
+        self.contentEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 0);
+    }
+}
+
+- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event
+{
+    if(_shouldIncreaseHitArea) {
+        return self;
+    } else {
+        return [super hitTest:point withEvent:event];
+    }
+}
+
 @end
