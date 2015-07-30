@@ -22,6 +22,8 @@
 		D328480D1AEC1B9500DE7CD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D328480B1AEC1B9500DE7CD3 /* Main.storyboard */; };
 		D32848101AEC209900DE7CD3 /* OHHambugerButtonDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = D328480F1AEC209900DE7CD3 /* OHHambugerButtonDemo.m */; };
 		D32848171AEC273800DE7CD3 /* OHHamburgerButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D32848161AEC273800DE7CD3 /* OHHamburgerButton.m */; };
+		D36B60591B6A468C00198D8E /* OHEqualWeightLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = D36B60581B6A468C00198D8E /* OHEqualWeightLayout.m */; };
+		D36B605A1B6A49D600198D8E /* OHEqualWeightLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = D36B60581B6A468C00198D8E /* OHEqualWeightLayout.m */; };
 		D36F729F1B62EADF00C75D05 /* OHCompactActionSheetController.m in Sources */ = {isa = PBXBuildFile; fileRef = D36F729E1B62EADF00C75D05 /* OHCompactActionSheetController.m */; };
 		D36F72A01B62EC4700C75D05 /* OHCompactActionSheetController.m in Sources */ = {isa = PBXBuildFile; fileRef = D36F729E1B62EADF00C75D05 /* OHCompactActionSheetController.m */; };
 		D379E5151AF07D0B004D523C /* OHBaseTableViewControllerWithCollapseHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = D379E5141AF07D0B004D523C /* OHBaseTableViewControllerWithCollapseHeader.m */; };
@@ -97,6 +99,8 @@
 		D32848151AEC273800DE7CD3 /* OHHamburgerButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHHamburgerButton.h; sourceTree = "<group>"; };
 		D32848161AEC273800DE7CD3 /* OHHamburgerButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHHamburgerButton.m; sourceTree = "<group>"; };
 		D33BA5F31ADA2D9000DF885A /* OHCommonDimensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OHCommonDimensions.h; sourceTree = "<group>"; };
+		D36B60571B6A468C00198D8E /* OHEqualWeightLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHEqualWeightLayout.h; sourceTree = "<group>"; };
+		D36B60581B6A468C00198D8E /* OHEqualWeightLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHEqualWeightLayout.m; sourceTree = "<group>"; };
 		D36F729D1B62EADF00C75D05 /* OHCompactActionSheetController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHCompactActionSheetController.h; sourceTree = "<group>"; };
 		D36F729E1B62EADF00C75D05 /* OHCompactActionSheetController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHCompactActionSheetController.m; sourceTree = "<group>"; };
 		D379E5131AF07D0B004D523C /* OHBaseTableViewControllerWithCollapseHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHBaseTableViewControllerWithCollapseHeader.h; sourceTree = "<group>"; };
@@ -278,6 +282,8 @@
 				D38FA04A1B255A68002F5C4F /* OHSegmentedControl.m */,
 				4C3EB79B1B54755C005DF938 /* OHLinearScrollView.h */,
 				4C3EB79C1B54755C005DF938 /* OHLinearScrollView.m */,
+				D36B60571B6A468C00198D8E /* OHEqualWeightLayout.h */,
+				D36B60581B6A468C00198D8E /* OHEqualWeightLayout.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -504,6 +510,7 @@
 				D3FE008C1AC5109F004D4BD2 /* OHBaseViewController.m in Sources */,
 				D323D4621B122DD900C3B0D0 /* OHButton.m in Sources */,
 				D3FC55E21B0012DD0043F02A /* OHRotatingRevealAnimationController.m in Sources */,
+				D36B605A1B6A49D600198D8E /* OHEqualWeightLayout.m in Sources */,
 				D3A3BA401AF43413005F38E2 /* OHHorizontalScrollView.m in Sources */,
 				D379E5161AF07EA7004D523C /* OHBaseTableViewControllerWithCollapseHeader.m in Sources */,
 				D36F72A01B62EC4700C75D05 /* OHCompactActionSheetController.m in Sources */,
@@ -524,6 +531,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3846F8E1AF2A81200E6FF78 /* OHPagerView.m in Sources */,
+				D36B60591B6A468C00198D8E /* OHEqualWeightLayout.m in Sources */,
 				D323D4601B12278F00C3B0D0 /* OHCircularButton.m in Sources */,
 				D3A8BC2B1B0A672E004FF5A3 /* NSDate+Utility.m in Sources */,
 				D3FE001E1AC507E3004D4BD2 /* OHButton.m in Sources */,
