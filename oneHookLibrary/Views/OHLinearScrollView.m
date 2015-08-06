@@ -48,7 +48,6 @@
                                         contentLength + marginTop,
                                         self.bounds.size.width - self.contentInset.left - self.contentInset.right,
                                         view.bounds.size.height);
-                NSLog(@"height %f margin %f", view.bounds.size.height, marginTop);
                 contentLength += view.bounds.size.height + marginTop;
             }
         }
@@ -56,7 +55,6 @@
             self.contentSize = CGSizeMake(contentLength, 0);
             self.contentView.frame = CGRectMake(0, 0, contentLength, self.frame.size.height);
         } else {
-            NSLog(@"%f content length", contentLength);
             self.contentSize = CGSizeMake(0, contentLength);
             self.contentView.frame = CGRectMake(0, 0, self.frame.size.width, contentLength);
         }

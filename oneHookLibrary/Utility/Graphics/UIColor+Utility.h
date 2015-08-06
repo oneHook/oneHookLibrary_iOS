@@ -12,5 +12,6 @@
 @interface UIColor (Utility)
 
 + (UIColor*)colorWithColor:(UIColor*)color alpha:(CGFloat)alpha;
++ (UIColor*)transitionColorFrom:(UIColor*)fromColor to:(UIColor*)toColor step:(CGFloat)step;
 
 @end
