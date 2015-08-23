@@ -10,4 +10,8 @@
 
 @interface UIImageViewWithOverlay : UIImageView
 
+@property (assign, nonatomic) BOOL showOverlay;
+@property (assign, nonatomic) BOOL showPlaceholder;
+@property (strong, nonatomic) UIImage* placeholderImage;
+
 @end
