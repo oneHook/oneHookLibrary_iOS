@@ -50,6 +50,8 @@
 		D3C0F99E1AEC7A3E00C4F7EA /* OHHamburgerButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D32848161AEC273800DE7CD3 /* OHHamburgerButton.m */; };
 		D3C4A84F1B7D01D300660353 /* UIImageViewWithOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = D3C4A84E1B7D01D300660353 /* UIImageViewWithOverlay.m */; };
 		D3C4A8501B7D054E00660353 /* UIImageViewWithOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = D3C4A84E1B7D01D300660353 /* UIImageViewWithOverlay.m */; };
+		D3E398FE1B88EFE1005D556D /* OHGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E398FD1B88EFE1005D556D /* OHGradientView.m */; };
+		D3E398FF1B88F0DB005D556D /* OHGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E398FD1B88EFE1005D556D /* OHGradientView.m */; };
 		D3FC55E11B0011890043F02A /* OHRotatingRevealAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FC55E01B0011890043F02A /* OHRotatingRevealAnimationController.m */; };
 		D3FC55E21B0012DD0043F02A /* OHRotatingRevealAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FC55E01B0011890043F02A /* OHRotatingRevealAnimationController.m */; };
 		D3FE00031AC50788004D4BD2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3FE00021AC50788004D4BD2 /* Images.xcassets */; };
@@ -135,6 +137,8 @@
 		D3A8BC2A1B0A672E004FF5A3 /* NSDate+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Utility.m"; sourceTree = "<group>"; };
 		D3C4A84D1B7D01D300660353 /* UIImageViewWithOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageViewWithOverlay.h; sourceTree = "<group>"; };
 		D3C4A84E1B7D01D300660353 /* UIImageViewWithOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageViewWithOverlay.m; sourceTree = "<group>"; };
+		D3E398FC1B88EFE1005D556D /* OHGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHGradientView.h; sourceTree = "<group>"; };
+		D3E398FD1B88EFE1005D556D /* OHGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHGradientView.m; sourceTree = "<group>"; };
 		D3FC55DF1B0011890043F02A /* OHRotatingRevealAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHRotatingRevealAnimationController.h; sourceTree = "<group>"; };
 		D3FC55E01B0011890043F02A /* OHRotatingRevealAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHRotatingRevealAnimationController.m; sourceTree = "<group>"; };
 		D3FE00021AC50788004D4BD2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../Images.xcassets; sourceTree = "<group>"; };
@@ -323,6 +327,8 @@
 				D30C945E1B7AB5EE003C05AB /* OHProgressBar.m */,
 				D3C4A84D1B7D01D300660353 /* UIImageViewWithOverlay.h */,
 				D3C4A84E1B7D01D300660353 /* UIImageViewWithOverlay.m */,
+				D3E398FC1B88EFE1005D556D /* OHGradientView.h */,
+				D3E398FD1B88EFE1005D556D /* OHGradientView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -547,6 +553,7 @@
 				D3846F8F1AF318D400E6FF78 /* OHPagerView.m in Sources */,
 				D3A8BC2C1B0A67E0004FF5A3 /* NSDate+Utility.m in Sources */,
 				D38FA0501B267B2F002F5C4F /* OHTooltipView.m in Sources */,
+				D3E398FF1B88F0DB005D556D /* OHGradientView.m in Sources */,
 				D3FE008C1AC5109F004D4BD2 /* OHBaseViewController.m in Sources */,
 				D323D4621B122DD900C3B0D0 /* OHButton.m in Sources */,
 				D3FC55E21B0012DD0043F02A /* OHRotatingRevealAnimationController.m in Sources */,
@@ -580,6 +587,7 @@
 				D3C4A84F1B7D01D300660353 /* UIImageViewWithOverlay.m in Sources */,
 				D34A080C1B7B74CF001B6C30 /* TOMSMorphingLabel.m in Sources */,
 				D3A8BC2B1B0A672E004FF5A3 /* NSDate+Utility.m in Sources */,
+				D3E398FE1B88EFE1005D556D /* OHGradientView.m in Sources */,
 				D3FE001E1AC507E3004D4BD2 /* OHButton.m in Sources */,
 				4C98AA901B56E16A000B6D9C /* UIColor+Utility.m in Sources */,
 				D3A7A98A1B18F88E002158DC /* OHConfettiScreen.m in Sources */,
