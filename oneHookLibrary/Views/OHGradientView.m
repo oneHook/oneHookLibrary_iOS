@@ -10,6 +10,18 @@
 
 @implementation OHGradientView
 
+
+- (id)initWithHorizontalGradient
+{
+    self = [super initWithFrame:CGRectZero];
+    if(self) {
+        CAGradientLayer* layer = (CAGradientLayer*) self.layer;
+        layer.startPoint = CGPointMake(0.0, 0.5);
+        layer.endPoint = CGPointMake(1.0, 0.5);
+    }
+    return self;
+}
+
 + (Class)layerClass
 {
     return [CAGradientLayer class];
