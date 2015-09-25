@@ -44,70 +44,68 @@
 }
 
 - (void)doInit {
-
-    self.button = [[UIButton alloc] init];
-    [self addSubview:self.button];
     self.backgroundColor = [UIColor clearColor];
-    self.button.clipsToBounds = YES;
+    
+    self.backgroundView = [[UIView alloc] init];
+    self.backgroundView.backgroundColor = [UIColor whiteColor];
+    [self addSubview:self.backgroundView];
+    self.backgroundView.clipsToBounds = YES;
+    
+    self.hasShadow = YES;
+    
+    self.titleLabel = [[UILabel alloc] init];
+    self.titleLabel.textAlignment = NSTextAlignmentCenter;
+    [self addSubview:self.titleLabel];
+}
 
-    self.backgroundColor = [UIColor clearColor];
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    NSLog(@"touch begin");
+    [self onPressed];
+}
+
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self onRelease];
+    NSLog(@"touch end");
+}
+
+- (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self onRelease];
+    NSLog(@"touch cancel");
+}
+
+- (void)setHasShadow:(BOOL)hasShadow
+{
+    _hasShadow = hasShadow;
     self.layer.shadowColor = [UIColor blackColor].CGColor;
-    self.layer.shadowOffset = CGSizeMake(0, 5);
     self.layer.shadowOpacity = SHADOW_OPACITY;
     self.layer.shadowRadius = 2.0;
-
-    [self.button addTarget:self action:@selector(onPressed) forControlEvents:UIControlEventTouchDown];
-    [self.button addTarget:self action:@selector(onRelease) forControlEvents:UIControlEventTouchCancel];
-
-    [self setButtonBackgroundWithNormalState:[UIColor whiteColor] pressedState:[UIColor grayColor] disabledState:[UIColor grayColor]];
-    [self setButtonTextColorWithNormalState:[UIColor blackColor] pressedState:[UIColor whiteColor] disabledState:[UIColor whiteColor]];
-    [self setButtonTextWithAllState:@"HELLO"];
+    if(hasShadow) {
+        self.layer.shadowOffset = CGSizeMake(0, 5);
+    } else {
+        self.layer.shadowOffset = CGSizeMake(0, 0);
+    }
 }
 
 - (void)onPressed {
-    self.layer.shadowOffset = CGSizeMake(0, 10);
+    if(_hasShadow) {
+        self.layer.shadowOffset = CGSizeMake(0, 10);
+    }
 }
 
 - (void)onRelease {
-    self.layer.shadowOffset = CGSizeMake(0, 5);
-}
-
-- (void)setButtonBackgroundWithNormalState:(UIColor *)normalColor pressedState:(UIColor *)pressedColor disabledState:(UIColor *)disabledColor {
-    [self.button setBackgroundImage:[UIImage imageWithColor:normalColor] forState:UIControlStateNormal];
-    [self.button setBackgroundImage:[UIImage imageWithColor:pressedColor] forState:UIControlStateHighlighted];
-    [self.button setBackgroundImage:[UIImage imageWithColor:disabledColor] forState:UIControlStateDisabled];
-}
-
-- (void)setButtonTextColorWithNormalState:(UIColor *)normalColor pressedState:(UIColor *)pressedColor disabledState:(UIColor *)disabledColor {
-    [self.button setTitleColor:normalColor forState:UIControlStateNormal];
-    [self.button setTitleColor:pressedColor forState:UIControlStateHighlighted];
-    [self.button setTitleColor:disabledColor forState:UIControlStateDisabled];
-}
-
-- (void)setButtonTextWithNormalState:(NSString *)normalText pressedState:(NSString *)pressedText disabledState:(NSString *)disabledText {
-    [self.button setTitle:normalText forState:UIControlStateNormal];
-    [self.button setTitle:pressedText forState:UIControlStateHighlighted];
-    [self.button setTitle:disabledText forState:UIControlStateDisabled];
-}
-
-- (void)setButtonAttributedTextWithNormalState:(NSAttributedString *)normalText pressedState:(NSAttributedString *)pressedText disabledState:(NSAttributedString *)disabledText {
-    [self.button setAttributedTitle:normalText forState:UIControlStateNormal];
-    [self.button setAttributedTitle:pressedText forState:UIControlStateHighlighted];
-    [self.button setAttributedTitle:disabledText forState:UIControlStateDisabled];
-}
-
-- (void)setButtonTextWithAllState:(NSString *)text {
-    [self.button setTitle:text forState:UIControlStateNormal];
-}
-
-- (void)addGestureRecognizer:(UIGestureRecognizer *)gestureRecognizer {
-    [self.button addGestureRecognizer:gestureRecognizer];
+    if(_hasShadow) {
+        self.layer.shadowOffset = CGSizeMake(0, 5);
+    }
 }
 
 - (void)layoutSubviews {
     [super layoutSubviews];
-    self.button.frame = self.bounds;
-    [self.button.layer setCornerRadius:ViewWidth(self.button) / 2];
+    self.backgroundView.frame = self.bounds;
+    self.titleLabel.frame = self.bounds;
+    [self.backgroundView.layer setCornerRadius:ViewWidth(self) / 2];
     self.layer.shadowPath = [UIBezierPath bezierPathWithRoundedRect:self.bounds cornerRadius:100.0].CGPath;
 }
 
