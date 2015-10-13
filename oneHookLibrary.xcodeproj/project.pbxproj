@@ -11,6 +11,8 @@
 		4C3EB79E1B547A96005DF938 /* OHLinearScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3EB79C1B54755C005DF938 /* OHLinearScrollView.m */; };
 		4C98AA901B56E16A000B6D9C /* UIColor+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C98AA8F1B56E16A000B6D9C /* UIColor+Utility.m */; };
 		4C98AA911B56E98A000B6D9C /* UIColor+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C98AA8F1B56E16A000B6D9C /* UIColor+Utility.m */; };
+		D300C3091BC808A5003F5050 /* OHReactiveButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D300C3081BC808A5003F5050 /* OHReactiveButton.m */; settings = {ASSET_TAGS = (); }; };
+		D300C30A1BC80E5D003F5050 /* OHReactiveButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D300C3081BC808A5003F5050 /* OHReactiveButton.m */; settings = {ASSET_TAGS = (); }; };
 		D309EC1E1ADA455F00858EF2 /* UIImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = D309EC1C1ADA454800858EF2 /* UIImageEffects.m */; };
 		D309EC1F1ADA456100858EF2 /* UIImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = D309EC1C1ADA454800858EF2 /* UIImageEffects.m */; };
 		D30C945F1B7AB5EE003C05AB /* OHProgressBar.m in Sources */ = {isa = PBXBuildFile; fileRef = D30C945E1B7AB5EE003C05AB /* OHProgressBar.m */; };
@@ -43,6 +45,8 @@
 		D38FA0501B267B2F002F5C4F /* OHTooltipView.m in Sources */ = {isa = PBXBuildFile; fileRef = D38FA04E1B26776D002F5C4F /* OHTooltipView.m */; };
 		D3A3BA3F1AF433E2005F38E2 /* OHHorizontalScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A3BA3E1AF433E2005F38E2 /* OHHorizontalScrollView.m */; };
 		D3A3BA401AF43413005F38E2 /* OHHorizontalScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A3BA3E1AF433E2005F38E2 /* OHHorizontalScrollView.m */; };
+		D3A7424E1BCDAAF80057710E /* OHCircularImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A7424D1BCDAAF80057710E /* OHCircularImageView.m */; settings = {ASSET_TAGS = (); }; };
+		D3A7424F1BCDAC910057710E /* OHCircularImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A7424D1BCDAAF80057710E /* OHCircularImageView.m */; settings = {ASSET_TAGS = (); }; };
 		D3A7A98A1B18F88E002158DC /* OHConfettiScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A7A9891B18F88E002158DC /* OHConfettiScreen.m */; };
 		D3A7A98B1B18F9E8002158DC /* OHConfettiScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A7A9891B18F88E002158DC /* OHConfettiScreen.m */; };
 		D3A8BC2B1B0A672E004FF5A3 /* NSDate+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A8BC2A1B0A672E004FF5A3 /* NSDate+Utility.m */; };
@@ -98,6 +102,8 @@
 		4C3EB79C1B54755C005DF938 /* OHLinearScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHLinearScrollView.m; sourceTree = "<group>"; };
 		4C98AA8E1B56E16A000B6D9C /* UIColor+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Utility.h"; sourceTree = "<group>"; };
 		4C98AA8F1B56E16A000B6D9C /* UIColor+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Utility.m"; sourceTree = "<group>"; };
+		D300C3071BC808A5003F5050 /* OHReactiveButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHReactiveButton.h; sourceTree = "<group>"; };
+		D300C3081BC808A5003F5050 /* OHReactiveButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHReactiveButton.m; sourceTree = "<group>"; };
 		D309EC1B1ADA454800858EF2 /* UIImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageEffects.h; sourceTree = "<group>"; };
 		D309EC1C1ADA454800858EF2 /* UIImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageEffects.m; sourceTree = "<group>"; };
 		D30C945D1B7AB5EE003C05AB /* OHProgressBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHProgressBar.h; sourceTree = "<group>"; };
@@ -133,6 +139,8 @@
 		D38FA04E1B26776D002F5C4F /* OHTooltipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHTooltipView.m; sourceTree = "<group>"; };
 		D3A3BA3D1AF433E2005F38E2 /* OHHorizontalScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHHorizontalScrollView.h; sourceTree = "<group>"; };
 		D3A3BA3E1AF433E2005F38E2 /* OHHorizontalScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHHorizontalScrollView.m; sourceTree = "<group>"; };
+		D3A7424C1BCDAAF80057710E /* OHCircularImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHCircularImageView.h; sourceTree = "<group>"; };
+		D3A7424D1BCDAAF80057710E /* OHCircularImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHCircularImageView.m; sourceTree = "<group>"; };
 		D3A7A9881B18F88E002158DC /* OHConfettiScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHConfettiScreen.h; sourceTree = "<group>"; };
 		D3A7A9891B18F88E002158DC /* OHConfettiScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHConfettiScreen.m; sourceTree = "<group>"; };
 		D3A8BC291B0A672E004FF5A3 /* NSDate+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Utility.h"; sourceTree = "<group>"; };
@@ -335,6 +343,10 @@
 				D3C4A84E1B7D01D300660353 /* UIImageViewWithOverlay.m */,
 				D3E398FC1B88EFE1005D556D /* OHGradientView.h */,
 				D3E398FD1B88EFE1005D556D /* OHGradientView.m */,
+				D300C3071BC808A5003F5050 /* OHReactiveButton.h */,
+				D300C3081BC808A5003F5050 /* OHReactiveButton.m */,
+				D3A7424C1BCDAAF80057710E /* OHCircularImageView.h */,
+				D3A7424D1BCDAAF80057710E /* OHCircularImageView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -568,7 +580,9 @@
 				D3A3BA401AF43413005F38E2 /* OHHorizontalScrollView.m in Sources */,
 				D379E5161AF07EA7004D523C /* OHBaseTableViewControllerWithCollapseHeader.m in Sources */,
 				D34A080E1B7B74E9001B6C30 /* TOMSMorphingLabel.m in Sources */,
+				D3A7424F1BCDAC910057710E /* OHCircularImageView.m in Sources */,
 				D36F72A01B62EC4700C75D05 /* OHCompactActionSheetController.m in Sources */,
+				D300C30A1BC80E5D003F5050 /* OHReactiveButton.m in Sources */,
 				4C98AA911B56E98A000B6D9C /* UIColor+Utility.m in Sources */,
 				D3FE009C1AC5E675004D4BD2 /* UIImage+Color.m in Sources */,
 				D3A7A98B1B18F9E8002158DC /* OHConfettiScreen.m in Sources */,
@@ -600,6 +614,7 @@
 				4C98AA901B56E16A000B6D9C /* UIColor+Utility.m in Sources */,
 				D3A7A98A1B18F88E002158DC /* OHConfettiScreen.m in Sources */,
 				D3FC55E11B0011890043F02A /* OHRotatingRevealAnimationController.m in Sources */,
+				D300C3091BC808A5003F5050 /* OHReactiveButton.m in Sources */,
 				D3A3BA3F1AF433E2005F38E2 /* OHHorizontalScrollView.m in Sources */,
 				D383040C1AE9F4CE003AE826 /* OHTableViewWIthCardEffectController.m in Sources */,
 				D38FA04F1B26776D002F5C4F /* OHTooltipView.m in Sources */,
@@ -611,6 +626,7 @@
 				D38FA04B1B255A68002F5C4F /* OHSegmentedControl.m in Sources */,
 				D323D4651B122DFC00C3B0D0 /* OHButtonDemoViewController.m in Sources */,
 				D309EC1F1ADA456100858EF2 /* UIImageEffects.m in Sources */,
+				D3A7424E1BCDAAF80057710E /* OHCircularImageView.m in Sources */,
 				4C3EB79D1B54755C005DF938 /* OHLinearScrollView.m in Sources */,
 				D3FEFFF81AC50788004D4BD2 /* main.m in Sources */,
 				D34A080B1B7B74CF001B6C30 /* NSString+Morphing.m in Sources */,

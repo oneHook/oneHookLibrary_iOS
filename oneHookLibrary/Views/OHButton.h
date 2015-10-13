@@ -19,6 +19,8 @@
 /* use primary color for text, secondary color for border, ignore background color */
 #define kButtonStyleStroke 2
 
+- (void)commonInit;
+
 @property (assign, nonatomic) int buttonStyle;
 @property (strong, nonatomic) UIColor *primaryColor;
 @property (strong, nonatomic) UIColor *secondaryColor;
