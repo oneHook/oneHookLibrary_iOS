@@ -47,6 +47,8 @@
 		D3A3BA401AF43413005F38E2 /* OHHorizontalScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A3BA3E1AF433E2005F38E2 /* OHHorizontalScrollView.m */; };
 		D3A7424E1BCDAAF80057710E /* OHCircularImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A7424D1BCDAAF80057710E /* OHCircularImageView.m */; settings = {ASSET_TAGS = (); }; };
 		D3A7424F1BCDAC910057710E /* OHCircularImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A7424D1BCDAAF80057710E /* OHCircularImageView.m */; settings = {ASSET_TAGS = (); }; };
+		D3A742531BCEC6530057710E /* OHImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A742521BCEC6530057710E /* OHImagePickerController.m */; settings = {ASSET_TAGS = (); }; };
+		D3A742541BCEC6620057710E /* OHImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A742521BCEC6530057710E /* OHImagePickerController.m */; settings = {ASSET_TAGS = (); }; };
 		D3A7A98A1B18F88E002158DC /* OHConfettiScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A7A9891B18F88E002158DC /* OHConfettiScreen.m */; };
 		D3A7A98B1B18F9E8002158DC /* OHConfettiScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A7A9891B18F88E002158DC /* OHConfettiScreen.m */; };
 		D3A8BC2B1B0A672E004FF5A3 /* NSDate+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A8BC2A1B0A672E004FF5A3 /* NSDate+Utility.m */; };
@@ -141,6 +143,8 @@
 		D3A3BA3E1AF433E2005F38E2 /* OHHorizontalScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHHorizontalScrollView.m; sourceTree = "<group>"; };
 		D3A7424C1BCDAAF80057710E /* OHCircularImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHCircularImageView.h; sourceTree = "<group>"; };
 		D3A7424D1BCDAAF80057710E /* OHCircularImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHCircularImageView.m; sourceTree = "<group>"; };
+		D3A742511BCEC6530057710E /* OHImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHImagePickerController.h; sourceTree = "<group>"; };
+		D3A742521BCEC6530057710E /* OHImagePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHImagePickerController.m; sourceTree = "<group>"; };
 		D3A7A9881B18F88E002158DC /* OHConfettiScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHConfettiScreen.h; sourceTree = "<group>"; };
 		D3A7A9891B18F88E002158DC /* OHConfettiScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHConfettiScreen.m; sourceTree = "<group>"; };
 		D3A8BC291B0A672E004FF5A3 /* NSDate+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Utility.h"; sourceTree = "<group>"; };
@@ -204,6 +208,7 @@
 		D309EC191ADA454800858EF2 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				D3A742501BCEC6470057710E /* ImagePicker */,
 				D3A8BC241B0A6657004FF5A3 /* Date */,
 				D309EC1A1ADA454800858EF2 /* Graphics */,
 			);
@@ -300,6 +305,15 @@
 				D38FA04E1B26776D002F5C4F /* OHTooltipView.m */,
 			);
 			path = Tooltip;
+			sourceTree = "<group>";
+		};
+		D3A742501BCEC6470057710E /* ImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				D3A742511BCEC6530057710E /* OHImagePickerController.h */,
+				D3A742521BCEC6530057710E /* OHImagePickerController.m */,
+			);
+			path = ImagePicker;
 			sourceTree = "<group>";
 		};
 		D3A7A9871B18F88E002158DC /* Screens */ = {
@@ -572,6 +586,7 @@
 				D3A8BC2C1B0A67E0004FF5A3 /* NSDate+Utility.m in Sources */,
 				D38FA0501B267B2F002F5C4F /* OHTooltipView.m in Sources */,
 				D3E399081B8A593A005D556D /* UIView+Toast.m in Sources */,
+				D3A742541BCEC6620057710E /* OHImagePickerController.m in Sources */,
 				D3E398FF1B88F0DB005D556D /* OHGradientView.m in Sources */,
 				D3FE008C1AC5109F004D4BD2 /* OHBaseViewController.m in Sources */,
 				D323D4621B122DD900C3B0D0 /* OHButton.m in Sources */,
@@ -615,6 +630,7 @@
 				D3A7A98A1B18F88E002158DC /* OHConfettiScreen.m in Sources */,
 				D3FC55E11B0011890043F02A /* OHRotatingRevealAnimationController.m in Sources */,
 				D300C3091BC808A5003F5050 /* OHReactiveButton.m in Sources */,
+				D3A742531BCEC6530057710E /* OHImagePickerController.m in Sources */,
 				D3A3BA3F1AF433E2005F38E2 /* OHHorizontalScrollView.m in Sources */,
 				D383040C1AE9F4CE003AE826 /* OHTableViewWIthCardEffectController.m in Sources */,
 				D38FA04F1B26776D002F5C4F /* OHTooltipView.m in Sources */,
