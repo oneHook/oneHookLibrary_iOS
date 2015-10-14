@@ -8,12 +8,14 @@
 
 #import "OHImagePickerController.h"
 #import "OHCompactActionSheetController.h"
+#import <MobileCoreServices/MobileCoreServices.h>
 
-@interface OHImagePickerController() <OHCompactActionSheetControllerDelegate> {
+@interface OHImagePickerController() <OHCompactActionSheetControllerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate> {
     
 }
 
 @property (strong, nonatomic) OHCompactActionSheetController* actionSheetController;
+@property (strong, nonatomic) UIImagePickerController* imagePicker;
 @property (strong, nonatomic) NSMutableArray* options;
 
 @end
@@ -56,20 +58,63 @@
 
 - (void)pickImageFromLibrary
 {
-    
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    self.imagePicker = picker;
+    picker.delegate = self;
+    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    [self.presentingController presentViewController:picker animated:YES completion:^{
+        
+    }];
 }
 
 - (void)pickImageFromCamera
 {
-        UIImagePickerController *picker = [[UIImagePickerController alloc] init];
-    //    picker.delegate = self;
-        picker.sourceType = UIImagePickerControllerSourceTypeCamera;
-        picker.cameraDevice = UIImagePickerControllerCameraDeviceFront;
-        picker.showsCameraControls = YES;
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    self.imagePicker = picker;
+    picker.delegate = self;
+    picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    picker.cameraDevice = UIImagePickerControllerCameraDeviceFront;
+    picker.showsCameraControls = YES;
     [self.presentingController presentViewController:picker animated:YES completion:^{
         
     }];
+    
+}
 
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info
+{
+    [[UIApplication sharedApplication] setStatusBarHidden:YES];
+    
+    NSString *mediaType = info[UIImagePickerControllerMediaType];
+    UIImage *originalImage, *editedImage, *imageToSave;
+    
+    // Handle a still image capture
+    if (CFStringCompare ((CFStringRef) mediaType, kUTTypeImage, 0) == kCFCompareEqualTo) {
+        editedImage = (UIImage *) info[UIImagePickerControllerEditedImage];
+        originalImage = (UIImage *) info[UIImagePickerControllerOriginalImage];
+        
+        if (editedImage) {
+            imageToSave = editedImage;
+        } else if (originalImage) {
+            imageToSave = originalImage;
+        } else {
+//            if ([self.delegate respondsToSelector:@selector(takeController:didFailAfterAttempting:)])
+//                [self.delegate takeController:self didFailAfterAttempting:YES];
+            return;
+        }
+        [self.delegate oh_imagePickerController:self imagePicked:imageToSave];
+    }
+    
+    [picker dismissViewControllerAnimated:YES completion:nil];
+    self.imagePicker = nil;
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+    [self.delegate oh_imagePickerControllerCancelled:self];
+    [[UIApplication sharedApplication] setStatusBarHidden:YES];
+    [picker dismissViewControllerAnimated:YES completion:nil];
+    self.imagePicker = nil;
 }
 
 @end

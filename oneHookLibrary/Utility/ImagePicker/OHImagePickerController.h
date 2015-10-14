@@ -8,12 +8,21 @@
 
 #import <UIKit/UIKit.h>
 
+@class OHImagePickerController;
+
+@protocol OHImagePickerControllerDelegate <NSObject>
+
+- (void)oh_imagePickerController:(OHImagePickerController*)pickerController imagePicked:(UIImage*)image;
+- (void)oh_imagePickerControllerCancelled:(OHImagePickerController *)pickerController;
+
+@end
+
 @interface OHImagePickerController : NSObject
 
 @property (weak, nonatomic) UIViewController* presentingController;
+@property (weak, nonatomic) id<OHImagePickerControllerDelegate> delegate;
 
 - (id)initWithViewController:(UIViewController*)presentingController;
-
 - (void)takePhotoOrChooseFromLibrary;
 
 @end
