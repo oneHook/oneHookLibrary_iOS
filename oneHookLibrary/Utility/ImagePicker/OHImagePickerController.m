@@ -102,10 +102,13 @@
 //                [self.delegate takeController:self didFailAfterAttempting:YES];
             return;
         }
-        [self.delegate oh_imagePickerController:self imagePicked:imageToSave];
     }
     
-    [picker dismissViewControllerAnimated:YES completion:nil];
+    [picker dismissViewControllerAnimated:YES completion:^{
+        if(imageToSave) {
+            [self.delegate oh_imagePickerController:self imagePicked:imageToSave];
+        }
+    }];
     self.imagePicker = nil;
 }
 
