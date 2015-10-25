@@ -51,7 +51,7 @@
     self.actionSheetController = nil;
     if(self.options.count > 1 && index == 0) {
         [self pickImageFromCamera];
-    } else {
+    } else if(self.options.count - 1 == index) {
         [self pickImageFromLibrary];
     }
 }

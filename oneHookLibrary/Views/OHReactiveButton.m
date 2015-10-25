@@ -23,11 +23,13 @@
 
 - (void)showDefault
 {
-    CGFloat width = CGRectGetWidth(self.frame);
-    CGFloat height = CGRectGetHeight(self.frame);
+//    CGFloat width = CGRectGetWidth(self.frame);
+//    CGFloat height = CGRectGetHeight(self.frame);
     [UIView animateWithDuration:0.25 animations:^{
         _progressView.alpha = 0.0f;
-        _finishView.alpha = 0.0;
+        if(_finishView) {
+            _finishView.alpha = 0.0;
+        }
         self.titleLabel.alpha = 1.0f;
     } completion:^(BOOL finished) {
         
@@ -47,7 +49,9 @@
     }
     [UIView animateWithDuration:0.25 animations:^{
         self.progressView.alpha = 1.0f;
-        _finishView.alpha = 0.0;
+        if(_finishView) {
+            _finishView.alpha = 0.0;
+        }
         self.titleLabel.alpha = 0.0f;
     } completion:^(BOOL finished) {
         
@@ -59,15 +63,16 @@
 {
     CGFloat width = CGRectGetWidth(self.frame);
     CGFloat height = CGRectGetHeight(self.frame);
-    if(!_finishView) {
-        UIView* finishView = self.finishView;
-        finishView.alpha = 0.0;
-        [self addSubview:finishView];
-        finishView.bounds = CGRectMake(0, 0, height, height);
-        finishView.center = CGPointMake(width / 2, height / 2);
+    if(_finishView) {
+        _finishView.alpha = 0.0;
+        _finishView.bounds = CGRectMake(0, 0, height, height);
+        _finishView.center = CGPointMake(width / 2, height / 2);
     }
+    
     [UIView animateWithDuration:0.25 animations:^{
-        self.finishView.alpha = 1.0f;
+        if(_finishView) {
+            _finishView.alpha = 1.0f;
+        }
         _progressView.alpha = 0.0;
         self.titleLabel.alpha = 0.0f;
     } completion:^(BOOL finished) {
@@ -81,13 +86,13 @@
     [indicator startAnimating];
 }
 
-- (UIView*)finishView
+- (void)setFinishView:(UIView *)finishView
 {
-    if(_finishView == nil) {
-        _finishView = [[UIView alloc] init];
-        _finishView.backgroundColor = [UIColor redColor];
+    if(_finishView) {
+        [_finishView removeFromSuperview];
     }
-    return _finishView;
+    _finishView = finishView;
+    [self addSubview:finishView];
 }
 
 - (UIView*)progressView
