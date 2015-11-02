@@ -12,7 +12,10 @@
 
 - (NSString*)capitalize
 {
-    return [[[self substringToIndex:1] uppercaseString] stringByAppendingString:[[self substringFromIndex:1] lowercaseString]];
+    if(self.length > 0) {
+        return [[[self substringToIndex:1] uppercaseString] stringByAppendingString:[[self substringFromIndex:1] lowercaseString]];
+    }
+    return self;
 }
 
 + (BOOL)isEmpty:(NSString *)text
