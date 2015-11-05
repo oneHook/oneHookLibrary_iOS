@@ -53,6 +53,8 @@
         [self pickImageFromCamera];
     } else if(self.options.count - 1 == index) {
         [self pickImageFromLibrary];
+    } else {
+        [self.delegate oh_imagePickerControllerCancelled:self];
     }
 }
 
