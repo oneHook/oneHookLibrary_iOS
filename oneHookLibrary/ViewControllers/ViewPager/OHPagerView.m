@@ -131,7 +131,6 @@
     view.frame = CGRectMake(PAGE_WIDTH * index, 0, PAGE_WIDTH, self.bounds.size.height);
     [self.views replaceObjectAtIndex:index withObject:view];
     [self.delegate pagerView:self viewAddedAt:index];
-    //    NSLog(@"obtain view at %ld %f %f", index, PAGE_WIDTH, self.bounds.size.height);
 }
 
 #pragma marks - UIScrollViewDelegate
