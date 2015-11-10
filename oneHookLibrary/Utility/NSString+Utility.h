@@ -12,5 +12,6 @@
 
 - (NSString*)capitalize;
 + (BOOL)isEmpty:(NSString*)text;
+- (BOOL)isEmailAddress;
 
 @end
