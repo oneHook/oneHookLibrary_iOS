@@ -30,6 +30,7 @@
 		D32848171AEC273800DE7CD3 /* OHHamburgerButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D32848161AEC273800DE7CD3 /* OHHamburgerButton.m */; };
 		D33A1CDD1BF589DE0005FDB2 /* OHAnimatedProgressRing.m in Sources */ = {isa = PBXBuildFile; fileRef = D33A1CDC1BF589DE0005FDB2 /* OHAnimatedProgressRing.m */; };
 		D33A1CE01BF590570005FDB2 /* OHProgressRingDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D33A1CDF1BF590570005FDB2 /* OHProgressRingDemoViewController.m */; };
+		D33A1CE11BF595D90005FDB2 /* OHProgressRingDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D33A1CDF1BF590570005FDB2 /* OHProgressRingDemoViewController.m */; };
 		D34A080B1B7B74CF001B6C30 /* NSString+Morphing.m in Sources */ = {isa = PBXBuildFile; fileRef = D34A08081B7B74CF001B6C30 /* NSString+Morphing.m */; };
 		D34A080C1B7B74CF001B6C30 /* TOMSMorphingLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = D34A080A1B7B74CF001B6C30 /* TOMSMorphingLabel.m */; };
 		D34A080D1B7B74E6001B6C30 /* NSString+Morphing.m in Sources */ = {isa = PBXBuildFile; fileRef = D34A08081B7B74CF001B6C30 /* NSString+Morphing.m */; };
@@ -611,6 +612,7 @@
 				D38FA0501B267B2F002F5C4F /* OHTooltipView.m in Sources */,
 				D3E399081B8A593A005D556D /* UIView+Toast.m in Sources */,
 				D3A742541BCEC6620057710E /* OHImagePickerController.m in Sources */,
+				D33A1CE11BF595D90005FDB2 /* OHProgressRingDemoViewController.m in Sources */,
 				D3E398FF1B88F0DB005D556D /* OHGradientView.m in Sources */,
 				D3FE008C1AC5109F004D4BD2 /* OHBaseViewController.m in Sources */,
 				D323D4621B122DD900C3B0D0 /* OHButton.m in Sources */,
