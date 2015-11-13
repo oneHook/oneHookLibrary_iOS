@@ -28,6 +28,8 @@
 		D328480D1AEC1B9500DE7CD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D328480B1AEC1B9500DE7CD3 /* Main.storyboard */; };
 		D32848101AEC209900DE7CD3 /* OHHambugerButtonDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = D328480F1AEC209900DE7CD3 /* OHHambugerButtonDemo.m */; };
 		D32848171AEC273800DE7CD3 /* OHHamburgerButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D32848161AEC273800DE7CD3 /* OHHamburgerButton.m */; };
+		D33A1CDD1BF589DE0005FDB2 /* OHAnimatedProgressRing.m in Sources */ = {isa = PBXBuildFile; fileRef = D33A1CDC1BF589DE0005FDB2 /* OHAnimatedProgressRing.m */; };
+		D33A1CE01BF590570005FDB2 /* OHProgressRingDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D33A1CDF1BF590570005FDB2 /* OHProgressRingDemoViewController.m */; };
 		D34A080B1B7B74CF001B6C30 /* NSString+Morphing.m in Sources */ = {isa = PBXBuildFile; fileRef = D34A08081B7B74CF001B6C30 /* NSString+Morphing.m */; };
 		D34A080C1B7B74CF001B6C30 /* TOMSMorphingLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = D34A080A1B7B74CF001B6C30 /* TOMSMorphingLabel.m */; };
 		D34A080D1B7B74E6001B6C30 /* NSString+Morphing.m in Sources */ = {isa = PBXBuildFile; fileRef = D34A08081B7B74CF001B6C30 /* NSString+Morphing.m */; };
@@ -124,6 +126,10 @@
 		D328480F1AEC209900DE7CD3 /* OHHambugerButtonDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHHambugerButtonDemo.m; sourceTree = "<group>"; };
 		D32848151AEC273800DE7CD3 /* OHHamburgerButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHHamburgerButton.h; sourceTree = "<group>"; };
 		D32848161AEC273800DE7CD3 /* OHHamburgerButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHHamburgerButton.m; sourceTree = "<group>"; };
+		D33A1CDB1BF589DE0005FDB2 /* OHAnimatedProgressRing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHAnimatedProgressRing.h; sourceTree = "<group>"; };
+		D33A1CDC1BF589DE0005FDB2 /* OHAnimatedProgressRing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHAnimatedProgressRing.m; sourceTree = "<group>"; };
+		D33A1CDE1BF590570005FDB2 /* OHProgressRingDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHProgressRingDemoViewController.h; sourceTree = "<group>"; };
+		D33A1CDF1BF590570005FDB2 /* OHProgressRingDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHProgressRingDemoViewController.m; sourceTree = "<group>"; };
 		D33BA5F31ADA2D9000DF885A /* OHCommonDimensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OHCommonDimensions.h; sourceTree = "<group>"; };
 		D34A08071B7B74CF001B6C30 /* NSString+Morphing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Morphing.h"; sourceTree = "<group>"; };
 		D34A08081B7B74CF001B6C30 /* NSString+Morphing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Morphing.m"; sourceTree = "<group>"; };
@@ -241,6 +247,8 @@
 				D328480F1AEC209900DE7CD3 /* OHHambugerButtonDemo.m */,
 				D323D4631B122DFC00C3B0D0 /* OHButtonDemoViewController.h */,
 				D323D4641B122DFC00C3B0D0 /* OHButtonDemoViewController.m */,
+				D33A1CDE1BF590570005FDB2 /* OHProgressRingDemoViewController.h */,
+				D33A1CDF1BF590570005FDB2 /* OHProgressRingDemoViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -252,6 +260,15 @@
 				D32848161AEC273800DE7CD3 /* OHHamburgerButton.m */,
 			);
 			path = HamburgerButton;
+			sourceTree = "<group>";
+		};
+		D33A1CDA1BF589CF0005FDB2 /* AnimatedProgressRing */ = {
+			isa = PBXGroup;
+			children = (
+				D33A1CDB1BF589DE0005FDB2 /* OHAnimatedProgressRing.h */,
+				D33A1CDC1BF589DE0005FDB2 /* OHAnimatedProgressRing.m */,
+			);
+			path = AnimatedProgressRing;
 			sourceTree = "<group>";
 		};
 		D34A08051B7B74CF001B6C30 /* Thirdparty */ = {
@@ -343,6 +360,7 @@
 		D3FE001B1AC507D7004D4BD2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D33A1CDA1BF589CF0005FDB2 /* AnimatedProgressRing */,
 				D38FA04C1B26775F002F5C4F /* Tooltip */,
 				D3A7A9871B18F88E002158DC /* Screens */,
 				D32848141AEC272D00DE7CD3 /* HamburgerButton */,
@@ -633,6 +651,7 @@
 				D34A080C1B7B74CF001B6C30 /* TOMSMorphingLabel.m in Sources */,
 				D3A8BC2B1B0A672E004FF5A3 /* NSDate+Utility.m in Sources */,
 				D3E398FE1B88EFE1005D556D /* OHGradientView.m in Sources */,
+				D33A1CE01BF590570005FDB2 /* OHProgressRingDemoViewController.m in Sources */,
 				D3FE001E1AC507E3004D4BD2 /* OHButton.m in Sources */,
 				4C98AA901B56E16A000B6D9C /* UIColor+Utility.m in Sources */,
 				D3A7A98A1B18F88E002158DC /* OHConfettiScreen.m in Sources */,
@@ -652,6 +671,7 @@
 				D309EC1F1ADA456100858EF2 /* UIImageEffects.m in Sources */,
 				D3A7424E1BCDAAF80057710E /* OHCircularImageView.m in Sources */,
 				4C3EB79D1B54755C005DF938 /* OHLinearScrollView.m in Sources */,
+				D33A1CDD1BF589DE0005FDB2 /* OHAnimatedProgressRing.m in Sources */,
 				D3FEFFF81AC50788004D4BD2 /* main.m in Sources */,
 				D34A080B1B7B74CF001B6C30 /* NSString+Morphing.m in Sources */,
 				D379E5151AF07D0B004D523C /* OHBaseTableViewControllerWithCollapseHeader.m in Sources */,
