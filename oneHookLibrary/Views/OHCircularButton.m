@@ -12,6 +12,7 @@
 
 @interface OHCircularButton () {
     CGFloat _buttonScale;
+    CGFloat _lastWidth;
 }
 @end
 
@@ -44,6 +45,7 @@
 }
 
 - (void)doInit {
+    _lastWidth = 0;
     self.backgroundColor = [UIColor clearColor];
     
     self.backgroundView = [[UIView alloc] init];
@@ -52,28 +54,38 @@
     self.backgroundView.clipsToBounds = YES;
     
     self.hasShadow = YES;
-    
-    self.titleLabel = [[UILabel alloc] init];
-    self.titleLabel.textAlignment = NSTextAlignmentCenter;
-    [self addSubview:self.titleLabel];
+}
+
+- (UILabel*)titleLabel
+{
+    if(_titleLabel == nil) {
+        _titleLabel = [[UILabel alloc] init];
+        _titleLabel.textAlignment = NSTextAlignmentCenter;
+        [self addSubview:_titleLabel];
+        self.contentView = _titleLabel;
+    }
+    return _titleLabel;
+}
+
+- (void)setContentView:(UIView *)contentView
+{
+    _contentView = contentView;
+    [self addSubview:_contentView];
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    NSLog(@"touch begin");
     [self onPressed];
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
     [self onRelease];
-    NSLog(@"touch end");
 }
 
 - (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
 {
     [self onRelease];
-    NSLog(@"touch cancel");
 }
 
 - (void)setHasShadow:(BOOL)hasShadow
@@ -103,10 +115,17 @@
 
 - (void)layoutSubviews {
     [super layoutSubviews];
-    self.backgroundView.frame = self.bounds;
-    self.titleLabel.frame = self.bounds;
-    [self.backgroundView.layer setCornerRadius:ViewWidth(self) / 2];
-    self.layer.shadowPath = [UIBezierPath bezierPathWithRoundedRect:self.bounds cornerRadius:100.0].CGPath;
+    if(_lastWidth != CGRectGetWidth(self.frame)) {
+        _lastWidth = CGRectGetWidth(self.frame);
+        self.backgroundView.frame = self.bounds;
+        _titleLabel.frame = self.bounds;
+        [self.backgroundView.layer setCornerRadius:ViewWidth(self) / 2];
+        if(_contentView) {
+            _contentView.frame = self.bounds;
+            [_contentView.layer setCornerRadius:ViewWidth(self) / 2];
+        }
+        self.layer.shadowPath = [UIBezierPath bezierPathWithRoundedRect:self.bounds cornerRadius:100.0].CGPath;
+    }
 }
 
 @end

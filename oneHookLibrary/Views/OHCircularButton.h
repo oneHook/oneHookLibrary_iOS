@@ -12,6 +12,7 @@
 
 @property (strong, nonatomic) UIView* backgroundView;
 @property (strong, nonatomic) UILabel* titleLabel;
+@property (strong, nonatomic) UIView* contentView;
 @property (assign, nonatomic) BOOL hasShadow;
 
 @end
