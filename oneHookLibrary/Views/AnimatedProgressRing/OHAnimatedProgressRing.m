@@ -44,7 +44,7 @@
     return self;
 }
 
-- (CGMutablePathRef)createPath {
+- (CGMutablePathRef)createPath CF_RETURNS_RETAINED {
     CGFloat length = CGRectGetWidth(self.frame);
     CGMutablePathRef path = CGPathCreateMutable();
     CGPathAddEllipseInRect(path, nil, CGRectMake(STROKE_LEGNTH / 2,
@@ -63,14 +63,16 @@
     self.transform = CGAffineTransformMakeRotation(-M_PI / 2);
 }
 
-- (void)layoutSubviews
+- (void)layoutSublayersOfLayer:(CALayer *)layer
 {
     CGFloat width = CGRectGetWidth(self.frame);
     if(_lastWidth != width) {
-        if(self.shapeLayer.path != nil) {
-            CGPathRelease(self.shapeLayer.path);
-            self.shapeLayer.path = nil;
-        }
+        _lastWidth = width;
+//        if(self.shapeLayer.path) {
+//            CGPathRef ref = self.shapeLayer.path;
+//            self.shapeLayer.path = nil;
+//            CGPathRelease(ref);
+//        }
         self.shapeLayer.path = [self createPath];
         self.shapeLayer.fillColor = nil;
         self.shapeLayer.strokeColor = self.progressColor.CGColor;

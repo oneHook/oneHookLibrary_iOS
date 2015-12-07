@@ -8,10 +8,14 @@
 
 #import "OHAnimatedProgressRing.h"
 
-@interface OHCountDownProgressView : OHAnimatedProgressRing
+@interface OHCountDownProgressView : UIView
 
 @property (assign, nonatomic) double secondsToCountDown;
 
--(void)start;
+@property (strong, nonatomic) OHAnimatedProgressRing* progressRing;
+@property (strong, nonatomic) UILabel* secondsLabel;
+
+-(void)startWithEndingBlock:(void(^)(NSTimeInterval countTime))endBlock;
+-(void)reset;
 
 @end
