@@ -43,6 +43,7 @@
     
     self.secondsLabel = [[UILabel alloc] init];
     self.secondsLabel.textAlignment = NSTextAlignmentCenter;
+    self.secondsLabel.adjustsFontSizeToFitWidth = YES;
     [self addSubview:self.secondsLabel];
 }
 
@@ -67,7 +68,7 @@
 {
     double currTime = CACurrentMediaTime();
     double past = currTime - _startTime;
-    self.secondsLabel.text = [NSString stringWithFormat:@"%ds", (int) ceil(_secondsToCountDown - past)];
+    self.secondsLabel.text = [NSString stringWithFormat:@"%d", (int) ceil(_secondsToCountDown - past)];
     CGFloat progress = past / self.secondsToCountDown;
     self.progressRing.progress = progress;
     if(progress >= 1.0) {
@@ -99,7 +100,7 @@
         [_timer invalidate];
         _timer = nil;
     }
-    self.secondsLabel.text = [NSString stringWithFormat:@"%ds", (int)_secondsToCountDown];
+    self.secondsLabel.text = [NSString stringWithFormat:@"%d", (int)_secondsToCountDown];
     self.progressRing.progress = 0.0f;
 }
 

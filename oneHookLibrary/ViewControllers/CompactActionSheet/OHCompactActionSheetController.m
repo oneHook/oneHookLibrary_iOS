@@ -47,7 +47,10 @@
             
         }];
     } else {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
         UIActionSheet* sheet = [[UIActionSheet alloc] init];
+#pragma clang diagnostic pop
         sheet.title = _title;
         sheet.delegate = self;
         for(NSString* option in _options) {
