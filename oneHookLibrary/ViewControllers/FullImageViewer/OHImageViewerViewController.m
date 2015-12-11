@@ -103,8 +103,13 @@
             [self.delegate imageViewer:self
                      loadHighResForKey:self.imageKey
                          progressBlock:^(double progress) {
-                             
+#ifdef DEBUG
+                             NSLog(@"OHImageViewerViewController loading High-res progress %f", progress);
+#endif
                          } completionBlock:^(UIImage *image) {
+#ifdef DEBUG
+                             NSLog(@"OHImageViewerViewController loading High-res done size is (%f, %f) ", image.size.width, image.size.height);
+#endif
                              weakSelf.displayingImage = image;
                              weakSelf.imageView.image = self.displayingImage;
                          }];
