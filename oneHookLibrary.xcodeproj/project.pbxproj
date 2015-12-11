@@ -11,6 +11,8 @@
 		4C3EB79E1B547A96005DF938 /* OHLinearScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3EB79C1B54755C005DF938 /* OHLinearScrollView.m */; };
 		4C98AA901B56E16A000B6D9C /* UIColor+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C98AA8F1B56E16A000B6D9C /* UIColor+Utility.m */; };
 		4C98AA911B56E98A000B6D9C /* UIColor+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C98AA8F1B56E16A000B6D9C /* UIColor+Utility.m */; };
+		4CBCD7B01C1A5660006385EA /* OHImageViewerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBCD7AF1C1A5660006385EA /* OHImageViewerViewController.m */; };
+		4CBCD7B11C1A5672006385EA /* OHImageViewerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBCD7AF1C1A5660006385EA /* OHImageViewerViewController.m */; };
 		D300C3091BC808A5003F5050 /* OHReactiveButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D300C3081BC808A5003F5050 /* OHReactiveButton.m */; };
 		D300C30A1BC80E5D003F5050 /* OHReactiveButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D300C3081BC808A5003F5050 /* OHReactiveButton.m */; };
 		D305F74F1BE511BE00A4071B /* NSString+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = D305F74E1BE511BE00A4071B /* NSString+Utility.m */; };
@@ -109,6 +111,8 @@
 		4C3EB79C1B54755C005DF938 /* OHLinearScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHLinearScrollView.m; sourceTree = "<group>"; };
 		4C98AA8E1B56E16A000B6D9C /* UIColor+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Utility.h"; sourceTree = "<group>"; };
 		4C98AA8F1B56E16A000B6D9C /* UIColor+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Utility.m"; sourceTree = "<group>"; };
+		4CBCD7AE1C1A5660006385EA /* OHImageViewerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHImageViewerViewController.h; sourceTree = "<group>"; };
+		4CBCD7AF1C1A5660006385EA /* OHImageViewerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHImageViewerViewController.m; sourceTree = "<group>"; };
 		D300C3071BC808A5003F5050 /* OHReactiveButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHReactiveButton.h; sourceTree = "<group>"; };
 		D300C3081BC808A5003F5050 /* OHReactiveButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHReactiveButton.m; sourceTree = "<group>"; };
 		D305F74D1BE511BE00A4071B /* NSString+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Utility.h"; sourceTree = "<group>"; };
@@ -216,6 +220,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4CBCD7AD1C1A5660006385EA /* FullImageViewer */ = {
+			isa = PBXGroup;
+			children = (
+				4CBCD7AE1C1A5660006385EA /* OHImageViewerViewController.h */,
+				4CBCD7AF1C1A5660006385EA /* OHImageViewerViewController.m */,
+			);
+			path = FullImageViewer;
+			sourceTree = "<group>";
+		};
 		D309EC191ADA454800858EF2 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
@@ -413,6 +426,7 @@
 		D3FE00211AC50A21004D4BD2 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				4CBCD7AD1C1A5660006385EA /* FullImageViewer */,
 				D36F729C1B62EAC200C75D05 /* CompactActionSheet */,
 				D3846F8B1AF2A80200E6FF78 /* ViewPager */,
 				D3FE00251AC50A70004D4BD2 /* Base */,
@@ -612,6 +626,7 @@
 				D38FA0501B267B2F002F5C4F /* OHTooltipView.m in Sources */,
 				D3E399081B8A593A005D556D /* UIView+Toast.m in Sources */,
 				D3A742541BCEC6620057710E /* OHImagePickerController.m in Sources */,
+				4CBCD7B11C1A5672006385EA /* OHImageViewerViewController.m in Sources */,
 				D33A1CE11BF595D90005FDB2 /* OHProgressRingDemoViewController.m in Sources */,
 				D3E398FF1B88F0DB005D556D /* OHGradientView.m in Sources */,
 				D3FE008C1AC5109F004D4BD2 /* OHBaseViewController.m in Sources */,
@@ -667,6 +682,7 @@
 				D36F729F1B62EADF00C75D05 /* OHCompactActionSheetController.m in Sources */,
 				D30C945F1B7AB5EE003C05AB /* OHProgressBar.m in Sources */,
 				D32848171AEC273800DE7CD3 /* OHHamburgerButton.m in Sources */,
+				4CBCD7B01C1A5660006385EA /* OHImageViewerViewController.m in Sources */,
 				D323D4611B12280800C3B0D0 /* UIImage+Color.m in Sources */,
 				D38FA04B1B255A68002F5C4F /* OHSegmentedControl.m in Sources */,
 				D323D4651B122DFC00C3B0D0 /* OHButtonDemoViewController.m in Sources */,
