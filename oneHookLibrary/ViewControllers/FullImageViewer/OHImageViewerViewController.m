@@ -68,11 +68,11 @@
     [self.scrollView addSubview:self.imageView];
     
     [UIView animateWithDuration:0.3f animations:^{
-        int imageWidth = image.size.width;
-        int imageHeight = image.size.height;
-        int imageRatio = imageWidth/imageHeight;
-        int viewRatio = self.view.frame.size.width/self.view.frame.size.height;
-        int ratio;
+        CGFloat imageWidth = image.size.width;
+        CGFloat imageHeight = image.size.height;
+        CGFloat imageRatio = imageWidth/imageHeight;
+        CGFloat viewRatio = self.view.frame.size.width/self.view.frame.size.height;
+        CGFloat ratio;
         if (imageRatio >= viewRatio) //image is wider
         {
             ratio = imageWidth/self.view.frame.size.width;
@@ -81,8 +81,8 @@
         {
             ratio = imageHeight/self.view.frame.size.height;
         }
-        int newWidth = imageWidth/ratio;
-        int newHeight = imageHeight/ratio;
+        CGFloat newWidth = imageWidth/ratio;
+        CGFloat newHeight = imageHeight/ratio;
         self.imageView.frame = CGRectMake(self.scrollView.frame.origin.x, self.scrollView.frame.origin.y, newWidth, newHeight);
         self.imageView.center = self.scrollView.center;
         self.imageView.layer.cornerRadius = 0.0;
