@@ -11,18 +11,21 @@
 
 @interface OHImageViewerViewController () <OHCompactActionSheetControllerDelegate>
 
+@property (weak, nonatomic) UIViewController* parentViewController;
 @property (strong, nonatomic) UIImage* displayingImage;
+@property (strong, nonatomic) NSString* imageKey;
 @property (strong, nonatomic) OHCompactActionSheetController* actionSheetController;
 
 @end
 
 @implementation OHImageViewerViewController
 
-- (id)initWithPlaceholderImage:(UIImage *)image
+- (id)initWithPlaceholderImage:(UIImage *)image imageKey:(NSString *)imageKey
 {
     self = [super init];
     if(self) {
         self.displayingImage = image;
+        self.imageKey = imageKey;
     }
     return self;
 }
@@ -49,7 +52,13 @@
     [self.scrollView addGestureRecognizer:tapTwice];
 }
 
-- (void)centerPictureFromPoint:(CGPoint)point ofSize:(CGSize)size withCornerRadius:(float)radius {
+
+- (void)presentPictureIn:(UIViewController*)parentViewController fromPoint:(CGPoint)point ofSize:(CGSize)size withCornerRadius:(float)radius
+{
+    self.parentViewController = parentViewController;
+    [self.parentViewController addChildViewController:self];
+    [self.parentViewController.view addSubview:self.view];
+    
     self.imageView = [[UIImageView alloc] initWithFrame:CGRectMake(point.x, point.y, size.width, size.height)];
     self.imageView.layer.cornerRadius = radius;
     self.imageView.clipsToBounds = YES;
@@ -87,8 +96,21 @@
         }
         self.pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(moveImage:)];
         [self.scrollView addGestureRecognizer:self.pan];
+        
+        /* we can load high res now if needed */
+        if(self.delegate) {
+            typeof(self) weakSelf = self;
+            [self.delegate imageViewer:self
+                     loadHighResForKey:self.imageKey
+                         progressBlock:^(double progress) {
+                             
+                         } completionBlock:^(UIImage *image) {
+                             weakSelf.displayingImage = image;
+                             weakSelf.imageView.image = self.displayingImage;
+                         }];
+        }
     }];
-    
+
 }
 
 - (void)tapOnce:(UIGestureRecognizer *)gestureRecognizer
@@ -98,6 +120,9 @@
         self.view.alpha = 0.0f;
     } completion:^(BOOL finished) {
         [self.view removeFromSuperview];
+        [self removeFromParentViewController];
+        self.parentViewController = nil;
+        self.delegate = nil;
     }];
 }
 
