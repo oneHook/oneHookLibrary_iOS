@@ -13,4 +13,7 @@
 + (NSDate *)beginningOfDay;
 + (NSDate *)endOfDay;
 
++ (NSDateFormatter*)isoDateFormatter;
+- (NSString *)relativeTime;
+
 @end

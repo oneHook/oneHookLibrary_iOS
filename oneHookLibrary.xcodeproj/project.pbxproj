@@ -36,6 +36,7 @@
 		D33A1CDD1BF589DE0005FDB2 /* OHAnimatedProgressRing.m in Sources */ = {isa = PBXBuildFile; fileRef = D33A1CDC1BF589DE0005FDB2 /* OHAnimatedProgressRing.m */; };
 		D33A1CE01BF590570005FDB2 /* OHProgressRingDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D33A1CDF1BF590570005FDB2 /* OHProgressRingDemoViewController.m */; };
 		D33A1CE11BF595D90005FDB2 /* OHProgressRingDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D33A1CDF1BF590570005FDB2 /* OHProgressRingDemoViewController.m */; };
+		D33D1AC11C1B82690006A9D3 /* NSDate+Utility.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D33D1AC01C1B82690006A9D3 /* NSDate+Utility.bundle */; };
 		D34A080B1B7B74CF001B6C30 /* NSString+Morphing.m in Sources */ = {isa = PBXBuildFile; fileRef = D34A08081B7B74CF001B6C30 /* NSString+Morphing.m */; };
 		D34A080C1B7B74CF001B6C30 /* TOMSMorphingLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = D34A080A1B7B74CF001B6C30 /* TOMSMorphingLabel.m */; };
 		D34A080D1B7B74E6001B6C30 /* NSString+Morphing.m in Sources */ = {isa = PBXBuildFile; fileRef = D34A08081B7B74CF001B6C30 /* NSString+Morphing.m */; };
@@ -141,6 +142,7 @@
 		D33A1CDE1BF590570005FDB2 /* OHProgressRingDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHProgressRingDemoViewController.h; sourceTree = "<group>"; };
 		D33A1CDF1BF590570005FDB2 /* OHProgressRingDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHProgressRingDemoViewController.m; sourceTree = "<group>"; };
 		D33BA5F31ADA2D9000DF885A /* OHCommonDimensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OHCommonDimensions.h; sourceTree = "<group>"; };
+		D33D1AC01C1B82690006A9D3 /* NSDate+Utility.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = "NSDate+Utility.bundle"; sourceTree = "<group>"; };
 		D34A08071B7B74CF001B6C30 /* NSString+Morphing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Morphing.h"; sourceTree = "<group>"; };
 		D34A08081B7B74CF001B6C30 /* NSString+Morphing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Morphing.m"; sourceTree = "<group>"; };
 		D34A08091B7B74CF001B6C30 /* TOMSMorphingLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TOMSMorphingLabel.h; sourceTree = "<group>"; };
@@ -515,6 +517,7 @@
 		D3FEFFF41AC50788004D4BD2 /* oneHookLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				D33D1AC01C1B82690006A9D3 /* NSDate+Utility.bundle */,
 				D34A08051B7B74CF001B6C30 /* Thirdparty */,
 				D309EC191ADA454800858EF2 /* Utility */,
 				D3FE00881AC50E79004D4BD2 /* Headers */,
@@ -618,6 +621,7 @@
 				D328480D1AEC1B9500DE7CD3 /* Main.storyboard in Resources */,
 				D328480C1AEC1B9500DE7CD3 /* LaunchScreen.xib in Resources */,
 				D3FE00031AC50788004D4BD2 /* Images.xcassets in Resources */,
+				D33D1AC11C1B82690006A9D3 /* NSDate+Utility.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
