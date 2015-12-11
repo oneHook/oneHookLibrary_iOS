@@ -7,12 +7,25 @@
 //
 
 #import "OHImageViewerViewController.h"
+#import "OHCompactActionSheetController.h"
 
-@interface OHImageViewerViewController ()
+@interface OHImageViewerViewController () <OHCompactActionSheetControllerDelegate>
+
+@property (strong, nonatomic) UIImage* displayingImage;
+@property (strong, nonatomic) OHCompactActionSheetController* actionSheetController;
 
 @end
 
 @implementation OHImageViewerViewController
+
+- (id)initWithPlaceholderImage:(UIImage *)image
+{
+    self = [super init];
+    if(self) {
+        self.displayingImage = image;
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -41,12 +54,13 @@
     self.imageView.layer.cornerRadius = radius;
     self.imageView.clipsToBounds = YES;
     
-    self.imageView.image = self.image;
+    UIImage* image = self.displayingImage;
+    self.imageView.image = image;
     [self.scrollView addSubview:self.imageView];
     
     [UIView animateWithDuration:0.3f animations:^{
-        int imageWidth = self.image.size.width;
-        int imageHeight = self.image.size.height;
+        int imageWidth = image.size.width;
+        int imageHeight = image.size.height;
         int imageRatio = imageWidth/imageHeight;
         int viewRatio = self.view.frame.size.width/self.view.frame.size.height;
         int ratio;
@@ -144,19 +158,23 @@
 - (void)longPress:(UILongPressGestureRecognizer *)gesture {
     if(UIGestureRecognizerStateBegan == gesture.state)
     {
-        UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Save to camera roll", nil];
-        [actionSheet showInView:self.view];
+        OHCompactActionSheetController* actionSheet = [[OHCompactActionSheetController alloc] initWithTitle:nil
+                                                                                                    message:@""
+                                                                                                    options:@[@"Save to camera roll"]];
+        self.actionSheetController = actionSheet;
+        self.actionSheetController.delegate = self;
+        [self.actionSheetController presentInViewController:self];
     }
-    
 }
 
-- (void) actionSheet:(UIActionSheet *)actionSheet willDismissWithButtonIndex:(NSInteger)buttonIndex
+- (void)actionSheetController:(OHCompactActionSheetController *)controller indexSelected:(NSInteger)index itemTitle:(NSString *)title
 {
-    if (buttonIndex == 0) //save to camera roll
-    {
-        UIImageWriteToSavedPhotosAlbum(self.image, self, @selector(image:finishedSavingWithError:contextInfo:), nil);
+    self.actionSheetController = nil;
+    if(index == 0) {
+        UIImageWriteToSavedPhotosAlbum(self.imageView.image,
+                                       self,
+                                       @selector(image:finishedSavingWithError:contextInfo:), nil);
     }
-    
 }
 
 - (void)image:(UIImage *)image finishedSavingWithError:(NSError *) error contextInfo:(void *)contextInfo
