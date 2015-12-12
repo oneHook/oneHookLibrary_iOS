@@ -95,12 +95,42 @@ const int YEAR = DAY*365;
     }
 }
 
+- (NSString*)relativeTimeShort
+{
+    NSDate *currentDate = [NSDate date];
+    long deltaSeconds = labs(lroundf([self timeIntervalSinceDate:currentDate]));
+    
+    if(deltaSeconds < 2*SECOND) {
+        return [self localizedString: @"Now"];
+    } else if(deltaSeconds < MINUTE) {
+        return [self formattedStringForCurrentDate:currentDate count:deltaSeconds past:@"%ds" future:@"in %ds"];
+    }else if(deltaSeconds < HOUR) {
+        int minutes = (int)lroundf((float)deltaSeconds/(float)MINUTE);
+        return [self formattedStringForCurrentDate:currentDate count:minutes past:@"%dm" future:@"in %dm"];
+    } else if(deltaSeconds < DAY) {
+        int hours = (int)lroundf((float)deltaSeconds/(float)HOUR);
+        return [self formattedStringForCurrentDate:currentDate count:hours past:@"%dh" future:@"in %dh"];
+    } else if(deltaSeconds < WEEK) {
+        int days = (int)lroundf((float)deltaSeconds/(float)DAY);
+        return [self formattedStringForCurrentDate:currentDate count:days past:@"%dd" future:@"in %dd"];
+    } else if(deltaSeconds < MONTH) {
+        int weeks = (int)lroundf((float)deltaSeconds/(float)WEEK);
+        return [self formattedStringForCurrentDate:currentDate count:weeks past:@"%dw" future:@"in %dw"];
+    } else if(deltaSeconds < YEAR) {
+        int months = (int)lroundf((float)deltaSeconds/(float)MONTH);
+        return [self formattedStringForCurrentDate:currentDate count:months past:@"%dm" future:@"in %dm"];
+    } else {
+        int years = (int)lroundf((float)deltaSeconds/(float)YEAR);
+        return [self formattedStringForCurrentDate:currentDate count:years past:@"%dy" future:@"in %dy"];
+    }
+}
+
 -(NSString *)formattedStringForCurrentDate:(NSDate *)currentDate count:(long)count past:(NSString *)past future:(NSString *)future
 {
     if ([self timeIntervalSinceDate:currentDate] > 0) {
-        return [NSString stringWithFormat: [self localizedString: future], count];
+        return [NSString stringWithFormat:[self localizedString:future], count];
     } else {
-        return [NSString stringWithFormat: [self localizedString: past], count];
+        return [NSString stringWithFormat:[self localizedString:past], count];
     }
 }
 

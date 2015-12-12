@@ -15,5 +15,6 @@
 
 + (NSDateFormatter*)isoDateFormatter;
 - (NSString *)relativeTime;
+- (NSString *)relativeTimeShort;
 
 @end
