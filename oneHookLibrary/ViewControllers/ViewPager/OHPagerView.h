@@ -30,8 +30,8 @@
 @property (assign, nonatomic) NSInteger selectedIndex;
 
 @property (strong, nonatomic) OHHorizontalScrollView *scrollView;
-@property (assign, nonatomic) id<OHPagerViewDatasource> datasource;
-@property (assign, nonatomic) id<OHPagerViewDelegate> delegate;
+@property (weak, nonatomic) id<OHPagerViewDatasource> datasource;
+@property (weak, nonatomic) id<OHPagerViewDelegate> delegate;
 
 - (void)gotoPageAtIndex:(NSInteger)index animated:(BOOL)animated;
 
