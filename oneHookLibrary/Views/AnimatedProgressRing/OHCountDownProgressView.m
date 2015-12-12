@@ -80,6 +80,15 @@
     }
 }
 
+- (void)removeFromSuperview
+{
+    [super removeFromSuperview];
+    if(_timer) {
+        [_timer invalidate];
+        _timer = nil;
+    }
+}
+
 - (void)layoutSubviews
 {
     self.progressRing.frame = self.bounds;
