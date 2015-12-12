@@ -37,7 +37,17 @@
     return self;
 }
 
+- (void)dealloc
+{
+#ifdef DEBUG
+    NSLog(@"DEALLOC ANIMATED PROGRESS RING");
+#endif
+}
+
 - (void)commonInit {
+#ifdef DEBUG
+    NSLog(@"ALLOC ANIMATED PROGRESS RING");
+#endif
     self.progressRing = [[OHAnimatedProgressRing alloc] init];
     [self addSubview:self.progressRing];
     
@@ -54,8 +64,9 @@
         _timer = nil;
     }
     endedBlock = endBlock;
+    __weak typeof(self) weakSelf = self;
     _timer = [NSTimer scheduledTimerWithTimeInterval:kDefaultFireIntervalHighUse
-                                              target:self
+                                              target:weakSelf
                                             selector:@selector(updateProgress)
                                             userInfo:nil
                                              repeats:YES];
