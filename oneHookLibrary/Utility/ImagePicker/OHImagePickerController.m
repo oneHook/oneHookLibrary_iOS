@@ -15,7 +15,7 @@
 }
 
 @property (strong, nonatomic) OHCompactActionSheetController* actionSheetController;
-@property (strong, nonatomic) UIImagePickerController* imagePicker;
+@property (weak, nonatomic) UIImagePickerController* imagePicker;
 @property (strong, nonatomic) NSMutableArray* options;
 
 @end
@@ -116,10 +116,10 @@
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
 {
+
     [self.delegate oh_imagePickerControllerCancelled:self];
     [[UIApplication sharedApplication] setStatusBarHidden:YES];
     [picker dismissViewControllerAnimated:YES completion:nil];
-    self.imagePicker = nil;
 }
 
 @end
