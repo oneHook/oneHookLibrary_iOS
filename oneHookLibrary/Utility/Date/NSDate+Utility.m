@@ -149,4 +149,14 @@ const int YEAR = DAY*365;
     return NSLocalizedStringFromTableInBundle(key, @"NSDate+Utility", bundle, nil);
 }
 
+- (NSString *)shortDate
+{
+    static NSDateFormatter* dateFormatter;
+    if(!dateFormatter) {
+        dateFormatter = [[NSDateFormatter alloc] init];
+        [dateFormatter setDateFormat:@"MMM dd"];
+    }
+    return [dateFormatter stringFromDate:self];
+}
+
 @end
