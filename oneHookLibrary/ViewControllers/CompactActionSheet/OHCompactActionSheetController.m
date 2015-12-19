@@ -41,7 +41,7 @@
             index++;
         }
         [alertController addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
-            [self.delegate actionSheetController:self indexSelected:index itemTitle:@"Cancel"];
+            [self.delegate actionSheetController:self indexSelected:-1 itemTitle:@"Cancel"];
         }]];
         [controller presentViewController:alertController animated:YES completion:^{
             
@@ -65,7 +65,7 @@
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     if(actionSheet.cancelButtonIndex == buttonIndex) {
-        [self.delegate actionSheetController:self indexSelected:buttonIndex itemTitle:@"Cancel"];
+        [self.delegate actionSheetController:self indexSelected:-1 itemTitle:@"Cancel"];
     } else {
         [self.delegate actionSheetController:self indexSelected:buttonIndex itemTitle:[_options objectAtIndex:buttonIndex]];
     }
