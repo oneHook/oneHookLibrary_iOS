@@ -60,7 +60,8 @@
         [sheet showInView:controller.view];
     }
 }
-
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     if(actionSheet.cancelButtonIndex == buttonIndex) {
@@ -69,6 +70,7 @@
         [self.delegate actionSheetController:self indexSelected:buttonIndex itemTitle:[_options objectAtIndex:buttonIndex]];
     }
 }
+#pragma clang diagnostic pop
 
 
 @end

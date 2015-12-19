@@ -11,7 +11,6 @@
 
 @interface OHImageViewerViewController () <OHCompactActionSheetControllerDelegate>
 
-@property (weak, nonatomic) UIViewController* parentViewController;
 @property (strong, nonatomic) UIImage* displayingImage;
 @property (strong, nonatomic) NSString* imageKey;
 @property (strong, nonatomic) OHCompactActionSheetController* actionSheetController;
@@ -55,9 +54,8 @@
 
 - (void)presentPictureIn:(UIViewController*)parentViewController fromPoint:(CGPoint)point ofSize:(CGSize)size withCornerRadius:(float)radius
 {
-    self.parentViewController = parentViewController;
-    [self.parentViewController addChildViewController:self];
-    [self.parentViewController.view addSubview:self.view];
+    [parentViewController addChildViewController:self];
+    [parentViewController.view addSubview:self.view];
     
     self.imageView = [[UIImageView alloc] initWithFrame:CGRectMake(point.x, point.y, size.width, size.height)];
     self.imageView.layer.cornerRadius = radius;
@@ -126,7 +124,6 @@
     } completion:^(BOOL finished) {
         [self.view removeFromSuperview];
         [self removeFromParentViewController];
-        self.parentViewController = nil;
         self.delegate = nil;
     }];
 }
