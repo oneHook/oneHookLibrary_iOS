@@ -142,9 +142,6 @@ const int YEAR = DAY*365;
         bundle = [NSBundle bundleWithPath:
                   [[[NSBundle mainBundle] resourcePath]
                                            stringByAppendingPathComponent:@"/NSDate+Utility.bundle"]];
-        NSLog(@"budnel %@ %@",
-              [[[NSBundle mainBundle] resourcePath]
-               stringByAppendingPathComponent:@"/NSDate+Utility.bundle"], bundle);
     });
     return NSLocalizedStringFromTableInBundle(key, @"NSDate+Utility", bundle, nil);
 }
