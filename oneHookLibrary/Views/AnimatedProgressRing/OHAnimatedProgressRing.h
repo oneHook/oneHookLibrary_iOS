@@ -13,12 +13,16 @@
 @property (assign, nonatomic) CGFloat progress;
 @property (strong, nonatomic) UIColor* progressColor;
 
+- (id)initWithStrokeLength:(CGFloat)strokeLength;
+
 - (void)setProgress:(CGFloat)progress animated:(BOOL)animated;
 
 - (void)hideProgressRing;
 - (void)hideProgressRingWithDuration:(double)duration;
 - (void)revealProgressRing;
 - (void)revealProgressRingWithDuration:(double)duration;
+
+- (void)setProgress:(CGFloat)progress animationDuration:(double)duration;
 
 
 @end

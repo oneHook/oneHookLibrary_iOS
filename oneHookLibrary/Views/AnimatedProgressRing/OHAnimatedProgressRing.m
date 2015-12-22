@@ -8,10 +8,11 @@
 
 #import "OHAnimatedProgressRing.h"
 
-#define STROKE_LEGNTH (CGRectGetWidth(self.frame) / 8)
+#define STROKE_LEGNTH _strokeLength
 
 @interface OHAnimatedProgressRing() {
     CGFloat _lastWidth;
+    CGFloat _strokeLength;
 }
 
 @property (weak, nonatomic) CAShapeLayer* shapeLayer;
@@ -23,7 +24,7 @@
 - (id)init {
     self = [super init];
     if (self) {
-        [self commonInit];
+        [self commonInitWithStrokeLength:24];
     }
     return self;
 }
@@ -31,7 +32,7 @@
 - (id)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
     if (self) {
-        [self commonInit];
+        [self commonInitWithStrokeLength:24];
     }
     return self;
 }
@@ -39,7 +40,15 @@
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        [self commonInit];
+        [self commonInitWithStrokeLength:24];
+    }
+    return self;
+}
+
+- (id)initWithStrokeLength:(CGFloat)strokeLength {
+    self = [super initWithFrame:CGRectZero];
+    if(self) {
+        [self commonInitWithStrokeLength:strokeLength];
     }
     return self;
 }
@@ -54,8 +63,10 @@
     return path;
 }
 
-- (void)commonInit {
+- (void)commonInitWithStrokeLength:(CGFloat)strokeLen {
     _lastWidth = -1;
+    _strokeLength = strokeLen;
+    
     CAShapeLayer* shapeLayer = [[CAShapeLayer alloc] init];
     self.shapeLayer = shapeLayer;
     [self.layer addSublayer:shapeLayer];
@@ -76,7 +87,7 @@
         self.shapeLayer.path = [self createPath];
         self.shapeLayer.fillColor = nil;
         self.shapeLayer.strokeColor = self.progressColor.CGColor;
-        self.shapeLayer.lineWidth = width / 8;
+        self.shapeLayer.lineWidth = _strokeLength;
         self.shapeLayer.lineCap = kCALineCapRound;
         self.shapeLayer.masksToBounds = YES;
         self.shapeLayer.frame = self.bounds;
@@ -95,12 +106,25 @@
 
 - (void)setProgress:(CGFloat)progress animated:(BOOL)animated
 {
-    _progress = progress;
     if(animated) {
-        
+        [self setProgress:progress animationDuration:0.8];
     } else {
+        _progress = progress;
         self.shapeLayer.strokeStart = progress;
     }
+}
+
+- (void)setProgress:(CGFloat)progress animationDuration:(double)duration
+{
+    CABasicAnimation *an = [[CABasicAnimation alloc] init];
+    an.keyPath = @"strokeStart";
+    an.duration = duration;
+    an.fromValue = [NSNumber numberWithFloat:_progress];
+    an.toValue = [NSNumber numberWithFloat:progress];
+    an.timingFunction = [CAMediaTimingFunction functionWithControlPoints:0.5:-0.8:0.5:1.85];
+    self.shapeLayer.strokeStart = progress;
+    [self.shapeLayer addAnimation:an forKey:@"strokeStart"];
+    _progress = progress;
 }
 
 - (void)hideProgressRing
