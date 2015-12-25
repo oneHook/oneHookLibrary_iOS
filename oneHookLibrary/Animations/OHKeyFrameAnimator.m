@@ -19,6 +19,24 @@
 
 @implementation OHKeyFrameAnimator
 
+- (id)init
+{
+    self = [super init];
+    if(self) {
+#ifdef DEBUG
+        NSLog(@"%@ ALLOC", [[self class] description]);
+#endif
+    }
+    return self;
+}
+
+- (void)dealloc
+{
+#ifdef DEBUG
+    NSLog(@"%@ DEALLOC", [[self class] description]);
+#endif
+}
+
 - (void)startAnimatingWithDuration:(double)duration progress:(void (^)(double))block
 {
     _timeblock = block;
