@@ -156,4 +156,14 @@ const int YEAR = DAY*365;
     return [dateFormatter stringFromDate:self];
 }
 
+- (NSString *)shortDateWithYear
+{
+    static NSDateFormatter* dateFormatter;
+    if(!dateFormatter) {
+        dateFormatter = [[NSDateFormatter alloc] init];
+        [dateFormatter setDateFormat:@"MMM dd, yyyy"];
+    }
+    return [dateFormatter stringFromDate:self];
+}
+
 @end
