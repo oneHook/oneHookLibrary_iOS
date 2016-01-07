@@ -14,6 +14,7 @@
 + (NSDate *)endOfDay;
 
 + (NSDateFormatter*)isoDateFormatter;
+- (NSString *)shortTime;
 - (NSString *)relativeTime;
 - (NSString *)relativeTimeShort;
 - (NSString *)shortDate;

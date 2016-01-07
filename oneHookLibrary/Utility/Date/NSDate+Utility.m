@@ -169,6 +169,16 @@ const int YEAR = DAY*365;
     return [dateFormatter stringFromDate:self];
 }
 
+- (NSString *)shortTime
+{
+    static NSDateFormatter* dateFormatter;
+    if(!dateFormatter) {
+        dateFormatter = [[NSDateFormatter alloc] init];
+        [dateFormatter setDateFormat:@"hh:mm a"];
+    }
+    return [dateFormatter stringFromDate:self];
+}
+
 - (NSString *)shortWeek
 {
     NSCalendar* cal = [NSCalendar currentCalendar];
