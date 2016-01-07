@@ -48,6 +48,8 @@
 - (id)initWithStrokeLength:(CGFloat)strokeLength {
     self = [super initWithFrame:CGRectZero];
     if(self) {
+        self.progressColor = [UIColor yellowColor];
+        self.clockwise = NO;
         [self commonInitWithStrokeLength:strokeLength];
     }
     return self;
@@ -70,7 +72,6 @@
     CAShapeLayer* shapeLayer = [[CAShapeLayer alloc] init];
     self.shapeLayer = shapeLayer;
     [self.layer addSublayer:shapeLayer];
-    self.progressColor = [UIColor yellowColor];
     self.transform = CGAffineTransformMakeRotation(-M_PI / 2);
 }
 
@@ -79,11 +80,6 @@
     CGFloat width = CGRectGetWidth(self.frame);
     if(_lastWidth != width) {
         _lastWidth = width;
-//        if(self.shapeLayer.path) {
-//            CGPathRef ref = self.shapeLayer.path;
-//            self.shapeLayer.path = nil;
-//            CGPathRelease(ref);
-//        }
         self.shapeLayer.path = [self createPath];
         self.shapeLayer.fillColor = nil;
         self.shapeLayer.strokeColor = self.progressColor.CGColor;
@@ -110,21 +106,41 @@
         [self setProgress:progress animationDuration:0.8];
     } else {
         _progress = progress;
-        self.shapeLayer.strokeStart = progress;
+        if(self.clockwise) {
+            self.shapeLayer.strokeStart = 0.0f;
+            self.shapeLayer.strokeEnd = 1 - progress;
+        } else {
+            self.shapeLayer.strokeStart = progress;
+            self.shapeLayer.strokeEnd = 1.0f;
+        }
     }
 }
 
 - (void)setProgress:(CGFloat)progress animationDuration:(double)duration
 {
-    CABasicAnimation *an = [[CABasicAnimation alloc] init];
-    an.keyPath = @"strokeStart";
-    an.duration = duration;
-    an.fromValue = [NSNumber numberWithFloat:_progress];
-    an.toValue = [NSNumber numberWithFloat:progress];
-    an.timingFunction = [CAMediaTimingFunction functionWithControlPoints:0.5:-0.8:0.5:1.85];
-    self.shapeLayer.strokeStart = progress;
-    [self.shapeLayer addAnimation:an forKey:@"strokeStart"];
-    _progress = progress;
+    if(self.clockwise) {
+        self.shapeLayer.strokeStart = 0.0f;
+        progress = 1 - progress;
+        CABasicAnimation *an = [[CABasicAnimation alloc] init];
+        an.keyPath = @"strokeEnd";
+        an.duration = duration;
+        an.fromValue = [NSNumber numberWithFloat:_progress];
+        an.toValue = [NSNumber numberWithFloat:progress];
+        an.timingFunction = [CAMediaTimingFunction functionWithControlPoints:0.5:-0.8:0.5:1.85];
+        self.shapeLayer.strokeEnd = progress;
+        [self.shapeLayer addAnimation:an forKey:@"strokeEnd"];
+        _progress = progress;
+    } else {
+        CABasicAnimation *an = [[CABasicAnimation alloc] init];
+        an.keyPath = @"strokeStart";
+        an.duration = duration;
+        an.fromValue = [NSNumber numberWithFloat:_progress];
+        an.toValue = [NSNumber numberWithFloat:progress];
+        an.timingFunction = [CAMediaTimingFunction functionWithControlPoints:0.5:-0.8:0.5:1.85];
+        self.shapeLayer.strokeStart = progress;
+        [self.shapeLayer addAnimation:an forKey:@"strokeStart"];
+        _progress = progress;
+    }
 }
 
 - (void)hideProgressRing
@@ -134,15 +150,7 @@
 
 - (void)hideProgressRingWithDuration:(double)duration
 {
-    CABasicAnimation *an = [[CABasicAnimation alloc] init];
-    an.keyPath = @"strokeStart";
-    an.duration = duration;
-    an.fromValue = [NSNumber numberWithFloat:_progress];
-    an.toValue = [NSNumber numberWithFloat:1.0];
-    an.timingFunction = [CAMediaTimingFunction functionWithControlPoints:0.5:-0.8:0.5:1.85];
-    self.shapeLayer.strokeStart = 1.0f;
-    [self.shapeLayer addAnimation:an forKey:@"strokeStart"];
-    _progress = 1.0;
+    [self setProgress:1.0 animated:duration];
 }
 
 - (void)revealProgressRing
@@ -152,16 +160,8 @@
 
 - (void)revealProgressRingWithDuration:(double)duration
 {
-    CABasicAnimation *an = [[CABasicAnimation alloc] init];
-    an.keyPath = @"strokeStart";
-    an.duration = duration;
-    an.fromValue = [NSNumber numberWithFloat:_progress];
-    an.toValue = [NSNumber numberWithFloat:0.0];
-    an.timingFunction = [CAMediaTimingFunction functionWithControlPoints:0.5:-0.8:0.5:1.85];
-    self.shapeLayer.strokeStart = 0.0f;
-    [self.shapeLayer addAnimation:an forKey:@"strokeStart"];
-    _progress = 0.0;
-}
+    [self setProgress:0.0 animated:duration];
+};
 
 - (void)setProgressColor:(UIColor *)progressColor
 {

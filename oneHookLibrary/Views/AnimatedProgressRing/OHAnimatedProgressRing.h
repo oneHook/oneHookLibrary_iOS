@@ -10,6 +10,7 @@
 
 @interface OHAnimatedProgressRing : UIView
 
+@property (assign, nonatomic) BOOL clockwise;
 @property (assign, nonatomic) CGFloat progress;
 @property (strong, nonatomic) UIColor* progressColor;
 

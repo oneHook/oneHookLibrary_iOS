@@ -7,6 +7,9 @@
 //
 
 #import "NSDate+Utility.h"
+#import <UIKit/UIKit.h>
+#import "OHMacros.h"
+
 
 @implementation NSDate (Utility)
 
@@ -164,6 +167,52 @@ const int YEAR = DAY*365;
         [dateFormatter setDateFormat:@"MMM dd, yyyy"];
     }
     return [dateFormatter stringFromDate:self];
+}
+
+- (NSString *)shortWeek
+{
+    NSCalendar* cal = [NSCalendar currentCalendar];
+    int weekday = 0;
+    if(OLDER_VERSION) {
+        NSDateComponents* comp = [cal components:NSWeekdayCalendarUnit fromDate:self];
+        weekday = (int) [comp weekday];
+    } else {
+        NSDateComponents* comp = [cal components:NSCalendarUnitWeekday fromDate:self];
+        weekday = (int) [comp weekday];
+    }
+    switch(weekday) {
+        case 1:
+            return @"SU";
+        case 2:
+            return @"M";
+        case 3:
+            return @"TU";
+        case 4:
+            return @"W";
+        case 5:
+            return @"TH";
+        case 6:
+            return @"F";
+        case 7:
+            return @"SA";
+            default:
+            return @"";
+            
+    }
+}
+
+- (int)year
+{
+    NSCalendar* cal = [NSCalendar currentCalendar];
+    int year = 0;
+    if(OLDER_VERSION) {
+        NSDateComponents* comp = [cal components:NSYearCalendarUnit fromDate:self];
+        year = (int) [comp year];
+    } else {
+        NSDateComponents* comp = [cal components:NSCalendarUnitYear fromDate:self];
+        year = (int) [comp year];
+    }
+    return year;
 }
 
 @end

@@ -18,5 +18,7 @@
 - (NSString *)relativeTimeShort;
 - (NSString *)shortDate;
 - (NSString *)shortDateWithYear;
+- (NSString *)shortWeek;
+- (int)year;
 
 @end
