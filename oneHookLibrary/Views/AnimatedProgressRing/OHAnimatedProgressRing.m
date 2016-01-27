@@ -78,6 +78,7 @@
 - (void)layoutSublayersOfLayer:(CALayer *)layer
 {
     CGFloat width = CGRectGetWidth(self.frame);
+
     if(_lastWidth != width) {
         _lastWidth = width;
         self.shapeLayer.path = [self createPath];
@@ -91,7 +92,7 @@
                                      @"strokeEnd" : [NSNull null],
                                      @"strokeColor" : [NSNull null],
                                      @"transform" : [NSNull null] };
-        self.shapeLayer.strokeStart = self.progress;
+        [self setProgress:self.progress animated:NO];
     }
 }
 
@@ -108,7 +109,7 @@
         _progress = progress;
         if(self.clockwise) {
             self.shapeLayer.strokeStart = 0.0f;
-            self.shapeLayer.strokeEnd = 1 - progress;
+            self.shapeLayer.strokeEnd = progress;
         } else {
             self.shapeLayer.strokeStart = progress;
             self.shapeLayer.strokeEnd = 1.0f;
