@@ -71,6 +71,8 @@
 		D3E398FF1B88F0DB005D556D /* OHGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E398FD1B88EFE1005D556D /* OHGradientView.m */; };
 		D3E399071B8A593A005D556D /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E399061B8A593A005D556D /* UIView+Toast.m */; };
 		D3E399081B8A593A005D556D /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E399061B8A593A005D556D /* UIView+Toast.m */; };
+		D3F6DFBF1C2CFF5100043B38 /* OHKeyFrameAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F6DFBE1C2CFF5100043B38 /* OHKeyFrameAnimator.m */; };
+		D3F6DFC01C2D02C300043B38 /* OHKeyFrameAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F6DFBE1C2CFF5100043B38 /* OHKeyFrameAnimator.m */; };
 		D3FC55E11B0011890043F02A /* OHRotatingRevealAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FC55E01B0011890043F02A /* OHRotatingRevealAnimationController.m */; };
 		D3FC55E21B0012DD0043F02A /* OHRotatingRevealAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FC55E01B0011890043F02A /* OHRotatingRevealAnimationController.m */; };
 		D3FE00031AC50788004D4BD2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3FE00021AC50788004D4BD2 /* Images.xcassets */; };
@@ -177,6 +179,8 @@
 		D3E398FD1B88EFE1005D556D /* OHGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHGradientView.m; sourceTree = "<group>"; };
 		D3E399051B8A593A005D556D /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
 		D3E399061B8A593A005D556D /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
+		D3F6DFBD1C2CFF5100043B38 /* OHKeyFrameAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHKeyFrameAnimator.h; sourceTree = "<group>"; };
+		D3F6DFBE1C2CFF5100043B38 /* OHKeyFrameAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHKeyFrameAnimator.m; sourceTree = "<group>"; };
 		D3FC55DF1B0011890043F02A /* OHRotatingRevealAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHRotatingRevealAnimationController.h; sourceTree = "<group>"; };
 		D3FC55E01B0011890043F02A /* OHRotatingRevealAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHRotatingRevealAnimationController.m; sourceTree = "<group>"; };
 		D3FE00021AC50788004D4BD2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../Images.xcassets; sourceTree = "<group>"; };
@@ -428,6 +432,8 @@
 			children = (
 				D38304091AE9F4B6003AE826 /* TableViewEffect */,
 				D3FE00291AC50AA2004D4BD2 /* Animator */,
+				D3F6DFBD1C2CFF5100043B38 /* OHKeyFrameAnimator.h */,
+				D3F6DFBE1C2CFF5100043B38 /* OHKeyFrameAnimator.m */,
 			);
 			path = Animations;
 			sourceTree = "<group>";
@@ -659,6 +665,7 @@
 				4C3EB79E1B547A96005DF938 /* OHLinearScrollView.m in Sources */,
 				D383040D1AE9F5B4003AE826 /* OHTableViewWIthCardEffectController.m in Sources */,
 				D305F7501BE5130300A4071B /* NSString+Utility.m in Sources */,
+				D3F6DFC01C2D02C300043B38 /* OHKeyFrameAnimator.m in Sources */,
 				D3C4A8501B7D054E00660353 /* UIImageViewWithOverlay.m in Sources */,
 				D3FE009B1AC5E55D004D4BD2 /* OHCircularButton.m in Sources */,
 				D309EC1E1ADA455F00858EF2 /* UIImageEffects.m in Sources */,
@@ -700,6 +707,7 @@
 				D323D4611B12280800C3B0D0 /* UIImage+Color.m in Sources */,
 				D38FA04B1B255A68002F5C4F /* OHSegmentedControl.m in Sources */,
 				D323D4651B122DFC00C3B0D0 /* OHButtonDemoViewController.m in Sources */,
+				D3F6DFBF1C2CFF5100043B38 /* OHKeyFrameAnimator.m in Sources */,
 				D309EC1F1ADA456100858EF2 /* UIImageEffects.m in Sources */,
 				D3A7424E1BCDAAF80057710E /* OHCircularImageView.m in Sources */,
 				4C3EB79D1B54755C005DF938 /* OHLinearScrollView.m in Sources */,

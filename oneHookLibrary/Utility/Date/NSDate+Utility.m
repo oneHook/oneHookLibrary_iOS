@@ -7,31 +7,48 @@
 //
 
 #import "NSDate+Utility.h"
+#import <UIKit/UIKit.h>
+#import "OHMacros.h"
+
 
 @implementation NSDate (Utility)
 
-+ (NSDate *)beginningOfDay {
+- (NSDate *)beginningOfDay
+{
     NSCalendar *calendar = [NSCalendar currentCalendar];
-
+    
     NSDateComponents *components = [calendar components:NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay
-                                               fromDate:[[NSDate alloc] init]];
-
+                                               fromDate:self];
+    
     return [calendar dateFromComponents:components];
 }
 
-+ (NSDate *)endOfDay {
+- (NSDate *)endOfDay
+{
     NSCalendar *calendar = [NSCalendar currentCalendar];
-
+    
     NSDateComponents *components = [NSDateComponents new];
     components.day = 1;
-
+    
     NSDate *date = [calendar dateByAddingComponents:components
-                                             toDate:[NSDate beginningOfDay]
+                                             toDate:[self beginningOfDay]
                                             options:0];
-
+    
     date = [date dateByAddingTimeInterval:-1];
-
     return date;
+}
+
+- (NSDate *)yesterday
+{
+    return [self dateByAddingTimeInterval:-86400];
+}
+
+- (BOOL)isSameDay:(NSDate *)other
+{
+    if(!other) {
+        return NO;
+    }
+    return [[self shortDate] isEqualToString:[other shortDate]];
 }
 
 + (NSDateFormatter*)isoDateFormatter
@@ -154,6 +171,72 @@ const int YEAR = DAY*365;
         [dateFormatter setDateFormat:@"MMM dd"];
     }
     return [dateFormatter stringFromDate:self];
+}
+
+- (NSString *)shortDateWithYear
+{
+    static NSDateFormatter* dateFormatter;
+    if(!dateFormatter) {
+        dateFormatter = [[NSDateFormatter alloc] init];
+        [dateFormatter setDateFormat:@"MMM dd, yyyy"];
+    }
+    return [dateFormatter stringFromDate:self];
+}
+
+- (NSString *)shortTime
+{
+    static NSDateFormatter* dateFormatter;
+    if(!dateFormatter) {
+        dateFormatter = [[NSDateFormatter alloc] init];
+        [dateFormatter setDateFormat:@"hh:mm a"];
+    }
+    return [dateFormatter stringFromDate:self];
+}
+
+- (NSString *)shortWeek
+{
+    NSCalendar* cal = [NSCalendar currentCalendar];
+    int weekday = 0;
+    if(OLDER_VERSION) {
+        NSDateComponents* comp = [cal components:NSWeekdayCalendarUnit fromDate:self];
+        weekday = (int) [comp weekday];
+    } else {
+        NSDateComponents* comp = [cal components:NSCalendarUnitWeekday fromDate:self];
+        weekday = (int) [comp weekday];
+    }
+    switch(weekday) {
+        case 1:
+            return @"SU";
+        case 2:
+            return @"M";
+        case 3:
+            return @"TU";
+        case 4:
+            return @"W";
+        case 5:
+            return @"TH";
+        case 6:
+            return @"F";
+        case 7:
+            return @"SA";
+            default:
+            return @"";
+            
+    }
+}
+
+- (int)year
+{
+    NSCalendar* cal = [NSCalendar currentCalendar];
+    int year = 0;
+    if(OLDER_VERSION) {
+        NSDateComponents* comp = [cal components:NSYearCalendarUnit fromDate:self];
+        year = (int) [comp year];
+    } else {
+        NSDateComponents* comp = [cal components:NSCalendarUnitYear fromDate:self];
+        year = (int) [comp year];
+    }
+    return year;
 }
 
 @end

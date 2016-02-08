@@ -10,12 +10,18 @@
 
 @interface NSDate (Utility)
 
-+ (NSDate *)beginningOfDay;
-+ (NSDate *)endOfDay;
+- (NSDate *)beginningOfDay;
+- (NSDate *)endOfDay;
+- (NSDate *)yesterday;
+- (BOOL)isSameDay:(NSDate*)other;
 
 + (NSDateFormatter*)isoDateFormatter;
+- (NSString *)shortTime;
 - (NSString *)relativeTime;
 - (NSString *)relativeTimeShort;
 - (NSString *)shortDate;
+- (NSString *)shortDateWithYear;
+- (NSString *)shortWeek;
+- (int)year;
 
 @end
