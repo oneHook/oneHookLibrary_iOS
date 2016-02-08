@@ -40,7 +40,7 @@
 {
     self.clipsToBounds = YES;
     _overlayLayer = [[CALayer alloc] init];
-    _overlayLayer.backgroundColor = [UIColor colorWithWhite:0 alpha:0.5].CGColor;
+    _overlayLayer.backgroundColor = [UIColor colorWithWhite:0 alpha:0.25].CGColor;
     [self.layer addSublayer:_overlayLayer];
 }
 
