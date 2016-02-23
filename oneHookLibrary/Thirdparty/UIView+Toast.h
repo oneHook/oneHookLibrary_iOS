@@ -28,6 +28,8 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #import <UIKit/UIKit.h>
 
+#define TOAST_DURATION_INDEFINITE -1
+
 extern NSString * const CSToastPositionTop;
 extern NSString * const CSToastPositionCenter;
 extern NSString * const CSToastPositionBottom;
