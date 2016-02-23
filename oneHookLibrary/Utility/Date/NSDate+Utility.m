@@ -16,26 +16,17 @@
 - (NSDate *)beginningOfDay
 {
     NSCalendar *calendar = [NSCalendar currentCalendar];
-    
-    NSDateComponents *components = [calendar components:NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay
-                                               fromDate:self];
-    
+    NSDateComponents *components = [calendar components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay|NSCalendarUnitHour|NSCalendarUnitMinute|NSCalendarUnitSecond fromDate:self];
+    components.hour = 0;
+    components.minute = 0;
+    components.second = 0;
     return [calendar dateFromComponents:components];
 }
 
 - (NSDate *)endOfDay
 {
-    NSCalendar *calendar = [NSCalendar currentCalendar];
-    
-    NSDateComponents *components = [NSDateComponents new];
-    components.day = 1;
-    
-    NSDate *date = [calendar dateByAddingComponents:components
-                                             toDate:[self beginningOfDay]
-                                            options:0];
-    
-    date = [date dateByAddingTimeInterval:-1];
-    return date;
+    NSDate* date = [self beginningOfDay];
+    return [NSDate dateWithTimeInterval:86399 sinceDate:date];
 }
 
 - (NSDate *)yesterday
