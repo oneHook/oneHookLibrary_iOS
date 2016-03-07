@@ -7,6 +7,7 @@
 //
 
 #import "OHCompactActionSheetController.h"
+#import "OHMacros.h"
 
 @interface OHCompactActionSheetController() {
     NSString* _title;
@@ -31,7 +32,7 @@
 
 - (void)presentInViewController:(UIViewController *)controller
 {
-    if([UIAlertController class]) {
+    if(!OLDER_VERSION && [UIAlertController class]) {
         UIAlertController* alertController = [UIAlertController alertControllerWithTitle:_title message:_message preferredStyle:UIAlertControllerStyleActionSheet];
         NSInteger index = 0;
         for(NSString* option in _options) {
