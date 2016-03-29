@@ -13,6 +13,8 @@
 		4C90D6611CAB24EF00D594F3 /* OHSolidButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C90D65F1CAB215A00D594F3 /* OHSolidButton.m */; };
 		4C90D6641CAB25B800D594F3 /* OHStrokeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C90D6631CAB25B800D594F3 /* OHStrokeButton.m */; };
 		4C90D6651CAB260600D594F3 /* OHStrokeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C90D6631CAB25B800D594F3 /* OHStrokeButton.m */; };
+		4C90D66C1CAB33FF00D594F3 /* OHRoundButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C90D66B1CAB33FF00D594F3 /* OHRoundButton.m */; };
+		4C90D66D1CAB346800D594F3 /* OHRoundButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C90D66B1CAB33FF00D594F3 /* OHRoundButton.m */; };
 		4C98AA901B56E16A000B6D9C /* UIColor+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C98AA8F1B56E16A000B6D9C /* UIColor+Utility.m */; };
 		4C98AA911B56E98A000B6D9C /* UIColor+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C98AA8F1B56E16A000B6D9C /* UIColor+Utility.m */; };
 		4CBCD7B01C1A5660006385EA /* OHImageViewerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBCD7AF1C1A5660006385EA /* OHImageViewerViewController.m */; };
@@ -123,6 +125,8 @@
 		4C90D65F1CAB215A00D594F3 /* OHSolidButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHSolidButton.m; sourceTree = "<group>"; };
 		4C90D6621CAB25B800D594F3 /* OHStrokeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHStrokeButton.h; sourceTree = "<group>"; };
 		4C90D6631CAB25B800D594F3 /* OHStrokeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHStrokeButton.m; sourceTree = "<group>"; };
+		4C90D66A1CAB33FF00D594F3 /* OHRoundButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHRoundButton.h; sourceTree = "<group>"; };
+		4C90D66B1CAB33FF00D594F3 /* OHRoundButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHRoundButton.m; sourceTree = "<group>"; };
 		4C98AA8E1B56E16A000B6D9C /* UIColor+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Utility.h"; sourceTree = "<group>"; };
 		4C98AA8F1B56E16A000B6D9C /* UIColor+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Utility.m"; sourceTree = "<group>"; };
 		4CBCD7AE1C1A5660006385EA /* OHImageViewerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHImageViewerViewController.h; sourceTree = "<group>"; };
@@ -424,6 +428,8 @@
 				4C90D65F1CAB215A00D594F3 /* OHSolidButton.m */,
 				4C90D6621CAB25B800D594F3 /* OHStrokeButton.h */,
 				4C90D6631CAB25B800D594F3 /* OHStrokeButton.m */,
+				4C90D66A1CAB33FF00D594F3 /* OHRoundButton.h */,
+				4C90D66B1CAB33FF00D594F3 /* OHRoundButton.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -656,6 +662,7 @@
 				D38FA0501B267B2F002F5C4F /* OHTooltipView.m in Sources */,
 				D3E399081B8A593A005D556D /* UIView+Toast.m in Sources */,
 				D3A742541BCEC6620057710E /* OHImagePickerController.m in Sources */,
+				4C90D66D1CAB346800D594F3 /* OHRoundButton.m in Sources */,
 				4CBCD7B11C1A5672006385EA /* OHImageViewerViewController.m in Sources */,
 				D33A1CE11BF595D90005FDB2 /* OHProgressRingDemoViewController.m in Sources */,
 				D3E398FF1B88F0DB005D556D /* OHGradientView.m in Sources */,
@@ -706,6 +713,7 @@
 				D335A9321C16015900A73B97 /* OHCountDownProgressView.m in Sources */,
 				D3FE001E1AC507E3004D4BD2 /* OHButton.m in Sources */,
 				4C98AA901B56E16A000B6D9C /* UIColor+Utility.m in Sources */,
+				4C90D66C1CAB33FF00D594F3 /* OHRoundButton.m in Sources */,
 				D3A7A98A1B18F88E002158DC /* OHConfettiScreen.m in Sources */,
 				D3FC55E11B0011890043F02A /* OHRotatingRevealAnimationController.m in Sources */,
 				D300C3091BC808A5003F5050 /* OHReactiveButton.m in Sources */,
