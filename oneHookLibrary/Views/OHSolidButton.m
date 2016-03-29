@@ -66,17 +66,17 @@
     if(state == UIControlStateNormal) {
         self.normalBackgroundColor = color;
         if(self.isEnabled && !self.isHighlighted) {
-            self.layer.borderColor = color.CGColor;
+            self.backgroundColor = color;
         }
     } else if(state == UIControlStateHighlighted) {
         self.activeBackgroundColor = color;
         if(self.isEnabled && self.isHighlighted) {
-            self.layer.borderColor = color.CGColor;
+            self.backgroundColor = color;
         }
     } else if(state == UIControlStateDisabled) {
         self.disabledBackgroundColor = color;
         if(!self.isEnabled) {
-            self.layer.borderColor = color.CGColor;
+            self.backgroundColor = color;
         }
     }
 }
