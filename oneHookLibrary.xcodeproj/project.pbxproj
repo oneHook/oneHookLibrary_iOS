@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		4C3EB79D1B54755C005DF938 /* OHLinearScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3EB79C1B54755C005DF938 /* OHLinearScrollView.m */; };
 		4C3EB79E1B547A96005DF938 /* OHLinearScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C3EB79C1B54755C005DF938 /* OHLinearScrollView.m */; };
+		4C90D6601CAB215A00D594F3 /* OHSolidButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C90D65F1CAB215A00D594F3 /* OHSolidButton.m */; };
+		4C90D6611CAB24EF00D594F3 /* OHSolidButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C90D65F1CAB215A00D594F3 /* OHSolidButton.m */; };
+		4C90D6641CAB25B800D594F3 /* OHStrokeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C90D6631CAB25B800D594F3 /* OHStrokeButton.m */; };
+		4C90D6651CAB260600D594F3 /* OHStrokeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C90D6631CAB25B800D594F3 /* OHStrokeButton.m */; };
 		4C98AA901B56E16A000B6D9C /* UIColor+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C98AA8F1B56E16A000B6D9C /* UIColor+Utility.m */; };
 		4C98AA911B56E98A000B6D9C /* UIColor+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C98AA8F1B56E16A000B6D9C /* UIColor+Utility.m */; };
 		4CBCD7B01C1A5660006385EA /* OHImageViewerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBCD7AF1C1A5660006385EA /* OHImageViewerViewController.m */; };
@@ -115,6 +119,10 @@
 /* Begin PBXFileReference section */
 		4C3EB79B1B54755C005DF938 /* OHLinearScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHLinearScrollView.h; sourceTree = "<group>"; };
 		4C3EB79C1B54755C005DF938 /* OHLinearScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHLinearScrollView.m; sourceTree = "<group>"; };
+		4C90D65E1CAB215A00D594F3 /* OHSolidButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHSolidButton.h; sourceTree = "<group>"; };
+		4C90D65F1CAB215A00D594F3 /* OHSolidButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHSolidButton.m; sourceTree = "<group>"; };
+		4C90D6621CAB25B800D594F3 /* OHStrokeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHStrokeButton.h; sourceTree = "<group>"; };
+		4C90D6631CAB25B800D594F3 /* OHStrokeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHStrokeButton.m; sourceTree = "<group>"; };
 		4C98AA8E1B56E16A000B6D9C /* UIColor+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Utility.h"; sourceTree = "<group>"; };
 		4C98AA8F1B56E16A000B6D9C /* UIColor+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Utility.m"; sourceTree = "<group>"; };
 		4CBCD7AE1C1A5660006385EA /* OHImageViewerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHImageViewerViewController.h; sourceTree = "<group>"; };
@@ -412,6 +420,10 @@
 				D300C3081BC808A5003F5050 /* OHReactiveButton.m */,
 				D3A7424C1BCDAAF80057710E /* OHCircularImageView.h */,
 				D3A7424D1BCDAAF80057710E /* OHCircularImageView.m */,
+				4C90D65E1CAB215A00D594F3 /* OHSolidButton.h */,
+				4C90D65F1CAB215A00D594F3 /* OHSolidButton.m */,
+				4C90D6621CAB25B800D594F3 /* OHStrokeButton.h */,
+				4C90D6631CAB25B800D594F3 /* OHStrokeButton.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -638,6 +650,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C90D6611CAB24EF00D594F3 /* OHSolidButton.m in Sources */,
 				D3846F8F1AF318D400E6FF78 /* OHPagerView.m in Sources */,
 				D3A8BC2C1B0A67E0004FF5A3 /* NSDate+Utility.m in Sources */,
 				D38FA0501B267B2F002F5C4F /* OHTooltipView.m in Sources */,
@@ -667,6 +680,7 @@
 				D305F7501BE5130300A4071B /* NSString+Utility.m in Sources */,
 				D3F6DFC01C2D02C300043B38 /* OHKeyFrameAnimator.m in Sources */,
 				D3C4A8501B7D054E00660353 /* UIImageViewWithOverlay.m in Sources */,
+				4C90D6651CAB260600D594F3 /* OHStrokeButton.m in Sources */,
 				D3FE009B1AC5E55D004D4BD2 /* OHCircularButton.m in Sources */,
 				D309EC1E1ADA455F00858EF2 /* UIImageEffects.m in Sources */,
 				D34A080D1B7B74E6001B6C30 /* NSString+Morphing.m in Sources */,
@@ -712,7 +726,9 @@
 				D3A7424E1BCDAAF80057710E /* OHCircularImageView.m in Sources */,
 				4C3EB79D1B54755C005DF938 /* OHLinearScrollView.m in Sources */,
 				D33A1CDD1BF589DE0005FDB2 /* OHAnimatedProgressRing.m in Sources */,
+				4C90D6641CAB25B800D594F3 /* OHStrokeButton.m in Sources */,
 				D3FEFFF81AC50788004D4BD2 /* main.m in Sources */,
+				4C90D6601CAB215A00D594F3 /* OHSolidButton.m in Sources */,
 				D34A080B1B7B74CF001B6C30 /* NSString+Morphing.m in Sources */,
 				D379E5151AF07D0B004D523C /* OHBaseTableViewControllerWithCollapseHeader.m in Sources */,
 				D32848011AEC1B3F00DE7CD3 /* AppDelegate.m in Sources */,

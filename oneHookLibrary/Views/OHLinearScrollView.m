@@ -11,7 +11,7 @@
 #define PADDING self.padding
 
 @interface OHLinearScrollView() {
-    CGFloat _lastWidth;
+    
 }
 
 @property (strong, nonatomic) NSMutableArray* viewOrders;
@@ -23,7 +23,6 @@
 - (id)initWithOrientation:(OHLinearScrollViewOrientation)orientation {
     self = [super init];
     if(self) {
-        _lastWidth = 0;
         self.orientation = orientation;
         self.contentView = [[UIView alloc] init];
         self.viewOrders = [[NSMutableArray alloc] init];
@@ -33,31 +32,28 @@
 }
 
 - (void)doLayout {
-
-    if(_lastWidth != self.bounds.size.width) {
-        _lastWidth = self.bounds.size.width;
-        CGFloat contentLength = 0;
-        for(UIView* view in self.viewOrders) {
-            if(self.orientation == OHLinearScrollViewOrientationHorizontal) {
-                view.frame = CGRectMake(contentLength, 0, view.bounds.size.width, self.bounds.size.height);
-                contentLength += view.bounds.size.width;
-            } else {
-                CGFloat marginTop = view.bounds.origin.y;
-                view.bounds = CGRectMake(0, 0, view.bounds.size.width, view.bounds.size.height);
-                view.frame = CGRectMake(0,
-                                        contentLength + marginTop,
-                                        self.bounds.size.width - self.contentInset.left - self.contentInset.right,
-                                        view.bounds.size.height);
-                contentLength += view.bounds.size.height + marginTop;
-            }
-        }
+    
+    CGFloat contentLength = 0;
+    for(UIView* view in self.viewOrders) {
         if(self.orientation == OHLinearScrollViewOrientationHorizontal) {
-            self.contentSize = CGSizeMake(contentLength, 0);
-            self.contentView.frame = CGRectMake(0, 0, contentLength, self.frame.size.height);
+            view.frame = CGRectMake(contentLength, 0, view.bounds.size.width, self.bounds.size.height);
+            contentLength += view.bounds.size.width;
         } else {
-            self.contentSize = CGSizeMake(0, contentLength);
-            self.contentView.frame = CGRectMake(0, 0, self.frame.size.width, contentLength);
+            CGFloat marginTop = view.bounds.origin.y;
+            view.bounds = CGRectMake(0, 0, view.bounds.size.width, view.bounds.size.height);
+            view.frame = CGRectMake(0,
+                                    contentLength + marginTop,
+                                    self.bounds.size.width - self.contentInset.left - self.contentInset.right,
+                                    view.bounds.size.height);
+            contentLength += view.bounds.size.height + marginTop;
         }
+    }
+    if(self.orientation == OHLinearScrollViewOrientationHorizontal) {
+        self.contentSize = CGSizeMake(contentLength, 0);
+        self.contentView.frame = CGRectMake(0, 0, contentLength, self.frame.size.height);
+    } else {
+        self.contentSize = CGSizeMake(0, contentLength);
+        self.contentView.frame = CGRectMake(0, 0, self.frame.size.width, contentLength);
     }
 }
 
@@ -65,5 +61,50 @@
 {
     [self.viewOrders addObject:view];
 }
+
+
+- (void)doLayoutInSize:(CGSize)size
+{
+    CGFloat contentLength = 0;
+    for(UIView* view in self.viewOrders) {
+        if(self.orientation == OHLinearScrollViewOrientationHorizontal) {
+            view.frame = CGRectMake(contentLength, 0, view.bounds.size.width, self.bounds.size.height);
+            contentLength += view.bounds.size.width;
+        } else {
+            CGFloat marginTop = view.bounds.origin.y;
+            CGFloat viewWidth = CGRectGetWidth(view.bounds);
+            CGFloat viewHeight = CGRectGetHeight(view.bounds);
+            
+            if(viewWidth == MATCH_PARENT) {
+                viewWidth = size.width - self.contentInset.left - self.contentInset.right;
+            } else if(viewWidth < 1) {
+                viewWidth = (size.width - self.contentInset.left - self.contentInset.right) * viewWidth;
+            }
+            
+            view.bounds = CGRectMake(0, 0, viewWidth, view.bounds.size.height);
+            view.frame = CGRectMake((size.width - viewWidth) / 2,
+                                    contentLength + marginTop,
+                                    viewWidth,
+                                    viewHeight);
+            contentLength += view.bounds.size.height + marginTop;
+        }
+    }
+    if(self.orientation == OHLinearScrollViewOrientationHorizontal) {
+        self.contentSize = CGSizeMake(contentLength, 0);
+        self.contentView.frame = CGRectMake(0, 0, contentLength, self.frame.size.height);
+    } else {
+        self.contentSize = CGSizeMake(0, contentLength);
+        self.contentView.frame = CGRectMake(0, 0, self.frame.size.width, contentLength);
+    }
+
+}
+
+- (void)addChild:(UIView*)view
+{
+    [self.contentView addSubview:view];
+    [self addViewToOrder:view];
+}
+
+
 
 @end
