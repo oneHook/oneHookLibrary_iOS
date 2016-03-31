@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "OHButton.h"
+#import "OHSolidButton.h"
 
-@interface OHReactiveButton : OHButton
+@interface OHReactiveButton : OHSolidButton
 
 @property (strong, nonatomic) UIView* progressView;
 @property (strong, nonatomic) UIView* finishView;

@@ -17,14 +17,11 @@
 @implementation OHReactiveButton
 
 - (void)commonInit {
-    [super commonInit];
-    self.buttonStyle = kButtonStyleSolid;
+
 }
 
 - (void)showDefault
 {
-//    CGFloat width = CGRectGetWidth(self.frame);
-//    CGFloat height = CGRectGetHeight(self.frame);
     [UIView animateWithDuration:0.25 animations:^{
         _progressView.alpha = 0.0f;
         if(_finishView) {

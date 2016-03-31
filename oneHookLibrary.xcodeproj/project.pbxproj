@@ -29,7 +29,6 @@
 		D30C94601B7ABAFD003C05AB /* OHProgressBar.m in Sources */ = {isa = PBXBuildFile; fileRef = D30C945E1B7AB5EE003C05AB /* OHProgressBar.m */; };
 		D323D4601B12278F00C3B0D0 /* OHCircularButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FE00911AC5DA0D004D4BD2 /* OHCircularButton.m */; };
 		D323D4611B12280800C3B0D0 /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FE00951AC5E02F004D4BD2 /* UIImage+Color.m */; };
-		D323D4621B122DD900C3B0D0 /* OHButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FE001D1AC507E3004D4BD2 /* OHButton.m */; };
 		D323D4651B122DFC00C3B0D0 /* OHButtonDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D323D4641B122DFC00C3B0D0 /* OHButtonDemoViewController.m */; };
 		D32848011AEC1B3F00DE7CD3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D32848001AEC1B3F00DE7CD3 /* AppDelegate.m */; };
 		D328480C1AEC1B9500DE7CD3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D328480A1AEC1B9500DE7CD3 /* LaunchScreen.xib */; };
@@ -82,7 +81,6 @@
 		D3FC55E11B0011890043F02A /* OHRotatingRevealAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FC55E01B0011890043F02A /* OHRotatingRevealAnimationController.m */; };
 		D3FC55E21B0012DD0043F02A /* OHRotatingRevealAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FC55E01B0011890043F02A /* OHRotatingRevealAnimationController.m */; };
 		D3FE00031AC50788004D4BD2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3FE00021AC50788004D4BD2 /* Images.xcassets */; };
-		D3FE001E1AC507E3004D4BD2 /* OHButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FE001D1AC507E3004D4BD2 /* OHButton.m */; };
 		D3FE002E1AC50AEA004D4BD2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3FE002D1AC50AEA004D4BD2 /* QuartzCore.framework */; };
 		D3FE00311AC50B70004D4BD2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3FE00301AC50B70004D4BD2 /* CoreGraphics.framework */; };
 		D3FE00331AC50BE3004D4BD2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3FE00321AC50BE3004D4BD2 /* Foundation.framework */; };
@@ -196,8 +194,6 @@
 		D3FC55DF1B0011890043F02A /* OHRotatingRevealAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHRotatingRevealAnimationController.h; sourceTree = "<group>"; };
 		D3FC55E01B0011890043F02A /* OHRotatingRevealAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHRotatingRevealAnimationController.m; sourceTree = "<group>"; };
 		D3FE00021AC50788004D4BD2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../Images.xcassets; sourceTree = "<group>"; };
-		D3FE001C1AC507E3004D4BD2 /* OHButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHButton.h; sourceTree = "<group>"; };
-		D3FE001D1AC507E3004D4BD2 /* OHButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHButton.m; sourceTree = "<group>"; };
 		D3FE00261AC50A7A004D4BD2 /* OHBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHBaseViewController.h; sourceTree = "<group>"; };
 		D3FE00271AC50A7A004D4BD2 /* OHBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHBaseViewController.m; sourceTree = "<group>"; };
 		D3FE002A1AC50AB7004D4BD2 /* OHCircularRevealAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHCircularRevealAnimationController.h; sourceTree = "<group>"; };
@@ -404,8 +400,6 @@
 				D3A7A9871B18F88E002158DC /* Screens */,
 				D32848141AEC272D00DE7CD3 /* HamburgerButton */,
 				D3FE00931AC5E020004D4BD2 /* View+ */,
-				D3FE001C1AC507E3004D4BD2 /* OHButton.h */,
-				D3FE001D1AC507E3004D4BD2 /* OHButton.m */,
 				D3FE00901AC5DA0D004D4BD2 /* OHCircularButton.h */,
 				D3FE00911AC5DA0D004D4BD2 /* OHCircularButton.m */,
 				D38FA0491B255A68002F5C4F /* OHSegmentedControl.h */,
@@ -667,7 +661,6 @@
 				D33A1CE11BF595D90005FDB2 /* OHProgressRingDemoViewController.m in Sources */,
 				D3E398FF1B88F0DB005D556D /* OHGradientView.m in Sources */,
 				D3FE008C1AC5109F004D4BD2 /* OHBaseViewController.m in Sources */,
-				D323D4621B122DD900C3B0D0 /* OHButton.m in Sources */,
 				D3FC55E21B0012DD0043F02A /* OHRotatingRevealAnimationController.m in Sources */,
 				D36B605A1B6A49D600198D8E /* OHEqualWeightLayout.m in Sources */,
 				D3A3BA401AF43413005F38E2 /* OHHorizontalScrollView.m in Sources */,
@@ -711,7 +704,6 @@
 				D3E398FE1B88EFE1005D556D /* OHGradientView.m in Sources */,
 				D33A1CE01BF590570005FDB2 /* OHProgressRingDemoViewController.m in Sources */,
 				D335A9321C16015900A73B97 /* OHCountDownProgressView.m in Sources */,
-				D3FE001E1AC507E3004D4BD2 /* OHButton.m in Sources */,
 				4C98AA901B56E16A000B6D9C /* UIColor+Utility.m in Sources */,
 				4C90D66C1CAB33FF00D594F3 /* OHRoundButton.m in Sources */,
 				D3A7A98A1B18F88E002158DC /* OHConfettiScreen.m in Sources */,

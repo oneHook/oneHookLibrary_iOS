@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 oneHook inc. All rights reserved.
 //
 
-#import "OHButton.h"
+#import "OHRoundButton.h"
 
 @interface OHCircularButton : UIView
 
