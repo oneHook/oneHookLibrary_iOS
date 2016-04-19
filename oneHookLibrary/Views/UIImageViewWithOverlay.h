@@ -14,4 +14,6 @@
 @property (assign, nonatomic) BOOL showPlaceholder;
 @property (strong, nonatomic) UIImage* placeholderImage;
 
+- (void)setOverlayColor:(UIColor*)color;
+
 @end

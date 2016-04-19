@@ -81,6 +81,11 @@
     }
 }
 
+- (void)setOverlayColor:(UIColor *)color
+{
+    _overlayLayer.backgroundColor = color.CGColor;
+}
+
 - (void)setShowPlaceholder:(BOOL)showPlaceholder
 {
     _showPlaceholder = showPlaceholder;

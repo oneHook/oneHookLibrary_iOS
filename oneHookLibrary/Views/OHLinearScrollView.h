@@ -13,7 +13,7 @@ typedef enum {
     OHLinearScrollViewOrientationHorizontal
 } OHLinearScrollViewOrientation;
 
-#define MATCH_PARENT -1
+#define MATCH_PARENT 1
 
 @interface OHLinearScrollView : UIScrollView
 

@@ -74,7 +74,6 @@
             CGFloat marginTop = view.bounds.origin.y;
             CGFloat viewWidth = CGRectGetWidth(view.bounds);
             CGFloat viewHeight = CGRectGetHeight(view.bounds);
-            
             if(viewWidth == MATCH_PARENT) {
                 viewWidth = size.width - self.contentInset.left - self.contentInset.right;
             } else if(viewWidth < 1) {
