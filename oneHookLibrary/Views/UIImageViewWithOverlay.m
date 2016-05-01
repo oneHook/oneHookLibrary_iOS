@@ -9,9 +9,7 @@
 #import "UIImageViewWithOverlay.h"
 
 @interface UIImageViewWithOverlay() {
-
-    CALayer* _overlayLayer;
-    UIImageView* _placeholderImageView;
+    
 }
 
 @end
@@ -39,87 +37,55 @@
 - (void)commonInit
 {
     self.clipsToBounds = YES;
-    _overlayLayer = [[CALayer alloc] init];
-    _overlayLayer.backgroundColor = [UIColor colorWithWhite:0 alpha:0.25].CGColor;
-    [self.layer addSublayer:_overlayLayer];
 }
 
 - (void)dealloc
 {
-    [_overlayLayer removeFromSuperlayer];
-    _overlayLayer = nil;
-    [_placeholderImageView removeFromSuperview];
-    _placeholderImageView = nil;
+    if(_solidOverlayLayer) {
+        [_solidOverlayLayer removeFromSuperlayer];
+    }
+    if(_gradientOverlayLayer) {
+        [_gradientOverlayLayer removeFromSuperlayer];
+    }
+}
+
+- (CALayer*)solidOverlayLayer
+{
+    if(!_solidOverlayLayer) {
+        _solidOverlayLayer = [[CALayer alloc] init];
+        _solidOverlayLayer.backgroundColor = [UIColor colorWithWhite:0 alpha:0.25].CGColor;
+        [self.layer addSublayer:_solidOverlayLayer];
+    }
+    return _solidOverlayLayer;
+}
+
+- (CAGradientLayer*)gradientOverlayLayer
+{
+    if(!_gradientOverlayLayer) {
+        _gradientOverlayLayer = [[CAGradientLayer alloc] init];
+        _gradientOverlayLayer.colors = [NSArray arrayWithObjects:(id)([UIColor clearColor].CGColor),
+                                        (id)([UIColor colorWithWhite:0 alpha:0.8].CGColor), nil];
+        [self.layer addSublayer:_gradientOverlayLayer];
+    }
+    return _gradientOverlayLayer;
 }
 
 - (void)layoutSubviews
 {
     [super layoutSubviews];
-    _overlayLayer.frame = self.bounds;
-    if(self.placeholderImage && _placeholderImageView) {
-        _placeholderImageView.image = self.placeholderImage;
-        _placeholderImageView.bounds = CGRectMake(0, 0, self.placeholderImage.size.width, self.placeholderImage.size.height);
-        _placeholderImageView.center = CGPointMake(CGRectGetWidth(self.bounds) / 2,
-                                                   CGRectGetHeight(self.bounds) / 2);
-    } else {
-        _placeholderImageView.frame = CGRectZero;
+    
+    if(_solidOverlayLayer) {
+        [CATransaction begin];
+        [CATransaction setDisableActions: YES];
+        _solidOverlayLayer.frame = self.bounds;
+        [CATransaction commit];
     }
-}
-
-- (void)setShowOverlay:(BOOL)showOverlay
-{
-    _showOverlay = showOverlay;
-    if(_showOverlay) {
-        if(!_overlayLayer) {
-            _overlayLayer = [[CALayer alloc] init];
-            _overlayLayer.backgroundColor = [UIColor colorWithWhite:0 alpha:0.5].CGColor;
-            [self.layer addSublayer:_overlayLayer];
-        }
-        _overlayLayer.hidden = NO;
-    } else {
-        _overlayLayer.hidden = YES;
-    }
-}
-
-- (void)setOverlayColor:(UIColor *)color
-{
-    _overlayLayer.backgroundColor = color.CGColor;
-}
-
-- (void)setShowPlaceholder:(BOOL)showPlaceholder
-{
-    _showPlaceholder = showPlaceholder;
-    if(_showPlaceholder) {
-        if(!_placeholderImageView) {
-            _placeholderImageView = [[UIImageView alloc] init];
-            [self addSubview:_placeholderImageView];
-        }
-        if(_placeholderImage) {
-            _placeholderImageView.image = _placeholderImage;
-            _placeholderImageView.bounds = CGRectMake(0, 0, _placeholderImage.size.width, _placeholderImage.size.height);
-            _placeholderImageView.center = CGPointMake(CGRectGetWidth(self.bounds) / 2,
-                                                       CGRectGetHeight(self.bounds) / 2);
-        } else {
-            _placeholderImageView.frame = CGRectZero;
-        }
-        _placeholderImageView.hidden = NO;
-    } else {
-        _placeholderImageView.hidden = YES;
-    }
-}
-
-- (void)setPlaceholderImage:(UIImage *)placeholderImage
-{
-    _placeholderImage = placeholderImage;
-    if(_placeholderImageView) {
-        if(_placeholderImage) {
-            _placeholderImageView.image = _placeholderImage;
-            _placeholderImageView.bounds = CGRectMake(0, 0, _placeholderImage.size.width, _placeholderImage.size.height);
-            _placeholderImageView.center = CGPointMake(CGRectGetWidth(self.bounds) / 2,
-                                                       CGRectGetHeight(self.bounds) / 2);
-        } else {
-            _placeholderImageView.frame = CGRectZero;
-        }
+    
+    if(_gradientOverlayLayer) {
+        [CATransaction begin];
+        [CATransaction setDisableActions: YES];
+        _gradientOverlayLayer.frame = self.bounds;
+        [CATransaction commit];
     }
 }
 

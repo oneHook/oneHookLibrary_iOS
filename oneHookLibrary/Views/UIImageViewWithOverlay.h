@@ -10,10 +10,7 @@
 
 @interface UIImageViewWithOverlay : UIImageView
 
-@property (assign, nonatomic) BOOL showOverlay;
-@property (assign, nonatomic) BOOL showPlaceholder;
-@property (strong, nonatomic) UIImage* placeholderImage;
-
-- (void)setOverlayColor:(UIColor*)color;
+@property (strong, nonatomic) CALayer* solidOverlayLayer;
+@property (strong, nonatomic) CAGradientLayer* gradientOverlayLayer;
 
 @end
