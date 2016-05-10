@@ -80,12 +80,17 @@
                 viewWidth = (size.width - self.contentInset.left - self.contentInset.right) * viewWidth;
             }
             
-            view.bounds = CGRectMake(0, 0, viewWidth, view.bounds.size.height);
-            view.frame = CGRectMake((size.width - viewWidth) / 2,
-                                    contentLength + marginTop,
-                                    viewWidth,
-                                    viewHeight);
-            contentLength += view.bounds.size.height + marginTop;
+            if(viewHeight == 0) {
+                view.hidden = YES;
+            } else {
+                view.hidden = NO;
+                view.bounds = CGRectMake(0, 0, viewWidth, viewHeight);
+                view.frame = CGRectMake((size.width - viewWidth) / 2,
+                                        contentLength + marginTop,
+                                        viewWidth,
+                                        viewHeight);
+            }
+            contentLength += viewHeight + marginTop;
         }
     }
     if(self.orientation == OHLinearScrollViewOrientationHorizontal) {
@@ -95,7 +100,7 @@
         self.contentSize = CGSizeMake(0, contentLength);
         self.contentView.frame = CGRectMake(0, 0, self.frame.size.width, contentLength);
     }
-
+    
 }
 
 - (void)addChild:(UIView*)view
