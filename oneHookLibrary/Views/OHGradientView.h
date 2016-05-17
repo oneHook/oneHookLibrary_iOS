@@ -11,6 +11,7 @@
 @interface OHGradientView : UIView
 
 - (id)initWithHorizontalGradient;
+- (id)initWithVerticalGradient;
 - (void)setGradientColorFrom:(UIColor*)fromColor to:(UIColor*)toColor;
 
 @end
