@@ -19,6 +19,8 @@
 		4C98AA911B56E98A000B6D9C /* UIColor+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C98AA8F1B56E16A000B6D9C /* UIColor+Utility.m */; };
 		4CBCD7B01C1A5660006385EA /* OHImageViewerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBCD7AF1C1A5660006385EA /* OHImageViewerViewController.m */; };
 		4CBCD7B11C1A5672006385EA /* OHImageViewerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBCD7AF1C1A5660006385EA /* OHImageViewerViewController.m */; };
+		4CD7290C1CEAC9DB00B91F0F /* OHSlideShowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD7290B1CEAC9DB00B91F0F /* OHSlideShowView.m */; };
+		4CD7290D1CEAD6FB00B91F0F /* OHSlideShowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD7290B1CEAC9DB00B91F0F /* OHSlideShowView.m */; };
 		D300C3091BC808A5003F5050 /* OHReactiveButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D300C3081BC808A5003F5050 /* OHReactiveButton.m */; };
 		D300C30A1BC80E5D003F5050 /* OHReactiveButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D300C3081BC808A5003F5050 /* OHReactiveButton.m */; };
 		D305F74F1BE511BE00A4071B /* NSString+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = D305F74E1BE511BE00A4071B /* NSString+Utility.m */; };
@@ -129,6 +131,8 @@
 		4C98AA8F1B56E16A000B6D9C /* UIColor+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Utility.m"; sourceTree = "<group>"; };
 		4CBCD7AE1C1A5660006385EA /* OHImageViewerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHImageViewerViewController.h; sourceTree = "<group>"; };
 		4CBCD7AF1C1A5660006385EA /* OHImageViewerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHImageViewerViewController.m; sourceTree = "<group>"; };
+		4CD7290A1CEAC9DB00B91F0F /* OHSlideShowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHSlideShowView.h; sourceTree = "<group>"; };
+		4CD7290B1CEAC9DB00B91F0F /* OHSlideShowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHSlideShowView.m; sourceTree = "<group>"; };
 		D300C3071BC808A5003F5050 /* OHReactiveButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHReactiveButton.h; sourceTree = "<group>"; };
 		D300C3081BC808A5003F5050 /* OHReactiveButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHReactiveButton.m; sourceTree = "<group>"; };
 		D305F74D1BE511BE00A4071B /* NSString+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Utility.h"; sourceTree = "<group>"; };
@@ -246,6 +250,15 @@
 				4CBCD7AF1C1A5660006385EA /* OHImageViewerViewController.m */,
 			);
 			path = FullImageViewer;
+			sourceTree = "<group>";
+		};
+		4CD729091CEAC9D200B91F0F /* SlideShowView */ = {
+			isa = PBXGroup;
+			children = (
+				4CD7290A1CEAC9DB00B91F0F /* OHSlideShowView.h */,
+				4CD7290B1CEAC9DB00B91F0F /* OHSlideShowView.m */,
+			);
+			path = SlideShowView;
 			sourceTree = "<group>";
 		};
 		D309EC191ADA454800858EF2 /* Utility */ = {
@@ -395,6 +408,7 @@
 		D3FE001B1AC507D7004D4BD2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4CD729091CEAC9D200B91F0F /* SlideShowView */,
 				D33A1CDA1BF589CF0005FDB2 /* AnimatedProgressRing */,
 				D38FA04C1B26775F002F5C4F /* Tooltip */,
 				D3A7A9871B18F88E002158DC /* Screens */,
@@ -665,6 +679,7 @@
 				D36B605A1B6A49D600198D8E /* OHEqualWeightLayout.m in Sources */,
 				D3A3BA401AF43413005F38E2 /* OHHorizontalScrollView.m in Sources */,
 				D335A9331C16019800A73B97 /* OHCountDownProgressView.m in Sources */,
+				4CD7290D1CEAD6FB00B91F0F /* OHSlideShowView.m in Sources */,
 				D379E5161AF07EA7004D523C /* OHBaseTableViewControllerWithCollapseHeader.m in Sources */,
 				D34A080E1B7B74E9001B6C30 /* TOMSMorphingLabel.m in Sources */,
 				D3A7424F1BCDAC910057710E /* OHCircularImageView.m in Sources */,
@@ -709,6 +724,7 @@
 				D3A7A98A1B18F88E002158DC /* OHConfettiScreen.m in Sources */,
 				D3FC55E11B0011890043F02A /* OHRotatingRevealAnimationController.m in Sources */,
 				D300C3091BC808A5003F5050 /* OHReactiveButton.m in Sources */,
+				4CD7290C1CEAC9DB00B91F0F /* OHSlideShowView.m in Sources */,
 				D3A742531BCEC6530057710E /* OHImagePickerController.m in Sources */,
 				D3A3BA3F1AF433E2005F38E2 /* OHHorizontalScrollView.m in Sources */,
 				D383040C1AE9F4CE003AE826 /* OHTableViewWIthCardEffectController.m in Sources */,
