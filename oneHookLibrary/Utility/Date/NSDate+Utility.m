@@ -216,6 +216,61 @@ const int YEAR = DAY*365;
     }
 }
 
+- (NSString *)shortDateUTC
+{
+    static NSDateFormatter* dateFormatter;
+    if(!dateFormatter) {
+        dateFormatter = [[NSDateFormatter alloc] init];
+        dateFormatter.timeZone = [NSTimeZone timeZoneWithName:@"UTC"];
+        [dateFormatter setDateFormat:@"MMM dd"];
+    }
+    return [dateFormatter stringFromDate:self];
+}
+
+- (NSString *)shortDateWithYearUTC
+{
+    static NSDateFormatter* dateFormatter;
+    if(!dateFormatter) {
+        dateFormatter = [[NSDateFormatter alloc] init];
+        dateFormatter.timeZone = [NSTimeZone timeZoneWithName:@"UTC"];
+        [dateFormatter setDateFormat:@"MMM dd, yyyy"];
+    }
+    return [dateFormatter stringFromDate:self];
+}
+
+- (NSString *)shortWeekUTC
+{
+    NSCalendar* cal = [NSCalendar currentCalendar];
+    cal.timeZone = [NSTimeZone timeZoneWithName:@"UTC"];
+    int weekday = 0;
+    if(OLDER_VERSION) {
+        NSDateComponents* comp = [cal components:NSWeekdayCalendarUnit fromDate:self];
+        weekday = (int) [comp weekday];
+    } else {
+        NSDateComponents* comp = [cal components:NSCalendarUnitWeekday fromDate:self];
+        weekday = (int) [comp weekday];
+    }
+    switch(weekday) {
+        case 1:
+            return @"SU";
+        case 2:
+            return @"M";
+        case 3:
+            return @"TU";
+        case 4:
+            return @"W";
+        case 5:
+            return @"TH";
+        case 6:
+            return @"F";
+        case 7:
+            return @"SA";
+        default:
+            return @"";
+            
+    }
+}
+
 - (int)year
 {
     NSCalendar* cal = [NSCalendar currentCalendar];

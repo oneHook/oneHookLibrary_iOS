@@ -22,6 +22,9 @@
 - (NSString *)shortDate;
 - (NSString *)shortDateWithYear;
 - (NSString *)shortWeek;
+- (NSString *)shortDateUTC;
+- (NSString *)shortDateWithYearUTC;
+- (NSString *)shortWeekUTC;
 - (int)year;
 
 @end
