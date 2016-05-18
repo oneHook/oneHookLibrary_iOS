@@ -21,6 +21,9 @@
 
 @property (weak, nonatomic) id<OHSlideShowViewDatasource> datasource;
 
-- (void)startAnimating;
+- (void)initialize;
+- (void)resumeAnimating;
+- (void)stopAnimating;
+- (NSInteger)currentIndex;
 
 @end

@@ -20,5 +20,6 @@
 #define MARGIN_MEDIUM 8
 #define MARGIN_LARGE 16
 #define MARGIN_XLARGE 32
+#define MARGIN_XXLARGE 64
 
 #endif

@@ -54,6 +54,13 @@
     if(!_solidOverlayLayer) {
         _solidOverlayLayer = [[CALayer alloc] init];
         _solidOverlayLayer.backgroundColor = [UIColor colorWithWhite:0 alpha:0.25].CGColor;
+        NSMutableDictionary *newActions = [[NSMutableDictionary alloc] initWithObjectsAndKeys:[NSNull null], @"onOrderIn",
+                                           [NSNull null], @"onOrderOut",
+                                           [NSNull null], @"sublayers",
+                                           [NSNull null], @"contents",
+                                           [NSNull null], @"bounds",
+                                           nil];
+        _solidOverlayLayer.actions = newActions;
         [self.layer addSublayer:_solidOverlayLayer];
     }
     return _solidOverlayLayer;
@@ -65,6 +72,13 @@
         _gradientOverlayLayer = [[CAGradientLayer alloc] init];
         _gradientOverlayLayer.colors = [NSArray arrayWithObjects:(id)([UIColor clearColor].CGColor),
                                         (id)([UIColor colorWithWhite:0 alpha:0.8].CGColor), nil];
+        NSMutableDictionary *newActions = [[NSMutableDictionary alloc] initWithObjectsAndKeys:[NSNull null], @"onOrderIn",
+                                           [NSNull null], @"onOrderOut",
+                                           [NSNull null], @"sublayers",
+                                           [NSNull null], @"contents",
+                                           [NSNull null], @"bounds",
+                                           nil];
+        _gradientOverlayLayer.actions = newActions;
         [self.layer addSublayer:_gradientOverlayLayer];
     }
     return _gradientOverlayLayer;
