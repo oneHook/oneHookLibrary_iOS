@@ -19,6 +19,8 @@
 		4C1736C31D048C2B00B6A4E3 /* OHEqualWeightLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1736C01D048C2B00B6A4E3 /* OHEqualWeightLayout.m */; };
 		4C1736C41D048C2B00B6A4E3 /* OHLinearScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1736C21D048C2B00B6A4E3 /* OHLinearScrollView.m */; };
 		4C1736C91D048C7600B6A4E3 /* OHToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1736C81D048C7600B6A4E3 /* OHToolbar.m */; };
+		4C1736CC1D048CEB00B6A4E3 /* OHViewControllerWithToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1736CB1D048CEB00B6A4E3 /* OHViewControllerWithToolbar.m */; };
+		4C1736CF1D048E0B00B6A4E3 /* OHViewControllerWithToolbarDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1736CE1D048E0B00B6A4E3 /* OHViewControllerWithToolbarDemo.m */; };
 		4C98AA901B56E16A000B6D9C /* UIColor+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C98AA8F1B56E16A000B6D9C /* UIColor+Utility.m */; };
 		4C98AA911B56E98A000B6D9C /* UIColor+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C98AA8F1B56E16A000B6D9C /* UIColor+Utility.m */; };
 		4CBCD7B01C1A5660006385EA /* OHImageViewerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBCD7AF1C1A5660006385EA /* OHImageViewerViewController.m */; };
@@ -135,6 +137,10 @@
 		4C1736C21D048C2B00B6A4E3 /* OHLinearScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHLinearScrollView.m; sourceTree = "<group>"; };
 		4C1736C71D048C7600B6A4E3 /* OHToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHToolbar.h; sourceTree = "<group>"; };
 		4C1736C81D048C7600B6A4E3 /* OHToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHToolbar.m; sourceTree = "<group>"; };
+		4C1736CA1D048CEB00B6A4E3 /* OHViewControllerWithToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHViewControllerWithToolbar.h; sourceTree = "<group>"; };
+		4C1736CB1D048CEB00B6A4E3 /* OHViewControllerWithToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHViewControllerWithToolbar.m; sourceTree = "<group>"; };
+		4C1736CD1D048E0B00B6A4E3 /* OHViewControllerWithToolbarDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHViewControllerWithToolbarDemo.h; sourceTree = "<group>"; };
+		4C1736CE1D048E0B00B6A4E3 /* OHViewControllerWithToolbarDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHViewControllerWithToolbarDemo.m; sourceTree = "<group>"; };
 		4C98AA8E1B56E16A000B6D9C /* UIColor+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Utility.h"; sourceTree = "<group>"; };
 		4C98AA8F1B56E16A000B6D9C /* UIColor+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Utility.m"; sourceTree = "<group>"; };
 		4CBCD7AE1C1A5660006385EA /* OHImageViewerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHImageViewerViewController.h; sourceTree = "<group>"; };
@@ -357,6 +363,8 @@
 				D323D4641B122DFC00C3B0D0 /* OHButtonDemoViewController.m */,
 				D33A1CDE1BF590570005FDB2 /* OHProgressRingDemoViewController.h */,
 				D33A1CDF1BF590570005FDB2 /* OHProgressRingDemoViewController.m */,
+				4C1736CD1D048E0B00B6A4E3 /* OHViewControllerWithToolbarDemo.h */,
+				4C1736CE1D048E0B00B6A4E3 /* OHViewControllerWithToolbarDemo.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -530,6 +538,8 @@
 				D3FE00271AC50A7A004D4BD2 /* OHBaseViewController.m */,
 				D379E5131AF07D0B004D523C /* OHBaseTableViewControllerWithCollapseHeader.h */,
 				D379E5141AF07D0B004D523C /* OHBaseTableViewControllerWithCollapseHeader.m */,
+				4C1736CA1D048CEB00B6A4E3 /* OHViewControllerWithToolbar.h */,
+				4C1736CB1D048CEB00B6A4E3 /* OHViewControllerWithToolbar.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -756,6 +766,8 @@
 				4CD7290C1CEAC9DB00B91F0F /* OHSlideShowView.m in Sources */,
 				4C1736BD1D048BCE00B6A4E3 /* UIImage+Color.m in Sources */,
 				D3A742531BCEC6530057710E /* OHImagePickerController.m in Sources */,
+				4C1736CF1D048E0B00B6A4E3 /* OHViewControllerWithToolbarDemo.m in Sources */,
+				4C1736CC1D048CEB00B6A4E3 /* OHViewControllerWithToolbar.m in Sources */,
 				D3A3BA3F1AF433E2005F38E2 /* OHHorizontalScrollView.m in Sources */,
 				D383040C1AE9F4CE003AE826 /* OHTableViewWIthCardEffectController.m in Sources */,
 				D38FA04F1B26776D002F5C4F /* OHTooltipView.m in Sources */,
