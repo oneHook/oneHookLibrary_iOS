@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "OHToolbar.h"
 
 @interface OHViewControllerWithToolbar : UIViewController
+
+@property (strong, nonatomic) OHToolbar* toolbar;
 
 @end

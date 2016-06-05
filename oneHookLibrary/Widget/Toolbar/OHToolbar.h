@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "OneHookFoundation.h"
 
 @interface OHToolbar : UIView
+
+@property (assign, nonatomic) BOOL showStatusBar;
+
+@property (strong, nonatomic) UIView* toolbarContainer;
+@property (strong, nonatomic) UIButton* leftButton;
+@property (strong, nonatomic) UIButton* rightButton;
+@property (strong, nonatomic) UILabel* titleLabel;
 
 @end

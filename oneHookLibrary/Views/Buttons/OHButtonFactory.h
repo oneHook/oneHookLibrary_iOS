@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "OHToolbarItem.h"
 
-@interface MOButtonFactory : NSObject
+@interface OHButtonFactory : NSObject
+
++(OHToolbarItem*)createToolbarActionButton;
 
 @end

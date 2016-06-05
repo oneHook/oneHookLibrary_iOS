@@ -9,6 +9,8 @@
 #ifndef oneHookLibrary_OHColor_h
 #define oneHookLibrary_OHColor_h
 
+#define WHITE [UIColor whiteColor]
+
 #define OHDefaultCircularButtonBackgroundColorNormal [UIColor whiteColor]
 #define OHDefaultCircularButtonBackgroundColorPressed HEXRGB(0xD7D7D7)
 #define OHDefaultCircularButtonBackgroundColorDisabled HEXRGB(0xEEEEEE)
