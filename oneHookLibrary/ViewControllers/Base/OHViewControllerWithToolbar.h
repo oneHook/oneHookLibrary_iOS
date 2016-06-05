@@ -9,8 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "OHToolbar.h"
 
-@interface OHViewControllerWithToolbar : UIViewController
+@interface OHViewControllerWithToolbar : UIViewController <UIScrollViewDelegate>
+
+
 
 @property (strong, nonatomic) OHToolbar* toolbar;
+@property (strong, nonatomic) UIScrollView* contentScrollableView;
+
+/* styles */
+@property (nonatomic) UIEdgeInsets padding;
 
 @end

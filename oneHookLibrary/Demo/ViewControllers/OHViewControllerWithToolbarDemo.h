@@ -11,3 +11,7 @@
 @interface OHViewControllerWithToolbarDemo : OHViewControllerWithToolbar
 
 @end
+
+@interface OHViewControllerWithToolbarDemoCell : UITableViewCell
+
+@end
