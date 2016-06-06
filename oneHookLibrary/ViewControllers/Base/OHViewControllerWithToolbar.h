@@ -11,19 +11,22 @@
 
 @interface OHViewControllerWithToolbar : UIViewController <UIScrollViewDelegate>
 
-
-
 @property (strong, nonatomic) OHToolbar* toolbar;
 @property (strong, nonatomic) UIScrollView* contentScrollableView;
 
 /* styles */
-@property (nonatomic) BOOL toolbarCanBounce;
-@property (nonatomic) BOOL toolbarShouldStay;
+
+@property (nonatomic) BOOL toolbarCanBounce;                   // determine if toolbar height can go over maximum height
+@property (nonatomic) BOOL toolbarShouldStay;                  // should the toolbar default size always visible
+@property (nonatomic) BOOL toolbarShouldAutoExpandOrCollapse;  // should the toolbar always expand to default size or minimum size
+
 @property (nonatomic) CGFloat toolbarExtension;
 @property (nonatomic) UIEdgeInsets padding;
 
 /* child can override the following functions for call back */
 
+- (void)toolbarDidLoad:(OHToolbar*)toolbar;
+- (void)toolbar:(OHToolbar*)toolbar willLayoutTo:(CGRect)frame expand:(BOOL)isExpand;
 - (void)toolbarDidLayout:(OHToolbar*)toolbar;
 
 @end

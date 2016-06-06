@@ -39,7 +39,7 @@
     self.toolbarContainer = [[UIView alloc] init];
     [self addSubview:self.toolbarContainer];
     
-    self.backgroundColor = [UIColor colorWithRed:0 green:0 blue:1 alpha:0.5];
+    self.backgroundColor = [UIColor colorWithRed:0 green:0 blue:1 alpha:0.8];
 //    self.backgroundColor = COLOR_PRIMARY_DARK;
 //    self.toolbarContainer.backgroundColor = COLOR_PRIMARY;
 }

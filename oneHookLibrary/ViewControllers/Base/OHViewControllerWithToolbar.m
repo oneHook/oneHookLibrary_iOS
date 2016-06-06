@@ -29,6 +29,7 @@
     self.toolbarCanBounce = NO;
     self.padding = UIEdgeInsetsMake(0, 0, 0, 0);
     self.toolbarShouldStay = NO;
+    self.toolbarShouldAutoExpandOrCollapse = YES;
     
     [self setupToolbar];
 }
@@ -50,13 +51,9 @@
 {
     self.toolbar = [[OHToolbar alloc] init];
     [self.view addSubview:self.toolbar];
+    
+    [self toolbarDidLoad:self.toolbar];
 }
-
-//- (CGFloat)toolbarMaximumHeight
-//{
-//    CGFloat statusBarHeight = IS_PORTRAIT ? kSystemStatusBarHeight : 0;
-//    return statusBarHeight + kToolbarDefaultHeight + self.toolbarExtension;
-//}
 
 - (void)viewWillLayoutSubviews
 {
@@ -66,7 +63,6 @@
     if(_lastWidth != width && _lastHeight != height) {
         NSLog(@"view will layout subviews ");
 
-        
         self.toolbar.showStatusBar = IS_PORTRAIT;
         CGFloat statusBarHeight = IS_PORTRAIT ? kSystemStatusBarHeight : 0;
         CGFloat toolbarMaximumHeight = statusBarHeight + kToolbarDefaultHeight + self.toolbarExtension;
@@ -77,7 +73,6 @@
                                                                    self.padding.left,
                                                                    self.padding.bottom,
                                                                    self.padding.right);
-            
         } else {
 #ifdef DEBUG
             NSLog(@"Warning: content scrollable view is not set");
@@ -89,6 +84,8 @@
             _scrollViewLastContentOffsetY = -toolbarMaximumHeight;
             self.contentScrollableView.contentOffset = CGPointMake(0, -toolbarMaximumHeight);
         }
+        
+        [self scrollViewDidScroll:_contentScrollableView];
         
         _lastWidth = width;
         _lastHeight = height;
@@ -106,6 +103,49 @@
     } else {
         [self.view addSubview:_contentScrollableView];
     }
+}
+
+- (void)doExpandOrCollapse
+{
+    CGFloat statusBarHeight = self.toolbar.showStatusBar ? kSystemStatusBarHeight : 0;
+    CGFloat toolbarDefaultHeight = statusBarHeight + kToolbarDefaultHeight;
+    CGFloat toolbarMinimumHeight = self.toolbarShouldStay ? (statusBarHeight + kToolbarDefaultHeight) : statusBarHeight;
+    
+    if(_toolbarHeight < toolbarDefaultHeight) {
+        CGFloat progress = _toolbarHeight / toolbarDefaultHeight;
+        CGFloat targetHeight = _toolbarHeight;
+        BOOL expand = NO;
+        NSLog(@"progress %f", progress);
+        if(progress < 0.5) {
+            targetHeight = toolbarMinimumHeight;
+        } else {
+            expand = YES;
+            targetHeight = toolbarDefaultHeight;
+        }
+        
+        CGRect finalFrame = CGRectMake(0, 0,
+                                       CGRectGetWidth(self.view.bounds),
+                                       targetHeight);
+        
+        [UIView animateWithDuration:0.15 animations:^{
+            [self toolbar:self.toolbar willLayoutTo:finalFrame expand:expand];
+            self.toolbar.frame = finalFrame;
+        } completion:^(BOOL finished) {
+            _toolbarHeight = targetHeight;
+        }];
+    }
+}
+
+#pragma marks - for child class to implement
+
+- (void)toolbar:(OHToolbar *)toolbar willLayoutTo:(CGRect)frame expand:(BOOL)isExpand
+{
+    
+}
+
+- (void)toolbarDidLoad:(OHToolbar *)toolbar
+{
+    
 }
 
 - (void)toolbarDidLayout:(OHToolbar *)toolbar
@@ -140,7 +180,6 @@
         _toolbarHeight = self.toolbarCanBounce ? -yOffset : MIN(toolbarMaximumHeight, -yOffset);
     }
     
-    
     NSLog(@"scroll view offset %f diff %f toolbar height %f", yOffset, yDiff, _toolbarHeight);
     
     self.toolbar.frame = CGRectMake(0, 0, width, _toolbarHeight);
@@ -148,6 +187,18 @@
     _scrollViewLastContentOffsetY = yOffset;
     
     [self toolbarDidLayout:self.toolbar];
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    [self doExpandOrCollapse];
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
+{
+    if(!decelerate) {
+        [self doExpandOrCollapse];
+    }
 }
 
 @end
