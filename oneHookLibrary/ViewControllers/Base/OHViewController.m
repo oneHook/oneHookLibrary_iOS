@@ -6,12 +6,10 @@
 //  Copyright © 2016 oneHook inc. All rights reserved.
 //
 
-#import "OHViewControllerWithToolbar.h"
+#import "OHViewController.h"
 #import "OneHookFoundation.h"
 
-
-
-@interface OHViewControllerWithToolbar() {
+@interface OHViewController() {
     CGFloat _lastWidth;
     CGFloat _lastHeight;
     CGFloat _toolbarHeight;
@@ -20,7 +18,16 @@
 
 @end
 
-@implementation OHViewControllerWithToolbar
+@implementation OHViewController
+
+- (id)initWithStyle:(OHViewControllerToolbarStyle)style
+{
+    self = [super init];
+    if(self) {
+        _toolbarStyle = style;
+    }
+    return self;
+}
 
 - (void)viewDidLoad
 {
@@ -31,7 +38,9 @@
     self.toolbarShouldStay = NO;
     self.toolbarShouldAutoExpandOrCollapse = YES;
     
-    [self setupToolbar];
+    if(self.toolbarStyle != OHViewControllerNoToolbar) {
+        [self setupToolbar];
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -67,6 +76,10 @@
         CGFloat statusBarHeight = IS_PORTRAIT ? kSystemStatusBarHeight : 0;
         CGFloat toolbarMaximumHeight = statusBarHeight + kToolbarDefaultHeight + self.toolbarExtension;
         
+        if(self.toolbarStyle == OHViewControllerToolbarAsStatusBar) {
+            toolbarMaximumHeight = statusBarHeight;
+        }
+        
         if(_contentScrollableView) {
             _contentScrollableView.frame = self.view.bounds;
             _contentScrollableView.contentInset = UIEdgeInsetsMake(self.padding.top + toolbarMaximumHeight,
@@ -85,7 +98,13 @@
             self.contentScrollableView.contentOffset = CGPointMake(0, -toolbarMaximumHeight);
         }
         
-        [self scrollViewDidScroll:_contentScrollableView];
+        if(self.toolbarStyle == OHViewControllerToolbarAsStatusBar) {
+            CGRect finalFrame = CGRectMake(0, 0,
+                                           CGRectGetWidth(self.view.bounds),
+                                           statusBarHeight);
+        } else if(self.toolbarStyle == OHViewControllerHasToolbar) {
+            [self scrollViewDidScroll:_contentScrollableView];
+        }
         
         _lastWidth = width;
         _lastHeight = height;
@@ -157,6 +176,9 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
+    if(self.toolbarStyle != OHViewControllerHasToolbar) {
+        return;
+    }
     CGFloat width = CGRectGetWidth(self.view.bounds);
     
     CGFloat yOffset = scrollView.contentOffset.y;
@@ -191,11 +213,17 @@
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
+    if(self.toolbarStyle != OHViewControllerHasToolbar) {
+        return;
+    }
     [self doExpandOrCollapse];
 }
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
 {
+    if(self.toolbarStyle != OHViewControllerHasToolbar) {
+        return;
+    }
     if(!decelerate) {
         [self doExpandOrCollapse];
     }

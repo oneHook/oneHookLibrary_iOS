@@ -9,12 +9,22 @@
 #import <UIKit/UIKit.h>
 #import "OHToolbar.h"
 
-@interface OHViewControllerWithToolbar : UIViewController <UIScrollViewDelegate>
+typedef NS_ENUM(NSInteger, OHViewControllerToolbarStyle) {
+    OHViewControllerNoToolbar,
+    OHViewControllerToolbarAsStatusBar,
+    OHViewControllerHasToolbar
+};
+
+@interface OHViewController : UIViewController <UIScrollViewDelegate>
+
+- (id)initWithStyle:(OHViewControllerToolbarStyle)style;
 
 @property (strong, nonatomic) OHToolbar* toolbar;
 @property (strong, nonatomic) UIScrollView* contentScrollableView;
 
 /* styles */
+
+@property (nonatomic, readonly) OHViewControllerToolbarStyle toolbarStyle;      // toolbar style, read only.
 
 @property (nonatomic) BOOL toolbarCanBounce;                   // determine if toolbar height can go over maximum height
 @property (nonatomic) BOOL toolbarShouldStay;                  // should the toolbar default size always visible

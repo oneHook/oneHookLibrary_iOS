@@ -6,9 +6,9 @@
 //  Copyright © 2016 oneHook inc. All rights reserved.
 //
 
-#import "OHViewControllerWithToolbar.h"
+#import "OHViewController.h"
 
-@interface OHViewControllerWithToolbarDemo : OHViewControllerWithToolbar
+@interface OHViewControllerWithToolbarDemo : OHViewController
 
 @end
 
