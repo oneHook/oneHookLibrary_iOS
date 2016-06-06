@@ -46,7 +46,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    NSLog(@"view will appear");
+    NSLog(@"view will appear %@", self.toolbar);
     [self.view bringSubviewToFront:self.toolbar];
 }
 
@@ -71,7 +71,7 @@
     
     if(_lastWidth != width && _lastHeight != height) {
         NSLog(@"view will layout subviews ");
-
+        
         self.toolbar.showStatusBar = IS_PORTRAIT;
         CGFloat statusBarHeight = IS_PORTRAIT ? kSystemStatusBarHeight : 0;
         CGFloat toolbarMaximumHeight = statusBarHeight + kToolbarDefaultHeight + self.toolbarExtension;
@@ -99,9 +99,10 @@
         }
         
         if(self.toolbarStyle == OHViewControllerToolbarAsStatusBar) {
-            CGRect finalFrame = CGRectMake(0, 0,
-                                           CGRectGetWidth(self.view.bounds),
-                                           statusBarHeight);
+            self.toolbar.frame = CGRectMake(0,
+                                            0,
+                                            CGRectGetWidth(self.view.bounds),
+                                            statusBarHeight);
         } else if(self.toolbarStyle == OHViewControllerHasToolbar) {
             [self scrollViewDidScroll:_contentScrollableView];
         }
@@ -188,7 +189,7 @@
     CGFloat toolbarDefaultHeight = statusBarHeight + kToolbarDefaultHeight;
     CGFloat toolbarMaximumHeight = toolbarDefaultHeight + self.toolbarExtension;
     CGFloat toolbarMinimumHeight = self.toolbarShouldStay ? (statusBarHeight + kToolbarDefaultHeight) : statusBarHeight;
-
+    
     _toolbarHeight -= yDiff;
     
     if(_toolbarHeight < toolbarMinimumHeight) {
@@ -205,7 +206,7 @@
     NSLog(@"scroll view offset %f diff %f toolbar height %f", yOffset, yDiff, _toolbarHeight);
     
     self.toolbar.frame = CGRectMake(0, 0, width, _toolbarHeight);
- 
+    
     _scrollViewLastContentOffsetY = yOffset;
     
     [self toolbarDidLayout:self.toolbar];
