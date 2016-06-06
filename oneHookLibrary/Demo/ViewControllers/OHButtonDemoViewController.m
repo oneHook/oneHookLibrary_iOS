@@ -7,7 +7,7 @@
 //
 
 #import "OHButtonDemoViewController.h"
-#import "OHButton.h"
+//#import "OHButton.h"
 
 @interface OHButtonDemoViewController ()
 
@@ -26,30 +26,30 @@
 
     self.buttons = [[NSMutableArray alloc] init];
 
-    OHButton *button = [[OHButton alloc] init];
-    button.buttonStyle = kButtonStyleDefault;
-    [button setTitle:@"Default" forState:UIControlStateNormal];
-    [self.buttons addObject:button];
-    [self.scrollView addSubview:button];
-
-    button = [[OHButton alloc] init];
-    button.primaryColor = [UIColor blackColor];
-    button.buttonBackgroundColor = [UIColor grayColor];
-    button.secondaryColor = [UIColor blackColor];
-    button.buttonStyle = kButtonStyleSolid;
-    [button setTitle:@"Solid" forState:UIControlStateNormal];
-    button.layer.cornerRadius = 15;
-    [self.buttons addObject:button];
-    [self.scrollView addSubview:button];
-
-    button = [[OHButton alloc] init];
-    button.primaryColor = [UIColor blackColor];
-    button.secondaryColor = [UIColor blackColor];
-    button.layer.cornerRadius = 15;
-    button.buttonStyle = kButtonStyleStroke;
-    [button setTitle:@"Stroke" forState:UIControlStateNormal];
-    [self.buttons addObject:button];
-    [self.scrollView addSubview:button];
+//    OHButton *button = [[OHButton alloc] init];
+//    button.buttonStyle = kButtonStyleDefault;
+//    [button setTitle:@"Default" forState:UIControlStateNormal];
+//    [self.buttons addObject:button];
+//    [self.scrollView addSubview:button];
+//
+//    button = [[OHButton alloc] init];
+//    button.primaryColor = [UIColor blackColor];
+//    button.buttonBackgroundColor = [UIColor grayColor];
+//    button.secondaryColor = [UIColor blackColor];
+//    button.buttonStyle = kButtonStyleSolid;
+//    [button setTitle:@"Solid" forState:UIControlStateNormal];
+//    button.layer.cornerRadius = 15;
+//    [self.buttons addObject:button];
+//    [self.scrollView addSubview:button];
+//
+//    button = [[OHButton alloc] init];
+//    button.primaryColor = [UIColor blackColor];
+//    button.secondaryColor = [UIColor blackColor];
+//    button.layer.cornerRadius = 15;
+//    button.buttonStyle = kButtonStyleStroke;
+//    [button setTitle:@"Stroke" forState:UIControlStateNormal];
+//    [self.buttons addObject:button];
+//    [self.scrollView addSubview:button];
 }
 
 - (void)viewWillLayoutSubviews {
@@ -58,11 +58,11 @@
 
     CGFloat currentY = 50;
     CGFloat totalContentY = 0;
-    for (OHButton *button in self.buttons) {
-        button.frame = CGRectMake((self.view.bounds.size.width - 96) / 2, currentY, 96, 48);
-        currentY += 48 + 12;
-        totalContentY = currentY;
-    }
+//    for (OHButton *button in self.buttons) {
+//        button.frame = CGRectMake((self.view.bounds.size.width - 96) / 2, currentY, 96, 48);
+//        currentY += 48 + 12;
+//        totalContentY = currentY;
+//    }
 
     self.scrollView.contentSize = CGSizeMake(0, totalContentY);
 }

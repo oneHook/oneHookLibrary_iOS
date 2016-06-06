@@ -22,6 +22,17 @@
     return self;
 }
 
+- (id)initWithVerticalGradient
+{
+    self = [super initWithFrame:CGRectZero];
+    if(self) {
+        CAGradientLayer* layer = (CAGradientLayer*) self.layer;
+        layer.startPoint = CGPointMake(0.5, 0);
+        layer.endPoint = CGPointMake(0.5, 1.0);
+    }
+    return self;
+}
+
 + (Class)layerClass
 {
     return [CAGradientLayer class];
@@ -36,6 +47,10 @@
 {
     CAGradientLayer* layer = (CAGradientLayer*) self.layer;
     layer.colors = @[(id)fromColor.CGColor, (id)toColor.CGColor];
+}
+
+- (BOOL)pointInside:(CGPoint)point withEvent:(UIEvent *)event {
+    return NO;
 }
 
 @end

@@ -9,6 +9,9 @@
 #ifndef oneHookLibrary_OHCommonDimensions_h
 #define oneHookLibrary_OHCommonDimensions_h
 
+#define kSystemStatusBarHeight 20
+#define kToolbarDefaultHeight 48
+
 #define NAVIGATION_BAR_ICON_SIZE 44
 
 #define FAB_LENGTH_SMALL 32
@@ -20,5 +23,6 @@
 #define MARGIN_MEDIUM 8
 #define MARGIN_LARGE 16
 #define MARGIN_XLARGE 32
+#define MARGIN_XXLARGE 64
 
 #endif
