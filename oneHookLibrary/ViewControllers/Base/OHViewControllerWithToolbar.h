@@ -17,6 +17,13 @@
 @property (strong, nonatomic) UIScrollView* contentScrollableView;
 
 /* styles */
+@property (nonatomic) BOOL toolbarCanBounce;
+@property (nonatomic) BOOL toolbarShouldStay;
+@property (nonatomic) CGFloat toolbarExtension;
 @property (nonatomic) UIEdgeInsets padding;
+
+/* child can override the following functions for call back */
+
+- (void)toolbarDidLayout:(OHToolbar*)toolbar;
 
 @end

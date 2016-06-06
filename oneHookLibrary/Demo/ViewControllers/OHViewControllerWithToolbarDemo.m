@@ -21,6 +21,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.toolbarExtension = 100;
+    
+    
     self.view.backgroundColor = [UIColor redColor];
     
     self.tableView = [[UITableView alloc] init];
