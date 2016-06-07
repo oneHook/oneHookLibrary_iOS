@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "OHToolbar.h"
+#import "OHFloatingActionButton.h"
 
 typedef NS_ENUM(NSInteger, OHViewControllerToolbarStyle) {
     OHViewControllerNoToolbar,
@@ -35,6 +36,8 @@ typedef NS_ENUM(NSInteger, OHViewControllerToolbarStyle) {
 
 - (CGFloat)defaultToolbarHeight;
 - (CGFloat)maximumToolbarHeight;
+
+- (void)manageFloatingActionButton:(OHFloatingActionButton*)fabButton;
 
 /* child can override the following functions for call back */
 

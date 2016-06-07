@@ -16,6 +16,8 @@
     CGFloat _scrollViewLastContentOffsetY;
 }
 
+@property (weak, nonatomic) OHFloatingActionButton* fabButton;
+
 @end
 
 @implementation OHViewController
@@ -55,6 +57,7 @@
     [super viewWillAppear:animated];
     NSLog(@"view will appear %@", self.toolbar);
     [self.view bringSubviewToFront:self.toolbar];
+    [self.view bringSubviewToFront:self.fabButton];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -168,6 +171,13 @@
     return self.defaultToolbarHeight + self.toolbarExtension;
 }
 
+- (void)manageFloatingActionButton:(OHFloatingActionButton *)fabButton
+{
+    self.fabButton = fabButton;
+    self.fabButton.bounds = CGRectMake(0, 0, 44, 44);
+    [self.view insertSubview:fabButton aboveSubview:self.toolbar];
+}
+
 #pragma marks - for child class to implement
 
 - (void)toolbar:(OHToolbar *)toolbar willLayoutTo:(CGRect)frame expand:(BOOL)isExpand
@@ -222,6 +232,10 @@
     _scrollViewLastContentOffsetY = yOffset;
     
     [self toolbarDidLayout:self.toolbar];
+    
+    if(_fabButton) {
+        _fabButton.center = CGPointMake(width / 2, CGRectGetMaxY(self.toolbar.frame));
+    }
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView

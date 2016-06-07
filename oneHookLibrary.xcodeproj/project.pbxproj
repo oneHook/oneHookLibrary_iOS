@@ -37,6 +37,8 @@
 		4C1736E01D0525D500B6A4E3 /* NSString+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1736A61D0489AD00B6A4E3 /* NSString+Utility.m */; };
 		4C1736E11D0525E500B6A4E3 /* OHEqualWeightLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1736C01D048C2B00B6A4E3 /* OHEqualWeightLayout.m */; };
 		4C1736E21D0525E500B6A4E3 /* OHLinearScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1736C21D048C2B00B6A4E3 /* OHLinearScrollView.m */; };
+		4C45F8981D066CF900602E81 /* OHFloatingActionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C45F8971D066CF900602E81 /* OHFloatingActionButton.m */; };
+		4C45F8991D066D2400602E81 /* OHFloatingActionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C45F8971D066CF900602E81 /* OHFloatingActionButton.m */; };
 		4C98AA901B56E16A000B6D9C /* UIColor+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C98AA8F1B56E16A000B6D9C /* UIColor+Utility.m */; };
 		4CBCD7B01C1A5660006385EA /* OHImageViewerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBCD7AF1C1A5660006385EA /* OHImageViewerViewController.m */; };
 		4CBCD7B11C1A5672006385EA /* OHImageViewerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBCD7AF1C1A5660006385EA /* OHImageViewerViewController.m */; };
@@ -157,6 +159,8 @@
 		4C1736CE1D048E0B00B6A4E3 /* OHViewControllerWithToolbarDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHViewControllerWithToolbarDemo.m; sourceTree = "<group>"; };
 		4C1736D01D04906200B6A4E3 /* OHToolbarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHToolbarItem.h; sourceTree = "<group>"; };
 		4C1736D11D04906200B6A4E3 /* OHToolbarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHToolbarItem.m; sourceTree = "<group>"; };
+		4C45F8961D066CF900602E81 /* OHFloatingActionButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHFloatingActionButton.h; sourceTree = "<group>"; };
+		4C45F8971D066CF900602E81 /* OHFloatingActionButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHFloatingActionButton.m; sourceTree = "<group>"; };
 		4C98AA8E1B56E16A000B6D9C /* UIColor+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Utility.h"; sourceTree = "<group>"; };
 		4C98AA8F1B56E16A000B6D9C /* UIColor+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Utility.m"; sourceTree = "<group>"; };
 		4CBCD7AE1C1A5660006385EA /* OHImageViewerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHImageViewerViewController.h; sourceTree = "<group>"; };
@@ -294,6 +298,8 @@
 				4C1736B21D048B9E00B6A4E3 /* OHSolidButton.m */,
 				4C1736B31D048B9E00B6A4E3 /* OHStrokeButton.h */,
 				4C1736B41D048B9E00B6A4E3 /* OHStrokeButton.m */,
+				4C45F8961D066CF900602E81 /* OHFloatingActionButton.h */,
+				4C45F8971D066CF900602E81 /* OHFloatingActionButton.m */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -756,6 +762,7 @@
 				4C1736D81D0525A100B6A4E3 /* OHSolidButton.m in Sources */,
 				D36F72A01B62EC4700C75D05 /* OHCompactActionSheetController.m in Sources */,
 				D335A9341C16062D00A73B97 /* OHAnimatedProgressRing.m in Sources */,
+				4C45F8991D066D2400602E81 /* OHFloatingActionButton.m in Sources */,
 				4C1736D51D0525A100B6A4E3 /* OHCircularButton.m in Sources */,
 				4C1736D91D0525A100B6A4E3 /* OHStrokeButton.m in Sources */,
 				4C1736DB1D0525BE00B6A4E3 /* OHToolbarItem.m in Sources */,
@@ -823,6 +830,7 @@
 				D34A080B1B7B74CF001B6C30 /* NSString+Morphing.m in Sources */,
 				4C1736C41D048C2B00B6A4E3 /* OHLinearScrollView.m in Sources */,
 				D379E5151AF07D0B004D523C /* OHBaseTableViewControllerWithCollapseHeader.m in Sources */,
+				4C45F8981D066CF900602E81 /* OHFloatingActionButton.m in Sources */,
 				D32848011AEC1B3F00DE7CD3 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
