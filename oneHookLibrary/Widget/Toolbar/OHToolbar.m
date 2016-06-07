@@ -52,7 +52,7 @@
     CGFloat topOffset = self.showStatusBar ? kSystemStatusBarHeight : 0;
     self.toolbarContainer.frame = CGRectMake(0, topOffset, width, height - topOffset);
     
-    CGFloat actionButtonLength = height - topOffset - MARGIN_TINY * 2;
+    CGFloat actionButtonLength = kToolbarDefaultHeight - MARGIN_TINY * 2;
     _leftButton.frame = CGRectMake(MARGIN_TINY,
                                    topOffset + MARGIN_TINY,
                                    actionButtonLength,
