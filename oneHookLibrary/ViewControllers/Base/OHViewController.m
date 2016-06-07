@@ -20,6 +20,19 @@
 
 @implementation OHViewController
 
+- (id)init
+{
+    self = [super init];
+    if(self) {
+        self.toolbarExtension = 0;
+        self.toolbarCanBounce = NO;
+        self.padding = UIEdgeInsetsMake(0, 0, 0, 0);
+        self.toolbarShouldStay = NO;
+        self.toolbarShouldAutoExpandOrCollapse = YES;
+    }
+    return self;
+}
+
 - (id)initWithStyle:(OHViewControllerToolbarStyle)style
 {
     self = [super init];
@@ -31,15 +44,9 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-    self.toolbarExtension = 0;
-    self.toolbarCanBounce = NO;
-    self.padding = UIEdgeInsetsMake(0, 0, 0, 0);
-    self.toolbarShouldStay = NO;
-    self.toolbarShouldAutoExpandOrCollapse = YES;
-    
+    [super viewDidLoad];    
     if(self.toolbarStyle != OHViewControllerNoToolbar) {
-        [self setupToolbar];
+        [self _setupToolbar];
     }
 }
 
@@ -56,7 +63,7 @@
     NSLog(@"view did appear");
 }
 
-- (void)setupToolbar
+- (void)_setupToolbar
 {
     self.toolbar = [[OHToolbar alloc] init];
     [self.view addSubview:self.toolbar];
@@ -116,16 +123,9 @@
 {
     _contentScrollableView = contentScrollableView;
     _contentScrollableView.delegate = self;
-    if(_contentScrollableView.superview) {
-#ifdef DEBUG
-        NSLog(@"Warning: do not assign content scroll view a parent");
-#endif
-    } else {
-        [self.view addSubview:_contentScrollableView];
-    }
 }
 
-- (void)doExpandOrCollapse
+- (void)_doExpandOrCollapse
 {
     CGFloat statusBarHeight = self.toolbar.showStatusBar ? kSystemStatusBarHeight : 0;
     CGFloat toolbarDefaultHeight = statusBarHeight + kToolbarDefaultHeight;
@@ -154,6 +154,18 @@
             _toolbarHeight = targetHeight;
         }];
     }
+}
+
+- (CGFloat)defaultToolbarHeight
+{
+    CGFloat statusBarHeight = self.toolbar.showStatusBar ? kSystemStatusBarHeight : 0;
+    CGFloat toolbarDefaultHeight = statusBarHeight + kToolbarDefaultHeight;
+    return toolbarDefaultHeight;
+}
+
+- (CGFloat)maximumToolbarHeight
+{
+    return self.defaultToolbarHeight + self.toolbarExtension;
 }
 
 #pragma marks - for child class to implement
@@ -217,7 +229,7 @@
     if(self.toolbarStyle != OHViewControllerHasToolbar) {
         return;
     }
-    [self doExpandOrCollapse];
+    [self _doExpandOrCollapse];
 }
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
@@ -226,7 +238,7 @@
         return;
     }
     if(!decelerate) {
-        [self doExpandOrCollapse];
+        [self _doExpandOrCollapse];
     }
 }
 

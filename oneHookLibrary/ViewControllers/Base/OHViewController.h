@@ -33,10 +33,14 @@ typedef NS_ENUM(NSInteger, OHViewControllerToolbarStyle) {
 @property (nonatomic) CGFloat toolbarExtension;
 @property (nonatomic) UIEdgeInsets padding;
 
+- (CGFloat)defaultToolbarHeight;
+- (CGFloat)maximumToolbarHeight;
+
 /* child can override the following functions for call back */
 
 - (void)toolbarDidLoad:(OHToolbar*)toolbar;
 - (void)toolbar:(OHToolbar*)toolbar willLayoutTo:(CGRect)frame expand:(BOOL)isExpand;
 - (void)toolbarDidLayout:(OHToolbar*)toolbar;
+
 
 @end
