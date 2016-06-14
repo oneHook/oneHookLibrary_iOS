@@ -90,6 +90,7 @@
 		D3C4A8501B7D054E00660353 /* UIImageViewWithOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = D3C4A84E1B7D01D300660353 /* UIImageViewWithOverlay.m */; };
 		D3E398FE1B88EFE1005D556D /* OHGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E398FD1B88EFE1005D556D /* OHGradientView.m */; };
 		D3E398FF1B88F0DB005D556D /* OHGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E398FD1B88EFE1005D556D /* OHGradientView.m */; };
+		D3EF649C1D0F895D0015D74C /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1736A21D04896400B6A4E3 /* UIView+Toast.m */; };
 		D3F6DFBF1C2CFF5100043B38 /* OHKeyFrameAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F6DFBE1C2CFF5100043B38 /* OHKeyFrameAnimator.m */; };
 		D3F6DFC01C2D02C300043B38 /* OHKeyFrameAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F6DFBE1C2CFF5100043B38 /* OHKeyFrameAnimator.m */; };
 		D3FC55E11B0011890043F02A /* OHRotatingRevealAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FC55E01B0011890043F02A /* OHRotatingRevealAnimationController.m */; };
@@ -756,6 +757,7 @@
 				D335A9331C16019800A73B97 /* OHCountDownProgressView.m in Sources */,
 				4CD7290D1CEAD6FB00B91F0F /* OHSlideShowView.m in Sources */,
 				D379E5161AF07EA7004D523C /* OHBaseTableViewControllerWithCollapseHeader.m in Sources */,
+				D3EF649C1D0F895D0015D74C /* UIView+Toast.m in Sources */,
 				D34A080E1B7B74E9001B6C30 /* TOMSMorphingLabel.m in Sources */,
 				4C1736DF1D0525CF00B6A4E3 /* UIColor+Utility.m in Sources */,
 				D3A7424F1BCDAC910057710E /* OHCircularImageView.m in Sources */,
