@@ -16,12 +16,18 @@ typedef NS_ENUM(NSInteger, OHViewControllerToolbarStyle) {
     OHViewControllerHasToolbar
 };
 
+typedef NS_ENUM(NSInteger, OHViewControllerFloatingActionButtonStyle) {
+    OHViewControllerFloatingActionButtonStyleAlwaysBottom,
+    OHViewControllerFloatingActionButtonStyleDefault
+};
+
 @interface OHViewController : UIViewController <UIScrollViewDelegate>
 
 - (id)initWithStyle:(OHViewControllerToolbarStyle)style;
 
 @property (strong, nonatomic) OHToolbar* toolbar;
 @property (strong, nonatomic) UIScrollView* contentScrollableView;
+@property (assign, nonatomic) OHViewControllerFloatingActionButtonStyle floatingActionButtonStyle;
 
 /* styles */
 
