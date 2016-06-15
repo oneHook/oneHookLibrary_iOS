@@ -28,6 +28,9 @@ typedef NS_ENUM(NSInteger, OHViewControllerFloatingActionButtonStyle) {
 @property (strong, nonatomic) OHToolbar* toolbar;
 @property (strong, nonatomic) UIScrollView* contentScrollableView;
 @property (assign, nonatomic) OHViewControllerFloatingActionButtonStyle floatingActionButtonStyle;
+@property (assign, nonatomic) BOOL hasPullToRefresh;
+@property (assign, nonatomic, readonly) BOOL isRefreshing;
+@property (assign, nonatomic) CGFloat pullToRefreshTriggerOffset;
 
 /* styles */
 
@@ -44,6 +47,7 @@ typedef NS_ENUM(NSInteger, OHViewControllerFloatingActionButtonStyle) {
 - (CGFloat)maximumToolbarHeight;
 
 - (void)manageFloatingActionButton:(OHFloatingActionButton*)fabButton;
+- (void)endRefreshing;
 
 /* child can override the following functions for call back */
 
@@ -51,5 +55,6 @@ typedef NS_ENUM(NSInteger, OHViewControllerFloatingActionButtonStyle) {
 - (void)toolbar:(OHToolbar*)toolbar willLayoutTo:(CGRect)frame expand:(BOOL)isExpand;
 - (void)toolbarDidLayout:(OHToolbar*)toolbar;
 
+- (void)willStartPullToRefresh:(CGFloat)progress starting:(BOOL)starting;
 
 @end

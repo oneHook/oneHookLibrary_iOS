@@ -18,6 +18,7 @@
     CGFloat _lastHeight;
     CGFloat _toolbarHeight;
     CGFloat _scrollViewLastContentOffsetY;
+    CGFloat _pullToRefreshProgress;
 }
 
 @property (weak, nonatomic) OHFloatingActionButton* fabButton;
@@ -53,6 +54,8 @@
     self.toolbarShouldStay = NO;
     self.toolbarShouldAutoExpandOrCollapse = YES;
     self.floatingActionButtonStyle = OHViewControllerFloatingActionButtonStyleDefault;
+    self.hasPullToRefresh = NO;
+    self.pullToRefreshTriggerOffset = 100;
 }
 
 - (void)viewDidLoad
@@ -198,6 +201,11 @@
     [self.view insertSubview:fabButton aboveSubview:self.toolbar];
 }
 
+- (void)endRefreshing
+{
+    _isRefreshing = NO;
+}
+
 #pragma marks - for child class to implement
 
 - (void)toolbar:(OHToolbar *)toolbar willLayoutTo:(CGRect)frame expand:(BOOL)isExpand
@@ -213,6 +221,11 @@
 - (void)toolbarDidLayout:(OHToolbar *)toolbar
 {
     
+}
+
+- (void)willStartPullToRefresh:(CGFloat)progress starting:(BOOL)starting
+{
+    NSLog(@"will start pull to refresh progress %f starting %d", progress, starting);
 }
 
 #pragma marks - UIScrollViewDelegate
@@ -246,9 +259,19 @@
         _toolbarHeight = self.toolbarCanBounce ? -yOffset : MIN(toolbarMaximumHeight, -yOffset);
     }
     
-    NSLog(@"scroll view offset %f diff %f toolbar height %f", yOffset, yDiff, _toolbarHeight);
+    NSLog(@"scroll view offset %f diff %f toolbar height %f maximum height %f", yOffset, yDiff, _toolbarHeight, toolbarMaximumHeight);
     
     self.toolbar.frame = CGRectMake(0, 0, width, _toolbarHeight);
+    
+    if(self.hasPullToRefresh && _toolbarStyle == OHViewControllerHasToolbar && !_isRefreshing) {
+        CGFloat overallOffset = -yOffset;
+        if(overallOffset > toolbarMaximumHeight) {
+            CGFloat pullToRefreshOffset = overallOffset - toolbarMaximumHeight;
+            CGFloat progress = pullToRefreshOffset / self.pullToRefreshTriggerOffset;
+            _pullToRefreshProgress = progress;
+            [self willStartPullToRefresh:progress starting:NO];
+        }
+    }
     
     _scrollViewLastContentOffsetY = yOffset;
     
@@ -294,15 +317,19 @@
         [self _checkFabButtonStateAndAnimate];
     }
     
-   }
+    if(_pullToRefreshProgress >= 1) {
+        _isRefreshing = YES;
+        [self willStartPullToRefresh:_pullToRefreshProgress starting:YES];
+    }
+}
 
 - (void)_checkFabButtonStateAndAnimate
 {
+    /* if the fab style is default, check if we should animate the fab back to the top */
     if(_fabButton &&
        self.floatingActionButtonStyle == OHViewControllerFloatingActionButtonStyleDefault &&
        _fabButton.tag == FAB_STATE_BOTTOM) {
         CGFloat width = CGRectGetWidth(self.view.bounds);
-        CGFloat height = CGRectGetHeight(self.view.bounds);
         CGFloat statusBarHeight = self.toolbar.showStatusBar ? kSystemStatusBarHeight : 0;
         CGFloat toolbarDefaultHeight = statusBarHeight + kToolbarDefaultHeight;
         if(_toolbarHeight > toolbarDefaultHeight + FLOATING_ACTION_BUTTON_ANIMATION_THRESHOLD) {
