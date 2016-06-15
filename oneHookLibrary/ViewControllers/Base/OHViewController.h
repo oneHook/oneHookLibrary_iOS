@@ -16,20 +16,29 @@ typedef NS_ENUM(NSInteger, OHViewControllerToolbarStyle) {
     OHViewControllerHasToolbar
 };
 
+typedef NS_ENUM(NSInteger, OHViewControllerFloatingActionButtonStyle) {
+    OHViewControllerFloatingActionButtonStyleAlwaysBottom,
+    OHViewControllerFloatingActionButtonStyleDefault
+};
+
 @interface OHViewController : UIViewController <UIScrollViewDelegate>
 
 - (id)initWithStyle:(OHViewControllerToolbarStyle)style;
 
 @property (strong, nonatomic) OHToolbar* toolbar;
 @property (strong, nonatomic) UIScrollView* contentScrollableView;
+@property (assign, nonatomic) OHViewControllerFloatingActionButtonStyle floatingActionButtonStyle;
+@property (assign, nonatomic) BOOL hasPullToRefresh;
+@property (assign, nonatomic, readonly) BOOL isRefreshing;
+@property (assign, nonatomic) CGFloat pullToRefreshTriggerOffset;
 
 /* styles */
 
 @property (nonatomic, readonly) OHViewControllerToolbarStyle toolbarStyle;      // toolbar style, read only.
 
-@property (nonatomic) BOOL toolbarCanBounce;                   // determine if toolbar height can go over maximum height
-@property (nonatomic) BOOL toolbarShouldStay;                  // should the toolbar default size always visible
-@property (nonatomic) BOOL toolbarShouldAutoExpandOrCollapse;  // should the toolbar always expand to default size or minimum size
+@property (nonatomic) BOOL toolbarCanBounce;                                    // determine if toolbar height can go over maximum height
+@property (nonatomic) BOOL toolbarShouldStay;                                   // should the toolbar default size always visible
+@property (nonatomic) BOOL toolbarShouldAutoExpandOrCollapse;                   // should the toolbar always expand to default size or minimum size
 
 @property (nonatomic) CGFloat toolbarExtension;
 @property (nonatomic) UIEdgeInsets padding;
@@ -38,6 +47,7 @@ typedef NS_ENUM(NSInteger, OHViewControllerToolbarStyle) {
 - (CGFloat)maximumToolbarHeight;
 
 - (void)manageFloatingActionButton:(OHFloatingActionButton*)fabButton;
+- (void)endRefreshing;
 
 /* child can override the following functions for call back */
 
@@ -45,5 +55,6 @@ typedef NS_ENUM(NSInteger, OHViewControllerToolbarStyle) {
 - (void)toolbar:(OHToolbar*)toolbar willLayoutTo:(CGRect)frame expand:(BOOL)isExpand;
 - (void)toolbarDidLayout:(OHToolbar*)toolbar;
 
+- (void)willStartPullToRefresh:(CGFloat)progress starting:(BOOL)starting;
 
 @end

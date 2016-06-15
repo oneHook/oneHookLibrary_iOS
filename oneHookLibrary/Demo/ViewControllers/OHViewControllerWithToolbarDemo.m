@@ -18,10 +18,21 @@
 
 @implementation OHViewControllerWithToolbarDemo
 
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithStyle:OHViewControllerHasToolbar];
+    if(self) {
+        
+    }
+    return self;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.toolbarExtension = 100;
+    self.toolbarExtension = 0;
+    self.toolbarCanBounce = NO;
+    self.hasPullToRefresh = YES;
     
     
     self.view.backgroundColor = [UIColor redColor];
@@ -32,13 +43,28 @@
     self.tableView.dataSource = self;
     
     [self.tableView registerClass:[OHViewControllerWithToolbarDemoCell class] forCellReuseIdentifier:@"Cell"];
-    
+    [self.view addSubview:self.tableView];
     self.contentScrollableView = self.tableView;
 }
 
 - (void)viewWillLayoutSubviews
 {
     [super viewWillLayoutSubviews];
+}
+
+- (void)willStartPullToRefresh:(CGFloat)progress starting:(BOOL)starting
+{
+//    [super willStartPullToRefresh:progress starting:starting];
+    if(starting) {
+        NSLog(@"start pull to refresh");
+        [self performSelector:@selector(finishRefreshing) withObject:nil afterDelay:2.0f];
+    }
+}
+
+- (void)finishRefreshing
+{
+    [self endRefreshing];
+    NSLog(@"end pull to refresh");
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
