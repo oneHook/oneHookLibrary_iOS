@@ -36,9 +36,9 @@ typedef NS_ENUM(NSInteger, OHViewControllerFloatingActionButtonStyle) {
 
 @property (nonatomic, readonly) OHViewControllerToolbarStyle toolbarStyle;      // toolbar style, read only.
 
-@property (nonatomic) BOOL toolbarCanBounce;                   // determine if toolbar height can go over maximum height
-@property (nonatomic) BOOL toolbarShouldStay;                  // should the toolbar default size always visible
-@property (nonatomic) BOOL toolbarShouldAutoExpandOrCollapse;  // should the toolbar always expand to default size or minimum size
+@property (nonatomic) BOOL toolbarCanBounce;                                    // determine if toolbar height can go over maximum height
+@property (nonatomic) BOOL toolbarShouldStay;                                   // should the toolbar default size always visible
+@property (nonatomic) BOOL toolbarShouldAutoExpandOrCollapse;                   // should the toolbar always expand to default size or minimum size
 
 @property (nonatomic) CGFloat toolbarExtension;
 @property (nonatomic) UIEdgeInsets padding;
