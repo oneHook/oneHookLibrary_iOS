@@ -12,6 +12,7 @@
 #define FLOATING_ACTION_BUTTON_ANIMATION_THRESHOLD 24
 #define FAB_STATE_TOP 0
 #define FAB_STATE_BOTTOM 1
+#define DEBUGGIN NO
 
 @interface OHViewController() {
     CGFloat _lastWidth;
@@ -69,7 +70,6 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    NSLog(@"view will appear %@", self.toolbar);
     [self.view bringSubviewToFront:self.toolbar];
     [self.view bringSubviewToFront:self.fabButton];
 }
@@ -77,7 +77,6 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    NSLog(@"view did appear");
 }
 
 - (void)_setupToolbar
@@ -94,8 +93,6 @@
     CGFloat height = CGRectGetHeight(self.view.bounds);
     
     if(_lastWidth != width && _lastHeight != height) {
-        NSLog(@"view will layout subviews ");
-        
         self.toolbar.showStatusBar = IS_PORTRAIT;
         CGFloat statusBarHeight = IS_PORTRAIT ? kSystemStatusBarHeight : 0;
         CGFloat toolbarMaximumHeight = statusBarHeight + kToolbarDefaultHeight + self.toolbarExtension;
@@ -225,7 +222,7 @@
 
 - (void)willStartPullToRefresh:(CGFloat)progress starting:(BOOL)starting
 {
-    NSLog(@"will start pull to refresh progress %f starting %d", progress, starting);
+
 }
 
 #pragma marks - UIScrollViewDelegate
@@ -259,8 +256,10 @@
         _toolbarHeight = self.toolbarCanBounce ? -yOffset : MIN(toolbarMaximumHeight, -yOffset);
     }
     
-    NSLog(@"scroll view offset %f diff %f toolbar height %f maximum height %f", yOffset, yDiff, _toolbarHeight, toolbarMaximumHeight);
-    
+    if(DEBUGGIN) {
+        NSLog(@"scroll view offset %f diff %f toolbar height %f maximum height %f", yOffset, yDiff, _toolbarHeight, toolbarMaximumHeight);
+    }
+        
     self.toolbar.frame = CGRectMake(0, 0, width, _toolbarHeight);
     
     if(self.hasPullToRefresh && _toolbarStyle == OHViewControllerHasToolbar && !_isRefreshing) {
