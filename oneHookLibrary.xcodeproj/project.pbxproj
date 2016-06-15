@@ -64,6 +64,8 @@
 		D34A080C1B7B74CF001B6C30 /* TOMSMorphingLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = D34A080A1B7B74CF001B6C30 /* TOMSMorphingLabel.m */; };
 		D34A080D1B7B74E6001B6C30 /* NSString+Morphing.m in Sources */ = {isa = PBXBuildFile; fileRef = D34A08081B7B74CF001B6C30 /* NSString+Morphing.m */; };
 		D34A080E1B7B74E9001B6C30 /* TOMSMorphingLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = D34A080A1B7B74CF001B6C30 /* TOMSMorphingLabel.m */; };
+		D357AE551D11E500000A8306 /* OHDeviceUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = D357AE541D11E500000A8306 /* OHDeviceUtil.m */; };
+		D357AE561D11E505000A8306 /* OHDeviceUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = D357AE541D11E500000A8306 /* OHDeviceUtil.m */; };
 		D36F729F1B62EADF00C75D05 /* OHCompactActionSheetController.m in Sources */ = {isa = PBXBuildFile; fileRef = D36F729E1B62EADF00C75D05 /* OHCompactActionSheetController.m */; };
 		D36F72A01B62EC4700C75D05 /* OHCompactActionSheetController.m in Sources */ = {isa = PBXBuildFile; fileRef = D36F729E1B62EADF00C75D05 /* OHCompactActionSheetController.m */; };
 		D379E5151AF07D0B004D523C /* OHBaseTableViewControllerWithCollapseHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = D379E5141AF07D0B004D523C /* OHBaseTableViewControllerWithCollapseHeader.m */; };
@@ -194,6 +196,8 @@
 		D34A08081B7B74CF001B6C30 /* NSString+Morphing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Morphing.m"; sourceTree = "<group>"; };
 		D34A08091B7B74CF001B6C30 /* TOMSMorphingLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TOMSMorphingLabel.h; sourceTree = "<group>"; };
 		D34A080A1B7B74CF001B6C30 /* TOMSMorphingLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOMSMorphingLabel.m; sourceTree = "<group>"; };
+		D357AE531D11E500000A8306 /* OHDeviceUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHDeviceUtil.h; sourceTree = "<group>"; };
+		D357AE541D11E500000A8306 /* OHDeviceUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHDeviceUtil.m; sourceTree = "<group>"; };
 		D36F729D1B62EADF00C75D05 /* OHCompactActionSheetController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHCompactActionSheetController.h; sourceTree = "<group>"; };
 		D36F729E1B62EADF00C75D05 /* OHCompactActionSheetController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHCompactActionSheetController.m; sourceTree = "<group>"; };
 		D379E5131AF07D0B004D523C /* OHBaseTableViewControllerWithCollapseHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHBaseTableViewControllerWithCollapseHeader.h; sourceTree = "<group>"; };
@@ -356,6 +360,7 @@
 		D309EC191ADA454800858EF2 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				D357AE521D11E4F8000A8306 /* Device */,
 				4C1736A41D0489AD00B6A4E3 /* Text */,
 				D3A742501BCEC6470057710E /* ImagePicker */,
 				D3A8BC241B0A6657004FF5A3 /* Date */,
@@ -432,6 +437,15 @@
 				D34A080A1B7B74CF001B6C30 /* TOMSMorphingLabel.m */,
 			);
 			path = TOMSMorphingLabel;
+			sourceTree = "<group>";
+		};
+		D357AE521D11E4F8000A8306 /* Device */ = {
+			isa = PBXGroup;
+			children = (
+				D357AE531D11E500000A8306 /* OHDeviceUtil.h */,
+				D357AE541D11E500000A8306 /* OHDeviceUtil.m */,
+			);
+			path = Device;
 			sourceTree = "<group>";
 		};
 		D36F729C1B62EAC200C75D05 /* CompactActionSheet */ = {
@@ -767,6 +781,7 @@
 				4C45F8991D066D2400602E81 /* OHFloatingActionButton.m in Sources */,
 				4C1736D51D0525A100B6A4E3 /* OHCircularButton.m in Sources */,
 				4C1736D91D0525A100B6A4E3 /* OHStrokeButton.m in Sources */,
+				D357AE561D11E505000A8306 /* OHDeviceUtil.m in Sources */,
 				4C1736DB1D0525BE00B6A4E3 /* OHToolbarItem.m in Sources */,
 				D3A7A98B1B18F9E8002158DC /* OHConfettiScreen.m in Sources */,
 				D3C0F99E1AEC7A3E00C4F7EA /* OHHamburgerButton.m in Sources */,
@@ -793,6 +808,7 @@
 				D3846F8E1AF2A81200E6FF78 /* OHPagerView.m in Sources */,
 				D3C4A84F1B7D01D300660353 /* UIImageViewWithOverlay.m in Sources */,
 				D34A080C1B7B74CF001B6C30 /* TOMSMorphingLabel.m in Sources */,
+				D357AE551D11E500000A8306 /* OHDeviceUtil.m in Sources */,
 				4C1736D21D04906200B6A4E3 /* OHToolbarItem.m in Sources */,
 				D3A8BC2B1B0A672E004FF5A3 /* NSDate+Utility.m in Sources */,
 				4C1736BA1D048B9E00B6A4E3 /* OHStrokeButton.m in Sources */,
