@@ -13,6 +13,7 @@
 @property (assign, nonatomic) BOOL clockwise;
 @property (assign, nonatomic) CGFloat progress;
 @property (strong, nonatomic) UIColor* progressColor;
+@property (assign, nonatomic) CGFloat strokeLength;
 
 - (id)initWithStrokeLength:(CGFloat)strokeLength;
 

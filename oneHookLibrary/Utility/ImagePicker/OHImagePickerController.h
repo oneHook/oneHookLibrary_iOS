@@ -24,5 +24,6 @@
 
 - (id)initWithViewController:(UIViewController*)presentingController;
 - (void)takePhotoOrChooseFromLibrary;
+- (void)pickImageFromCamera;
 
 @end
