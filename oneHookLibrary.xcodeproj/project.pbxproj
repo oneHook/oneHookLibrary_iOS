@@ -97,6 +97,8 @@
 		D3F6DFC01C2D02C300043B38 /* OHKeyFrameAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F6DFBE1C2CFF5100043B38 /* OHKeyFrameAnimator.m */; };
 		D3FC55E11B0011890043F02A /* OHRotatingRevealAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FC55E01B0011890043F02A /* OHRotatingRevealAnimationController.m */; };
 		D3FC55E21B0012DD0043F02A /* OHRotatingRevealAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FC55E01B0011890043F02A /* OHRotatingRevealAnimationController.m */; };
+		D3FCA9D31D1C9404006D771D /* SimpleBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FCA9D21D1C9404006D771D /* SimpleBadge.m */; };
+		D3FCA9D41D1C94A2006D771D /* SimpleBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FCA9D21D1C9404006D771D /* SimpleBadge.m */; };
 		D3FE00031AC50788004D4BD2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3FE00021AC50788004D4BD2 /* Images.xcassets */; };
 		D3FE002E1AC50AEA004D4BD2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3FE002D1AC50AEA004D4BD2 /* QuartzCore.framework */; };
 		D3FE00311AC50B70004D4BD2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3FE00301AC50B70004D4BD2 /* CoreGraphics.framework */; };
@@ -228,6 +230,8 @@
 		D3F6DFBE1C2CFF5100043B38 /* OHKeyFrameAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHKeyFrameAnimator.m; sourceTree = "<group>"; };
 		D3FC55DF1B0011890043F02A /* OHRotatingRevealAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHRotatingRevealAnimationController.h; sourceTree = "<group>"; };
 		D3FC55E01B0011890043F02A /* OHRotatingRevealAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHRotatingRevealAnimationController.m; sourceTree = "<group>"; };
+		D3FCA9D11D1C9404006D771D /* SimpleBadge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleBadge.h; sourceTree = "<group>"; };
+		D3FCA9D21D1C9404006D771D /* SimpleBadge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleBadge.m; sourceTree = "<group>"; };
 		D3FE00021AC50788004D4BD2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../Images.xcassets; sourceTree = "<group>"; };
 		D3FE00261AC50A7A004D4BD2 /* OHBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHBaseViewController.h; sourceTree = "<group>"; };
 		D3FE00271AC50A7A004D4BD2 /* OHBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHBaseViewController.m; sourceTree = "<group>"; };
@@ -513,9 +517,19 @@
 			path = Date;
 			sourceTree = "<group>";
 		};
+		D3FCA9D01D1C93FA006D771D /* Badge */ = {
+			isa = PBXGroup;
+			children = (
+				D3FCA9D11D1C9404006D771D /* SimpleBadge.h */,
+				D3FCA9D21D1C9404006D771D /* SimpleBadge.m */,
+			);
+			path = Badge;
+			sourceTree = "<group>";
+		};
 		D3FE001B1AC507D7004D4BD2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D3FCA9D01D1C93FA006D771D /* Badge */,
 				4C1736BE1D048C0C00B6A4E3 /* RelativeLayout */,
 				4C1736A81D048B9E00B6A4E3 /* Buttons */,
 				4CD729091CEAC9D200B91F0F /* SlideShowView */,
@@ -766,6 +780,7 @@
 				D3E398FF1B88F0DB005D556D /* OHGradientView.m in Sources */,
 				4C1736E21D0525E500B6A4E3 /* OHLinearScrollView.m in Sources */,
 				D3FE008C1AC5109F004D4BD2 /* OHBaseViewController.m in Sources */,
+				D3FCA9D41D1C94A2006D771D /* SimpleBadge.m in Sources */,
 				D3FC55E21B0012DD0043F02A /* OHRotatingRevealAnimationController.m in Sources */,
 				D3A3BA401AF43413005F38E2 /* OHHorizontalScrollView.m in Sources */,
 				D335A9331C16019800A73B97 /* OHCountDownProgressView.m in Sources */,
@@ -808,6 +823,7 @@
 				D3846F8E1AF2A81200E6FF78 /* OHPagerView.m in Sources */,
 				D3C4A84F1B7D01D300660353 /* UIImageViewWithOverlay.m in Sources */,
 				D34A080C1B7B74CF001B6C30 /* TOMSMorphingLabel.m in Sources */,
+				D3FCA9D31D1C9404006D771D /* SimpleBadge.m in Sources */,
 				D357AE551D11E500000A8306 /* OHDeviceUtil.m in Sources */,
 				4C1736D21D04906200B6A4E3 /* OHToolbarItem.m in Sources */,
 				D3A8BC2B1B0A672E004FF5A3 /* NSDate+Utility.m in Sources */,
