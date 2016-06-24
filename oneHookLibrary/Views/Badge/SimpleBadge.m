@@ -20,6 +20,7 @@
         self.numberOfLines = 1;
         self.clipsToBounds = YES;
         self.textAlignment = NSTextAlignmentCenter;
+        self.baselineAdjustment = UIBaselineAdjustmentAlignCenters;
     }
     return self;
 }
