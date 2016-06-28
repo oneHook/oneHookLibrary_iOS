@@ -125,7 +125,14 @@
                                             CGRectGetWidth(self.view.bounds),
                                             statusBarHeight);
         } else if(self.toolbarStyle == OHViewControllerHasToolbar) {
-            [self scrollViewDidScroll:_contentScrollableView];
+            if(_contentScrollableView) {
+                [self scrollViewDidScroll:_contentScrollableView];
+            } else {
+                CGFloat statusBarHeight = self.toolbar.showStatusBar ? kSystemStatusBarHeight : 0;
+                CGFloat toolbarDefaultHeight = statusBarHeight + kToolbarDefaultHeight;
+                self.toolbar.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.bounds),
+                                                toolbarDefaultHeight);
+            }
         }
         
         if(self.floatingActionButtonStyle == OHViewControllerFloatingActionButtonStyleAlwaysBottom) {

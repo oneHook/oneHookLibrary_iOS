@@ -9,7 +9,8 @@
 #import "OHToolbar.h"
 
 @interface OHToolbar() {
-    
+    CGFloat _lastWidth;
+    CGFloat _lastHeight;
 }
 
 @end
@@ -40,8 +41,8 @@
     [self addSubview:self.toolbarContainer];
     
     self.backgroundColor = [UIColor colorWithRed:0 green:0 blue:1 alpha:0.8];
-//    self.backgroundColor = COLOR_PRIMARY_DARK;
-//    self.toolbarContainer.backgroundColor = COLOR_PRIMARY;
+    //    self.backgroundColor = COLOR_PRIMARY_DARK;
+    //    self.toolbarContainer.backgroundColor = COLOR_PRIMARY;
 }
 
 - (void)layoutSubviews
@@ -49,22 +50,27 @@
     CGFloat width = CGRectGetWidth(self.bounds);
     CGFloat height = CGRectGetHeight(self.bounds);
     
-    CGFloat topOffset = self.showStatusBar ? kSystemStatusBarHeight : 0;
-    self.toolbarContainer.frame = CGRectMake(0, topOffset, width, height - topOffset);
-    
-    CGFloat actionButtonLength = kToolbarDefaultHeight - MARGIN_TINY * 2;
-    _leftButton.frame = CGRectMake(MARGIN_TINY,
-                                   topOffset + MARGIN_TINY,
-                                   actionButtonLength,
-                                   actionButtonLength);
-    _rightButton.frame = CGRectMake(width - MARGIN_TINY - actionButtonLength,
-                                    topOffset + MARGIN_TINY,
-                                    actionButtonLength,
-                                    actionButtonLength);
-    _titleLabel.frame = CGRectMake(MARGIN_TINY + actionButtonLength,
-                                   topOffset,
-                                   width - 2 * actionButtonLength - 2 * MARGIN_TINY,
-                                   height - topOffset);
+    if(_lastWidth != width && _lastHeight != height) {
+        
+        CGFloat topOffset = self.showStatusBar ? kSystemStatusBarHeight : 0;
+        self.toolbarContainer.frame = CGRectMake(0, topOffset, width, height - topOffset);
+        
+        CGFloat actionButtonLength = kToolbarDefaultHeight - MARGIN_TINY * 2;
+        _leftButton.frame = CGRectMake(MARGIN_TINY,
+                                       topOffset + MARGIN_TINY,
+                                       actionButtonLength,
+                                       actionButtonLength);
+        _rightButton.frame = CGRectMake(width - MARGIN_TINY - actionButtonLength,
+                                        topOffset + MARGIN_TINY,
+                                        actionButtonLength,
+                                        actionButtonLength);
+        _titleLabel.frame = CGRectMake(MARGIN_TINY + actionButtonLength,
+                                       topOffset,
+                                       width - 2 * actionButtonLength - 2 * MARGIN_TINY,
+                                       height - topOffset);
+        _lastWidth = width;
+        _lastHeight = height;
+    }
 }
 
 - (UIButton*)leftButton
@@ -95,6 +101,12 @@
         [self addSubview:_titleLabel];
     }
     return _titleLabel;
+}
+
+- (void)setFrame:(CGRect)frame
+{
+    [super setFrame:frame];
+    [self layoutSubviews];
 }
 
 

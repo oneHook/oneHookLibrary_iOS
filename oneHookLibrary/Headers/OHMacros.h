@@ -100,6 +100,9 @@
 /** screen height **/
 #define ScreenHeight [[UIScreen mainScreen] bounds].size.height
 
+/** screen scale **/
+#define ScreenScale (MIN(ScreenWidth, ScreenHeight) / 320.)
+
 /** default minimum touchable area height **/
 #define TouchHeightDefault 44
 
