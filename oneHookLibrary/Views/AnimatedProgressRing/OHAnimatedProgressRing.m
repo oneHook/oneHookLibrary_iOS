@@ -12,7 +12,6 @@
 
 @interface OHAnimatedProgressRing() {
     CGFloat _lastWidth;
-    CGFloat _strokeLength;
 }
 
 @property (weak, nonatomic) CAShapeLayer* shapeLayer;
@@ -115,6 +114,11 @@
             self.shapeLayer.strokeEnd = 1.0f;
         }
     }
+}
+
+- (void)setStrokeLength:(CGFloat)strokeLength
+{
+    _strokeLength = strokeLength;
 }
 
 - (void)setProgress:(CGFloat)progress animationDuration:(double)duration
