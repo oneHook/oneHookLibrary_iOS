@@ -242,7 +242,7 @@
     CGFloat width = CGRectGetWidth(self.view.bounds);
     CGFloat height = CGRectGetHeight(self.view.bounds);
     
-    CGFloat yOffset = scrollView.contentOffset.y;
+    CGFloat yOffset = scrollView.contentOffset.y + self.padding.top;
     CGFloat yDiff = yOffset - _scrollViewLastContentOffsetY;
     
     CGFloat statusBarHeight = self.toolbar.showStatusBar ? kSystemStatusBarHeight : 0;
@@ -291,7 +291,7 @@
                 _fabButton.transform = CGAffineTransformMakeScale(0.01f, 0.01f);
             } completion:^(BOOL finished) {
                 _fabButton.center = CGPointMake(width - CGRectGetWidth(_fabButton.bounds),
-                                                height - CGRectGetWidth(_fabButton.bounds));
+                                                height - CGRectGetWidth(_fabButton.bounds) / 2 - MARGIN_LARGE);
                 [UIView animateWithDuration:0.15 animations:^{
                     _fabButton.transform = CGAffineTransformMakeScale(1.0f, 1.0f);
                 }];
