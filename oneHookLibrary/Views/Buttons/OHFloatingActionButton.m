@@ -14,6 +14,10 @@
     CGFloat _buttonScale;
     CGFloat _lastWidth;
 }
+
+@property (strong, nonatomic) UIView* backgroundView;
+@property (strong, nonatomic) UIView* contentView;
+
 @end
 
 @implementation OHFloatingActionButton
@@ -65,6 +69,18 @@
         self.contentView = _titleLabel;
     }
     return _titleLabel;
+}
+
+- (UIImageView*)imageView
+{
+    if(_imageView == nil) {
+        _imageView = [[UIImageView alloc] init];
+        _imageView.clipsToBounds = YES;
+        _imageView.contentMode = UIViewContentModeScaleToFill;
+        [self addSubview:_imageView];
+        self.contentView = _imageView;
+    }
+    return _imageView;
 }
 
 - (void)setContentView:(UIView *)contentView
@@ -119,6 +135,7 @@
         _lastWidth = CGRectGetWidth(self.frame);
         self.backgroundView.frame = self.bounds;
         _titleLabel.frame = self.bounds;
+        _imageView.frame = self.bounds;
         [self.backgroundView.layer setCornerRadius:ViewWidth(self) / 2];
         if(_contentView) {
             _contentView.frame = self.bounds;
