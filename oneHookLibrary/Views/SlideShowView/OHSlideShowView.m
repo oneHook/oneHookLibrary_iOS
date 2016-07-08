@@ -9,7 +9,7 @@
 #import "OHSlideShowView.h"
 
 #define FRAME_DURATION 0.02
-#define SINGLE_PAGE_DURATION 5
+#define SINGLE_PAGE_DURATION 8
 
 @interface OHSlideShowView() {
     NSTimer* _timer;
