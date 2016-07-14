@@ -236,6 +236,9 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
+    if(scrollView != self.contentScrollableView) {
+        return;
+    }
     if(self.toolbarStyle != OHViewControllerHasToolbar) {
         return;
     }
@@ -306,6 +309,9 @@
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
+    if(scrollView != self.contentScrollableView) {
+        return;
+    }
     if(self.toolbarStyle != OHViewControllerHasToolbar) {
         return;
     }
@@ -315,6 +321,9 @@
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
 {
+    if(scrollView != self.contentScrollableView) {
+        return;
+    }
     if(self.toolbarStyle != OHViewControllerHasToolbar) {
         return;
     }
