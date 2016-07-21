@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "OHFlowLayout.h"
 
-@interface OHTagsView : UIView
+@interface OHTagsView : OHFlowLayout
+
+@property (assign, nonatomic) CGFloat tagPadding;
+@property (assign, nonatomic) CGFloat tagCornerRadius;
+@property (strong, nonatomic) UIColor* defaultBackgroundColor;
+@property (strong, nonatomic) UIColor* defaultTextColor;
+
+- (void)setTags:(NSArray*)tags;
 
 @end
