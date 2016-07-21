@@ -12,7 +12,7 @@
 @interface OHImageViewerViewController () <OHCompactActionSheetControllerDelegate>
 
 @property (strong, nonatomic) UIImage* displayingImage;
-@property (strong, nonatomic) NSString* imageKey;
+@property (strong, nonatomic) NSObject* imageKey;
 @property (strong, nonatomic) OHCompactActionSheetController* actionSheetController;
 
 @end

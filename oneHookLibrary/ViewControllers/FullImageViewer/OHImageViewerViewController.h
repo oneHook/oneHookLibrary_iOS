@@ -13,7 +13,7 @@
 @protocol OHImageViewerViewControllerDelegate
 
 - (void)imageViewer:(OHImageViewerViewController*)controller
-  loadHighResForKey:(NSString*)imageKey
+  loadHighResForKey:(NSObject*)imageKey
       progressBlock:(void (^)(double))progressBlock
     completionBlock:(void (^)(UIImage*))completionBlock;
 
@@ -29,7 +29,7 @@
 
 @property (assign, nonatomic) BOOL disableSavingImage;
 
-- (id)initWithPlaceholderImage:(UIImage*)image imageKey:(NSString*)imageKey;
+- (id)initWithPlaceholderImage:(UIImage*)image imageKey:(NSObject*)imageKey;
 - (void)presentPictureIn:(UIViewController*)parentViewController fromPoint:(CGPoint)point ofSize:(CGSize)size withCornerRadius:(float)radius;
 
 @end
