@@ -37,8 +37,6 @@
         UIView* child = [self.subviews objectAtIndex:i];
         CGSize viewSize = child.bounds.size;
         
-        NSLog(@"child width %f", viewSize.width);
-        
         if(currentLineX + _horizontalSpacing + viewSize.width < maxWidth || currentLineViews.count == 0) {
             /* still in the same line */
             currentLineMaxHeight = MAX(currentLineMaxHeight, viewSize.height);
@@ -46,7 +44,6 @@
             currentLineX += viewSize.width + _horizontalSpacing;
             i++;
         } else {
-            NSLog(@"change line");
             /* first layout current line */
             [self layoutLine:currentLineViews yStart:currentLineY maxHeight:currentLineMaxHeight];
             /* should go into a new line */
@@ -85,7 +82,6 @@
             toLayout.frame = CGRectMake(xStart, yStart, viewSize.width, viewSize.height);
         }
         xStart += viewSize.width + _horizontalSpacing;
-        NSLog(@"layout to X %f Y %f W %f H %f", toLayout.frame.origin.x, toLayout.frame.origin.y, toLayout.frame.size.width, toLayout.frame.size.height);
     }
 }
 
