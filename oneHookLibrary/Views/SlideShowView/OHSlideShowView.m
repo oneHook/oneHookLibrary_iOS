@@ -92,7 +92,11 @@
     if(offset > SINGLE_PAGE_DURATION) {
         offset -= SINGLE_PAGE_DURATION;
         /* need turn page */
-        [self turnPage];
+        if(self.currentSlideIndex < [self.datasource numberOfSlidesIn:self]) {
+            [self turnPage];
+        } else {
+            [self stopAnimating];
+        }
     }
     
 //    NSLog(@"on timer %f", _progress);

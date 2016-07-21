@@ -39,6 +39,7 @@
 		4C1736E21D0525E500B6A4E3 /* OHLinearScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1736C21D048C2B00B6A4E3 /* OHLinearScrollView.m */; };
 		4C45F8981D066CF900602E81 /* OHFloatingActionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C45F8971D066CF900602E81 /* OHFloatingActionButton.m */; };
 		4C45F8991D066D2400602E81 /* OHFloatingActionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C45F8971D066CF900602E81 /* OHFloatingActionButton.m */; };
+		4C9346E11D407B1B00DB5C97 /* OHTagsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9346E01D407B1B00DB5C97 /* OHTagsView.m */; };
 		4C98AA901B56E16A000B6D9C /* UIColor+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C98AA8F1B56E16A000B6D9C /* UIColor+Utility.m */; };
 		4CBCD7B01C1A5660006385EA /* OHImageViewerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBCD7AF1C1A5660006385EA /* OHImageViewerViewController.m */; };
 		4CBCD7B11C1A5672006385EA /* OHImageViewerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBCD7AF1C1A5660006385EA /* OHImageViewerViewController.m */; };
@@ -166,6 +167,8 @@
 		4C1736D11D04906200B6A4E3 /* OHToolbarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHToolbarItem.m; sourceTree = "<group>"; };
 		4C45F8961D066CF900602E81 /* OHFloatingActionButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHFloatingActionButton.h; sourceTree = "<group>"; };
 		4C45F8971D066CF900602E81 /* OHFloatingActionButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHFloatingActionButton.m; sourceTree = "<group>"; };
+		4C9346DF1D407B1B00DB5C97 /* OHTagsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHTagsView.h; sourceTree = "<group>"; };
+		4C9346E01D407B1B00DB5C97 /* OHTagsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHTagsView.m; sourceTree = "<group>"; };
 		4C98AA8E1B56E16A000B6D9C /* UIColor+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Utility.h"; sourceTree = "<group>"; };
 		4C98AA8F1B56E16A000B6D9C /* UIColor+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Utility.m"; sourceTree = "<group>"; };
 		4CBCD7AE1C1A5660006385EA /* OHImageViewerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHImageViewerViewController.h; sourceTree = "<group>"; };
@@ -341,6 +344,15 @@
 				4C1736D11D04906200B6A4E3 /* OHToolbarItem.m */,
 			);
 			path = Toolbar;
+			sourceTree = "<group>";
+		};
+		4C9346DE1D407B0F00DB5C97 /* TagsView */ = {
+			isa = PBXGroup;
+			children = (
+				4C9346DF1D407B1B00DB5C97 /* OHTagsView.h */,
+				4C9346E01D407B1B00DB5C97 /* OHTagsView.m */,
+			);
+			path = TagsView;
 			sourceTree = "<group>";
 		};
 		4CBCD7AD1C1A5660006385EA /* FullImageViewer */ = {
@@ -529,6 +541,7 @@
 		D3FE001B1AC507D7004D4BD2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4C9346DE1D407B0F00DB5C97 /* TagsView */,
 				D3FCA9D01D1C93FA006D771D /* Badge */,
 				4C1736BE1D048C0C00B6A4E3 /* RelativeLayout */,
 				4C1736A81D048B9E00B6A4E3 /* Buttons */,
@@ -832,6 +845,7 @@
 				4C1736A31D04896400B6A4E3 /* UIView+Toast.m in Sources */,
 				D33A1CE01BF590570005FDB2 /* OHProgressRingDemoViewController.m in Sources */,
 				4C1736B61D048B9E00B6A4E3 /* OHCircularButton.m in Sources */,
+				4C9346E11D407B1B00DB5C97 /* OHTagsView.m in Sources */,
 				D335A9321C16015900A73B97 /* OHCountDownProgressView.m in Sources */,
 				4C98AA901B56E16A000B6D9C /* UIColor+Utility.m in Sources */,
 				D3A7A98A1B18F88E002158DC /* OHConfettiScreen.m in Sources */,
