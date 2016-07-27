@@ -25,3 +25,6 @@
 "A year from now" = "A year from now";
 "%d years ago" = "%d years ago";
 "%d years from now" = "%d years from now";
+
+/* absolute time */
+"shortDateWithYearFormat" = "yyyy年M月d日";

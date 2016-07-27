@@ -11,6 +11,14 @@
 #import "OHMacros.h"
 
 
+@interface DummyClass: NSObject
+@end
+
+@implementation DummyClass
+
+@end
+
+
 @implementation NSDate (Utility)
 
 - (NSDate *)beginningOfDay
@@ -147,9 +155,7 @@ const int YEAR = DAY*365;
     static NSBundle *bundle;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        bundle = [NSBundle bundleWithPath:
-                  [[[NSBundle mainBundle] resourcePath]
-                                           stringByAppendingPathComponent:@"/NSDate+Utility.bundle"]];
+        bundle = [NSBundle bundleWithPath:[[[NSBundle bundleForClass:[DummyClass class]] resourcePath] stringByAppendingPathComponent:@"NSDate+Utility.bundle"]];
     });
     return NSLocalizedStringFromTableInBundle(key, @"NSDate+Utility", bundle, nil);
 }
@@ -169,7 +175,8 @@ const int YEAR = DAY*365;
     static NSDateFormatter* dateFormatter;
     if(!dateFormatter) {
         dateFormatter = [[NSDateFormatter alloc] init];
-        [dateFormatter setDateFormat:@"MMM dd, yyyy"];
+        NSLog(@"here %@", [self localizedString:@"shortDateWithYearFormat"]);
+        [dateFormatter setDateFormat:[self localizedString:@"shortDateWithYearFormat"]];
     }
     return [dateFormatter stringFromDate:self];
 }

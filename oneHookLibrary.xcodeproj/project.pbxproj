@@ -42,6 +42,7 @@
 		4C7A06051D416F0C00C47097 /* OHFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7A06041D416F0C00C47097 /* OHFlowLayout.m */; };
 		4C7A06061D41786000C47097 /* OHFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7A06041D416F0C00C47097 /* OHFlowLayout.m */; };
 		4C7A06071D41786400C47097 /* OHTagsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9346E01D407B1B00DB5C97 /* OHTagsView.m */; };
+		4C8E48E01D48395C003426D8 /* NSDate+Utility.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4C8E48DF1D48395C003426D8 /* NSDate+Utility.bundle */; };
 		4C9346E11D407B1B00DB5C97 /* OHTagsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9346E01D407B1B00DB5C97 /* OHTagsView.m */; };
 		4C98AA901B56E16A000B6D9C /* UIColor+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C98AA8F1B56E16A000B6D9C /* UIColor+Utility.m */; };
 		4CBCD7B01C1A5660006385EA /* OHImageViewerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBCD7AF1C1A5660006385EA /* OHImageViewerViewController.m */; };
@@ -63,7 +64,6 @@
 		D33A1CDD1BF589DE0005FDB2 /* OHAnimatedProgressRing.m in Sources */ = {isa = PBXBuildFile; fileRef = D33A1CDC1BF589DE0005FDB2 /* OHAnimatedProgressRing.m */; };
 		D33A1CE01BF590570005FDB2 /* OHProgressRingDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D33A1CDF1BF590570005FDB2 /* OHProgressRingDemoViewController.m */; };
 		D33A1CE11BF595D90005FDB2 /* OHProgressRingDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D33A1CDF1BF590570005FDB2 /* OHProgressRingDemoViewController.m */; };
-		D33D1AC11C1B82690006A9D3 /* NSDate+Utility.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D33D1AC01C1B82690006A9D3 /* NSDate+Utility.bundle */; };
 		D34A080B1B7B74CF001B6C30 /* NSString+Morphing.m in Sources */ = {isa = PBXBuildFile; fileRef = D34A08081B7B74CF001B6C30 /* NSString+Morphing.m */; };
 		D34A080C1B7B74CF001B6C30 /* TOMSMorphingLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = D34A080A1B7B74CF001B6C30 /* TOMSMorphingLabel.m */; };
 		D34A080D1B7B74E6001B6C30 /* NSString+Morphing.m in Sources */ = {isa = PBXBuildFile; fileRef = D34A08081B7B74CF001B6C30 /* NSString+Morphing.m */; };
@@ -172,6 +172,7 @@
 		4C45F8971D066CF900602E81 /* OHFloatingActionButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHFloatingActionButton.m; sourceTree = "<group>"; };
 		4C7A06031D416F0C00C47097 /* OHFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHFlowLayout.h; sourceTree = "<group>"; };
 		4C7A06041D416F0C00C47097 /* OHFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHFlowLayout.m; sourceTree = "<group>"; };
+		4C8E48DF1D48395C003426D8 /* NSDate+Utility.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = "NSDate+Utility.bundle"; sourceTree = "<group>"; };
 		4C9346DF1D407B1B00DB5C97 /* OHTagsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHTagsView.h; sourceTree = "<group>"; };
 		4C9346E01D407B1B00DB5C97 /* OHTagsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHTagsView.m; sourceTree = "<group>"; };
 		4C98AA8E1B56E16A000B6D9C /* UIColor+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Utility.h"; sourceTree = "<group>"; };
@@ -201,7 +202,6 @@
 		D33A1CDE1BF590570005FDB2 /* OHProgressRingDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHProgressRingDemoViewController.h; sourceTree = "<group>"; };
 		D33A1CDF1BF590570005FDB2 /* OHProgressRingDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHProgressRingDemoViewController.m; sourceTree = "<group>"; };
 		D33BA5F31ADA2D9000DF885A /* OHCommonDimensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OHCommonDimensions.h; sourceTree = "<group>"; };
-		D33D1AC01C1B82690006A9D3 /* NSDate+Utility.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = "NSDate+Utility.bundle"; sourceTree = "<group>"; };
 		D34A08071B7B74CF001B6C30 /* NSString+Morphing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Morphing.h"; sourceTree = "<group>"; };
 		D34A08081B7B74CF001B6C30 /* NSString+Morphing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Morphing.m"; sourceTree = "<group>"; };
 		D34A08091B7B74CF001B6C30 /* TOMSMorphingLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TOMSMorphingLabel.h; sourceTree = "<group>"; };
@@ -530,6 +530,7 @@
 		D3A8BC241B0A6657004FF5A3 /* Date */ = {
 			isa = PBXGroup;
 			children = (
+				4C8E48DF1D48395C003426D8 /* NSDate+Utility.bundle */,
 				D3A8BC291B0A672E004FF5A3 /* NSDate+Utility.h */,
 				D3A8BC2A1B0A672E004FF5A3 /* NSDate+Utility.m */,
 			);
@@ -671,7 +672,6 @@
 		D3FEFFF41AC50788004D4BD2 /* oneHookLibrary */ = {
 			isa = PBXGroup;
 			children = (
-				D33D1AC01C1B82690006A9D3 /* NSDate+Utility.bundle */,
 				D34A08051B7B74CF001B6C30 /* Thirdparty */,
 				D309EC191ADA454800858EF2 /* Utility */,
 				D3FE00881AC50E79004D4BD2 /* Headers */,
@@ -756,6 +756,8 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
+				"zh-Hant",
 			);
 			mainGroup = D3FEFFE91AC50788004D4BD2;
 			productRefGroup = D3FEFFF31AC50788004D4BD2 /* Products */;
@@ -776,7 +778,7 @@
 				D328480D1AEC1B9500DE7CD3 /* Main.storyboard in Resources */,
 				D328480C1AEC1B9500DE7CD3 /* LaunchScreen.xib in Resources */,
 				D3FE00031AC50788004D4BD2 /* Images.xcassets in Resources */,
-				D33D1AC11C1B82690006A9D3 /* NSDate+Utility.bundle in Resources */,
+				4C8E48E01D48395C003426D8 /* NSDate+Utility.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
