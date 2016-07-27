@@ -12,7 +12,7 @@
 #define FLOATING_ACTION_BUTTON_ANIMATION_THRESHOLD 24
 #define FAB_STATE_TOP 0
 #define FAB_STATE_BOTTOM 1
-#define DEBUGGIN NO
+#define DEBUGGIN YES
 
 @interface OHViewController() {
     CGFloat _lastWidth;
@@ -20,6 +20,8 @@
     CGFloat _toolbarHeight;
     CGFloat _scrollViewLastContentOffsetY;
     CGFloat _pullToRefreshProgress;
+    
+    CGFloat _yOffsetBeforeOrientationChange;
 }
 
 @property (weak, nonatomic) OHFloatingActionButton* fabButton;
@@ -85,6 +87,20 @@
     [self.view addSubview:self.toolbar];
     
     [self toolbarDidLoad:self.toolbar];
+}
+
+- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{
+    [super willRotateToInterfaceOrientation:toInterfaceOrientation duration:duration];
+    _yOffsetBeforeOrientationChange = self.contentScrollableView.contentOffset.y;
+}
+
+- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
+{
+    [super didRotateFromInterfaceOrientation:fromInterfaceOrientation];
+    if(_yOffsetBeforeOrientationChange < 0 && -_yOffsetBeforeOrientationChange >= self.maximumToolbarHeight / 2) {
+        [self.contentScrollableView setContentOffset:CGPointMake(0, -self.maximumToolbarHeight) animated:YES];
+    }
 }
 
 - (void)viewWillLayoutSubviews
