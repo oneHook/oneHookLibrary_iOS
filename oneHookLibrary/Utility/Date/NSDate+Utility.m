@@ -175,7 +175,6 @@ const int YEAR = DAY*365;
     static NSDateFormatter* dateFormatter;
     if(!dateFormatter) {
         dateFormatter = [[NSDateFormatter alloc] init];
-        NSLog(@"here %@", [self localizedString:@"shortDateWithYearFormat"]);
         [dateFormatter setDateFormat:[self localizedString:@"shortDateWithYearFormat"]];
     }
     return [dateFormatter stringFromDate:self];
