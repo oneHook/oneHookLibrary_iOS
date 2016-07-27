@@ -116,6 +116,13 @@
 
 }
 
+- (void)viewWillLayoutSubviews
+{
+    [super viewWillLayoutSubviews];
+    self.scrollView.frame = self.view.bounds;
+    [self centerScrollViewContents];
+}
+
 - (void)tapOnce:(UIGestureRecognizer *)gestureRecognizer
 {
     [[UIApplication sharedApplication] setStatusBarHidden:NO];
