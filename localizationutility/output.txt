@@ -1,0 +1,2180 @@
+/* BuildContext.m */
+
+@"lastShownOnboardingKey" = @"lastShownOnboardingKey"
+@"serverStatus" = @"serverStatus"
+
+
+/* HSAppDelegate.m */
+
+@"647187018277-j73fsp5gsdmf04erf7l2upfvu63qqf70.apps.googleusercontent.com" = @"647187018277-j73fsp5gsdmf04erf7l2upfvu63qqf70.apps.googleusercontent.com"
+@"647187018277-ke5354c9ujr6lrdm4cceurrktgt1ns3n.apps.googleusercontent.com" = @"647187018277-ke5354c9ujr6lrdm4cceurrktgt1ns3n.apps.googleusercontent.com"
+@"type" = @"type"
+@"type" = @"type"
+@"userChallengeId" = @"userChallengeId"
+
+
+/* HSWindow.m */
+
+@"PROD" = @"PROD"
+@"STAGING" = @"STAGING"
+@"Switch Server?" = @"Switch Server?"
+@"Would you like to switch server? You will be signed out." = @"Would you like to switch server? You will be signed out."
+@"NO" = @"NO"
+@"YES" = @"YES"
+
+
+/* PresentDetailChallengeAnimationController.m */
+
+@"path" = @"path"
+@"path" = @"path"
+
+
+/* MOFABButton.m */
+
+@"99" = @"99"
+@"%d" = @"%d"
+@"99+" = @"99+"
+
+
+/* MOPickDateViewController.m */
+
+@"Confirm" = @"Confirm"
+
+
+/* MOTableViewLoadingCell.m */
+
+@"END" = @"END"
+@"LOAD MORE" = @"LOAD MORE"
+
+
+/* MOTwoLineToastView.m */
+
+@"line1" = @"line1"
+@"line2" = @"line2"
+
+
+/* MOUserProfileImageView.m */
+
+@"default_user_avartar" = @"default_user_avartar"
+
+
+/* HSHealthKitHelper.m */
+
+@"HKHealthStore" = @"HKHealthStore"
+@"event" = @"event"
+@"event" = @"event"
+@"HKHealthStore" = @"HKHealthStore"
+@"HK failure" = @"HK failure"
+@"errorCode" = @"errorCode"
+@"%ld" = @"%ld"
+@"errorInfo" = @"errorInfo"
+@"HKHealthStore" = @"HKHealthStore"
+@"HK failure" = @"HK failure"
+@"errorCode" = @"errorCode"
+@"%ld" = @"%ld"
+@"errorInfo" = @"errorInfo"
+
+
+/* MOUpdateStepUtility.m */
+
+@"lastStepUpdatedDate" = @"lastStepUpdatedDate"
+@"date" = @"date"
+@"value" = @"value"
+@"sums" = @"sums"
+@"userChallenge" = @"userChallenge"
+
+
+/* HSBaseActivity.m */
+
+@"userChallenge" = @"userChallenge"
+@"userCategory" = @"userCategory"
+@"userCategory" = @"userCategory"
+@"%@ : %@ UCI: %@ X%d | COMPLETED: %d" = @"%@ : %@ UCI: %@ X%d | COMPLETED: %d"
+
+
+/* HSCameraActivity.m */
+
+@"Photo Challenge" = @"Photo Challenge"
+
+
+/* HSCategory.m */
+
+@"id" = @"id"
+@"id" = @"id"
+@"enabled" = @"enabled"
+@"category" = @"category"
+@"time" = @"time"
+@"icon" = @"icon"
+@"iconFull" = @"iconFull"
+@"iconAdd" = @"iconAdd"
+@"iconEmpty" = @"iconEmpty"
+@"description" = @"description"
+@"duration" = @"duration"
+@"hasLeaderboard" = @"hasLeaderboard"
+@"tagId" = @"tagId"
+@"All Day" = @"All Day"
+@"AM" = @"AM"
+@"PM" = @"PM"
+@"%ld %@" = @"%ld %@"
+
+
+/* HSChallenge.m */
+
+@"category" = @"category"
+@"id" = @"id"
+@"type" = @"type"
+@"title" = @"title"
+@"description" = @"description"
+@"photo" = @"photo"
+@"points" = @"points"
+@"steps" = @"steps"
+@"duration" = @"duration"
+@"source" = @"source"
+@"link" = @"link"
+@"requiredPluginType" = @"requiredPluginType"
+@"image" = @"image"
+
+
+/* HSCompany.m */
+
+@"companyName" = @"companyName"
+@"companyID" = @"companyID"
+@"companyCode" = @"companyCode"
+@"companyName" = @"companyName"
+@"companyID" = @"companyID"
+@"companyCode" = @"companyCode"
+@"code" = @"code"
+@"id" = @"id"
+@"name" = @"name"
+@"N/A" = @"N/A"
+@"N/A" = @"N/A"
+@"No Company" = @"No Company"
+@"N/A" = @"N/A"
+
+
+/* HSCountdownActivity.m */
+
+@"%d Seconds" = @"%d Seconds"
+@"%@ : %@ : %@ : %@" = @"%@ : %@ : %@ : %@"
+@"Timed Challenge" = @"Timed Challenge"
+
+
+/* HSPhoto.m */
+
+@"id" = @"id"
+@"file" = @"file"
+@"thumbnail" = @"thumbnail"
+@"type" = @"type"
+@"gif" = @"gif"
+@"---- PHOTO ----\n" = @"---- PHOTO ----\n"
+@"ID:    %@\n" = @"ID:    %@\n"
+@"URL:   %@\n" = @"URL:   %@\n"
+@"THUMB: %@\n" = @"THUMB: %@\n"
+@"---------------\n" = @"---------------\n"
+
+
+/* HSReward.m */
+
+@"id" = @"id"
+@"name" = @"name"
+@"description" = @"description"
+@"value" = @"value"
+@"points" = @"points"
+@"expiry" = @"expiry"
+@"expiry" = @"expiry"
+@"enabled" = @"enabled"
+@"logo" = @"logo"
+@"logo" = @"logo"
+
+
+/* HSSingleClickActivity.m */
+
+@"Read & Confirm" = @"Read & Confirm"
+
+
+/* HSStepActivity.m */
+
+@"%d/%d" = @"%d/%d"
+@"%d/%d" = @"%d/%d"
+
+
+/* HSTeam.m */
+
+@"teamID" = @"teamID"
+@"teamName" = @"teamName"
+@"teamPoints" = @"teamPoints"
+@"teamAvartarImage" = @"teamAvartarImage"
+@"teamID" = @"teamID"
+@"teamName" = @"teamName"
+@"teamAvartarImage" = @"teamAvartarImage"
+@"teamPoints" = @"teamPoints"
+@"id" = @"id"
+@"name" = @"name"
+@"picture" = @"picture"
+@"points" = @"points"
+@"N/A" = @"N/A"
+@"[Team ID: %@ NAME %@]" = @"[Team ID: %@ NAME %@]"
+
+
+/* HSUser.m */
+
+@"userSessionToken" = @"userSessionToken"
+@"userID" = @"userID"
+@"userName" = @"userName"
+@"userRank" = @"userRank"
+@"userProfile" = @"userProfile"
+@"userSelectedPlugins" = @"userSelectedPlugins"
+@"userSelectedPluginTags" = @"userSelectedPluginTags"
+@"userProfileCompany" = @"userProfileCompany"
+@"userProfileTeam" = @"userProfileTeam"
+@"isMyself" = @"isMyself"
+@"teamRank" = @"teamRank"
+@"userSessionToken" = @"userSessionToken"
+@"userID" = @"userID"
+@"userName" = @"userName"
+@"userRank" = @"userRank"
+@"userProfile" = @"userProfile"
+@"userSelectedPlugins" = @"userSelectedPlugins"
+@"userSelectedPluginTags" = @"userSelectedPluginTags"
+@"userProfileCompany" = @"userProfileCompany"
+@"userProfileTeam" = @"userProfileTeam"
+@"teamRank" = @"teamRank"
+@"isMyself" = @"isMyself"
+@"sessionToken" = @"sessionToken"
+@"id" = @"id"
+@"username" = @"username"
+@"userRank" = @"userRank"
+@"userProfile" = @"userProfile"
+@"picture" = @"picture"
+@"picture" = @"picture"
+@"userCategories" = @"userCategories"
+@"userPlugins" = @"userPlugins"
+@"userPlugins" = @"userPlugins"
+@"company" = @"company"
+@"company" = @"company"
+@"team" = @"team"
+@"team" = @"team"
+@"teamRank" = @"teamRank"
+@"teamRank" = @"teamRank"
+@"=====User Request=====\n" = @"=====User Request=====\n"
+
+
+/* HSUserCategory.m */
+
+@"id" = @"id"
+@"id" = @"id"
+@"time" = @"time"
+@"category" = @"category"
+@"totalCompleted" = @"totalCompleted"
+@"totalCompleted" = @"totalCompleted"
+@"points" = @"points"
+@"points" = @"points"
+
+
+/* HSUserCategoryEntry.m */
+
+@"userCategory" = @"userCategory"
+@"challengesCompleted" = @"challengesCompleted"
+
+
+/* HSUserChallenge.m */
+
+@"challenge" = @"challenge"
+@"id" = @"id"
+@"state" = @"state"
+@"stepsCompleted" = @"stepsCompleted"
+@"photo" = @"photo"
+@"updatedAt" = @"updatedAt"
+@"points" = @"points"
+@"<UserChallenge %@ with %d>" = @"<UserChallenge %@ with %d>"
+
+
+/* HSUserChallengeHistory.m */
+
+@"utcDate" = @"utcDate"
+@"stepsCompleted" = @"stepsCompleted"
+@"<HSUserChallengeHistory %@ %@>" = @"<HSUserChallengeHistory %@ %@>"
+
+
+/* HSUserProfile.m */
+
+@"userProfileID" = @"userProfileID"
+@"profileFirstName" = @"profileFirstName"
+@"profileLastName" = @"profileLastName"
+@"userProfileEmail" = @"userProfileEmail"
+@"userProfilePoints" = @"userProfilePoints"
+@"userProfileAvartarImage" = @"userProfileAvartarImage"
+@"userProfileBirthday" = @"userProfileBirthday"
+@"userProfileAnonymousMode" = @"userProfileAnonymousMode"
+@"userProfileID" = @"userProfileID"
+@"profileFirstName" = @"profileFirstName"
+@"profileLastName" = @"profileLastName"
+@"userProfileEmail" = @"userProfileEmail"
+@"userProfilePoints" = @"userProfilePoints"
+@"userProfileAvartarImage" = @"userProfileAvartarImage"
+@"userProfileBirthday" = @"userProfileBirthday"
+@"userProfileAnonymousMode" = @"userProfileAnonymousMode"
+@"id" = @"id"
+@"firstName" = @"firstName"
+@"lastName" = @"lastName"
+@"email" = @"email"
+@"points" = @"points"
+@"birthDate" = @"birthDate"
+@"en_US_POSIX" = @"en_US_POSIX"
+@"yyyy-MM-dd" = @"yyyy-MM-dd"
+@"birthDate" = @"birthDate"
+@"picture" = @"picture"
+@"anonymous" = @"anonymous"
+@"%@ %@" = @"%@ %@"
+@"%@ %@" = @"%@ %@"
+
+
+/* HSUserStore.m */
+
+@"currentUserStagingV2" = @"currentUserStagingV2"
+@"authTypeStagingV2" = @"authTypeStagingV2"
+@"currentUserV2" = @"currentUserV2"
+@"authTypeV2" = @"authTypeV2"
+@"badge" = @"badge"
+@"feed" = @"feed"
+
+
+/* HSLeaderboardUser.m */
+
+@"Rank: %ld Name: %@ Points: %ld" = @"Rank: %ld Name: %@ Points: %ld"
+
+
+/* HSActivityCompletionObject.m */
+
+@"fullProfile" = @"fullProfile"
+@"pointsAwarded" = @"pointsAwarded"
+@"leaderboardCategory" = @"leaderboardCategory"
+@"start" = @"start"
+@"userCategories" = @"userCategories"
+@"profile" = @"profile"
+
+
+/* HSCalendarEvent.m */
+
+@"<TimeInterval %ld - %ld>" = @"<TimeInterval %ld - %ld>"
+
+
+/* HSFeedActivity.m */
+
+@"id" = @"id"
+@"type" = @"type"
+@"profile" = @"profile"
+@"userChallenge" = @"userChallenge"
+@"createdAt" = @"createdAt"
+@"%@ has completed a challenge %@" = @"%@ has completed a challenge %@"
+@"Please update your app to see message" = @"Please update your app to see message"
+
+
+/* HSFeedAnnoucement.m */
+
+@"title" = @"title"
+@"description" = @"description"
+@"sentAt" = @"sentAt"
+@"type" = @"type"
+@"challenge" = @"challenge"
+@"expiresAt" = @"expiresAt"
+@"startsAt" = @"startsAt"
+
+
+/* HSPlugin.m */
+
+@"android" = @"android"
+@"ios" = @"ios"
+@"web" = @"web"
+@"clientUpdateMode" = @"clientUpdateMode"
+@"clientSyncMode" = @"clientSyncMode"
+@"type" = @"type"
+@"id" = @"id"
+@"name" = @"name"
+@"description" = @"description"
+@"logoUrl" = @"logoUrl"
+@"<Plugin %@>" = @"<Plugin %@>"
+
+
+/* HSPlugInType.m */
+
+@"name" = @"name"
+@"name" = @"name"
+@"id" = @"id"
+@"tagId" = @"tagId"
+@"name" = @"name"
+@"name" = @"name"
+
+
+/* HSUserPlugin.m */
+
+@"id" = @"id"
+@"plugin" = @"plugin"
+@"type" = @"type"
+@"data" = @"data"
+@"data" = @"data"
+@"events" = @"events"
+@"events" = @"events"
+@"start" = @"start"
+@"end" = @"end"
+@"%d" = @"%d"
+@"<UserPlugin %@ %@>" = @"<UserPlugin %@ %@>"
+
+
+/* HSChallengerAPI.m */
+
+@"profile" = @"profile"
+@"user" = @"user"
+@"fetchProfile" = @"fetchProfile"
+@"Failed to fetch your profile, please try again later" = @"Failed to fetch your profile, please try again later"
+@"Failed to sign you in, but your profile is created" = @"Failed to sign you in, but your profile is created"
+@"setTimeZone" = @"setTimeZone"
+@"timeZone" = @"timeZone"
+@"v2_signUp" = @"v2_signUp"
+@"username" = @"username"
+@"password" = @"password"
+@"code" = @"code"
+@"profile" = @"profile"
+@"tz" = @"tz"
+@"fetchProfile" = @"fetchProfile"
+@"user" = @"user"
+@"id" = @"id"
+@"sessionToken" = @"sessionToken"
+@"dooo_v3_fetchProfile" = @"dooo_v3_fetchProfile"
+@"user" = @"user"
+@"Something went wrong, please try again later" = @"Something went wrong, please try again later"
+@"Failed to sign you in, please try again later" = @"Failed to sign you in, please try again later"
+@"error" = @"error"
+@"error" = @"error"
+@"1005" = @"1005"
+@"1005" = @"1005"
+@"Username %@ already taken" = @"Username %@ already taken"
+@"Failed to create new user, please try again later" = @"Failed to create new user, please try again later"
+@", error, (long) errorCode, error.domain, [error.userInfo objectForKey:@" = @", error, (long) errorCode, error.domain, [error.userInfo objectForKey:@"
+@"v2_signIn" = @"v2_signIn"
+@"username" = @"username"
+@"password" = @"password"
+@"profile" = @"profile"
+@"tz" = @"tz"
+@"fetchProfile" = @"fetchProfile"
+@"user" = @"user"
+@"id" = @"id"
+@"sessionToken" = @"sessionToken"
+@"dooo_v3_fetchProfile" = @"dooo_v3_fetchProfile"
+@"user" = @"user"
+@"Something went wrong, please try again later" = @"Something went wrong, please try again later"
+@"Failed to sign you in, please try again later" = @"Failed to sign you in, please try again later"
+@"error" = @"error"
+@"error" = @"error"
+@"101" = @"101"
+@"101" = @"101"
+@"Invalid login credentials" = @"Invalid login credentials"
+@"Failed to sign you in, please try again later" = @"Failed to sign you in, please try again later"
+@"dooo_v3_fetchProfile" = @"dooo_v3_fetchProfile"
+@"user" = @"user"
+@"dooo_v3_updateProfile" = @"dooo_v3_updateProfile"
+@"userProfileID" = @"userProfileID"
+@"firstName" = @"firstName"
+@"lastName" = @"lastName"
+@"birthDate" = @"birthDate"
+@"userProfile" = @"userProfile"
+@"dooo_v3_updateProfile" = @"dooo_v3_updateProfile"
+@"userProfileID" = @"userProfileID"
+@"anonymous" = @"anonymous"
+@"userProfile" = @"userProfile"
+@"dooo_v3_updateProfile" = @"dooo_v3_updateProfile"
+@"userProfileID" = @"userProfileID"
+@"userProfile" = @"userProfile"
+@"v2_fetchPublicProfile" = @"v2_fetchPublicProfile"
+@"userProfileId" = @"userProfileId"
+@"dooo_v3_pageCategories" = @"dooo_v3_pageCategories"
+@"categories" = @"categories"
+@"userCategories" = @"userCategories"
+@"addUserCategory" = @"addUserCategory"
+@"categoryId" = @"categoryId"
+@"removeUserCategoryById" = @"removeUserCategoryById"
+@"userCategoryId" = @"userCategoryId"
+@"fetchTimelineJSON" = @"fetchTimelineJSON"
+@"fetchUserChallengeJSON" = @"fetchUserChallengeJSON"
+@"userChallengeId" = @"userChallengeId"
+@"categoryRank" = @"categoryRank"
+@"fetchUserChallengeJSON" = @"fetchUserChallengeJSON"
+@"userChallengeId" = @"userChallengeId"
+@"calcDailyAverage" = @"calcDailyAverage"
+@"categoryRank" = @"categoryRank"
+@"calcDailyAverageLimit" = @"calcDailyAverageLimit"
+@"historyLimit" = @"historyLimit"
+@"categoryRank" = @"categoryRank"
+@"userChallengeHistory" = @"userChallengeHistory"
+@"dailyAverages" = @"dailyAverages"
+@"stepsCompleted" = @"stepsCompleted"
+@"updateUserCategoryTimes" = @"updateUserCategoryTimes"
+@"userCategories" = @"userCategories"
+@"dooo_v3_pageRewards" = @"dooo_v3_pageRewards"
+@"rewards" = @"rewards"
+@"dooo_v3_fetchLeaderboardCategory" = @"dooo_v3_fetchLeaderboardCategory"
+@"categoryTagId" = @"categoryTagId"
+@"start" = @"start"
+@"limit" = @"limit"
+@"userCategories" = @"userCategories"
+@"profile" = @"profile"
+@"totalCompleted" = @"totalCompleted"
+@"nextStart" = @"nextStart"
+@"dooo_v3_fetchLeaderboardTeam" = @"dooo_v3_fetchLeaderboardTeam"
+@"teamId" = @"teamId"
+@"start" = @"start"
+@"limit" = @"limit"
+@"userProfiles" = @"userProfiles"
+@"nextStart" = @"nextStart"
+@"dooo_v3_fetchLeaderboardCompany" = @"dooo_v3_fetchLeaderboardCompany"
+@"start" = @"start"
+@"limit" = @"limit"
+@"userProfiles" = @"userProfiles"
+@"nextStart" = @"nextStart"
+@"dooo_v3_fetchLeaderboardTeams" = @"dooo_v3_fetchLeaderboardTeams"
+@"start" = @"start"
+@"limit" = @"limit"
+@"teams" = @"teams"
+@"nextStart" = @"nextStart"
+@"redeemReward" = @"redeemReward"
+@"rewardId" = @"rewardId"
+@"UserProfile" = @"UserProfile"
+@"picture" = @"picture"
+@"completeChallengeJSON" = @"completeChallengeJSON"
+@"userChallengeId" = @"userChallengeId"
+@"reviewChallengeJSON" = @"reviewChallengeJSON"
+@"userChallengeId" = @"userChallengeId"
+@"ERORR-1000: Try to complete activity with nil object" = @"ERORR-1000: Try to complete activity with nil object"
+@"ERORR-1001: Try to complete activity with nil userChallengeID" = @"ERORR-1001: Try to complete activity with nil userChallengeID"
+@"data" = @"data"
+@"completeChallengeJSON" = @"completeChallengeJSON"
+@"userChallengeId" = @"userChallengeId"
+@"completeChallengeJSON" = @"completeChallengeJSON"
+@"userChallengeId" = @"userChallengeId"
+@"file" = @"file"
+@"Photo challenge failed %ld" = @"Photo challenge failed %ld"
+@"addToGuestlist" = @"addToGuestlist"
+@"email" = @"email"
+@"name" = @"name"
+@"company" = @"company"
+@"title" = @"title"
+@"associateInstallation" = @"associateInstallation"
+@"installationObjectId" = @"installationObjectId"
+@"unassociateInstallation" = @"unassociateInstallation"
+@"installationObjectId" = @"installationObjectId"
+@"addUserPlugin" = @"addUserPlugin"
+@"pluginId" = @"pluginId"
+@"clientKey" = @"clientKey"
+@"data" = @"data"
+@"removeUserPlugin" = @"removeUserPlugin"
+@"pluginId" = @"pluginId"
+@"No user plugin found" = @"No user plugin found"
+@"pluginId" = @"pluginId"
+@"data" = @"data"
+@"clientKey" = @"clientKey"
+@"dooo_v3_updateUserPlugin" = @"dooo_v3_updateUserPlugin"
+@"userChallenge" = @"userChallenge"
+@"userProfile" = @"userProfile"
+@"userPlugin" = @"userPlugin"
+@"dooo_v3_fetchCompanyWelcome" = @"dooo_v3_fetchCompanyWelcome"
+@"companyWelcome" = @"companyWelcome"
+@"companyWelcome" = @"companyWelcome"
+@"logo" = @"logo"
+@"companyName" = @"companyName"
+@"Need company name from server" = @"Need company name from server"
+@"message" = @"message"
+@"name" = @"name"
+@"photo" = @"photo"
+@"title" = @"title"
+@"color" = @"color"
+@"dooo_v3_validateCompanyEmployee" = @"dooo_v3_validateCompanyEmployee"
+@"companyCode" = @"companyCode"
+@"email" = @"email"
+@", error, [error.userInfo objectForKey:@" = @", error, [error.userInfo objectForKey:@"
+@"error" = @"error"
+@"error" = @"error"
+@"code" = @"code"
+@"dooo_v3_fetchActivityFeed" = @"dooo_v3_fetchActivityFeed"
+@"date" = @"date"
+@"limit" = @"limit"
+@"activities" = @"activities"
+@"results" = @"results"
+@"activities" = @"activities"
+@"nextDate" = @"nextDate"
+@"dooo_v3_fetchCompanyAnnouncementsFeed" = @"dooo_v3_fetchCompanyAnnouncementsFeed"
+@"date" = @"date"
+@"limit" = @"limit"
+@"companyAnnouncements" = @"companyAnnouncements"
+@"results" = @"results"
+@"userChallenges" = @"userChallenges"
+@"companyAnnouncements" = @"companyAnnouncements"
+@"nextDate" = @"nextDate"
+@"dooo_v3_fetchBadges" = @"dooo_v3_fetchBadges"
+@"badge" = @"badge"
+@"companyAnnouncementsBadge" = @"companyAnnouncementsBadge"
+@"dooo_v3_fetchCompanyAnnouncementsBadge" = @"dooo_v3_fetchCompanyAnnouncementsBadge"
+@"companyAnnouncementsBadge" = @"companyAnnouncementsBadge"
+@"dooo_v3_updateCompanyAnnouncementsBadgeDate" = @"dooo_v3_updateCompanyAnnouncementsBadgeDate"
+@"date" = @"date"
+@"dooo_v3_pagePlugins" = @"dooo_v3_pagePlugins"
+@"pluginApi" = @"pluginApi"
+@"plugins" = @"plugins"
+@"userPlugins" = @"userPlugins"
+@"dooo_v3_fetchPluginSyncUrl" = @"dooo_v3_fetchPluginSyncUrl"
+@"pluginId" = @"pluginId"
+@"syncUrl" = @"syncUrl"
+@"syncUrl" = @"syncUrl"
+
+
+/* HSPluginSettingController.m */
+
+@"https://www.googleapis.com/auth/fitness.activity.read" = @"https://www.googleapis.com/auth/fitness.activity.read"
+@"https://www.googleapis.com/auth/calendar.readonly" = @"https://www.googleapis.com/auth/calendar.readonly"
+@"Google Calendar" = @"Google Calendar"
+@"Google Fit" = @"Google Fit"
+@"Apple Health" = @"Apple Health"
+@"Apple Health" = @"Apple Health"
+@"Removing %@..." = @"Removing %@..."
+@"Failed to remove %@, please try again later" = @"Failed to remove %@, please try again later"
+@"Adding %@" = @"Adding %@"
+@"Failed to add %@, please try again later" = @"Failed to add %@, please try again later"
+@"Google Fit" = @"Google Fit"
+@"Google Calendar" = @"Google Calendar"
+@"code" = @"code"
+@"Failed to authenticate with Google, please try again later" = @"Failed to authenticate with Google, please try again later"
+
+
+/* HSTrackerPluginCell.m */
+
+@"default_plugin_image" = @"default_plugin_image"
+@"CONNECT" = @"CONNECT"
+@"default_plugin_image" = @"default_plugin_image"
+@"default_plugin_image" = @"default_plugin_image"
+@"DISCONNECT" = @"DISCONNECT"
+@"CONNECT" = @"CONNECT"
+
+
+/* HSTrackerPluginChooseViewController.m */
+
+@"Connect Devices" = @"Connect Devices"
+@"Syncing may take up to 15min" = @"Syncing may take up to 15min"
+@"Cell" = @"Cell"
+@"Cell" = @"Cell"
+@"Removing %@..." = @"Removing %@..."
+@"Failed to remove plugin, please try again later" = @"Failed to remove plugin, please try again later"
+@"Loading..." = @"Loading..."
+@"Connection Failed, please try again later" = @"Connection Failed, please try again later"
+@"Loading..." = @"Loading..."
+@"Setup HealthKit" = @"Setup HealthKit"
+@"Once prompted, please allow Dooo to pull your step data from Apple Health and click Done" = @"Once prompted, please allow Dooo to pull your step data from Apple Health and click Done"
+@"OK" = @"OK"
+
+
+/* HSTrackerSetupWebViewController.m */
+
+@"Setup %@" = @"Setup %@"
+@"Failed to load plugin, please try again later" = @"Failed to load plugin, please try again later"
+@"Loading..." = @"Loading..."
+@"http://localhost/" = @"http://localhost/"
+
+
+/* HSPluginDataModel.m */
+
+@"Available" = @"Available"
+@"Selected" = @"Selected"
+@"Available" = @"Available"
+
+
+/* HCYoutubeParser.m */
+
+@"http://www.youtube.com/get_video_info?video_id=" = @"http://www.youtube.com/get_video_info?video_id="
+@"http://img.youtube.com/vi/%@/%@.jpg" = @"http://img.youtube.com/vi/%@/%@.jpg"
+@"http://gdata.youtube.com/feeds/api/videos/%@?alt=json" = @"http://gdata.youtube.com/feeds/api/videos/%@?alt=json"
+@"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.4 (KHTML, like Gecko) Chrome/22.0.1229.79 Safari/537.4" = @"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.4 (KHTML, like Gecko) Chrome/22.0.1229.79 Safari/537.4"
+@"+" = @"+"
+@" " = @" "
+@"&" = @"&"
+@"=" = @"="
+@"youtu.be" = @"youtu.be"
+@"www.youtube.com/embed" = @"www.youtube.com/embed"
+@"youtube.googleapis.com" = @"youtube.googleapis.com"
+@"www.youtube.com" = @"www.youtube.com"
+@"v" = @"v"
+@"%@%@" = @"%@%@"
+@"User-Agent" = @"User-Agent"
+@"GET" = @"GET"
+@"url_encoded_fmt_stream_map" = @"url_encoded_fmt_stream_map"
+@"," = @","
+@"type" = @"type"
+@"stereo3d" = @"stereo3d"
+@"itag" = @"itag"
+@"itag" = @"itag"
+@"mp4" = @"mp4"
+@"url" = @"url"
+@"%@&signature=%@" = @"%@&signature=%@"
+@"quality" = @"quality"
+@"stereo3d" = @"stereo3d"
+@"stereo3d" = @"stereo3d"
+@"-stereo3d" = @"-stereo3d"
+@"author" = @"author"
+@"avg_rating" = @"avg_rating"
+@"iurl" = @"iurl"
+@"iurlmaxres" = @"iurlmaxres"
+@"iurlsd" = @"iurlsd"
+@"keywords" = @"keywords"
+@"length_seconds" = @"length_seconds"
+@"title" = @"title"
+@"video_id" = @"video_id"
+@"moreInfo" = @"moreInfo"
+@"live_playback" = @"live_playback"
+@"hlsvp" = @"hlsvp"
+@"hlsvp" = @"hlsvp"
+@"live" = @"live"
+@"hlsvp" = @"hlsvp"
+@"me.hiddencode.yt-parser" = @"me.hiddencode.yt-parser"
+@"Invalid YouTube URL" = @"Invalid YouTube URL"
+@"default" = @"default"
+@"mqdefault" = @"mqdefault"
+@"hqdefault" = @"hqdefault"
+@"maxresdefault" = @"maxresdefault"
+@"default" = @"default"
+@"default" = @"default"
+@"mqdefault" = @"mqdefault"
+@"hqdefault" = @"hqdefault"
+@"maxresdefault" = @"maxresdefault"
+@"default" = @"default"
+@"User-Agent" = @"User-Agent"
+@"GET" = @"GET"
+@"Could not find a valid Youtube ID" = @"Could not find a valid Youtube ID"
+@"com.hiddencode.yt-parser" = @"com.hiddencode.yt-parser"
+@"Could not find a valid Youtube ID" = @"Could not find a valid Youtube ID"
+@"com.hiddencode.yt-parser" = @"com.hiddencode.yt-parser"
+
+
+/* RSKImageCropViewController.m */
+
+@"Move and Scale" = @"Move and Scale"
+@"Cancel" = @"Cancel"
+@"Choose" = @"Choose"
+@"path" = @"path"
+@"path" = @"path"
+
+
+/* IISideController.m */
+
+@"shrinkSide" = @"shrinkSide"
+
+
+/* IIViewDeckController.m */
+
+@"left" = @"left"
+@"right" = @"right"
+@"top" = @"top"
+@"bottom" = @"bottom"
+@"no" = @"no"
+@"unknown" = @"unknown"
+@"bounds" = @"bounds"
+@"side controllers. Value will be ignored." = @"side controllers. Value will be ignored."
+@"bounds" = @"bounds"
+@"bounds" = @"bounds"
+@"shadowPath" = @"shadowPath"
+@"shadowOpacity" = @"shadowOpacity"
+@"shadowOpacity" = @"shadowOpacity"
+@"cannot rightViewPushViewControllerOverCenterView when center " = @"cannot rightViewPushViewControllerOverCenterView when center "
+@"controller is not a navigation controller" = @"controller is not a navigation controller"
+@"previewBounceAnimation" = @"previewBounceAnimation"
+@"position.x" = @"position.x"
+@"position.y" = @"position.y"
+@"previewBounceAnimation" = @"previewBounceAnimation"
+@"previewBounceAnimation" = @"previewBounceAnimation"
+@"previewBounceAnimation" = @"previewBounceAnimation"
+@"Cannot set navigationcontroller behavior when the " = @"Cannot set navigationcontroller behavior when the "
+@"view deck is already showing." = @"view deck is already showing."
+@"parentViewController" = @"parentViewController"
+@"title" = @"title"
+@"tabBarItem.title" = @"tabBarItem.title"
+@"tabBarItem.image" = @"tabBarItem.image"
+@"hidesBottomBarWhenPushed" = @"hidesBottomBarWhenPushed"
+@"title" = @"title"
+@"tabBarItem.title" = @"tabBarItem.title"
+@"tabBarItem.image" = @"tabBarItem.image"
+@"hidesBottomBarWhenPushed" = @"hidesBottomBarWhenPushed"
+@"tabBarItem.title" = @"tabBarItem.title"
+@"tabBarItem.image" = @"tabBarItem.image"
+@"hidesBottomBarWhenPushed" = @"hidesBottomBarWhenPushed"
+@"tabBarItem.title" = @"tabBarItem.title"
+@"tabBarItem.image" = @"tabBarItem.image"
+@"hidesBottomBarWhenPushed" = @"hidesBottomBarWhenPushed"
+@"tabBarItem.title" = @"tabBarItem.title"
+@"tabBarItem.image" = @"tabBarItem.image"
+@"hidesBottomBarWhenPushed" = @"hidesBottomBarWhenPushed"
+@"title" = @"title"
+@"bounds" = @"bounds"
+@"parentViewController" = @"parentViewController"
+@"parentViewController" = @"parentViewController"
+
+
+/* MOTrackingManager.m */
+
+@"PageView" = @"PageView"
+@"PageView" = @"PageView"
+@"Skipped" = @"Skipped"
+@"YES" = @"YES"
+@"NO" = @"NO"
+
+
+/* HSSoundUtility.m */
+
+@"alert_sound_default" = @"alert_sound_default"
+@"wav" = @"wav"
+@"alert_sound_water" = @"alert_sound_water"
+@"wav" = @"wav"
+
+
+/* HSUtility.m */
+
+@"hh:mm a" = @"hh:mm a"
+@"HH:mm" = @"HH:mm"
+@"%@%@" = @"%@%@"
+@"1" = @"1"
+@"%@%ldst" = @"%@%ldst"
+@"%@%ldnd" = @"%@%ldnd"
+@"%@%ldrd" = @"%@%ldrd"
+@"%@%ldth" = @"%@%ldth"
+@"%@%d %@" = @"%@%d %@"
+
+
+/* HSMainViewController.m */
+
+@"Unable to open this challenge, required plugin missing." = @"Unable to open this challenge, required plugin missing."
+@"HealthKit is not available in your device" = @"HealthKit is not available in your device"
+@"Warning" = @"Warning"
+@"No Pedometer plugin found, would you like to set it up now?" = @"No Pedometer plugin found, would you like to set it up now?"
+@"Cancel" = @"Cancel"
+@"Setup" = @"Setup"
+@"Warning" = @"Warning"
+@"You have not yet authorize Dooo to access Apple Health, would you like to authorize it now?" = @"You have not yet authorize Dooo to access Apple Health, would you like to authorize it now?"
+@"Cancel" = @"Cancel"
+@"Authorize" = @"Authorize"
+@"If you would like to change your pedometer plugin, you can go to setting" = @"If you would like to change your pedometer plugin, you can go to setting"
+@"event" = @"event"
+@"Failed to authorize. If you would like to change your pedometer plugin, you can go to setting" = @"Failed to authorize. If you would like to change your pedometer plugin, you can go to setting"
+
+
+/* HSAddCategoryViewController.m */
+
+@"view_controller_add_category_view_controller_title" = @"view_controller_add_category_view_controller_title"
+@"%C" = @"%C"
+@"Cell" = @"Cell"
+@"Cell" = @"Cell"
+
+
+/* HSBaseGenericDetailChallengeViewController.m */
+
+@"view_controller_detail_challenge_done_text" = @"view_controller_detail_challenge_done_text"
+@"Click to View Result" = @"Click to View Result"
+@"from %@" = @"from %@"
+
+
+/* HSChallengeDetailContainerViewController.m */
+
+@"confetti" = @"confetti"
+
+
+/* HSCameraChallengeDetailViewController.m */
+
+@"view_controller_camera_challenge_title" = @"view_controller_camera_challenge_title"
+@"image_placeholder" = @"image_placeholder"
+@"image_placeholder" = @"image_placeholder"
+@"Bad news" = @"Bad news"
+@"Failed to upload your image, would you like to try again?" = @"Failed to upload your image, would you like to try again?"
+@"Cancel" = @"Cancel"
+@"Try again" = @"Try again"
+@"image_placeholder" = @"image_placeholder"
+
+
+/* HSSingleClickChallengeDetailViewController.m */
+
+@"view_controller_single_click_challenge_done_text" = @"view_controller_single_click_challenge_done_text"
+
+
+/* HSDrinkChallengeDetailViewController.m */
+
+@"water_duck" = @"water_duck"
+@"0" = @"0"
+@"Cell" = @"Cell"
+@"AVERAGE\n%d" = @"AVERAGE\n%d"
+@"AVERAGE\n--" = @"AVERAGE\n--"
+@"YESTERDAY\n%d" = @"YESTERDAY\n%d"
+@"YESTERDAY\n--" = @"YESTERDAY\n--"
+@"TOTAL\n%d" = @"TOTAL\n%d"
+@" %d Glasses Today" = @" %d Glasses Today"
+@"%@" = @"%@"
+
+
+/* HSHistogramCellView.m */
+
+@"M" = @"M"
+
+
+/* HSPedometerChallengeDetailBasePageView.m */
+
+@"Step Leaderboard" = @"Step Leaderboard"
+@"%d %@ Earned" = @"%d %@ Earned"
+@"%d %@ Earned" = @"%d %@ Earned"
+@"Cumulative Steps\n%@" = @"Cumulative Steps\n%@"
+@"Rank %d" = @"Rank %d"
+
+
+/* HSPedometerChallengeDetailViewPresenter.m */
+
+@"Apple Health Not Available" = @"Apple Health Not Available"
+@"Checking plugin" = @"Checking plugin"
+@"Loading Steps" = @"Loading Steps"
+@"userChallenge" = @"userChallenge"
+
+
+/* HSPedometerChallengeHistoryHistogramView.m */
+
+@"15,000" = @"15,000"
+@"10,000" = @"10,000"
+@"5,000" = @"5,000"
+@"YOU" = @"YOU"
+@"AVERAGE USER" = @"AVERAGE USER"
+@"%@ Past %d Days" = @"%@ Past %d Days"
+@"%@ - %@" = @"%@ - %@"
+@"%@ - %@" = @"%@ - %@"
+
+
+/* HSPedometerChallengeRecentListView.m */
+
+@"My History" = @"My History"
+@"July 15, 2015" = @"July 15, 2015"
+@"%d" = @"%d"
+@"%@" = @"%@"
+
+
+/* HSStepChallengeDetailViewController.m */
+
+@"Cell" = @"Cell"
+
+
+/* HSStepChallengeDetailViewControllerDatasource.m */
+
+@"Cell" = @"Cell"
+
+
+/* HSCountDownChallengeDetailViewController.m */
+
+@"START\n%ds" = @"START\n%ds"
+@"view_controller_count_down_challenge_complete_text" = @"view_controller_count_down_challenge_complete_text"
+
+
+/* MOActivityCongratulationPersonView.m */
+
+@"default_user_avartar" = @"default_user_avartar"
+@"%d %@" = @"%d %@"
+@"default_user_avartar" = @"default_user_avartar"
+@"You" = @"You"
+
+
+/* MOActivityCongratulationViewController.m */
+
+@"Activity Complete" = @"Activity Complete"
+@"FINISH" = @"FINISH"
+@"+%d %@" = @"+%d %@"
+@"position" = @"position"
+@"pathAnimation" = @"pathAnimation"
+
+
+/* MODrinkHistoryViewController.m */
+
+@"Drink history" = @"Drink history"
+
+
+/* HSHomeViewController.m */
+
+@"badge" = @"badge"
+@"feed" = @"feed"
+@"userChallenge" = @"userChallenge"
+@"event" = @"event"
+@"No timed category selected" = @"No timed category selected"
+@"ADD CATEGORY" = @"ADD CATEGORY"
+@"Complete your first challenge and earn 200 points!" = @"Complete your first challenge and earn 200 points!"
+@"DoooChallenger://" = @"DoooChallenger://"
+@"https://itunes.apple.com/ca/app/dooo-vs/id1033043630?mt=8" = @"https://itunes.apple.com/ca/app/dooo-vs/id1033043630?mt=8"
+@"My Activities" = @"My Activities"
+@"My Schedule" = @"My Schedule"
+@"Today" = @"Today"
+@"Challenge Friends" = @"Challenge Friends"
+@"Current Activity" = @"Current Activity"
+@"Previous Activity" = @"Previous Activity"
+@"Future Activity" = @"Future Activity"
+@"scheduledTime" = @"scheduledTime"
+
+
+/* HSZoomedOutScheduleView.m */
+
+@"view_controller_schedule_view_all_day_text" = @"view_controller_schedule_view_all_day_text"
+@"AM" = @"AM"
+@"PM" = @"PM"
+@"%ld %@" = @"%ld %@"
+
+
+/* HSChallengeZoomedInCellView.m */
+
+@"LAUNCH ACTIVITY" = @"LAUNCH ACTIVITY"
+@"REVIEW ACTIVITY" = @"REVIEW ACTIVITY"
+@"LAUNCH ACTIVITY" = @"LAUNCH ACTIVITY"
+@"Completed at %@" = @"Completed at %@"
+@"%d %@ Earned" = @"%d %@ Earned"
+@"%d %@" = @"%d %@"
+
+
+/* HSLeaderboardViewController.m */
+
+@"view_controller_leaderboard_segment_team" = @"view_controller_leaderboard_segment_team"
+@"view_controller_leaderboard_segment_everyone" = @"view_controller_leaderboard_segment_everyone"
+@"Steps" = @"Steps"
+@"Leaderboard" = @"Leaderboard"
+
+
+/* HSBaseLeaderboardViewController.m */
+
+@"Cell" = @"Cell"
+@"LoadingCell" = @"LoadingCell"
+@"LoadingCell" = @"LoadingCell"
+
+
+/* HSLeaderboardUserTableViewCell.m */
+
+@"default_user_avartar" = @"default_user_avartar"
+@"Andrew" = @"Andrew"
+@"127 pts" = @"127 pts"
+@"1" = @"1"
+@"%ld" = @"%ld"
+@"default_user_avartar" = @"default_user_avartar"
+@"%ld" = @"%ld"
+@"default_user_avartar" = @"default_user_avartar"
+@"%ld" = @"%ld"
+@"default_user_avartar" = @"default_user_avartar"
+@"%ld Steps" = @"%ld Steps"
+
+
+/* HSLeaderboardEveryoneViewController.m */
+
+@"Cell" = @"Cell"
+
+
+/* HSLeaderboardEveryoneInTeamViewController.m */
+
+@"%@ Leaderboard" = @"%@ Leaderboard"
+
+
+/* HSLeaderboardEveryoneInTeamWrappedViewController.m */
+
+@"Cell" = @"Cell"
+
+
+/* HSStepsLeaderboardViewController.m */
+
+@"steps" = @"steps"
+@"Cell" = @"Cell"
+
+
+/* HSLeaderboardTeamsViewController.m */
+
+@"Cell" = @"Cell"
+
+
+/* HSMenuHeaderView.m */
+
+@"fake_user_image" = @"fake_user_image"
+@"VIEW PROFILE" = @"VIEW PROFILE"
+@"Name" = @"Name"
+@"RANK" = @"RANK"
+@"TEAM" = @"TEAM"
+@"default_user_avartar" = @"default_user_avartar"
+@"RANKED %ld" = @"RANKED %ld"
+
+
+/* HSMenuViewController.m */
+
+@"Today" = @"Today"
+@"Leaderboard" = @"Leaderboard"
+@"Connect Devices" = @"Connect Devices"
+@"Reward" = @"Reward"
+@"Settings" = @"Settings"
+@"Feedback" = @"Feedback"
+@"Privacy Policy" = @"Privacy Policy"
+@"Terms and Conditions" = @"Terms and Conditions"
+@"About Dooo" = @"About Dooo"
+@"More Optimity" = @"More Optimity"
+@"Sign Out" = @"Sign Out"
+@"Cell1" = @"Cell1"
+@"Cell2" = @"Cell2"
+@"No Mail service has been setup on this device." = @"No Mail service has been setup on this device."
+@"About Dooo" = @"About Dooo"
+@"I have some feedback\n\nPlease enter your feedback here\n\n" = @"I have some feedback\n\nPlease enter your feedback here\n\n"
+@"dooo@myoptimity.com" = @"dooo@myoptimity.com"
+@"Let's get paid to be fit" = @"Let's get paid to be fit"
+@"Want to get rewarded for being healthy? \nGet fit with Dooo!" = @"Want to get rewarded for being healthy? \nGet fit with Dooo!"
+@"https://www.doooapp.com/" = @"https://www.doooapp.com/"
+@"http://www.myhealthsphere.ca/" = @"http://www.myhealthsphere.ca/"
+@"http://www.myhealthsphere.ca/" = @"http://www.myhealthsphere.ca/"
+@"Cell1" = @"Cell1"
+@"Cell2" = @"Cell2"
+
+
+/* HSBaseNewsPageViewController.m */
+
+@"LoadingCell" = @"LoadingCell"
+@"LoadingCell" = @"LoadingCell"
+
+
+/* HSNewsFeedViewController.m */
+
+@"view_controller_news_segment_activities" = @"view_controller_news_segment_activities"
+@"view_controller_news_segment_annoucement" = @"view_controller_news_segment_annoucement"
+@"News Feed" = @"News Feed"
+
+
+/* HSNewsActivitiesTableViewCell.m */
+
+@"default_user_avartar" = @"default_user_avartar"
+
+
+/* HSNewsActivitiesViewController.m */
+
+@"Cell" = @"Cell"
+@"Cell" = @"Cell"
+
+
+/* HSFeedAnnoucementChallengeTableViewCell.m */
+
+@"Start: Dec 15th, 2015" = @"Start: Dec 15th, 2015"
+@"End  : Dec 16th, 2015" = @"End  : Dec 16th, 2015"
+@"DONE" = @"DONE"
+@"+%d %@" = @"+%d %@"
+@"DONE" = @"DONE"
+@"EXPIRED" = @"EXPIRED"
+@"DONE?" = @"DONE?"
+@"Start: %@" = @"Start: %@"
+@"No Start Date" = @"No Start Date"
+@"End  : %@" = @"End  : %@"
+@"No End Date" = @"No End Date"
+
+
+/* HSFeedAnnoucementTableViewCell.m */
+
+@"Dec 11" = @"Dec 11"
+
+
+/* HSFeedAnnoucementViewController.m */
+
+@"PushCell" = @"PushCell"
+@"ChallengeCell" = @"ChallengeCell"
+@"ChallengeCell" = @"ChallengeCell"
+@"PushCell" = @"PushCell"
+
+
+/* HSBaseAuthenticationViewController.m */
+
+@"Creating your account..." = @"Creating your account..."
+@"Signing you in..." = @"Signing you in..."
+@"Failed to retrieve your information from Facebook, please try again later" = @"Failed to retrieve your information from Facebook, please try again later"
+@"Failed to retrieve your information from Google, please try again later" = @"Failed to retrieve your information from Google, please try again later"
+@"public_profile" = @"public_profile"
+@"email" = @"email"
+@"public_profile" = @"public_profile"
+@"email" = @"email"
+@"no permission" = @"no permission"
+@",@" = @",@"
+
+
+/* HSSignInFormViewController.m */
+
+@"Login" = @"Login"
+@"Welcome back!" = @"Welcome back!"
+@"Email" = @"Email"
+@"Password" = @"Password"
+@"Forgot password?" = @"Forgot password?"
+@"Submit" = @"Submit"
+@"OR" = @"OR"
+
+
+/* HSSignupFormViewController.m */
+
+@"Sign-up" = @"Sign-up"
+@"Company Email" = @"Company Email"
+@"Company Code" = @"Company Code"
+@"view_controller_sign_up_form_password1_hint" = @"view_controller_sign_up_form_password1_hint"
+@"CREATE YOUR PASSWORD" = @"CREATE YOUR PASSWORD"
+@"By signing up you agree to the Terms of Use" = @"By signing up you agree to the Terms of Use"
+@"Submit" = @"Submit"
+@"Already registered?" = @"Already registered?"
+@"OR" = @"OR"
+@"Password should be at least 6 characters long" = @"Password should be at least 6 characters long"
+
+
+/* HSValidateCompanyFormViewController.m */
+
+@"Welcome" = @"Welcome"
+@"Company Email" = @"Company Email"
+@"Company Code" = @"Company Code"
+@"This is a unique code provided by Optimity to your company. Contact your HR manager for more details" = @"This is a unique code provided by Optimity to your company. Contact your HR manager for more details"
+@"Validate" = @"Validate"
+@"Invalid company code" = @"Invalid company code"
+@"Username already in use" = @"Username already in use"
+@"Invalid company email" = @"Invalid company email"
+@"Something went wrong, please try again later" = @"Something went wrong, please try again later"
+
+
+/* HSForgetPasswordViewController.m */
+
+@"Enter your email!" = @"Enter your email!"
+@"Email" = @"Email"
+@"Submit" = @"Submit"
+@"Forgot password" = @"Forgot password"
+@"Your password reset request has been sent, please check your email." = @"Your password reset request has been sent, please check your email."
+@"OK" = @"OK"
+@"Forgot password" = @"Forgot password"
+@"No user found with given email" = @"No user found with given email"
+@"OK" = @"OK"
+
+
+/* HSPrivacyViewController.m */
+
+@"view_controller_privacy_policies_title" = @"view_controller_privacy_policies_title"
+@"privacy_policies" = @"privacy_policies"
+@"html" = @"html"
+
+
+/* HSSimpleWebViewController.m */
+
+@"html" = @"html"
+
+
+/* HSTermViewController.m */
+
+@"view_controller_terms_and_conditions_title" = @"view_controller_terms_and_conditions_title"
+@"terms_and_conditions" = @"terms_and_conditions"
+@"html" = @"html"
+
+
+/* HSLandingMainViewControllerV2.m */
+
+@"view_controller_on_boarding_sign_in_button" = @"view_controller_on_boarding_sign_in_button"
+
+
+/* HSLandingMainViewControllerV2FeatureView.m */
+
+@"CONTINUE" = @"CONTINUE"
+@"zoom" = @"zoom"
+@"zoom" = @"zoom"
+@"zoom" = @"zoom"
+
+
+/* HSLandingMainViewPager1View.m */
+
+@"view_controller_on_boarding_sign_up_button" = @"view_controller_on_boarding_sign_up_button"
+@"Welcome" = @"Welcome"
+@"Seamlessly integrate activities into your daily life to build healthy habits." = @"Seamlessly integrate activities into your daily life to build healthy habits."
+
+
+/* HSLandingMainViewPager2View.m */
+
+@"Do Daily Activities" = @"Do Daily Activities"
+@"Dooo helps people across all industries to exercise better, rest more and eat healthy." = @"Dooo helps people across all industries to exercise better, rest more and eat healthy."
+
+
+/* HSLandingMainViewPager3View.m */
+
+@"Get Rewarded" = @"Get Rewarded"
+@"Completing challenges earns you reward points. These points can be redeemed for a number of exciting rewards." = @"Completing challenges earns you reward points. These points can be redeemed for a number of exciting rewards."
+
+
+/* HSLandingMainViewPager4View.m */
+
+@"icon-aerobics" = @"icon-aerobics"
+@"1842/3000" = @"1842/3000"
+@"Sync With Trackers" = @"Sync With Trackers"
+@"Dooo syncs with wearables and passive trackers on your smartphone." = @"Dooo syncs with wearables and passive trackers on your smartphone."
+@"zoom" = @"zoom"
+
+
+/* HSLandingMainViewPager5View.m */
+
+@"icon-nutrition" = @"icon-nutrition"
+@"view_controller_on_boarding_sign_up_button" = @"view_controller_on_boarding_sign_up_button"
+@"CFBundleShortVersionString" = @"CFBundleShortVersionString"
+@"CFBundleVersion" = @"CFBundleVersion"
+@"Version %@ (%@)" = @"Version %@ (%@)"
+@"Calendar Integration" = @"Calendar Integration"
+@"Dooo syncs with your Google Calendar to ensure no activities are scheduled when you are busy." = @"Dooo syncs with your Google Calendar to ensure no activities are scheduled when you are busy."
+@"zoom" = @"zoom"
+
+
+/* MOPostAuthenticationOnBoardingNavigationViewController.m */
+
+@"Showinfo" = @"Showinfo"
+
+
+/* MOBasePluginPostAuthenticationPageViewController.m */
+
+@"SETUP" = @"SETUP"
+
+
+/* MOBaseRatePostAuthenticationPageViewController.m */
+
+@"Poor" = @"Poor"
+@"Perfect" = @"Perfect"
+@"Bad news" = @"Bad news"
+@"Failed to post your rating, would you like to try again?" = @"Failed to post your rating, would you like to try again?"
+@"Cancel" = @"Cancel"
+@"Try again" = @"Try again"
+
+
+/* MOBasePostAuthenticationPageViewController.m */
+
+@"Add a profile photo" = @"Add a profile photo"
+@"Sync with your calendar to ensure no activities are scheduled when you are busy" = @"Sync with your calendar to ensure no activities are scheduled when you are busy"
+@"SKIP" = @"SKIP"
+@"SKIP" = @"SKIP"
+@"SAVE" = @"SAVE"
+
+
+/* MOPostAuthenticationCompanyWelcomePage.m */
+
+@"THANK YOU" = @"THANK YOU"
+@"default_user_avartar" = @"default_user_avartar"
+@"default_user_avartar" = @"default_user_avartar"
+@"Bad news" = @"Bad news"
+@"Failed to fetch your company information" = @"Failed to fetch your company information"
+@"Skip" = @"Skip"
+@"Try again" = @"Try again"
+
+
+/* MOPostAuthenticationNameCompletionPageViewController.m */
+
+@"Let's setup your profile" = @"Let's setup your profile"
+@"First name" = @"First name"
+@"Last Name" = @"Last Name"
+@"Select Birth Date" = @"Select Birth Date"
+@"Edit Profile" = @"Edit Profile"
+@"Tell us who you are" = @"Tell us who you are"
+@"Please enter your first name" = @"Please enter your first name"
+@"Please enter your last name" = @"Please enter your last name"
+@"Please choose your birthday" = @"Please choose your birthday"
+@"NEXT" = @"NEXT"
+@"Bad news" = @"Bad news"
+@"Failed update your profile, would you like to try again?" = @"Failed update your profile, would you like to try again?"
+@"Cancel" = @"Cancel"
+@"Try again" = @"Try again"
+@"SAVE" = @"SAVE"
+@"yyyy-MM-dd" = @"yyyy-MM-dd"
+
+
+/* MOPostAuthenticationProfileImageCompletionViewController.m */
+
+@"CHOOSE" = @"CHOOSE"
+@"No problem!" = @"No problem!"
+@"You can upload your profile image anytime in user profile page." = @"You can upload your profile image anytime in user profile page."
+@"Bad news" = @"Bad news"
+@"Failed to upload new profile picture, would you like to try again?" = @"Failed to upload new profile picture, would you like to try again?"
+@"Cancel" = @"Cancel"
+@"Try again" = @"Try again"
+@"CHOOSE" = @"CHOOSE"
+@"CHOOSE" = @"CHOOSE"
+
+
+/* MOPostAuthenticationSetupCalendarPageViewController.m */
+
+@"Sync your calendar" = @"Sync your calendar"
+@"Sync with your calendar to ensure no activities are scheduled when you're busy" = @"Sync with your calendar to ensure no activities are scheduled when you're busy"
+@"No problem!" = @"No problem!"
+@"You can setup your calendar anytime in the Settings." = @"You can setup your calendar anytime in the Settings."
+@"Remove" = @"Remove"
+@"Setup" = @"Setup"
+
+
+/* MOPostAuthenticationSetupPedometerPageViewController.m */
+
+@"Sync with trackers" = @"Sync with trackers"
+@"Sync with wearables and passive trackers on your smartphone" = @"Sync with wearables and passive trackers on your smartphone"
+@"No problem!" = @"No problem!"
+@"You can setup your pedometer tracker anytime in the Settings." = @"You can setup your pedometer tracker anytime in the Settings."
+
+
+/* MOPostAuthenticationWelcomePageViewController.m */
+
+@"GET STARTED" = @"GET STARTED"
+@"Let's setup your profile" = @"Let's setup your profile"
+@"Your profile helps us to build a more customized experience for you." = @"Your profile helps us to build a more customized experience for you."
+
+
+/* MORateHealthAuthenticationPageViewController.m */
+
+@"Rate your current health" = @"Rate your current health"
+
+
+/* MORateMoodAuthenticationPageViewController.m */
+
+@"Rate your current mood" = @"Rate your current mood"
+
+
+/* HSUserProfileHeaderView.m */
+
+@"RANK %ld" = @"RANK %ld"
+@"default_user_avartar" = @"default_user_avartar"
+
+
+/* HSUserProfileViewController.m */
+
+@"Cell" = @"Cell"
+@"Cell" = @"Cell"
+@"view_controller_user_profile_uploading_message" = @"view_controller_user_profile_uploading_message"
+
+
+/* HSRewardViewController.m */
+
+@"RewardItemTableViewCell" = @"RewardItemTableViewCell"
+@"Rewards" = @"Rewards"
+@"No rewards available at this time" = @"No rewards available at this time"
+@"Claim reward" = @"Claim reward"
+@"Please wait..." = @"Please wait..."
+@"Claim" = @"Claim"
+@"Congraz! You have claimed your reward!" = @"Congraz! You have claimed your reward!"
+@"OK" = @"OK"
+@"Claim" = @"Claim"
+@"Failed to claim your reward, please try again!" = @"Failed to claim your reward, please try again!"
+@"OK" = @"OK"
+@"Claim" = @"Claim"
+@"Would you like to claim this reward?" = @"Would you like to claim this reward?"
+@"YES" = @"YES"
+@"NO" = @"NO"
+
+
+/* HSSettingFotterView.m */
+
+@"CFBundleShortVersionString" = @"CFBundleShortVersionString"
+@"CFBundleVersion" = @"CFBundleVersion"
+@"Version %@ (%@)" = @"Version %@ (%@)"
+
+
+/* HSSettingViewController.m */
+
+@"Settings" = @"Settings"
+@"infoCell" = @"infoCell"
+@"buttonCell" = @"buttonCell"
+@"toggleCell" = @"toggleCell"
+@"infoCell" = @"infoCell"
+@"buttonCell" = @"buttonCell"
+@"toggleCell" = @"toggleCell"
+@"Acknowledgement" = @"Acknowledgement"
+@"acknowledgement" = @"acknowledgement"
+@"Cancel" = @"Cancel"
+@"OK" = @"OK"
+
+
+/* MONameBirthdaySettingViewController.m */
+
+@"Edit Personal Information" = @"Edit Personal Information"
+@"First name" = @"First name"
+@"Last Name" = @"Last Name"
+@"Select Birth Date" = @"Select Birth Date"
+@"SAVE" = @"SAVE"
+@"Please enter your first name" = @"Please enter your first name"
+@"Please enter your last name" = @"Please enter your last name"
+@"Please choose your birthday" = @"Please choose your birthday"
+@"Bad news" = @"Bad news"
+@"Failed update your profile, would you like to try again?" = @"Failed update your profile, would you like to try again?"
+@"Cancel" = @"Cancel"
+@"Try again" = @"Try again"
+@"SAVE" = @"SAVE"
+@"yyyy-MM-dd" = @"yyyy-MM-dd"
+
+
+/* HSSettingController.m */
+
+@"Personal Information" = @"Personal Information"
+@"Account" = @"Account"
+@"Company" = @"Company"
+@"Team" = @"Team"
+@"Anonymous Mode" = @"Anonymous Mode"
+@"Enabling anonymous mode will anonymize your personal information when other members view your profile on the leaderboards and activity feed." = @"Enabling anonymous mode will anonymize your personal information when other members view your profile on the leaderboards and activity feed."
+@"About" = @"About"
+@"Terms of Use" = @"Terms of Use"
+@"Acknowledgement" = @"Acknowledgement"
+@"Logout" = @"Logout"
+@"Turning off anonymous mode" = @"Turning off anonymous mode"
+@"Turning on anonymous mode" = @"Turning on anonymous mode"
+
+
+/* HSSocialController.m */
+
+@"Select Sharing option:" = @"Select Sharing option:"
+@"Share myOptimity with your friends" = @"Share myOptimity with your friends"
+@"Share on Facebook" = @"Share on Facebook"
+@"Share on Google+" = @"Share on Google+"
+@"Share via E-mail" = @"Share via E-mail"
+@"Share via Text" = @"Share via Text"
+@"https://www.doooapp.com/#/" = @"https://www.doooapp.com/#/"
+@"No Mail service has been setup on this device." = @"No Mail service has been setup on this device."
+@"%@ \n%@" = @"%@ \n%@"
+@"647187018277-j73fsp5gsdmf04erf7l2upfvu63qqf70.apps.googleusercontent.com" = @"647187018277-j73fsp5gsdmf04erf7l2upfvu63qqf70.apps.googleusercontent.com"
+@"just setting up my Fabric" = @"just setting up my Fabric"
+@"fabric" = @"fabric"
+@"Error" = @"Error"
+@"Your device doesn't support SMS!" = @"Your device doesn't support SMS!"
+@"OK" = @"OK"
+@"%@ \n%@" = @"%@ \n%@"
+
+
+/* HSAnimatedNumberLabel.m */
+
+@"%ld %@" = @"%ld %@"
+@"%ld %@" = @"%ld %@"
+@"%ld %@" = @"%ld %@"
+
+
+/* HSChallengeProgressIconViewWithName.m */
+
+@"12:00 PM" = @"12:00 PM"
+@"AM" = @"AM"
+@"PM" = @"PM"
+@"PM" = @"PM"
+@"%ld %@" = @"%ld %@"
+@"%ld" = @"%ld"
+
+
+/* HSButton.m */
+
+@"Retry" = @"Retry"
+
+
+/* HSChallengeSelectionIconCellView.m */
+
+@"%C" = @"%C"
+@"BUY" = @"BUY"
+@"Daily" = @"Daily"
+
+
+/* HSRewardItemTableViewCell.m */
+
+@"TITLE" = @"TITLE"
+@"DESCRIPTION" = @"DESCRIPTION"
+@"Claim" = @"Claim"
+@"PRICE" = @"PRICE"
+@"Value" = @"Value"
+@"MM/dd/yyyy" = @"MM/dd/yyyy"
+@"reward_icon" = @"reward_icon"
+@"reward_icon" = @"reward_icon"
+@"COST " = @"COST "
+@"$%ld" = @"$%ld"
+
+
+/* MOHexagonGridView.m */
+
+@"%d\n(%d,%d)" = @"%d\n(%d,%d)"
+
+
+/* MOHexagonView.m */
+
+@"strokeStart" = @"strokeStart"
+@"strokeEnd" = @"strokeEnd"
+@"strokeColor" = @"strokeColor"
+@"transform" = @"transform"
+
+
+/* OHLiquidShaderProgram.m */
+
+@"SimpleVertex" = @"SimpleVertex"
+@"SimpleFragment" = @"SimpleFragment"
+
+
+/* OHShaderProgram.m */
+
+@"glsl" = @"glsl"
+
+
+/* OHSolidShaderProgram.m */
+
+@"TextureVertex" = @"TextureVertex"
+@"TextureFragment" = @"TextureFragment"
+
+
+/* OHSolidParticleRenderer.m */
+
+@"duck" = @"duck"
+
+
+/* OHWaterParticleRenderer.m */
+
+@"blur_particle" = @"blur_particle"
+
+
+/* CC3Foundation.m */
+
+@"(%.3f, %.3f, %.3f)" = @"(%.3f, %.3f, %.3f)"
+@"(%.3f, %.3f, %.3f)" = @"(%.3f, %.3f, %.3f)"
+@"(%.3f, %.3f, %.3f, %.3f)" = @"(%.3f, %.3f, %.3f, %.3f)"
+@"SLERP with cos %.3f at %.3f between %@ and %@ is %@" = @"SLERP with cos %.3f at %.3f between %@ and %@ is %@"
+@"(%.3f, %.3f, %.3f, %.3f)" = @"(%.3f, %.3f, %.3f, %.3f)"
+@"(%i, %i, %i, %i)" = @"(%i, %i, %i, %i)"
+@"(%.2f, %.2f, %.2f, %.2f)" = @"(%.2f, %.2f, %.2f, %.2f)"
+
+
+/* CC3GLMatrix.m */
+
+@"\n\t[%.3f, " = @"\n\t[%.3f, "
+@"%.3f, " = @"%.3f, "
+@"%.3f, " = @"%.3f, "
+@"%.3f,\n\t " = @"%.3f,\n\t "
+@"%.3f, " = @"%.3f, "
+@"%.3f, " = @"%.3f, "
+@"%.3f, " = @"%.3f, "
+@"%.3f,\n\t " = @"%.3f,\n\t "
+@"%.3f, " = @"%.3f, "
+@"%.3f, " = @"%.3f, "
+@"%.3f, " = @"%.3f, "
+@"%.3f,\n\t " = @"%.3f,\n\t "
+@"%.3f, " = @"%.3f, "
+@"%.3f, " = @"%.3f, "
+@"%.3f, " = @"%.3f, "
+@"%.3f]" = @"%.3f]"
+
+
+/* HSLogoView.m */
+
+@"strokeStart" = @"strokeStart"
+@"strokeEnd" = @"strokeEnd"
+@"strokeColor" = @"strokeColor"
+@"transform" = @"transform"
+@"transform.rotation" = @"transform.rotation"
+@"animateMask" = @"animateMask"
+@"strokeEnd" = @"strokeEnd"
+@"strokeStart" = @"strokeStart"
+@"group" = @"group"
+
+
+/* UIView+Genie.m */
+
+@"@sum.bounds.size.height" = @"@sum.bounds.size.height"
+@"@sum.bounds.size.width" = @"@sum.bounds.size.width"
+@"and %@ edge of %@ rect is incorrect. Animation will not be " = @"and %@ edge of %@ rect is incorrect. Animation will not be "
+@"performed!" = @"performed!"
+@"star" = @"star"
+@"destination" = @"destination"
+@"edge of %@ rect. Glitches may occur." = @"edge of %@ rect. Glitches may occur."
+@"start" = @"start"
+@"destination" = @"destination"
+@"transform" = @"transform"
+@"transform" = @"transform"
+@"bottom" = @"bottom"
+@"top" = @"top"
+@"right" = @"right"
+@"left" = @"left"
+
+
+/* ChallengerTests.m */
+
+@"No implementation for \" = @"No implementation for \"
+
+
+/* AFHTTPSessionManager.m */
+
+@"/" = @"/"
+@"GET" = @"GET"
+@"HEAD" = @"HEAD"
+@"POST" = @"POST"
+@"POST" = @"POST"
+@"PUT" = @"PUT"
+@"PATCH" = @"PATCH"
+@"DELETE" = @"DELETE"
+@"<%@: %p, baseURL: %@, session: %@, operationQueue: %@>" = @"<%@: %p, baseURL: %@, session: %@, operationQueue: %@>"
+@"sessionConfiguration" = @"sessionConfiguration"
+@"identifier" = @"identifier"
+@"sessionConfiguration" = @"sessionConfiguration"
+@"identifier" = @"identifier"
+
+
+/* AFNetworkReachabilityManager.m */
+
+@"com.alamofire.networking.reachability.change" = @"com.alamofire.networking.reachability.change"
+@"AFNetworkingReachabilityNotificationStatusItem" = @"AFNetworkingReachabilityNotificationStatusItem"
+@"Not Reachable" = @"Not Reachable"
+@"AFNetworking" = @"AFNetworking"
+@"Reachable via WWAN" = @"Reachable via WWAN"
+@"AFNetworking" = @"AFNetworking"
+@"Reachable via WiFi" = @"Reachable via WiFi"
+@"AFNetworking" = @"AFNetworking"
+@"Unknown" = @"Unknown"
+@"AFNetworking" = @"AFNetworking"
+@"reachable" = @"reachable"
+@"reachableViaWWAN" = @"reachableViaWWAN"
+@"reachableViaWiFi" = @"reachableViaWiFi"
+@"networkReachabilityStatus" = @"networkReachabilityStatus"
+
+
+/* AFSecurityPolicy.m */
+
+@"cer" = @"cer"
+@"." = @"."
+@"pinnedCertificates" = @"pinnedCertificates"
+
+
+/* AFURLRequestSerialization.m */
+
+@"com.alamofire.error.serialization.request" = @"com.alamofire.error.serialization.request"
+@"com.alamofire.serialization.request.error.response" = @"com.alamofire.serialization.request.error.response"
+@", " = @", "
+@":#[]@" = @":#[]@"
+@"!$&'()*+,;=" = @"!$&'()*+,;="
+@"%@=%@" = @"%@=%@"
+@"&" = @"&"
+@"description" = @"description"
+@"%@[%@]" = @"%@[%@]"
+@"%@[]" = @"%@[]"
+@"%@;q=%0.1g" = @"%@;q=%0.1g"
+@", " = @", "
+@"Accept-Language" = @"Accept-Language"
+@"%@/%@ (%@; iOS %@; Scale/%0.2f)" = @"%@/%@ (%@; iOS %@; Scale/%0.2f)"
+@"CFBundleShortVersionString" = @"CFBundleShortVersionString"
+@"%@/%@ (%@; watchOS %@; Scale/%0.2f)" = @"%@/%@ (%@; watchOS %@; Scale/%0.2f)"
+@"CFBundleShortVersionString" = @"CFBundleShortVersionString"
+@"%@/%@ (Mac OS X %@)" = @"%@/%@ (Mac OS X %@)"
+@"CFBundleShortVersionString" = @"CFBundleShortVersionString"
+@"Any-Latin; Latin-ASCII; [:^ASCII:] Remove" = @"Any-Latin; Latin-ASCII; [:^ASCII:] Remove"
+@"User-Agent" = @"User-Agent"
+@"GET" = @"GET"
+@"HEAD" = @"HEAD"
+@"DELETE" = @"DELETE"
+@"%@:%@" = @"%@:%@"
+@"Basic %@" = @"Basic %@"
+@"Authorization" = @"Authorization"
+@"Authorization" = @"Authorization"
+@"GET" = @"GET"
+@"HEAD" = @"HEAD"
+@"&%@" = @"&%@"
+@"?%@" = @"?%@"
+@"Content-Type" = @"Content-Type"
+@"application/x-www-form-urlencoded" = @"application/x-www-form-urlencoded"
+@"Content-Type" = @"Content-Type"
+@"Boundary+%08X%08X" = @"Boundary+%08X%08X"
+@"\r\n" = @"\r\n"
+@"--%@%@" = @"--%@%@"
+@"%@--%@%@" = @"%@--%@%@"
+@"%@--%@--%@" = @"%@--%@--%@"
+@"application/octet-stream" = @"application/octet-stream"
+@"Expected URL to be a file URL" = @"Expected URL to be a file URL"
+@"AFNetworking" = @"AFNetworking"
+@"File URL not reachable." = @"File URL not reachable."
+@"AFNetworking" = @"AFNetworking"
+@"form-data; name=\" = @"form-data; name=\"
+@"Content-Disposition" = @"Content-Disposition"
+@"Content-Type" = @"Content-Type"
+@"form-data; name=\" = @"form-data; name=\"
+@"Content-Disposition" = @"Content-Disposition"
+@"Content-Type" = @"Content-Type"
+@"form-data; name=\" = @"form-data; name=\"
+@"Content-Disposition" = @"Content-Disposition"
+@"Content-Type" = @"Content-Type"
+@"form-data; name=\" = @"form-data; name=\"
+@"Content-Disposition" = @"Content-Disposition"
+@"multipart/form-data; boundary=%@" = @"multipart/form-data; boundary=%@"
+@"Content-Type" = @"Content-Type"
+@"%llu" = @"%llu"
+@"Content-Length" = @"Content-Length"
+@"%@: %@%@" = @"%@: %@%@"
+@"Content-Type" = @"Content-Type"
+@"application/json" = @"application/json"
+@"Content-Type" = @"Content-Type"
+@"Content-Type" = @"Content-Type"
+@"application/x-plist" = @"application/x-plist"
+@"Content-Type" = @"Content-Type"
+
+
+/* AFURLResponseSerialization.m */
+
+@"com.alamofire.error.serialization.response" = @"com.alamofire.error.serialization.response"
+@"com.alamofire.serialization.response.error.response" = @"com.alamofire.serialization.response.error.response"
+@"com.alamofire.serialization.response.error.data" = @"com.alamofire.serialization.response.error.data"
+@"Request failed: unacceptable content-type: %@" = @"Request failed: unacceptable content-type: %@"
+@"AFNetworking" = @"AFNetworking"
+@"Request failed: %@ (%ld)" = @"Request failed: %@ (%ld)"
+@"AFNetworking" = @"AFNetworking"
+@"application/json" = @"application/json"
+@"text/json" = @"text/json"
+@"text/javascript" = @"text/javascript"
+@" " = @" "
+@"Data failed decoding as a UTF-8 string" = @"Data failed decoding as a UTF-8 string"
+@"AFNetworking" = @"AFNetworking"
+@"Could not decode string: %@" = @"Could not decode string: %@"
+@"AFNetworking" = @"AFNetworking"
+@"application/xml" = @"application/xml"
+@"text/xml" = @"text/xml"
+@"application/xml" = @"application/xml"
+@"text/xml" = @"text/xml"
+@"application/x-plist" = @"application/x-plist"
+@"image/png" = @"image/png"
+@"image/jpeg" = @"image/jpeg"
+@"image/tiff" = @"image/tiff"
+@"image/jpeg" = @"image/jpeg"
+@"image/gif" = @"image/gif"
+@"image/png" = @"image/png"
+@"image/ico" = @"image/ico"
+@"image/x-icon" = @"image/x-icon"
+@"image/bmp" = @"image/bmp"
+@"image/x-bmp" = @"image/x-bmp"
+@"image/x-xbitmap" = @"image/x-xbitmap"
+@"image/x-win-bitmap" = @"image/x-win-bitmap"
+
+
+/* AFURLSessionManager.m */
+
+@"com.alamofire.networking.task.resume" = @"com.alamofire.networking.task.resume"
+@"com.alamofire.networking.task.complete" = @"com.alamofire.networking.task.complete"
+@"com.alamofire.networking.task.suspend" = @"com.alamofire.networking.task.suspend"
+@"com.alamofire.networking.session.invalidate" = @"com.alamofire.networking.session.invalidate"
+@"com.alamofire.networking.session.download.file-manager-error" = @"com.alamofire.networking.session.download.file-manager-error"
+@"com.alamofire.networking.task.complete.serializedresponse" = @"com.alamofire.networking.task.complete.serializedresponse"
+@"com.alamofire.networking.task.complete.responseserializer" = @"com.alamofire.networking.task.complete.responseserializer"
+@"com.alamofire.networking.complete.finish.responsedata" = @"com.alamofire.networking.complete.finish.responsedata"
+@"com.alamofire.networking.task.complete.error" = @"com.alamofire.networking.task.complete.error"
+@"com.alamofire.networking.task.complete.assetpath" = @"com.alamofire.networking.task.complete.assetpath"
+@"com.alamofire.networking.session.manager.lock" = @"com.alamofire.networking.session.manager.lock"
+@"new" = @"new"
+@"new" = @"new"
+@"new" = @"new"
+@"new" = @"new"
+@"com.alamofire.networking.nsurlsessiontask.resume" = @"com.alamofire.networking.nsurlsessiontask.resume"
+@"com.alamofire.networking.nsurlsessiontask.suspend" = @"com.alamofire.networking.nsurlsessiontask.suspend"
+@"NSURLSessionTask" = @"NSURLSessionTask"
+@"State method should never be called in the actual dummy class" = @"State method should never be called in the actual dummy class"
+@"Does not respond to state" = @"Does not respond to state"
+@"Does not respond to state" = @"Does not respond to state"
+@"%p" = @"%p"
+@"@unionOfArrays.self" = @"@unionOfArrays.self"
+@"<%@: %p, session: %@, operationQueue: %@>" = @"<%@: %p, session: %@, operationQueue: %@>"
+@"Content-Length" = @"Content-Length"
+@"sessionConfiguration" = @"sessionConfiguration"
+@"sessionConfiguration" = @"sessionConfiguration"
+
+
+/* AFAutoPurgingImageCache.m */
+
+@"Idenfitier: %@  lastAccessDate: %@ " = @"Idenfitier: %@  lastAccessDate: %@ "
+@"com.alamofire.autopurgingimagecache-%@" = @"com.alamofire.autopurgingimagecache-%@"
+@"lastAccessDate" = @"lastAccessDate"
+
+
+/* AFImageDownloader.m */
+
+@"<AFImageDownloaderResponseHandler>UUID: %@" = @"<AFImageDownloaderResponseHandler>UUID: %@"
+@"com.alamofire.imagedownloader" = @"com.alamofire.imagedownloader"
+@"com.alamofire.imagedownloader.synchronizationqueue-%@" = @"com.alamofire.imagedownloader.synchronizationqueue-%@"
+@"com.alamofire.imagedownloader.responsequeue-%@" = @"com.alamofire.imagedownloader.responsequeue-%@"
+@"ImageDownloader cancelled URL request: %@" = @"ImageDownloader cancelled URL request: %@"
+
+
+/* AFNetworkActivityIndicatorManager.m */
+
+@"networkActivityIndicatorVisible" = @"networkActivityIndicatorVisible"
+@"networkActivityIndicatorVisible" = @"networkActivityIndicatorVisible"
+@"activityCount" = @"activityCount"
+@"activityCount" = @"activityCount"
+@"activityCount" = @"activityCount"
+@"activityCount" = @"activityCount"
+@"currentState" = @"currentState"
+@"currentState" = @"currentState"
+
+
+/* UIButton+AFNetworking.m */
+
+@"image/*" = @"image/*"
+@"Accept" = @"Accept"
+@"image/*" = @"image/*"
+@"Accept" = @"Accept"
+
+
+/* UIImageView+AFNetworking.m */
+
+@"image/*" = @"image/*"
+@"Accept" = @"Accept"
+
+
+/* UIProgressView+AFNetworking.m */
+
+@"state" = @"state"
+@"countOfBytesSent" = @"countOfBytesSent"
+@"state" = @"state"
+@"countOfBytesReceived" = @"countOfBytesReceived"
+
+
+/* BFCancellationToken.m */
+
+@"Delay must be >= -1" = @"Delay must be >= -1"
+@"Object already disposed" = @"Object already disposed"
+
+
+/* BFCancellationTokenRegistration.m */
+
+@"Object already disposed" = @"Object already disposed"
+
+
+/* BFTask.m */
+
+@"bolts" = @"bolts"
+@"BFMultipleExceptionsException" = @"BFMultipleExceptionsException"
+@"There were multiple exceptions." = @"There were multiple exceptions."
+@"exceptions" = @"exceptions"
+@"errors" = @"errors"
+@"result" = @"result"
+@" result = %@" = @" result = %@"
+@"<%@: %p; completed = %@; cancelled = %@; faulted = %@;%@>" = @"<%@: %p; completed = %@; cancelled = %@; faulted = %@;%@>"
+@"YES" = @"YES"
+@"NO" = @"NO"
+@"YES" = @"YES"
+@"NO" = @"NO"
+@"YES" = @"YES"
+@"NO" = @"NO"
+
+
+/* BFTaskCompletionSource.m */
+
+@"Cannot set the result on a completed task." = @"Cannot set the result on a completed task."
+@"Cannot set the error on a completed task." = @"Cannot set the error on a completed task."
+@"Cannot set the exception on a completed task." = @"Cannot set the exception on a completed task."
+@"Cannot cancel a completed task." = @"Cannot cancel a completed task."
+
+
+/* BFAppLink.m */
+
+@"al_applink_data" = @"al_applink_data"
+@"target_url" = @"target_url"
+@"user_agent" = @"user_agent"
+@"extras" = @"extras"
+@"referer_app_link" = @"referer_app_link"
+@"app_name" = @"app_name"
+@"url" = @"url"
+@"version" = @"version"
+@"1.0" = @"1.0"
+
+
+/* BFAppLinkNavigation.m */
+
+@":/?#[]@!$&'()*+,;=" = @":/?#[]@!$&'()*+,;="
+@"Bolts iOS %@" = @"Bolts iOS %@"
+@"%@%@%@=%@" = @"%@%@%@=%@"
+@"&" = @"&"
+@"?" = @"?"
+@"1" = @"1"
+@"0" = @"0"
+@"outputURLScheme" = @"outputURLScheme"
+@"outputURL" = @"outputURL"
+@"sourceURL" = @"sourceURL"
+@"sourceHost" = @"sourceHost"
+@"sourceScheme" = @"sourceScheme"
+@"error" = @"error"
+@"fail" = @"fail"
+@"web" = @"web"
+@"app" = @"app"
+@"success" = @"success"
+@"type" = @"type"
+
+
+/* BFAppLinkReturnToRefererView.m */
+
+@"referer_app_link" = @"referer_app_link"
+@"app_name" = @"app_name"
+@"url" = @"url"
+@"Touch to return to %1$@" = @"Touch to return to %1$@"
+@"Format for the string to return to a calling app." = @"Format for the string to return to a calling app."
+
+
+/* BFMeasurementEvent.m */
+
+@"com.parse.bolts.measurement_event" = @"com.parse.bolts.measurement_event"
+@"event_name" = @"event_name"
+@"event_args" = @"event_args"
+@"al_link_parse" = @"al_link_parse"
+@"al_nav_in" = @"al_nav_in"
+@"al_nav_out" = @"al_nav_out"
+@"al_ref_back_out" = @"al_ref_back_out"
+
+
+/* BFURL.m */
+
+@"1.0" = @"1.0"
+@"1" = @"1"
+@"0" = @"0"
+@"version" = @"version"
+@"refererURL" = @"refererURL"
+@"refererAppName" = @"refererAppName"
+@"sourceApplication" = @"sourceApplication"
+@"targetURL" = @"targetURL"
+@"inputURL" = @"inputURL"
+@"inputURLScheme" = @"inputURLScheme"
+@"forRenderBackToReferrerBar" = @"forRenderBackToReferrerBar"
+@"forOpenUrl" = @"forOpenUrl"
+@"&" = @"&"
+@"=" = @"="
+
+
+/* BFWebViewAppLinkResolver.m */
+
+@"url" = @"url"
+@"app_store_id" = @"app_store_id"
+@"app_name" = @"app_name"
+@"_value" = @"_value"
+@"Prefer-Html-Meta-Tags" = @"Prefer-Html-Meta-Tags"
+@"al" = @"al"
+@"web" = @"web"
+@"ios" = @"ios"
+@"iphone" = @"iphone"
+@"ipad" = @"ipad"
+@"url" = @"url"
+@"should_fallback" = @"should_fallback"
+@"Location" = @"Location"
+@"response" = @"response"
+@"data" = @"data"
+@"data" = @"data"
+@"response" = @"response"
+@"property" = @"property"
+@":" = @":"
+@"content" = @"content"
+@"content" = @"content"
+@"no" = @"no"
+@"false" = @"false"
+@"0" = @"0"
+
+
+/* CustomBadge.m */
+
+@"HelveticaNeue-Medium" = @"HelveticaNeue-Medium"
+@"HelveticaNeue-Light" = @"HelveticaNeue-Light"
+
+
+/* HMSegmentedControl.m */
+
+@"***%s: Images bounds (%ld) Dont match Title bounds (%ld)" = @"***%s: Images bounds (%ld) Dont match Title bounds (%ld)"
+@"Unexpected type of segment title: %@" = @"Unexpected type of segment title: %@"
+@"@sum.self" = @"@sum.self"
+@"position" = @"position"
+@"bounds" = @"bounds"
+
+
+/* NSInvocation+Copy.m */
+
+@"r" = @"r"
+@"n" = @"n"
+@"o" = @"o"
+@"V" = @"V"
+@"^" = @"^"
+@"@" = @"@"
+
+
+/* MZFormSheetBackgroundWindow.m */
+
+@"image" = @"image"
+@"image" = @"image"
+@"new" = @"new"
+@"UIDeviceOrientationRotateAnimatedUserInfoKey" = @"UIDeviceOrientationRotateAnimatedUserInfoKey"
+@"image" = @"image"
+
+
+/* MZFormSheetController.m */
+
+@"MZFormSheetDidPresentNotification" = @"MZFormSheetDidPresentNotification"
+@"MZFormSheetDidDismissNotification" = @"MZFormSheetDidDismissNotification"
+@"MZFormSheetWillPresentNotification" = @"MZFormSheetWillPresentNotification"
+@"MZFormSheetWillDismissNotification" = @"MZFormSheetWillDismissNotification"
+@"UIViewControllerBasedStatusBarAppearance" = @"UIViewControllerBasedStatusBarAppearance"
+@"NSLayoutConstraint" = @"NSLayoutConstraint"
+@"MZFormSheetController must have at least one view controller." = @"MZFormSheetController must have at least one view controller."
+@"Attempting to begin a form sheet transition from to while a transition is already in progress. Wait for didPresentCompletionHandler/didDismissCompletionHandler to know the current transition has completed" = @"Attempting to begin a form sheet transition from to while a transition is already in progress. Wait for didPresentCompletionHandler/didDismissCompletionHandler to know the current transition has completed"
+
+
+/* MZFormSheetTransition.m */
+
+@"MZTransitionExceptionMethodNotImplemented" = @"MZTransitionExceptionMethodNotImplemented"
+@"-[%@ entryFormSheetControllerTransition:completionHandler:] must be implemented" = @"-[%@ entryFormSheetControllerTransition:completionHandler:] must be implemented"
+@"-[%@ exitFormSheetControllerTransition:completionHandler:] must be implemented" = @"-[%@ exitFormSheetControllerTransition:completionHandler:] must be implemented"
+@"completionHandler" = @"completionHandler"
+@"position.x" = @"position.x"
+@"completionHandler" = @"completionHandler"
+@"bounceLeft" = @"bounceLeft"
+@"position.x" = @"position.x"
+@"completionHandler" = @"completionHandler"
+@"bounceRight" = @"bounceRight"
+@"transform" = @"transform"
+@"completionHandler" = @"completionHandler"
+@"bounce" = @"bounce"
+@"transform.scale" = @"transform.scale"
+@"completionHandler" = @"completionHandler"
+@"bounce" = @"bounce"
+@"position.y" = @"position.y"
+@"completionHandler" = @"completionHandler"
+@"dropdown" = @"dropdown"
+
+
+/* UIImage+Additional.m */
+
+@"*** error: invalid size: (%.2f x %.2f). Both dimensions must be >= 1: %@" = @"*** error: invalid size: (%.2f x %.2f). Both dimensions must be >= 1: %@"
+@"*** error: image must be backed by a CGImage: %@" = @"*** error: image must be backed by a CGImage: %@"
+@"*** error: maskImage must be backed by a CGImage: %@" = @"*** error: maskImage must be backed by a CGImage: %@"
+
+
+/* MZTimerLabel.m */
+
+@"HH:mm:ss" = @"HH:mm:ss"
+@"en_GB" = @"en_GB"
+@"GMT" = @"GMT"
+@"SS" = @"SS"
+
+
+/* SVIndefiniteAnimatedView.m */
+
+@"SVProgressHUD" = @"SVProgressHUD"
+@"bundle" = @"bundle"
+@"angle-mask" = @"angle-mask"
+@"png" = @"png"
+@"transform.rotation" = @"transform.rotation"
+@"rotate" = @"rotate"
+@"strokeStart" = @"strokeStart"
+@"strokeEnd" = @"strokeEnd"
+@"progress" = @"progress"
+
+
+/* SVProgressHUD.m */
+
+@"SVProgressHUDDidReceiveTouchEventNotification" = @"SVProgressHUDDidReceiveTouchEventNotification"
+@"SVProgressHUDDidTouchDownInsideNotification" = @"SVProgressHUDDidTouchDownInsideNotification"
+@"SVProgressHUDWillDisappearNotification" = @"SVProgressHUDWillDisappearNotification"
+@"SVProgressHUDDidDisappearNotification" = @"SVProgressHUDDidDisappearNotification"
+@"SVProgressHUDWillAppearNotification" = @"SVProgressHUDWillAppearNotification"
+@"SVProgressHUDDidAppearNotification" = @"SVProgressHUDDidAppearNotification"
+@"SVProgressHUDStatusUserInfoKey" = @"SVProgressHUDStatusUserInfoKey"
+@"SVProgressHUD" = @"SVProgressHUD"
+@"bundle" = @"bundle"
+@"info" = @"info"
+@"png" = @"png"
+@"success" = @"success"
+@"png" = @"png"
+@"error" = @"error"
+@"png" = @"png"
+@"center.x" = @"center.x"
+@"center.y" = @"center.y"
+@"UIPeripheralHostView" = @"UIPeripheralHostView"
+@"UIKeyboard" = @"UIKeyboard"
+@"UIInputSetContainerView" = @"UIInputSetContainerView"
+@"UIInputSetHostView" = @"UIInputSetHostView"
+
+
+/* Tolo.m */
+
+@"get" = @"get"
+@"on" = @"on"
+
+

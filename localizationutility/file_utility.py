@@ -2,6 +2,8 @@ import os
 import re
 
 string_re = re.compile('(?<!NSLog\()@"[^"]+"')
+
+
 ## print(string_re.search('''this is a typical line @"abfdsfc"'''))
 
 def scan_m_files(target):
@@ -15,12 +17,23 @@ def scan_m_files(target):
 
 
 def scan_lines(filename):
-    input = open(filename)
-    line = input.readline()
+    rv = []
+    finput = open(filename)
+    line = finput.readline()
     while line != "":
-        matches = string_re.search(line)
-        if matches != None:
+        start = 0
+        match = string_re.search(line, start)
+        while match != None:
+            print("Found ({0}, {1})".format(match.start(), match.end()))
             print(line)
-        line = input.readline()
-    input.close()
+            print(" " * match.start() + "^" + " " * (match.end() - match.start() - 2) + "^")
+            rv.append("{0} = {0}".format(line[match.start():match.end()]))
+            # key = input("Press enter to change: ")
+            # if key == "":
+            #     print("Change ")
+            print("-" * 15)
+            match = string_re.search(line, match.end())
+        line = finput.readline()
+    finput.close()
+    return rv
 
