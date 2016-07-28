@@ -31,8 +31,8 @@ def scan_lines(filename):
             print(line)
             print(" " * match.start() + "^" + " " * (match.end() - match.start() - 2) + "^")
 
-            # key = input("Press enter to change: ")
-            key = ""
+            key = input("Press enter to change: ")
+            # key = ""
             if key == "":
                 print("will change sir ")
                 rv.append("{0} = {0}".format(line[match.start():match.end()]))
