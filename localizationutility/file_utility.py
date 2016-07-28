@@ -30,18 +30,20 @@ def scan_lines(filename):
             print("Found ({0}, {1})".format(match.start(), match.end()))
             print(line)
             print(" " * match.start() + "^" + " " * (match.end() - match.start() - 2) + "^")
-            rv.append("{0} = {0}".format(line[match.start():match.end()]))
-            line = line[:match.start()] + "getString(" + line[match.start():match.end()] + ")" + line[match.end():]
 
             # key = input("Press enter to change: ")
-            # if key == "":
-            #     print("Change ")
+            key = ""
+            if key == "":
+                print("will change sir ")
+                rv.append("{0} = {0}".format(line[match.start():match.end()]))
+                line = line[:match.start()] + "getString(" + line[match.start():match.end()] + ")" + line[match.end():]
+                start = match.end() + 10
+            else:
+                start = match.end()
             print("-" * 15)
-            match = string_re.search(line, match.end() + 10)
-
+            match = string_re.search(line, start)
 
         new_lines.append(line)
-
         line = finput.readline()
     finput.close()
 
