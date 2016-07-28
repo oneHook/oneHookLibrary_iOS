@@ -12,7 +12,7 @@
 #define FLOATING_ACTION_BUTTON_ANIMATION_THRESHOLD 24
 #define FAB_STATE_TOP 0
 #define FAB_STATE_BOTTOM 1
-#define DEBUGGIN YES
+#define DEBUGGIN NO
 
 @interface OHViewController() {
     CGFloat _lastWidth;
@@ -35,6 +35,7 @@
     self = [super init];
     if(self) {
         [self commonInit];
+        
     }
     return self;
 }
@@ -47,6 +48,11 @@
         _toolbarStyle = style;
     }
     return self;
+}
+
+- (void)dealloc
+{
+    NSLog(@"%@ DEALLOC", [self class]);
 }
 
 - (void)commonInit
