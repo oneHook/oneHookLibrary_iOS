@@ -1,6 +1,6 @@
 import file_utility as utility
 
-target = "../../Dooo-iOS"
+target = "../../Dooo-iOS/Challenger"
 
 mfiles = utility.scan_m_files(target)
 
