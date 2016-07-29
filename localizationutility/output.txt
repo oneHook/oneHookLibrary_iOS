@@ -1,0 +1,509 @@
+/* MOPickDateViewController.m */
+
+@"Confirm" = @"Confirm"
+
+
+/* MOTableViewLoadingCell.m */
+
+@"END" = @"END"
+@"LOAD MORE" = @"LOAD MORE"
+
+
+/* HSChallengerAPI.m */
+
+@"Failed to fetch your profile, please try again later" = @"Failed to fetch your profile, please try again later"
+@"Failed to sign you in, but your profile is created" = @"Failed to sign you in, but your profile is created"
+@"Something went wrong, please try again later" = @"Something went wrong, please try again later"
+@"Failed to sign you in, please try again later" = @"Failed to sign you in, please try again later"
+@"Username %@ already taken" = @"Username %@ already taken"
+@"Failed to create new user, please try again later" = @"Failed to create new user, please try again later"
+@", error, (long) errorCode, error.domain, [error.userInfo objectForKey:@" = @", error, (long) errorCode, error.domain, [error.userInfo objectForKey:@"
+@"Something went wrong, please try again later" = @"Something went wrong, please try again later"
+@"Failed to sign you in, please try again later" = @"Failed to sign you in, please try again later"
+@"Invalid login credentials" = @"Invalid login credentials"
+@"Failed to sign you in, please try again later" = @"Failed to sign you in, please try again later"
+
+
+/* HSMainViewController.m */
+
+@"Unable to open this challenge, required plugin missing." = @"Unable to open this challenge, required plugin missing."
+@"HealthKit is not available in your device" = @"HealthKit is not available in your device"
+@"Warning" = @"Warning"
+@"No Pedometer plugin found, would you like to set it up now?" = @"No Pedometer plugin found, would you like to set it up now?"
+@"Cancel" = @"Cancel"
+@"Setup" = @"Setup"
+@"Warning" = @"Warning"
+@"You have not yet authorize Dooo to access Apple Health, would you like to authorize it now?" = @"You have not yet authorize Dooo to access Apple Health, would you like to authorize it now?"
+@"Cancel" = @"Cancel"
+@"Authorize" = @"Authorize"
+@"If you would like to change your pedometer plugin, you can go to setting" = @"If you would like to change your pedometer plugin, you can go to setting"
+@"Failed to authorize. If you would like to change your pedometer plugin, you can go to setting" = @"Failed to authorize. If you would like to change your pedometer plugin, you can go to setting"
+
+
+/* HSBaseGenericDetailChallengeViewController.m */
+
+@"Click to View Result" = @"Click to View Result"
+@"from %@" = @"from %@"
+
+
+/* HSCameraChallengeDetailViewController.m */
+
+@"Bad news" = @"Bad news"
+@"Failed to upload your image, would you like to try again?" = @"Failed to upload your image, would you like to try again?"
+@"Cancel" = @"Cancel"
+@"Try again" = @"Try again"
+
+
+/* HSDrinkChallengeDetailViewController.m */
+
+@"AVERAGE\n%d" = @"AVERAGE\n%d"
+@"AVERAGE\n--" = @"AVERAGE\n--"
+@"YESTERDAY\n%d" = @"YESTERDAY\n%d"
+@"YESTERDAY\n--" = @"YESTERDAY\n--"
+@"TOTAL\n%d" = @"TOTAL\n%d"
+@" %d Glasses Today" = @" %d Glasses Today"
+@"%@" = @"%@"
+
+
+/* HSPedometerChallengeDetailBasePageView.m */
+
+@"Step Leaderboard" = @"Step Leaderboard"
+@"%d %@ Earned" = @"%d %@ Earned"
+@"%d %@ Earned" = @"%d %@ Earned"
+@"Cumulative Steps\n%@" = @"Cumulative Steps\n%@"
+@"Rank %d" = @"Rank %d"
+
+
+/* HSPedometerChallengeDetailViewPresenter.m */
+
+@"Apple Health Not Available" = @"Apple Health Not Available"
+@"Checking plugin" = @"Checking plugin"
+@"Loading Steps" = @"Loading Steps"
+
+
+/* HSPedometerChallengeHistoryHistogramView.m */
+
+@"YOU" = @"YOU"
+@"AVERAGE USER" = @"AVERAGE USER"
+@"%@ Past %d Days" = @"%@ Past %d Days"
+@"%@ - %@" = @"%@ - %@"
+@"%@ - %@" = @"%@ - %@"
+
+
+/* HSPedometerChallengeRecentListView.m */
+
+@"My History" = @"My History"
+
+
+/* HSCountDownChallengeDetailViewController.m */
+
+@"START\n%ds" = @"START\n%ds"
+
+
+/* MOActivityCongratulationPersonView.m */
+
+@"You" = @"You"
+
+
+/* MODrinkHistoryViewController.m */
+
+@"Drink history" = @"Drink history"
+
+
+/* HSHomeViewController.m */
+
+@"No timed category selected" = @"No timed category selected"
+@"ADD CATEGORY" = @"ADD CATEGORY"
+@"Complete your first challenge and earn 200 points!" = @"Complete your first challenge and earn 200 points!"
+@"My Activities" = @"My Activities"
+@"My Schedule" = @"My Schedule"
+@"Today" = @"Today"
+@"Challenge Friends" = @"Challenge Friends"
+@"Current Activity" = @"Current Activity"
+@"Previous Activity" = @"Previous Activity"
+@"Future Activity" = @"Future Activity"
+
+
+/* HSChallengeZoomedInCellView.m */
+
+@"LAUNCH ACTIVITY" = @"LAUNCH ACTIVITY"
+@"REVIEW ACTIVITY" = @"REVIEW ACTIVITY"
+@"LAUNCH ACTIVITY" = @"LAUNCH ACTIVITY"
+@"Completed at %@" = @"Completed at %@"
+@"%d %@ Earned" = @"%d %@ Earned"
+
+
+/* HSLeaderboardViewController.m */
+
+@"Steps" = @"Steps"
+@"Leaderboard" = @"Leaderboard"
+
+
+/* HSLeaderboardUserTableViewCell.m */
+
+@"Andrew" = @"Andrew"
+@"127 pts" = @"127 pts"
+@"1" = @"1"
+@"%ld Steps" = @"%ld Steps"
+
+
+/* HSMenuHeaderView.m */
+
+@"VIEW PROFILE" = @"VIEW PROFILE"
+@"Name" = @"Name"
+@"RANK" = @"RANK"
+@"TEAM" = @"TEAM"
+@"RANKED %ld" = @"RANKED %ld"
+
+
+/* HSMenuViewController.m */
+
+@"Today" = @"Today"
+@"Leaderboard" = @"Leaderboard"
+@"Connect Devices" = @"Connect Devices"
+@"Reward" = @"Reward"
+@"Settings" = @"Settings"
+@"Feedback" = @"Feedback"
+@"Privacy Policy" = @"Privacy Policy"
+@"Terms and Conditions" = @"Terms and Conditions"
+@"About Dooo" = @"About Dooo"
+@"More Optimity" = @"More Optimity"
+@"Sign Out" = @"Sign Out"
+@"No Mail service has been setup on this device." = @"No Mail service has been setup on this device."
+@"About Dooo" = @"About Dooo"
+@"I have some feedback\n\nPlease enter your feedback here\n\n" = @"I have some feedback\n\nPlease enter your feedback here\n\n"
+@"dooo@myoptimity.com" = @"dooo@myoptimity.com"
+@"Let's get paid to be fit" = @"Let's get paid to be fit"
+@"Want to get rewarded for being healthy? \nGet fit with Dooo!" = @"Want to get rewarded for being healthy? \nGet fit with Dooo!"
+@"http://www.myhealthsphere.ca/" = @"http://www.myhealthsphere.ca/"
+
+
+/* HSNewsFeedViewController.m */
+
+@"News Feed" = @"News Feed"
+
+
+/* HSFeedAnnoucementChallengeTableViewCell.m */
+
+@"DONE" = @"DONE"
+@"DONE" = @"DONE"
+@"EXPIRED" = @"EXPIRED"
+@"DONE?" = @"DONE?"
+@"Start: %@" = @"Start: %@"
+@"No Start Date" = @"No Start Date"
+@"End  : %@" = @"End  : %@"
+@"No End Date" = @"No End Date"
+
+
+/* HSBaseAuthenticationViewController.m */
+
+@"Creating your account..." = @"Creating your account..."
+@"Signing you in..." = @"Signing you in..."
+@"Failed to retrieve your information from Facebook, please try again later" = @"Failed to retrieve your information from Facebook, please try again later"
+@"Failed to retrieve your information from Google, please try again later" = @"Failed to retrieve your information from Google, please try again later"
+
+
+/* HSSignInFormViewController.m */
+
+@"Login" = @"Login"
+@"Welcome back!" = @"Welcome back!"
+@"Email" = @"Email"
+@"Password" = @"Password"
+@"Forgot password?" = @"Forgot password?"
+@"Submit" = @"Submit"
+@"OR" = @"OR"
+
+
+/* HSSignupFormViewController.m */
+
+@"Sign-up" = @"Sign-up"
+@"Company Email" = @"Company Email"
+@"Company Code" = @"Company Code"
+@"view_controller_sign_up_form_password1_hint" = @"view_controller_sign_up_form_password1_hint"
+@"CREATE YOUR PASSWORD" = @"CREATE YOUR PASSWORD"
+@"By signing up you agree to the Terms of Use" = @"By signing up you agree to the Terms of Use"
+@"Submit" = @"Submit"
+@"Already registered?" = @"Already registered?"
+@"OR" = @"OR"
+@"Password should be at least 6 characters long" = @"Password should be at least 6 characters long"
+
+
+/* HSValidateCompanyFormViewController.m */
+
+@"Welcome" = @"Welcome"
+@"Company Email" = @"Company Email"
+@"Company Code" = @"Company Code"
+@"This is a unique code provided by Optimity to your company. Contact your HR manager for more details" = @"This is a unique code provided by Optimity to your company. Contact your HR manager for more details"
+@"Validate" = @"Validate"
+@"Invalid company code" = @"Invalid company code"
+@"Username already in use" = @"Username already in use"
+@"Invalid company email" = @"Invalid company email"
+@"Something went wrong, please try again later" = @"Something went wrong, please try again later"
+
+
+/* HSForgetPasswordViewController.m */
+
+@"Enter your email!" = @"Enter your email!"
+@"Email" = @"Email"
+@"Submit" = @"Submit"
+@"Forgot password" = @"Forgot password"
+@"Your password reset request has been sent, please check your email." = @"Your password reset request has been sent, please check your email."
+@"OK" = @"OK"
+@"Forgot password" = @"Forgot password"
+@"No user found with given email" = @"No user found with given email"
+@"OK" = @"OK"
+
+
+/* HSLandingMainViewControllerV2FeatureView.m */
+
+@"CONTINUE" = @"CONTINUE"
+
+
+/* HSLandingMainViewPager1View.m */
+
+@"Welcome" = @"Welcome"
+@"Seamlessly integrate activities into your daily life to build healthy habits." = @"Seamlessly integrate activities into your daily life to build healthy habits."
+
+
+/* HSLandingMainViewPager2View.m */
+
+@"Do Daily Activities" = @"Do Daily Activities"
+@"Dooo helps people across all industries to exercise better, rest more and eat healthy." = @"Dooo helps people across all industries to exercise better, rest more and eat healthy."
+
+
+/* HSLandingMainViewPager3View.m */
+
+@"Get Rewarded" = @"Get Rewarded"
+@"Completing challenges earns you reward points. These points can be redeemed for a number of exciting rewards." = @"Completing challenges earns you reward points. These points can be redeemed for a number of exciting rewards."
+
+
+/* HSLandingMainViewPager4View.m */
+
+@"Sync With Trackers" = @"Sync With Trackers"
+@"Dooo syncs with wearables and passive trackers on your smartphone." = @"Dooo syncs with wearables and passive trackers on your smartphone."
+
+
+/* HSLandingMainViewPager5View.m */
+
+@"CFBundleShortVersionString" = @"CFBundleShortVersionString"
+@"Calendar Integration" = @"Calendar Integration"
+@"Dooo syncs with your Google Calendar to ensure no activities are scheduled when you are busy." = @"Dooo syncs with your Google Calendar to ensure no activities are scheduled when you are busy."
+@"zoom" = @"zoom"
+
+
+/* MOBaseRatePostAuthenticationPageViewController.m */
+
+@"Poor" = @"Poor"
+@"Perfect" = @"Perfect"
+@"Bad news" = @"Bad news"
+@"Failed to post your rating, would you like to try again?" = @"Failed to post your rating, would you like to try again?"
+@"Cancel" = @"Cancel"
+@"Try again" = @"Try again"
+
+
+/* MOBasePostAuthenticationPageViewController.m */
+
+@"Add a profile photo" = @"Add a profile photo"
+@"Sync with your calendar to ensure no activities are scheduled when you are busy" = @"Sync with your calendar to ensure no activities are scheduled when you are busy"
+@"SKIP" = @"SKIP"
+@"SKIP" = @"SKIP"
+@"SAVE" = @"SAVE"
+
+
+/* MOPostAuthenticationCompanyWelcomePage.m */
+
+@"THANK YOU" = @"THANK YOU"
+@"Bad news" = @"Bad news"
+@"Failed to fetch your company information" = @"Failed to fetch your company information"
+@"Skip" = @"Skip"
+@"Try again" = @"Try again"
+
+
+/* MOPostAuthenticationNameCompletionPageViewController.m */
+
+@"Let's setup your profile" = @"Let's setup your profile"
+@"First name" = @"First name"
+@"Last Name" = @"Last Name"
+@"Select Birth Date" = @"Select Birth Date"
+@"Edit Profile" = @"Edit Profile"
+@"Tell us who you are" = @"Tell us who you are"
+@"Please enter your first name" = @"Please enter your first name"
+@"Please choose your birthday" = @"Please choose your birthday"
+@"NEXT" = @"NEXT"
+@"Bad news" = @"Bad news"
+@"Failed update your profile, would you like to try again?" = @"Failed update your profile, would you like to try again?"
+@"Cancel" = @"Cancel"
+@"Try again" = @"Try again"
+@"SAVE" = @"SAVE"
+
+
+/* MOPostAuthenticationProfileImageCompletionViewController.m */
+
+@"CHOOSE" = @"CHOOSE"
+@"No problem!" = @"No problem!"
+@"You can upload your profile image anytime in user profile page." = @"You can upload your profile image anytime in user profile page."
+@"Bad news" = @"Bad news"
+@"Failed to upload new profile picture, would you like to try again?" = @"Failed to upload new profile picture, would you like to try again?"
+@"Cancel" = @"Cancel"
+@"Try again" = @"Try again"
+@"CHOOSE" = @"CHOOSE"
+@"CHOOSE" = @"CHOOSE"
+
+
+/* MOPostAuthenticationSetupCalendarPageViewController.m */
+
+@"Sync your calendar" = @"Sync your calendar"
+@"Sync with your calendar to ensure no activities are scheduled when you're busy" = @"Sync with your calendar to ensure no activities are scheduled when you're busy"
+@"No problem!" = @"No problem!"
+@"You can setup your calendar anytime in the Settings." = @"You can setup your calendar anytime in the Settings."
+@"Remove" = @"Remove"
+@"Setup" = @"Setup"
+
+
+/* MOPostAuthenticationSetupPedometerPageViewController.m */
+
+@"Sync with trackers" = @"Sync with trackers"
+@"Sync with wearables and passive trackers on your smartphone" = @"Sync with wearables and passive trackers on your smartphone"
+@"No problem!" = @"No problem!"
+@"You can setup your pedometer tracker anytime in the Settings." = @"You can setup your pedometer tracker anytime in the Settings."
+
+
+/* MOPostAuthenticationWelcomePageViewController.m */
+
+@"GET STARTED" = @"GET STARTED"
+@"Let's setup your profile" = @"Let's setup your profile"
+@"Your profile helps us to build a more customized experience for you." = @"Your profile helps us to build a more customized experience for you."
+
+
+/* MORateHealthAuthenticationPageViewController.m */
+
+@"Rate your current health" = @"Rate your current health"
+
+
+/* MORateMoodAuthenticationPageViewController.m */
+
+@"Rate your current mood" = @"Rate your current mood"
+
+
+/* HSUserProfileHeaderView.m */
+
+@"RANK %ld" = @"RANK %ld"
+
+
+/* HSRewardViewController.m */
+
+@"Rewards" = @"Rewards"
+@"No rewards available at this time" = @"No rewards available at this time"
+@"Claim reward" = @"Claim reward"
+@"Please wait..." = @"Please wait..."
+@"Claim" = @"Claim"
+@"Congraz! You have claimed your reward!" = @"Congraz! You have claimed your reward!"
+@"OK" = @"OK"
+@"Claim" = @"Claim"
+@"Failed to claim your reward, please try again!" = @"Failed to claim your reward, please try again!"
+@"OK" = @"OK"
+@"Claim" = @"Claim"
+@"Would you like to claim this reward?" = @"Would you like to claim this reward?"
+@"YES" = @"YES"
+@"NO" = @"NO"
+
+
+/* HSSettingFotterView.m */
+
+@"CFBundleShortVersionString" = @"CFBundleShortVersionString"
+
+
+/* HSSettingViewController.m */
+
+@"Settings" = @"Settings"
+@"acknowledgement" = @"acknowledgement"
+@"Cancel" = @"Cancel"
+@"OK" = @"OK"
+
+
+/* MONameBirthdaySettingViewController.m */
+
+@"Edit Personal Information" = @"Edit Personal Information"
+@"First name" = @"First name"
+@"Last Name" = @"Last Name"
+@"Select Birth Date" = @"Select Birth Date"
+@"SAVE" = @"SAVE"
+@"Please enter your first name" = @"Please enter your first name"
+@"Please enter your last name" = @"Please enter your last name"
+@"Please choose your birthday" = @"Please choose your birthday"
+@"Bad news" = @"Bad news"
+@"Failed update your profile, would you like to try again?" = @"Failed update your profile, would you like to try again?"
+@"Cancel" = @"Cancel"
+@"Try again" = @"Try again"
+@"SAVE" = @"SAVE"
+@"yyyy-MM-dd" = @"yyyy-MM-dd"
+
+
+/* HSSettingController.m */
+
+@"Personal Information" = @"Personal Information"
+@"Anonymous Mode" = @"Anonymous Mode"
+@"Enabling anonymous mode will anonymize your personal information when other members view your profile on the leaderboards and activity feed." = @"Enabling anonymous mode will anonymize your personal information when other members view your profile on the leaderboards and activity feed."
+@"About" = @"About"
+@"Terms of Use" = @"Terms of Use"
+@"Acknowledgement" = @"Acknowledgement"
+@"Logout" = @"Logout"
+@"Turning off anonymous mode" = @"Turning off anonymous mode"
+@"Turning on anonymous mode" = @"Turning on anonymous mode"
+
+
+/* HSSocialController.m */
+
+@"Select Sharing option:" = @"Select Sharing option:"
+@"Share myOptimity with your friends" = @"Share myOptimity with your friends"
+@"Share on Facebook" = @"Share on Facebook"
+@"Share on Google+" = @"Share on Google+"
+@"Share via E-mail" = @"Share via E-mail"
+@"Share via Text" = @"Share via Text"
+@"No Mail service has been setup on this device." = @"No Mail service has been setup on this device."
+
+
+/* HSPluginSettingController.m */
+
+@"Removing %@..." = @"Removing %@..."
+@"Failed to remove %@, please try again later" = @"Failed to remove %@, please try again later"
+@"Adding %@" = @"Adding %@"
+@"Failed to add %@, please try again later" = @"Failed to add %@, please try again later"
+@"Failed to authenticate with Google, please try again later" = @"Failed to authenticate with Google, please try again later"
+
+
+/* HSTrackerPluginCell.m */
+
+@"CONNECT" = @"CONNECT"
+@"DISCONNECT" = @"DISCONNECT"
+@"CONNECT" = @"CONNECT"
+
+
+/* HSTrackerPluginChooseViewController.m */
+
+@"Connect Devices" = @"Connect Devices"
+@"Syncing may take up to 15min" = @"Syncing may take up to 15min"
+@"Removing %@..." = @"Removing %@..."
+@"Failed to remove plugin, please try again later" = @"Failed to remove plugin, please try again later"
+@"Loading..." = @"Loading..."
+@"Connection Failed, please try again later" = @"Connection Failed, please try again later"
+@"Loading..." = @"Loading..."
+@"Setup HealthKit" = @"Setup HealthKit"
+@"Once prompted, please allow Dooo to pull your step data from Apple Health and click Done" = @"Once prompted, please allow Dooo to pull your step data from Apple Health and click Done"
+@"OK" = @"OK"
+
+
+/* HSTrackerSetupWebViewController.m */
+
+@"Setup %@" = @"Setup %@"
+@"Failed to load plugin, please try again later" = @"Failed to load plugin, please try again later"
+@"Loading..." = @"Loading..."
+
+
+/* HSPluginDataModel.m */
+
+@"Available" = @"Available"
+@"Selected" = @"Selected"
+@"Available" = @"Available"
+
+
