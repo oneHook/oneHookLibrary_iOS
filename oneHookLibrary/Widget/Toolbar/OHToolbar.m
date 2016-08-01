@@ -55,18 +55,18 @@
         CGFloat topOffset = self.showStatusBar ? kSystemStatusBarHeight : 0;
         self.toolbarContainer.frame = CGRectMake(0, topOffset, width, height - topOffset);
         
-        CGFloat actionButtonLength = kToolbarDefaultHeight - MARGIN_TINY * 2;
-        _leftButton.frame = CGRectMake(MARGIN_TINY,
-                                       topOffset + MARGIN_TINY,
+        CGFloat actionButtonLength = kToolbarDefaultHeight - MARGIN_SMALL * 2;
+        _leftButton.frame = CGRectMake(MARGIN_SMALL,
+                                       topOffset + MARGIN_SMALL,
                                        actionButtonLength,
                                        actionButtonLength);
-        _rightButton.frame = CGRectMake(width - MARGIN_TINY - actionButtonLength,
-                                        topOffset + MARGIN_TINY,
+        _rightButton.frame = CGRectMake(width - MARGIN_SMALL - actionButtonLength,
+                                        topOffset + MARGIN_SMALL,
                                         actionButtonLength,
                                         actionButtonLength);
-        _titleLabel.frame = CGRectMake(MARGIN_TINY + actionButtonLength,
+        _titleLabel.frame = CGRectMake(MARGIN_SMALL + actionButtonLength,
                                        topOffset,
-                                       width - 2 * actionButtonLength - 2 * MARGIN_TINY,
+                                       width - 2 * actionButtonLength - 2 * MARGIN_SMALL,
                                        height - topOffset);
         _lastWidth = width;
         _lastHeight = height;

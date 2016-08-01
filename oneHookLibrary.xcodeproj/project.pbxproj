@@ -45,6 +45,8 @@
 		4C8E48E01D48395C003426D8 /* NSDate+Utility.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4C8E48DF1D48395C003426D8 /* NSDate+Utility.bundle */; };
 		4C9346E11D407B1B00DB5C97 /* OHTagsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9346E01D407B1B00DB5C97 /* OHTagsView.m */; };
 		4C98AA901B56E16A000B6D9C /* UIColor+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C98AA8F1B56E16A000B6D9C /* UIColor+Utility.m */; };
+		4CA6EE421D4FB7BE003AFA21 /* OHCustomActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA6EE411D4FB7BE003AFA21 /* OHCustomActionSheet.m */; };
+		4CA6EE431D4FB93D003AFA21 /* OHCustomActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA6EE411D4FB7BE003AFA21 /* OHCustomActionSheet.m */; };
 		4CBCD7B01C1A5660006385EA /* OHImageViewerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBCD7AF1C1A5660006385EA /* OHImageViewerViewController.m */; };
 		4CBCD7B11C1A5672006385EA /* OHImageViewerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBCD7AF1C1A5660006385EA /* OHImageViewerViewController.m */; };
 		4CD7290C1CEAC9DB00B91F0F /* OHSlideShowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD7290B1CEAC9DB00B91F0F /* OHSlideShowView.m */; };
@@ -177,6 +179,8 @@
 		4C9346E01D407B1B00DB5C97 /* OHTagsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHTagsView.m; sourceTree = "<group>"; };
 		4C98AA8E1B56E16A000B6D9C /* UIColor+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Utility.h"; sourceTree = "<group>"; };
 		4C98AA8F1B56E16A000B6D9C /* UIColor+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Utility.m"; sourceTree = "<group>"; };
+		4CA6EE401D4FB7BE003AFA21 /* OHCustomActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHCustomActionSheet.h; sourceTree = "<group>"; };
+		4CA6EE411D4FB7BE003AFA21 /* OHCustomActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHCustomActionSheet.m; sourceTree = "<group>"; };
 		4CBCD7AE1C1A5660006385EA /* OHImageViewerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHImageViewerViewController.h; sourceTree = "<group>"; };
 		4CBCD7AF1C1A5660006385EA /* OHImageViewerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHImageViewerViewController.m; sourceTree = "<group>"; };
 		4CD7290A1CEAC9DB00B91F0F /* OHSlideShowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHSlideShowView.h; sourceTree = "<group>"; };
@@ -360,6 +364,15 @@
 				4C9346E01D407B1B00DB5C97 /* OHTagsView.m */,
 			);
 			path = TagsView;
+			sourceTree = "<group>";
+		};
+		4CA6EE3F1D4FB7B2003AFA21 /* ActionSheet */ = {
+			isa = PBXGroup;
+			children = (
+				4CA6EE401D4FB7BE003AFA21 /* OHCustomActionSheet.h */,
+				4CA6EE411D4FB7BE003AFA21 /* OHCustomActionSheet.m */,
+			);
+			path = ActionSheet;
 			sourceTree = "<group>";
 		};
 		4CBCD7AD1C1A5660006385EA /* FullImageViewer */ = {
@@ -549,6 +562,7 @@
 		D3FE001B1AC507D7004D4BD2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4CA6EE3F1D4FB7B2003AFA21 /* ActionSheet */,
 				4C9346DE1D407B0F00DB5C97 /* TagsView */,
 				D3FCA9D01D1C93FA006D771D /* Badge */,
 				4C1736BE1D048C0C00B6A4E3 /* RelativeLayout */,
@@ -789,6 +803,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CA6EE431D4FB93D003AFA21 /* OHCustomActionSheet.m in Sources */,
 				D3846F8F1AF318D400E6FF78 /* OHPagerView.m in Sources */,
 				D3A8BC2C1B0A67E0004FF5A3 /* NSDate+Utility.m in Sources */,
 				4C1736E11D0525E500B6A4E3 /* OHEqualWeightLayout.m in Sources */,
@@ -889,6 +904,7 @@
 				D3FEFFF81AC50788004D4BD2 /* main.m in Sources */,
 				D34A080B1B7B74CF001B6C30 /* NSString+Morphing.m in Sources */,
 				4C1736C41D048C2B00B6A4E3 /* OHLinearScrollView.m in Sources */,
+				4CA6EE421D4FB7BE003AFA21 /* OHCustomActionSheet.m in Sources */,
 				D379E5151AF07D0B004D523C /* OHBaseTableViewControllerWithCollapseHeader.m in Sources */,
 				4C45F8981D066CF900602E81 /* OHFloatingActionButton.m in Sources */,
 				D32848011AEC1B3F00DE7CD3 /* AppDelegate.m in Sources */,
