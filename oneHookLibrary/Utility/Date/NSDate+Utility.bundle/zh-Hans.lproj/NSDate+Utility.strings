@@ -27,4 +27,5 @@
 "%d years from now" = "%d years from now";
 
 /* absolute time */
+"shortDateNoYearFormat" = "M月d日";
 "shortDateWithYearFormat" = "yyyy年M月d日";

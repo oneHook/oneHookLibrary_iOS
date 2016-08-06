@@ -20,7 +20,7 @@
 
 + (BOOL)isEmpty:(NSString *)text
 {
-    return text == nil || text.length == 0;
+    return text == nil || text == [NSNull null] || text.length == 0;
 }
 
 -(BOOL)isEmailAddress
