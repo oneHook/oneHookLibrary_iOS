@@ -385,6 +385,30 @@ JXImageViewDelegate
 
 @implementation JXImageBrowser
 
+- (id)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if(self) {
+        [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(orientationDidChange:)
+                                                     name:UIDeviceOrientationDidChangeNotification
+                                                   object:nil];
+    }
+    return self;
+}
+
+- (void)dealloc
+{
+    self.imageLoader = nil;
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [[UIDevice currentDevice] endGeneratingDeviceOrientationNotifications];
+}
+
+- (void)orientationDidChange:(NSNotificationCenter *)notification {
+    self.frame = [UIScreen mainScreen].bounds;
+}
+
 + (void)browseImages:(NSArray <JXImage *> *)images fromIndex:(NSInteger)fromIndex imageLoader:(nonnull id<JXImageLoader>)loader{
     if (fromIndex < 0 || fromIndex >= images.count) {
         return;
@@ -568,6 +592,12 @@ JXImageViewDelegate
             self.scrollView.userInteractionEnabled = YES;
         }];
     }];
+}
+
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    self.scrollView.frame = self.bounds;
 }
 
 JX_IMAGE_BROWSER_DEALLOC_TEST
