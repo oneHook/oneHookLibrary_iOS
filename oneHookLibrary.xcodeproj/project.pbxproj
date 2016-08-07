@@ -47,6 +47,8 @@
 		4C98AA901B56E16A000B6D9C /* UIColor+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C98AA8F1B56E16A000B6D9C /* UIColor+Utility.m */; };
 		4CA6EE421D4FB7BE003AFA21 /* OHCustomActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA6EE411D4FB7BE003AFA21 /* OHCustomActionSheet.m */; };
 		4CA6EE431D4FB93D003AFA21 /* OHCustomActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA6EE411D4FB7BE003AFA21 /* OHCustomActionSheet.m */; };
+		4CB06E5C1D57988D004AF1BF /* JXImageBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB06E5B1D57988D004AF1BF /* JXImageBrowser.m */; };
+		4CB06E5D1D5798C0004AF1BF /* JXImageBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB06E5B1D57988D004AF1BF /* JXImageBrowser.m */; };
 		4CBCD7B01C1A5660006385EA /* OHImageViewerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBCD7AF1C1A5660006385EA /* OHImageViewerViewController.m */; };
 		4CBCD7B11C1A5672006385EA /* OHImageViewerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBCD7AF1C1A5660006385EA /* OHImageViewerViewController.m */; };
 		4CD7290C1CEAC9DB00B91F0F /* OHSlideShowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD7290B1CEAC9DB00B91F0F /* OHSlideShowView.m */; };
@@ -182,6 +184,8 @@
 		4CA6EE401D4FB7BE003AFA21 /* OHCustomActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHCustomActionSheet.h; sourceTree = "<group>"; };
 		4CA6EE411D4FB7BE003AFA21 /* OHCustomActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHCustomActionSheet.m; sourceTree = "<group>"; };
 		4CB06E511D564E1F004AF1BF /* oneHookLibrary-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "oneHookLibrary-Bridging-Header.h"; sourceTree = "<group>"; };
+		4CB06E5A1D57988D004AF1BF /* JXImageBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXImageBrowser.h; sourceTree = "<group>"; };
+		4CB06E5B1D57988D004AF1BF /* JXImageBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXImageBrowser.m; sourceTree = "<group>"; };
 		4CBCD7AE1C1A5660006385EA /* OHImageViewerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHImageViewerViewController.h; sourceTree = "<group>"; };
 		4CBCD7AF1C1A5660006385EA /* OHImageViewerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHImageViewerViewController.m; sourceTree = "<group>"; };
 		4CD7290A1CEAC9DB00B91F0F /* OHSlideShowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHSlideShowView.h; sourceTree = "<group>"; };
@@ -376,6 +380,15 @@
 			path = ActionSheet;
 			sourceTree = "<group>";
 		};
+		4CB06E591D57988D004AF1BF /* ImageBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				4CB06E5A1D57988D004AF1BF /* JXImageBrowser.h */,
+				4CB06E5B1D57988D004AF1BF /* JXImageBrowser.m */,
+			);
+			path = ImageBrowser;
+			sourceTree = "<group>";
+		};
 		4CBCD7AD1C1A5660006385EA /* FullImageViewer */ = {
 			isa = PBXGroup;
 			children = (
@@ -459,6 +472,7 @@
 		D34A08051B7B74CF001B6C30 /* Thirdparty */ = {
 			isa = PBXGroup;
 			children = (
+				4CB06E591D57988D004AF1BF /* ImageBrowser */,
 				4C1736A01D04896400B6A4E3 /* Toast */,
 				D34A08061B7B74CF001B6C30 /* TOMSMorphingLabel */,
 			);
@@ -810,6 +824,7 @@
 				D3846F8F1AF318D400E6FF78 /* OHPagerView.m in Sources */,
 				D3A8BC2C1B0A67E0004FF5A3 /* NSDate+Utility.m in Sources */,
 				4C1736E11D0525E500B6A4E3 /* OHEqualWeightLayout.m in Sources */,
+				4CB06E5D1D5798C0004AF1BF /* JXImageBrowser.m in Sources */,
 				4C1736DD1D0525CF00B6A4E3 /* UIImage+Color.m in Sources */,
 				D38FA0501B267B2F002F5C4F /* OHTooltipView.m in Sources */,
 				4C1736D31D05259200B6A4E3 /* OHViewController.m in Sources */,
@@ -860,6 +875,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CB06E5C1D57988D004AF1BF /* JXImageBrowser.m in Sources */,
 				4C1736C91D048C7600B6A4E3 /* OHToolbar.m in Sources */,
 				4C1736B91D048B9E00B6A4E3 /* OHSolidButton.m in Sources */,
 				D3846F8E1AF2A81200E6FF78 /* OHPagerView.m in Sources */,
