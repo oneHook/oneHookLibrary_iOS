@@ -21,6 +21,29 @@
 
 @implementation NSDate (Utility)
 
++ (NSString*)getWeekdaySymbolAt:(int)weekday
+{
+    switch (weekday) {
+        case 0:
+            return [NSDate localizedString:@"Sunday"];
+        case 1:
+            return [NSDate localizedString:@"Monday"];
+        case 2:
+            return [NSDate localizedString:@"Tuesday"];
+        case 3:
+            return [NSDate localizedString:@"Wednesday"];
+        case 4:
+            return [NSDate localizedString:@"Thursday"];
+        case 5:
+            return [NSDate localizedString:@"Friday"];
+        case 6:
+            return [NSDate localizedString:@"Saturday"];
+        default:
+            return @"Unknown";
+            break;
+    }
+}
+
 - (NSDate *)beginningOfDay
 {
     NSCalendar *calendar = [NSCalendar currentCalendar];
@@ -75,36 +98,36 @@ const int YEAR = DAY*365;
     BOOL dateInFuture = ([self timeIntervalSinceDate:currentDate] > 0);
     
     if(deltaSeconds < 2*SECOND) {
-        return [self localizedString: @"Now"];
+        return [NSDate localizedString: @"Now"];
     } else if(deltaSeconds < MINUTE) {
         return [self formattedStringForCurrentDate:currentDate count:deltaSeconds past:@"%d seconds ago" future:@"%d seconds from now"];
     } else if(deltaSeconds < 1.5*MINUTE) {
-        return !dateInFuture ? [self localizedString: @"A minute ago"] : [self localizedString: @"A minute from now"];
+        return !dateInFuture ? [NSDate localizedString: @"A minute ago"] : [NSDate localizedString: @"A minute from now"];
     } else if(deltaSeconds < HOUR) {
         int minutes = (int)lroundf((float)deltaSeconds/(float)MINUTE);
         return [self formattedStringForCurrentDate:currentDate count:minutes past:@"%d minutes ago" future:@"%d minutes from now"];
     } else if(deltaSeconds < 1.5*HOUR) {
-        return !dateInFuture ? [self localizedString: @"An hour ago"] : [self localizedString: @"An hour from now"];
+        return !dateInFuture ? [NSDate localizedString: @"An hour ago"] : [NSDate localizedString: @"An hour from now"];
     } else if(deltaSeconds < DAY) {
         int hours = (int)lroundf((float)deltaSeconds/(float)HOUR);
         return [self formattedStringForCurrentDate:currentDate count:hours past:@"%d hours ago" future:@"%d hours from now"];
     } else if(deltaSeconds < 1.5*DAY) {
-        return !dateInFuture ? [self localizedString: @"A day ago"] : [self localizedString: @"A day from now"];
+        return !dateInFuture ? [NSDate localizedString: @"A day ago"] : [NSDate localizedString: @"A day from now"];
     } else if(deltaSeconds < WEEK) {
         int days = (int)lroundf((float)deltaSeconds/(float)DAY);
         return [self formattedStringForCurrentDate:currentDate count:days past:@"%d days ago" future:@"%d days from now"];
     } else if(deltaSeconds < 1.5*WEEK) {
-        return !dateInFuture ? [self localizedString: @"A week ago"] : [self localizedString: @"A week from now"];
+        return !dateInFuture ? [NSDate localizedString: @"A week ago"] : [NSDate localizedString: @"A week from now"];
     } else if(deltaSeconds < MONTH) {
         int weeks = (int)lroundf((float)deltaSeconds/(float)WEEK);
         return [self formattedStringForCurrentDate:currentDate count:weeks past:@"%d weeks ago" future:@"%d weeks from now"];
     } else if(deltaSeconds < 1.5*MONTH) {
-        return !dateInFuture ? [self localizedString: @"A month ago"] : [self localizedString: @"A month from now"];
+        return !dateInFuture ? [NSDate localizedString: @"A month ago"] : [NSDate localizedString: @"A month from now"];
     } else if(deltaSeconds < YEAR) {
         int months = (int)lroundf((float)deltaSeconds/(float)MONTH);
         return [self formattedStringForCurrentDate:currentDate count:months past:@"%d months ago" future:@"%d months from now"];
     } else if(deltaSeconds < 1.5*YEAR) {
-        return !dateInFuture ? [self localizedString: @"A year ago"] : [self localizedString: @"A year from now"];
+        return !dateInFuture ? [NSDate localizedString: @"A year ago"] : [NSDate localizedString: @"A year from now"];
     } else {
         int years = (int)lroundf((float)deltaSeconds/(float)YEAR);
         return [self formattedStringForCurrentDate:currentDate count:years past:@"%d years ago" future:@"%d years from now"];
@@ -117,7 +140,7 @@ const int YEAR = DAY*365;
     long deltaSeconds = labs(lroundf([self timeIntervalSinceDate:currentDate]));
     
     if(deltaSeconds < 2*SECOND) {
-        return [self localizedString: @"Now"];
+        return [NSDate localizedString: @"Now"];
     } else if(deltaSeconds < MINUTE) {
         return [self formattedStringForCurrentDate:currentDate count:deltaSeconds past:@"%ds" future:@"in %ds"];
     }else if(deltaSeconds < HOUR) {
@@ -144,13 +167,13 @@ const int YEAR = DAY*365;
 -(NSString *)formattedStringForCurrentDate:(NSDate *)currentDate count:(long)count past:(NSString *)past future:(NSString *)future
 {
     if ([self timeIntervalSinceDate:currentDate] > 0) {
-        return [NSString stringWithFormat:[self localizedString:future], count];
+        return [NSString stringWithFormat:[NSDate localizedString:future], count];
     } else {
-        return [NSString stringWithFormat:[self localizedString:past], count];
+        return [NSString stringWithFormat:[NSDate localizedString:past], count];
     }
 }
 
--(NSString *)localizedString:(NSString *)key
++(NSString *)localizedString:(NSString *)key
 {
     static NSBundle *bundle;
     static dispatch_once_t onceToken;
@@ -165,7 +188,7 @@ const int YEAR = DAY*365;
     static NSDateFormatter* dateFormatter;
     if(!dateFormatter) {
         dateFormatter = [[NSDateFormatter alloc] init];
-        [dateFormatter setDateFormat:[self localizedString:@"shortDateNoYearFormat"]];
+        [dateFormatter setDateFormat:[NSDate localizedString:@"shortDateNoYearFormat"]];
     }
     return [dateFormatter stringFromDate:self];
 }
@@ -175,7 +198,7 @@ const int YEAR = DAY*365;
     static NSDateFormatter* dateFormatter;
     if(!dateFormatter) {
         dateFormatter = [[NSDateFormatter alloc] init];
-        [dateFormatter setDateFormat:[self localizedString:@"shortDateWithYearFormat"]];
+        [dateFormatter setDateFormat:[NSDate localizedString:@"shortDateWithYearFormat"]];
     }
     return [dateFormatter stringFromDate:self];
 }
