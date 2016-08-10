@@ -11,6 +11,7 @@
 @interface NSDate (Utility)
 
 + (NSString*)getWeekdaySymbolAt:(int)weekday;
+- (int)weekdayIndex;
 
 
 - (NSDate *)beginningOfDay;

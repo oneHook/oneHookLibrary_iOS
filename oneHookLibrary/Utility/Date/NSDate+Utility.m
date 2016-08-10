@@ -44,6 +44,14 @@
     }
 }
 
+- (int)weekdayIndex
+{
+    NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    NSDateComponents *comps = [gregorian components:NSWeekdayCalendarUnit fromDate:self];
+    int weekday = [comps weekday];
+    return weekday;
+}
+
 - (NSDate *)beginningOfDay
 {
     NSCalendar *calendar = [NSCalendar currentCalendar];
