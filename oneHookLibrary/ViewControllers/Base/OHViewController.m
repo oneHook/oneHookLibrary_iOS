@@ -217,6 +217,11 @@
     return self.defaultToolbarHeight + self.toolbarExtension;
 }
 
+- (CGFloat)currentToolbarHeight
+{
+    return _toolbarHeight;
+}
+
 - (void)manageFloatingActionButton:(OHFloatingActionButton *)fabButton
 {
     self.fabButton = fabButton;

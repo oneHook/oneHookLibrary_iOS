@@ -45,6 +45,7 @@ typedef NS_ENUM(NSInteger, OHViewControllerFloatingActionButtonStyle) {
 
 - (CGFloat)defaultToolbarHeight;
 - (CGFloat)maximumToolbarHeight;
+- (CGFloat)currentToolbarHeight;
 
 - (void)manageFloatingActionButton:(OHFloatingActionButton*)fabButton;
 - (void)endRefreshing;

@@ -175,9 +175,6 @@ static const CGFloat NYTPhotoTransitionAnimatorSpringDamping = 0.9;
                          endingViewForAnimation.center = translatedEndingViewFinalCenter;
                          startingViewForAnimation.transform = CGAffineTransformScale(startingViewForAnimation.transform, startingViewFinalTransform, startingViewFinalTransform);
                          startingViewForAnimation.center = translatedEndingViewFinalCenter;
-//                         endingViewForAnimation.alpha = 0.0f;
-//                         self.endingView.alpha = 1.0f;
-                         NSLog(@"FUCK");
                      }
                      completion:^(BOOL finished) {
                          [endingViewForAnimation removeFromSuperview];
