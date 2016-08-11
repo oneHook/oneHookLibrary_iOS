@@ -48,7 +48,7 @@
 {
     NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
     NSDateComponents *comps = [gregorian components:NSWeekdayCalendarUnit fromDate:self];
-    int weekday = [comps weekday];
+    int weekday = [comps weekday] - 1;
     return weekday;
 }
 
