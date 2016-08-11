@@ -83,6 +83,8 @@ extern NSString * const NYTPhotosViewControllerDidDismissNotification;
  */
 @property (nonatomic, copy, nullable) NSArray <UIBarButtonItem *> *rightBarButtonItems;
 
+@property (assign, nonatomic) BOOL hasActionButton;
+
 /**
  *  The object that acts as the delegate of the `NYTPhotosViewController`.
  */
