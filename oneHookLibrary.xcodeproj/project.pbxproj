@@ -60,8 +60,6 @@
 		4C79400B1D5C0327004C000F /* NYTPhotoTransitionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C793FE01D5C0302004C000F /* NYTPhotoTransitionController.m */; };
 		4C79400C1D5C0327004C000F /* NYTPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C793FE21D5C0302004C000F /* NYTPhotoViewController.m */; };
 		4C79400D1D5C0327004C000F /* NYTScalingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C793FE71D5C0302004C000F /* NYTScalingImageView.m */; };
-		4C7940101D5C05B6004C000F /* NYTSimplePhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C79400F1D5C05B6004C000F /* NYTSimplePhoto.m */; };
-		4C7940111D5C05BD004C000F /* NYTSimplePhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C79400F1D5C05B6004C000F /* NYTSimplePhoto.m */; };
 		4C7940121D5C071B004C000F /* NSBundle+NYTPhotoViewer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C793FEF1D5C0302004C000F /* NSBundle+NYTPhotoViewer.m */; };
 		4C7A06051D416F0C00C47097 /* OHFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7A06041D416F0C00C47097 /* OHFlowLayout.m */; };
 		4C7A06061D41786000C47097 /* OHFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7A06041D416F0C00C47097 /* OHFlowLayout.m */; };
@@ -224,8 +222,6 @@
 		4C793FEC1D5C0302004C000F /* NYTPhotosViewControllerDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYTPhotosViewControllerDataSource.h; sourceTree = "<group>"; };
 		4C793FEE1D5C0302004C000F /* NSBundle+NYTPhotoViewer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+NYTPhotoViewer.h"; sourceTree = "<group>"; };
 		4C793FEF1D5C0302004C000F /* NSBundle+NYTPhotoViewer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+NYTPhotoViewer.m"; sourceTree = "<group>"; };
-		4C79400E1D5C05B6004C000F /* NYTSimplePhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NYTSimplePhoto.h; sourceTree = "<group>"; };
-		4C79400F1D5C05B6004C000F /* NYTSimplePhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NYTSimplePhoto.m; sourceTree = "<group>"; };
 		4C7A06031D416F0C00C47097 /* OHFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHFlowLayout.h; sourceTree = "<group>"; };
 		4C7A06041D416F0C00C47097 /* OHFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHFlowLayout.m; sourceTree = "<group>"; };
 		4C8E48DF1D48395C003426D8 /* NSDate+Utility.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = "NSDate+Utility.bundle"; sourceTree = "<group>"; };
@@ -415,8 +411,6 @@
 		4C793FD11D5C0302004C000F /* NYTPhotoViewer */ = {
 			isa = PBXGroup;
 			children = (
-				4C79400E1D5C05B6004C000F /* NYTSimplePhoto.h */,
-				4C79400F1D5C05B6004C000F /* NYTSimplePhoto.m */,
 				4C793FD21D5C0302004C000F /* Info.plist */,
 				4C793FD31D5C0302004C000F /* NYTPhotoCaptionView.h */,
 				4C793FD41D5C0302004C000F /* NYTPhotoCaptionView.m */,
@@ -933,7 +927,6 @@
 				D33A1CE11BF595D90005FDB2 /* OHProgressRingDemoViewController.m in Sources */,
 				D3E398FF1B88F0DB005D556D /* OHGradientView.m in Sources */,
 				4C1736E21D0525E500B6A4E3 /* OHLinearScrollView.m in Sources */,
-				4C7940111D5C05BD004C000F /* NYTSimplePhoto.m in Sources */,
 				D3FE008C1AC5109F004D4BD2 /* OHBaseViewController.m in Sources */,
 				4C7940071D5C0327004C000F /* NYTPhotosDataSource.m in Sources */,
 				D3FCA9D41D1C94A2006D771D /* SimpleBadge.m in Sources */,
@@ -1025,7 +1018,6 @@
 				4CBCD7B01C1A5660006385EA /* OHImageViewerViewController.m in Sources */,
 				D38FA04B1B255A68002F5C4F /* OHSegmentedControl.m in Sources */,
 				4C1736C31D048C2B00B6A4E3 /* OHEqualWeightLayout.m in Sources */,
-				4C7940101D5C05B6004C000F /* NYTSimplePhoto.m in Sources */,
 				D323D4651B122DFC00C3B0D0 /* OHButtonDemoViewController.m in Sources */,
 				D3F6DFBF1C2CFF5100043B38 /* OHKeyFrameAnimator.m in Sources */,
 				D309EC1F1ADA456100858EF2 /* UIImageEffects.m in Sources */,
