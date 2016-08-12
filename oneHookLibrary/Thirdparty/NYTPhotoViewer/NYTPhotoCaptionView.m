@@ -144,7 +144,7 @@ static const CGFloat NYTPhotoCaptionViewVerticalMargin = 7.0;
     
     if (self.attributedSummary) {
         if (self.attributedTitle) {
-            [attributedLabelText appendAttributedString:[[NSAttributedString alloc] initWithString:@"\n" attributes:nil]];
+            [attributedLabelText appendAttributedString:[[NSAttributedString alloc] initWithString:@"\n\n" attributes:nil]];
         }
         
         [attributedLabelText appendAttributedString:self.attributedSummary];
