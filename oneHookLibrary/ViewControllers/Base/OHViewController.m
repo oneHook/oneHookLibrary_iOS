@@ -95,18 +95,21 @@
     [self toolbarDidLoad:self.toolbar];
 }
 
-- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator
 {
-    [super willRotateToInterfaceOrientation:toInterfaceOrientation duration:duration];
     _yOffsetBeforeOrientationChange = self.contentScrollableView.contentOffset.y;
-}
-
-- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
-{
-    [super didRotateFromInterfaceOrientation:fromInterfaceOrientation];
-    if(_yOffsetBeforeOrientationChange < 0 && -_yOffsetBeforeOrientationChange >= self.maximumToolbarHeight / 2) {
-        [self.contentScrollableView setContentOffset:CGPointMake(0, -self.maximumToolbarHeight) animated:YES];
-    }
+    [coordinator animateAlongsideTransition:^(id<UIViewControllerTransitionCoordinatorContext> context) {
+        if(size.width > size.height) {
+            /* new size is land */
+        } else {
+            /* new size is port */
+            self.contentScrollableView.contentOffset = CGPointMake(self.contentScrollableView.contentOffset.x,
+                                                            self.contentScrollableView.contentOffset.y - kSystemStatusBarHeight);
+        }
+    } completion:^(id<UIViewControllerTransitionCoordinatorContext> context) {
+    }];
+    
+    [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
 }
 
 - (void)viewWillLayoutSubviews
@@ -269,6 +272,7 @@
     if(self.toolbarStyle != OHViewControllerHasToolbar) {
         return;
     }
+    
     CGFloat width = CGRectGetWidth(self.view.bounds);
     CGFloat height = CGRectGetHeight(self.view.bounds);
     
