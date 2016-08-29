@@ -14,6 +14,4 @@
 @property (strong, nonatomic) UILabel* textLabel;
 @property (assign, nonatomic) CGFloat padding;
 
-
-
 @end

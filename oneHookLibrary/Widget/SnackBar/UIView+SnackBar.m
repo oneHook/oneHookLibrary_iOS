@@ -13,29 +13,63 @@
 
 #define ANIMATION_DURATION 0.25
 
+@implementation OHSnack
+
+@end
+
 /* SnackBar singleton */
 
 @interface OverlayView : UIControl
 
 @property (strong, nonatomic) OHBaseSnackView* snackView;
 @property (strong, nonatomic) OHKeyFrameAnimator* animator;
+@property (strong, nonatomic) NSMutableArray* snackQueue;
 
 @end
 
 @implementation OverlayView
 
-- (void)showSnackView:(OHBaseSnackView*)snackView
+- (NSMutableArray*)snackQueue
+{
+    if(!_snackQueue) {
+        _snackQueue = [[NSMutableArray alloc] init];
+    }
+    return _snackQueue;
+}
+
+/* master function for showing a snack */
+- (void)showSnack:(OHSnack*)snack
 {
     if(_snackView) {
-        /* for now, ignore snack if something is presenting */
+        /* something is currently showing, put new snack to queue */
+        [self.snackQueue addObject:snack];
         return;
     }
     
+    if(snack.style == OHSnackBarStyleSingleText) {
+        OHSinglelineSnackView* singleLineView = [[OHSinglelineSnackView alloc] init];
+        if(snack.messageText) {
+            singleLineView.textLabel.text = snack.messageText;
+        } else {
+            singleLineView.textLabel.attributedText = snack.messageAttributedText;
+        }
+        singleLineView.textLabel.font = snack.foregroundFont;
+        singleLineView.textLabel.textColor = snack.foregroundColor;
+        singleLineView.backgroundColor = snack.backgroundColor;
+        [self showSnackView:singleLineView];
+    } else {
+        /* NOT SUPPORTED */
+    }
+    
+}
+
+- (void)showSnackView:(OHBaseSnackView*)snackView
+{
     self.snackView = snackView;
     self.snackView.frame = CGRectMake(0,
-                                CGRectGetHeight(self.frame),
-                                CGRectGetWidth(self.frame),
-                                [snackView measureHeightByWidth:CGRectGetWidth(self.frame)]);
+                                      CGRectGetHeight(self.frame),
+                                      CGRectGetWidth(self.frame),
+                                      [snackView measureHeightByWidth:CGRectGetWidth(self.frame)]);
     [self addSubview:snackView];
     
     self.animator = [[OHKeyFrameAnimator alloc] init];
@@ -49,7 +83,7 @@
         self.animator = nil;
         [self performSelector:@selector(dismissSnackView) withObject:nil afterDelay:self.snackView.idleTime];
     }];
-
+    
 }
 
 - (void)dismissSnackView
@@ -66,8 +100,17 @@
         self.animator = nil;
         [self.snackView removeFromSuperview];
         self.snackView = nil;
+        [self checkQueue];
     }];
+}
 
+- (void)checkQueue
+{
+    if(_snackView == nil && self.snackQueue.count > 0) {
+        OHSnack* first = self.snackQueue.firstObject;
+        [self.snackQueue removeObjectAtIndex:0];
+        [self showSnack:first];
+    }
 }
 
 -(BOOL)pointInside:(CGPoint)point withEvent:(UIEvent *)event {
@@ -84,9 +127,9 @@
     if(_snackView && !_animator) {
         CGFloat measuredHeight = [_snackView measureHeightByWidth:CGRectGetWidth(self.frame)];
         _snackView.frame = CGRectMake(0,
-                                       CGRectGetHeight(self.frame) - measuredHeight,
-                                       CGRectGetWidth(self.frame),
-                                       measuredHeight);
+                                      CGRectGetHeight(self.frame) - measuredHeight,
+                                      CGRectGetWidth(self.frame),
+                                      measuredHeight);
     }
 }
 
@@ -94,6 +137,7 @@
 
 @interface SnackBar : NSObject
 
+@property (assign, nonatomic) OHSnackBarBackgroundStyle backgroundStyle;
 @property (strong, nonatomic) UIColor* backgroundColor;
 @property (strong, nonatomic) UIColor* foregroundColor;
 @property (strong, nonatomic) UIFont*  foregroundTextFont;
@@ -108,6 +152,7 @@
 {
     self = [super init];
     if(self) {
+        self.backgroundStyle = OHSnackBarBackgroundStyleSolid;
         self.backgroundColor = [UIColor redColor];
         self.foregroundColor = [UIColor whiteColor];
         self.foregroundTextFont = [UIFont systemFontOfSize:15];
@@ -125,7 +170,7 @@
     return _overlayView;
 }
 
-- (void)test
+- (void)showSnack:(OHSnack*)snack
 {
     if(!self.overlayView.superview) {
         NSEnumerator *frontToBackWindows = [UIApplication.sharedApplication.windows reverseObjectEnumerator];
@@ -143,13 +188,7 @@
         [self.overlayView.superview bringSubviewToFront:self.overlayView];
     }
     
-    OHSinglelineSnackView* testView = [[OHSinglelineSnackView alloc] init];
-    testView.textLabel.text = @"this is a toast message, This is very very very long , very very vey veyeyeyey hsfhh kjdfksjfksdjfdks";
-    testView.textLabel.font = self.foregroundTextFont;
-    testView.textLabel.textColor = self.foregroundColor;
-    testView.backgroundColor = self.backgroundColor;
-    
-    [self.overlayView showSnackView:testView];
+    [self.overlayView showSnack:snack];
 }
 
 @end
@@ -191,10 +230,30 @@
     [self sharedInstance].foregroundTextFont = font;
 }
 
-+ (void)test
++ (void)showText:(NSString *)text
 {
-    [[self sharedInstance] test];
+    OHSnack* snack = [[OHSnack alloc] init];
+    snack.presentationType = OHSnackBarPresentationTypeBottom;
+    snack.style = OHSnackBarStyleSingleText;
+    snack.messageText = text;
+    snack.backgroundStyle = [self sharedInstance].backgroundStyle;
+    snack.backgroundColor = [self sharedInstance].backgroundColor;
+    snack.foregroundColor = [self sharedInstance].foregroundColor;
+    snack.foregroundFont = [self sharedInstance].foregroundTextFont;
+    [[self sharedInstance] showSnack:snack];
 }
 
++ (void)showAttributedText:(NSAttributedString *)attributedText
+{
+    OHSnack* snack = [[OHSnack alloc] init];
+    snack.presentationType = OHSnackBarPresentationTypeBottom;
+    snack.style = OHSnackBarStyleSingleText;
+    snack.messageAttributedText = attributedText;
+    snack.backgroundStyle = [self sharedInstance].backgroundStyle;
+    snack.backgroundColor = [self sharedInstance].backgroundColor;
+    snack.foregroundColor = [self sharedInstance].foregroundColor;
+    snack.foregroundFont = [self sharedInstance].foregroundTextFont;
+    [[self sharedInstance] showSnack:snack];
+}
 
 @end
