@@ -99,6 +99,12 @@
 		D3EF649C1D0F895D0015D74C /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1736A21D04896400B6A4E3 /* UIView+Toast.m */; };
 		D3F6DFBF1C2CFF5100043B38 /* OHKeyFrameAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F6DFBE1C2CFF5100043B38 /* OHKeyFrameAnimator.m */; };
 		D3F6DFC01C2D02C300043B38 /* OHKeyFrameAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F6DFBE1C2CFF5100043B38 /* OHKeyFrameAnimator.m */; };
+		D3FB2DCF1D748FBF00CB409F /* UIView+SnackBar.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FB2DCE1D748FBF00CB409F /* UIView+SnackBar.m */; };
+		D3FB2DD01D74984600CB409F /* UIView+SnackBar.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FB2DCE1D748FBF00CB409F /* UIView+SnackBar.m */; };
+		D3FB2DD31D74A39700CB409F /* OHSinglelineSnackView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FB2DD21D74A39700CB409F /* OHSinglelineSnackView.m */; };
+		D3FB2DD61D74D0A300CB409F /* OHBaseSnackView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FB2DD51D74D0A300CB409F /* OHBaseSnackView.m */; };
+		D3FB2DD71D74D19700CB409F /* OHSinglelineSnackView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FB2DD21D74A39700CB409F /* OHSinglelineSnackView.m */; };
+		D3FB2DD81D74D19A00CB409F /* OHBaseSnackView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FB2DD51D74D0A300CB409F /* OHBaseSnackView.m */; };
 		D3FC55E11B0011890043F02A /* OHRotatingRevealAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FC55E01B0011890043F02A /* OHRotatingRevealAnimationController.m */; };
 		D3FC55E21B0012DD0043F02A /* OHRotatingRevealAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FC55E01B0011890043F02A /* OHRotatingRevealAnimationController.m */; };
 		D3FCA9D31D1C9404006D771D /* SimpleBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FCA9D21D1C9404006D771D /* SimpleBadge.m */; };
@@ -236,6 +242,12 @@
 		D3E398FD1B88EFE1005D556D /* OHGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHGradientView.m; sourceTree = "<group>"; };
 		D3F6DFBD1C2CFF5100043B38 /* OHKeyFrameAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHKeyFrameAnimator.h; sourceTree = "<group>"; };
 		D3F6DFBE1C2CFF5100043B38 /* OHKeyFrameAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHKeyFrameAnimator.m; sourceTree = "<group>"; };
+		D3FB2DCD1D748FBF00CB409F /* UIView+SnackBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SnackBar.h"; sourceTree = "<group>"; };
+		D3FB2DCE1D748FBF00CB409F /* UIView+SnackBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SnackBar.m"; sourceTree = "<group>"; };
+		D3FB2DD11D74A39700CB409F /* OHSinglelineSnackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHSinglelineSnackView.h; sourceTree = "<group>"; };
+		D3FB2DD21D74A39700CB409F /* OHSinglelineSnackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHSinglelineSnackView.m; sourceTree = "<group>"; };
+		D3FB2DD41D74D0A300CB409F /* OHBaseSnackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHBaseSnackView.h; sourceTree = "<group>"; };
+		D3FB2DD51D74D0A300CB409F /* OHBaseSnackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHBaseSnackView.m; sourceTree = "<group>"; };
 		D3FC55DF1B0011890043F02A /* OHRotatingRevealAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHRotatingRevealAnimationController.h; sourceTree = "<group>"; };
 		D3FC55E01B0011890043F02A /* OHRotatingRevealAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHRotatingRevealAnimationController.m; sourceTree = "<group>"; };
 		D3FCA9D11D1C9404006D771D /* SimpleBadge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleBadge.h; sourceTree = "<group>"; };
@@ -337,6 +349,7 @@
 		4C1736C51D048C6500B6A4E3 /* Widget */ = {
 			isa = PBXGroup;
 			children = (
+				D3FB2DCC1D748FAD00CB409F /* SnackBar */,
 				4C1736C61D048C6500B6A4E3 /* Toolbar */,
 			);
 			path = Widget;
@@ -535,6 +548,19 @@
 				D3A8BC2A1B0A672E004FF5A3 /* NSDate+Utility.m */,
 			);
 			path = Date;
+			sourceTree = "<group>";
+		};
+		D3FB2DCC1D748FAD00CB409F /* SnackBar */ = {
+			isa = PBXGroup;
+			children = (
+				D3FB2DCD1D748FBF00CB409F /* UIView+SnackBar.h */,
+				D3FB2DCE1D748FBF00CB409F /* UIView+SnackBar.m */,
+				D3FB2DD11D74A39700CB409F /* OHSinglelineSnackView.h */,
+				D3FB2DD21D74A39700CB409F /* OHSinglelineSnackView.m */,
+				D3FB2DD41D74D0A300CB409F /* OHBaseSnackView.h */,
+				D3FB2DD51D74D0A300CB409F /* OHBaseSnackView.m */,
+			);
+			path = SnackBar;
 			sourceTree = "<group>";
 		};
 		D3FCA9D01D1C93FA006D771D /* Badge */ = {
@@ -793,6 +819,7 @@
 				D3A8BC2C1B0A67E0004FF5A3 /* NSDate+Utility.m in Sources */,
 				4C1736E11D0525E500B6A4E3 /* OHEqualWeightLayout.m in Sources */,
 				4C1736DD1D0525CF00B6A4E3 /* UIImage+Color.m in Sources */,
+				D3FB2DD01D74984600CB409F /* UIView+SnackBar.m in Sources */,
 				D38FA0501B267B2F002F5C4F /* OHTooltipView.m in Sources */,
 				4C1736D31D05259200B6A4E3 /* OHViewController.m in Sources */,
 				D3A742541BCEC6620057710E /* OHImagePickerController.m in Sources */,
@@ -802,6 +829,7 @@
 				D33A1CE11BF595D90005FDB2 /* OHProgressRingDemoViewController.m in Sources */,
 				D3E398FF1B88F0DB005D556D /* OHGradientView.m in Sources */,
 				4C1736E21D0525E500B6A4E3 /* OHLinearScrollView.m in Sources */,
+				D3FB2DD71D74D19700CB409F /* OHSinglelineSnackView.m in Sources */,
 				D3FE008C1AC5109F004D4BD2 /* OHBaseViewController.m in Sources */,
 				D3FCA9D41D1C94A2006D771D /* SimpleBadge.m in Sources */,
 				D3FC55E21B0012DD0043F02A /* OHRotatingRevealAnimationController.m in Sources */,
@@ -829,6 +857,7 @@
 				D3C4A8501B7D054E00660353 /* UIImageViewWithOverlay.m in Sources */,
 				4C1736DA1D0525BE00B6A4E3 /* OHToolbar.m in Sources */,
 				D34A080D1B7B74E6001B6C30 /* NSString+Morphing.m in Sources */,
+				D3FB2DD81D74D19A00CB409F /* OHBaseSnackView.m in Sources */,
 				4C1736D61D0525A100B6A4E3 /* OHReactiveButton.m in Sources */,
 				4C1736DE1D0525CF00B6A4E3 /* UIImageEffects.m in Sources */,
 				4C1736E01D0525D500B6A4E3 /* NSString+Utility.m in Sources */,
@@ -851,6 +880,7 @@
 				D357AE551D11E500000A8306 /* OHDeviceUtil.m in Sources */,
 				4C1736D21D04906200B6A4E3 /* OHToolbarItem.m in Sources */,
 				D3A8BC2B1B0A672E004FF5A3 /* NSDate+Utility.m in Sources */,
+				D3FB2DD61D74D0A300CB409F /* OHBaseSnackView.m in Sources */,
 				4C1736BA1D048B9E00B6A4E3 /* OHStrokeButton.m in Sources */,
 				D3E398FE1B88EFE1005D556D /* OHGradientView.m in Sources */,
 				4C1736A31D04896400B6A4E3 /* UIView+Toast.m in Sources */,
@@ -864,6 +894,7 @@
 				4CD7290C1CEAC9DB00B91F0F /* OHSlideShowView.m in Sources */,
 				4C1736BD1D048BCE00B6A4E3 /* UIImage+Color.m in Sources */,
 				D3A742531BCEC6530057710E /* OHImagePickerController.m in Sources */,
+				D3FB2DD31D74A39700CB409F /* OHSinglelineSnackView.m in Sources */,
 				4C1736CF1D048E0B00B6A4E3 /* OHViewControllerWithToolbarDemo.m in Sources */,
 				4C1736CC1D048CEB00B6A4E3 /* OHViewController.m in Sources */,
 				D3A3BA3F1AF433E2005F38E2 /* OHHorizontalScrollView.m in Sources */,
@@ -882,6 +913,7 @@
 				4C1736C31D048C2B00B6A4E3 /* OHEqualWeightLayout.m in Sources */,
 				D323D4651B122DFC00C3B0D0 /* OHButtonDemoViewController.m in Sources */,
 				D3F6DFBF1C2CFF5100043B38 /* OHKeyFrameAnimator.m in Sources */,
+				D3FB2DCF1D748FBF00CB409F /* UIView+SnackBar.m in Sources */,
 				D309EC1F1ADA456100858EF2 /* UIImageEffects.m in Sources */,
 				4C1736B51D048B9E00B6A4E3 /* OHButtonFactory.m in Sources */,
 				D3A7424E1BCDAAF80057710E /* OHCircularImageView.m in Sources */,

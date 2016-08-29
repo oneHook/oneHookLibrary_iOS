@@ -13,6 +13,7 @@
     double _totalDuration;
     double _currDuration;
     void (^_timeblock)(double);
+    void (^_finishblock)(void);
 }
 
 @end
@@ -39,7 +40,14 @@
 
 - (void)startAnimatingWithDuration:(double)duration progress:(void (^)(double))block
 {
+    [self startAnimatingWithDuration:duration progress:block finish:_finishblock];
+}
+
+
+- (void)startAnimatingWithDuration:(double)duration progress:(void (^)(double))block finish:(void (^)(void))finishBlock
+{
     _timeblock = block;
+    _finishblock = finishBlock;
     if(_timer) {
         [_timer invalidate];
         _timer = nil;
@@ -47,10 +55,10 @@
     _totalDuration = duration;
     _currDuration = 0;
     _timer = [NSTimer scheduledTimerWithTimeInterval:1. / 60
-                                                  target:self
-                                                selector:@selector(onTimer) userInfo:nil repeats:YES];
-        [[NSRunLoop currentRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
-        [_timer fire];
+                                              target:self
+                                            selector:@selector(onTimer) userInfo:nil repeats:YES];
+    [[NSRunLoop currentRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
+    [_timer fire];
 }
 
 - (void)onTimer {
@@ -59,6 +67,9 @@
         [_timer invalidate];
         _timer = nil;
         _timeblock(1);
+        _finishblock();
+        _timeblock = nil;
+        _finishblock = nil;
     } else {
         _timeblock(_currDuration / _totalDuration);
     }
