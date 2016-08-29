@@ -25,3 +25,17 @@
 "A year from now" = "Een jaar vanaf nu";
 "%d years ago" = "%d jaar geleden";
 "%d years from now" = "%d jaar vanaf nu";
+
+/* absolute time */
+
+"shortDateNoYearFormat" = "MMMM d";
+"shortDateWithYearFormat" = "MMMM d, yyyy";
+
+/* weekday symbols */
+"Monday" = "Monday";
+"Tuesday" = "Tuesday";
+"Wednesday" = "Wednesday";
+"Thursday" = "Thursday";
+"Friday" = "Friday";
+"Saturday" = "Saturday";
+"Sunday" = "Sunday";

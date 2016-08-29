@@ -14,4 +14,9 @@
 + (BOOL)isEmpty:(NSString*)text;
 - (BOOL)isEmailAddress;
 
+- (NSString *)stringByTrimmingLeadingCharactersInSet:(NSCharacterSet *)characterSet;
+- (NSString *)stringByTrimmingLeadingWhitespaceAndNewlineCharacters;
+- (NSString *)stringByTrimmingTrailingCharactersInSet:(NSCharacterSet *)characterSet;
+- (NSString *)stringByTrimmingTrailingWhitespaceAndNewlineCharacters;
+
 @end

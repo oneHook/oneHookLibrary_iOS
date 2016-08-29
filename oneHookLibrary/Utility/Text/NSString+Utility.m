@@ -20,7 +20,7 @@
 
 + (BOOL)isEmpty:(NSString *)text
 {
-    return text == nil || text.length == 0;
+    return text == nil || text == [NSNull null] || text.length == 0;
 }
 
 -(BOOL)isEmailAddress
@@ -31,6 +31,35 @@
     NSString *emailRegex = stricterFilter ? stricterFilterString : laxString;
     NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
     return [emailTest evaluateWithObject:self];
+}
+
+#pragma mark Trimming Methods
+
+- (NSString *)stringByTrimmingLeadingCharactersInSet:(NSCharacterSet *)characterSet {
+    NSRange rangeOfFirstWantedCharacter = [self rangeOfCharacterFromSet:[characterSet invertedSet]];
+    if (rangeOfFirstWantedCharacter.location == NSNotFound) {
+        return @"";
+    }
+    return [self substringFromIndex:rangeOfFirstWantedCharacter.location];
+}
+
+- (NSString *)stringByTrimmingLeadingWhitespaceAndNewlineCharacters {
+    return [self stringByTrimmingLeadingCharactersInSet:
+            [NSCharacterSet whitespaceAndNewlineCharacterSet]];
+}
+
+- (NSString *)stringByTrimmingTrailingCharactersInSet:(NSCharacterSet *)characterSet {
+    NSRange rangeOfLastWantedCharacter = [self rangeOfCharacterFromSet:[characterSet invertedSet]
+                                                               options:NSBackwardsSearch];
+    if (rangeOfLastWantedCharacter.location == NSNotFound) {
+        return @"";
+    }
+    return [self substringToIndex:rangeOfLastWantedCharacter.location+1]; // non-inclusive
+}
+
+- (NSString *)stringByTrimmingTrailingWhitespaceAndNewlineCharacters {
+    return [self stringByTrimmingTrailingCharactersInSet:
+            [NSCharacterSet whitespaceAndNewlineCharacterSet]];
 }
 
 @end
