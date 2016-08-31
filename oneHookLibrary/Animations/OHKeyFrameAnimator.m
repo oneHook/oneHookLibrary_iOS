@@ -67,7 +67,9 @@
         [_timer invalidate];
         _timer = nil;
         _timeblock(1);
-        _finishblock();
+        if(_finishblock) {
+            _finishblock();
+        }
         _timeblock = nil;
         _finishblock = nil;
     } else {
