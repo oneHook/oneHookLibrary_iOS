@@ -41,10 +41,10 @@ typedef NS_ENUM(NSInteger, OHSnackBarBackgroundStyle) {
 
 @interface UIView (SnackBar)
 
-+ (void)setBackgroundStyle:(OHSnackBarBackgroundStyle)backgroundStyle;
-+ (void)setBackgroundColor:(UIColor*)color;
-+ (void)setForegroundColor:(UIColor*)color;
-+ (void)setFont:(UIFont*)font;
++ (void)setSnackBackgroundStyle:(OHSnackBarBackgroundStyle)backgroundStyle;
++ (void)setSnackBackgroundColor:(UIColor*)color;
++ (void)setSnackForegroundColor:(UIColor*)color;
++ (void)setSnackFont:(UIFont*)font;
 
 + (void)showText:(NSString*)text;
 + (void)showAttributedText:(NSAttributedString*)attributedText;

@@ -215,17 +215,22 @@
     return config;
 }
 
-+ (void)setBackgroundColor:(UIColor *)color
++ (void)setSnackBackgroundStyle:(OHSnackBarBackgroundStyle)backgroundStyle
+{
+    [self sharedInstance].backgroundStyle = backgroundStyle;
+}
+
++ (void)setSnackBackgroundColor:(UIColor *)color
 {
     [self sharedInstance].backgroundColor = color;
 }
 
-+ (void)setForegroundColor:(UIColor *)color
++ (void)setSnackForegroundColor:(UIColor *)color
 {
     [self sharedInstance].foregroundColor = color;
 }
 
-+ (void)setFont:(UIFont *)font
++ (void)setSnackFont:(UIFont *)font
 {
     [self sharedInstance].foregroundTextFont = font;
 }
