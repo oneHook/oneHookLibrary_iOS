@@ -13,6 +13,7 @@
 - (NSString*)capitalize;
 + (BOOL)isEmpty:(NSString*)text;
 - (BOOL)isEmailAddress;
+- (NSString *)urlencode;
 
 - (NSString *)stringByTrimmingLeadingCharactersInSet:(NSCharacterSet *)characterSet;
 - (NSString *)stringByTrimmingLeadingWhitespaceAndNewlineCharacters;
