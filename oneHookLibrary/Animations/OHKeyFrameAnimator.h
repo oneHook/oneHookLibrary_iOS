@@ -11,5 +11,6 @@
 @interface OHKeyFrameAnimator : NSObject
 
 - (void)startAnimatingWithDuration:(double)duration progress:(void (^)(double))block;
+- (void)startAnimatingWithDuration:(double)duration progress:(void (^)(double))block finish:(void (^)(void))finishBlock;
 
 @end
