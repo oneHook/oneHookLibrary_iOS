@@ -115,6 +115,8 @@
 		D3A7A98B1B18F9E8002158DC /* OHConfettiScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A7A9891B18F88E002158DC /* OHConfettiScreen.m */; };
 		D3A8BC2B1B0A672E004FF5A3 /* NSDate+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A8BC2A1B0A672E004FF5A3 /* NSDate+Utility.m */; };
 		D3A8BC2C1B0A67E0004FF5A3 /* NSDate+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A8BC2A1B0A672E004FF5A3 /* NSDate+Utility.m */; };
+		D3B467281D78818A00986711 /* OHScaleView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B467271D78818A00986711 /* OHScaleView.m */; };
+		D3B467291D7881F400986711 /* OHScaleView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B467271D78818A00986711 /* OHScaleView.m */; };
 		D3C0F99E1AEC7A3E00C4F7EA /* OHHamburgerButton.m in Sources */ = {isa = PBXBuildFile; fileRef = D32848161AEC273800DE7CD3 /* OHHamburgerButton.m */; };
 		D3C4A84F1B7D01D300660353 /* UIImageViewWithOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = D3C4A84E1B7D01D300660353 /* UIImageViewWithOverlay.m */; };
 		D3C4A8501B7D054E00660353 /* UIImageViewWithOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = D3C4A84E1B7D01D300660353 /* UIImageViewWithOverlay.m */; };
@@ -291,6 +293,8 @@
 		D3A7A9891B18F88E002158DC /* OHConfettiScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHConfettiScreen.m; sourceTree = "<group>"; };
 		D3A8BC291B0A672E004FF5A3 /* NSDate+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Utility.h"; sourceTree = "<group>"; };
 		D3A8BC2A1B0A672E004FF5A3 /* NSDate+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Utility.m"; sourceTree = "<group>"; };
+		D3B467261D78818A00986711 /* OHScaleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHScaleView.h; sourceTree = "<group>"; };
+		D3B467271D78818A00986711 /* OHScaleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHScaleView.m; sourceTree = "<group>"; };
 		D3C4A84D1B7D01D300660353 /* UIImageViewWithOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageViewWithOverlay.h; sourceTree = "<group>"; };
 		D3C4A84E1B7D01D300660353 /* UIImageViewWithOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageViewWithOverlay.m; sourceTree = "<group>"; };
 		D3E398FC1B88EFE1005D556D /* OHGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHGradientView.h; sourceTree = "<group>"; };
@@ -666,6 +670,15 @@
 			path = Date;
 			sourceTree = "<group>";
 		};
+		D3B467251D78818000986711 /* ScaleView */ = {
+			isa = PBXGroup;
+			children = (
+				D3B467261D78818A00986711 /* OHScaleView.h */,
+				D3B467271D78818A00986711 /* OHScaleView.m */,
+			);
+			path = ScaleView;
+			sourceTree = "<group>";
+		};
 		D3FB2DCC1D748FAD00CB409F /* SnackBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -691,6 +704,7 @@
 		D3FE001B1AC507D7004D4BD2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D3B467251D78818000986711 /* ScaleView */,
 				4CA6EE3F1D4FB7B2003AFA21 /* ActionSheet */,
 				4C9346DE1D407B0F00DB5C97 /* TagsView */,
 				D3FCA9D01D1C93FA006D771D /* Badge */,
@@ -959,6 +973,7 @@
 				4C7940071D5C0327004C000F /* NYTPhotosDataSource.m in Sources */,
 				D3FCA9D41D1C94A2006D771D /* SimpleBadge.m in Sources */,
 				D3FC55E21B0012DD0043F02A /* OHRotatingRevealAnimationController.m in Sources */,
+				D3B467291D7881F400986711 /* OHScaleView.m in Sources */,
 				4C7940121D5C071B004C000F /* NSBundle+NYTPhotoViewer.m in Sources */,
 				D3A3BA401AF43413005F38E2 /* OHHorizontalScrollView.m in Sources */,
 				4C7A06061D41786000C47097 /* OHFlowLayout.m in Sources */,
@@ -1029,6 +1044,7 @@
 				4CD7290C1CEAC9DB00B91F0F /* OHSlideShowView.m in Sources */,
 				4C1736BD1D048BCE00B6A4E3 /* UIImage+Color.m in Sources */,
 				D3A742531BCEC6530057710E /* OHImagePickerController.m in Sources */,
+				D3B467281D78818A00986711 /* OHScaleView.m in Sources */,
 				D3FB2DD31D74A39700CB409F /* OHSinglelineSnackView.m in Sources */,
 				4C1736CF1D048E0B00B6A4E3 /* OHViewControllerWithToolbarDemo.m in Sources */,
 				4C1736CC1D048CEB00B6A4E3 /* OHViewController.m in Sources */,
