@@ -24,7 +24,7 @@
     self.textLabel = [[UILabel alloc] init];
     self.textLabel.numberOfLines = 0;
     [self addSubview:self.textLabel];
-    self.padding = 4;
+    self.padding = 8;
 }
 
 - (CGFloat)measureHeightByWidth:(CGFloat)width

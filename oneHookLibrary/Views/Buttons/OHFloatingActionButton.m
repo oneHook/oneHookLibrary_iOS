@@ -50,6 +50,7 @@
 
 - (void)doInit {
     _lastWidth = 0;
+    _imagePadding = 0;
     self.backgroundColor = [UIColor clearColor];
     
     self.backgroundView = [[UIView alloc] init];
@@ -134,12 +135,12 @@
     if(_lastWidth != CGRectGetWidth(self.frame)) {
         _lastWidth = CGRectGetWidth(self.frame);
         self.backgroundView.frame = self.bounds;
-        _titleLabel.frame = self.bounds;
-        _imageView.frame = self.bounds;
         [self.backgroundView.layer setCornerRadius:ViewWidth(self) / 2];
         if(_contentView) {
-            _contentView.frame = self.bounds;
-            [_contentView.layer setCornerRadius:ViewWidth(self) / 2];
+            _contentView.frame = CGRectMake(_imagePadding,
+                                            _imagePadding,
+                                            _lastWidth - 2 * _imagePadding,
+                                            _lastWidth - 2 * _imagePadding);
         }
         self.layer.shadowPath = [UIBezierPath bezierPathWithRoundedRect:self.bounds cornerRadius:100.0].CGPath;
     }

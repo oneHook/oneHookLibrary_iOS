@@ -12,6 +12,8 @@
 
 @property (strong, nonatomic) UILabel* titleLabel;
 @property (strong, nonatomic) UIImageView* imageView;
+
+@property (assign, nonatomic) CGFloat imagePadding;
 @property (assign, nonatomic) BOOL hasShadow;
 
 @end
