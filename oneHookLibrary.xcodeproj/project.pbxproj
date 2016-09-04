@@ -73,6 +73,8 @@
 		4CBCD7B11C1A5672006385EA /* OHImageViewerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBCD7AF1C1A5660006385EA /* OHImageViewerViewController.m */; };
 		4CD7290C1CEAC9DB00B91F0F /* OHSlideShowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD7290B1CEAC9DB00B91F0F /* OHSlideShowView.m */; };
 		4CD7290D1CEAD6FB00B91F0F /* OHSlideShowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD7290B1CEAC9DB00B91F0F /* OHSlideShowView.m */; };
+		4CD8E2DB1D7BB972009EEA0C /* OHIconLabelButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD8E2DA1D7BB972009EEA0C /* OHIconLabelButton.m */; };
+		4CD8E2DC1D7BB974009EEA0C /* OHIconLabelButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD8E2DA1D7BB972009EEA0C /* OHIconLabelButton.m */; };
 		D309EC1F1ADA456100858EF2 /* UIImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = D309EC1C1ADA454800858EF2 /* UIImageEffects.m */; };
 		D30C945F1B7AB5EE003C05AB /* OHProgressBar.m in Sources */ = {isa = PBXBuildFile; fileRef = D30C945E1B7AB5EE003C05AB /* OHProgressBar.m */; };
 		D30C94601B7ABAFD003C05AB /* OHProgressBar.m in Sources */ = {isa = PBXBuildFile; fileRef = D30C945E1B7AB5EE003C05AB /* OHProgressBar.m */; };
@@ -244,6 +246,8 @@
 		4CBCD7AF1C1A5660006385EA /* OHImageViewerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHImageViewerViewController.m; sourceTree = "<group>"; };
 		4CD7290A1CEAC9DB00B91F0F /* OHSlideShowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHSlideShowView.h; sourceTree = "<group>"; };
 		4CD7290B1CEAC9DB00B91F0F /* OHSlideShowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHSlideShowView.m; sourceTree = "<group>"; };
+		4CD8E2D91D7BB972009EEA0C /* OHIconLabelButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHIconLabelButton.h; sourceTree = "<group>"; };
+		4CD8E2DA1D7BB972009EEA0C /* OHIconLabelButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHIconLabelButton.m; sourceTree = "<group>"; };
 		D309EC1B1ADA454800858EF2 /* UIImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageEffects.h; sourceTree = "<group>"; };
 		D309EC1C1ADA454800858EF2 /* UIImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageEffects.m; sourceTree = "<group>"; };
 		D30C945D1B7AB5EE003C05AB /* OHProgressBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHProgressBar.h; sourceTree = "<group>"; };
@@ -388,6 +392,8 @@
 				4C1736B41D048B9E00B6A4E3 /* OHStrokeButton.m */,
 				4C45F8961D066CF900602E81 /* OHFloatingActionButton.h */,
 				4C45F8971D066CF900602E81 /* OHFloatingActionButton.m */,
+				4CD8E2D91D7BB972009EEA0C /* OHIconLabelButton.h */,
+				4CD8E2DA1D7BB972009EEA0C /* OHIconLabelButton.m */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -1008,6 +1014,7 @@
 				4C1736DE1D0525CF00B6A4E3 /* UIImageEffects.m in Sources */,
 				4C1736E01D0525D500B6A4E3 /* NSString+Utility.m in Sources */,
 				D3FE00801AC50D5B004D4BD2 /* OHCircularRevealAnimationController.m in Sources */,
+				4CD8E2DC1D7BB974009EEA0C /* OHIconLabelButton.m in Sources */,
 				4C1736D41D0525A100B6A4E3 /* OHButtonFactory.m in Sources */,
 				D30C94601B7ABAFD003C05AB /* OHProgressBar.m in Sources */,
 				4C7940061D5C0327004C000F /* NYTPhotoDismissalInteractionController.m in Sources */,
@@ -1052,6 +1059,7 @@
 				D383040C1AE9F4CE003AE826 /* OHTableViewWIthCardEffectController.m in Sources */,
 				4C7A06051D416F0C00C47097 /* OHFlowLayout.m in Sources */,
 				D38FA04F1B26776D002F5C4F /* OHTooltipView.m in Sources */,
+				4CD8E2DB1D7BB972009EEA0C /* OHIconLabelButton.m in Sources */,
 				D32848101AEC209900DE7CD3 /* OHHambugerButtonDemo.m in Sources */,
 				4C793FFB1D5C0302004C000F /* NSBundle+NYTPhotoViewer.m in Sources */,
 				4C1736B71D048B9E00B6A4E3 /* OHReactiveButton.m in Sources */,
