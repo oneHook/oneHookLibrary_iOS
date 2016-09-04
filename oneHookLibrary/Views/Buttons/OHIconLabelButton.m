@@ -47,4 +47,29 @@
     self.label.frame = CGRectMake(0, width, width, height - width);
 }
 
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self onPressed];
+}
+
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self onRelease];
+}
+
+- (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self onRelease];
+}
+
+- (void)onPressed {
+    self.imageView.alpha = 0.5f;
+    self.label.alpha = 0.5f;
+}
+
+- (void)onRelease {
+    self.imageView.alpha = 1.f;
+    self.label.alpha = 1.f;
+}
+
 @end
