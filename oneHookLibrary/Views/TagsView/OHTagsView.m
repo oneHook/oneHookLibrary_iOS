@@ -8,6 +8,18 @@
 
 #import "OHTagsView.h"
 
+@implementation OHTag
+
+@end
+
+@interface OHTagsView() {
+    
+}
+
+@property (strong, nonatomic) NSMutableArray* rawTags;
+
+@end
+
 @implementation OHTagsView
 
 - (id)initWithFrame:(CGRect)frame
@@ -29,8 +41,11 @@
         [child removeFromSuperview];
     }
     
+    _rawTags = [[NSMutableArray alloc] init];
     for(int i = 0; i < tags.count; i++) {
-        [self addSubview:[self createTagViewAt:i tag:[tags objectAtIndex:i]]];
+        OHTag* ohTag = [tags objectAtIndex:i];
+        [_rawTags addObject:ohTag];
+        [self addSubview:[self createTagViewAt:i tag:ohTag.tagString]];
     }
 }
 
@@ -41,13 +56,22 @@
     tagView.backgroundColor = [self backgroundColorAt:index];
     tagView.textColor = [self textColorAt:index];
     tagView.text = tag;
+    tagView.tag = index;
     tagView.textAlignment = NSTextAlignmentCenter;
     tagView.clipsToBounds = YES;
     tagView.layer.cornerRadius = _tagCornerRadius;
     
     [tagView sizeToFit];
+    tagView.userInteractionEnabled = YES;
     tagView.bounds = CGRectMake(0, 0, CGRectGetWidth(tagView.frame) + _tagPadding, CGRectGetHeight(tagView.frame) + _tagPadding);
+    [tagView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onTagViewClicked:)]];
     return tagView;
+}
+
+- (void)onTagViewClicked:(UITapGestureRecognizer*)rec
+{
+    NSInteger index = rec.view.tag;
+    [self.delegate onTagClicked:rec.view tag:[self.rawTags objectAtIndex:index] in:self];
 }
 
 
