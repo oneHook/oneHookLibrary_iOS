@@ -7,6 +7,7 @@
 //
 
 #import "OHTagsView.h"
+#import "UIColor+Utility.h"
 
 @implementation OHTag
 
@@ -51,13 +52,13 @@
 
 - (UIView*)createTagViewAt:(int)index tag:(NSString*)tag
 {
-    UILabel* tagView = [[UILabel alloc] init];
-    tagView.numberOfLines = 1;
+    UIButton* tagView = [[UIButton alloc] init];
+    
     tagView.backgroundColor = [self backgroundColorAt:index];
-    tagView.textColor = [self textColorAt:index];
-    tagView.text = tag;
+    [tagView setTitleColor:[self textColorAt:index] forState:UIControlStateNormal];
+    [tagView setTitleColor:[UIColor darkerColorForColor:[self textColorAt:index]] forState:UIControlStateHighlighted];
+    [tagView setTitle:tag forState:UIControlStateNormal];
     tagView.tag = index;
-    tagView.textAlignment = NSTextAlignmentCenter;
     tagView.clipsToBounds = YES;
     tagView.layer.cornerRadius = _tagCornerRadius;
     
