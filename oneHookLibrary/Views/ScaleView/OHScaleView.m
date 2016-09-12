@@ -78,8 +78,6 @@
     
     CGFloat scaleLength = self.scaleLength;
     CGFloat centerPoint = (_screenCenterValue - self.minValue) * self.numberOfIntervals * self.intervalSpace;
-    NSLog(@"Scale Length : %f Center point : %f", scaleLength, centerPoint);
-    
     self.scrollView.contentSize = CGSizeMake(_isVertical? 0 : scaleLength, _isVertical? scaleLength : 0);
     self.scrollView.contentOffset = CGPointMake(_isVertical? 0 : centerPoint, _isVertical? centerPoint : 0);
 }
@@ -125,7 +123,6 @@
     
     CGFloat startY = _drawOffset;
     CGFloat startValue = _screenStartValue;
-    NSLog(@"start %f center %f end %f", _screenStartValue, _screenCenterValue, _screenEndValue);
     while(startY <= height) {
         
         CGFloat tickWidth = width / 4 * 3;

@@ -52,7 +52,9 @@
 
 - (void)dealloc
 {
+#ifdef DEBUG
     NSLog(@"%@ DEALLOC", [self class]);
+#endif
 }
 
 - (void)commonInit

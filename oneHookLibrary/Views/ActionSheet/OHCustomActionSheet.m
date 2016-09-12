@@ -21,7 +21,6 @@
 
 - (void)commonInit
 {
-    NSLog(@"oh custom action sheet init");
     [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(orientationDidChange:)
@@ -33,7 +32,6 @@
 
 - (void)dealloc
 {
-    NSLog(@"oh custom action sheet dealloc");
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     [[UIDevice currentDevice] endGeneratingDeviceOrientationNotifications];
 }
@@ -52,8 +50,6 @@
 
 - (void)orientationDidChange:(NSNotification *)note
 {
-    NSLog(@"orientation change");
-    
     self.frame = CGRectMake(0, 0, CGRectGetWidth(self.superview.bounds), 100);
 }
 
