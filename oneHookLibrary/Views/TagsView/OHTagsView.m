@@ -29,7 +29,7 @@
     if(self) {
         self.defaultBackgroundColor = [UIColor redColor];
         self.defaultTextColor = [UIColor whiteColor];
-        self.tagPadding = 8;
+        self.tagPadding = 4;
         self.tagCornerRadius = 4;
     }
     return self;
@@ -59,12 +59,13 @@
     [tagView setTitleColor:[UIColor darkerColorForColor:[self textColorAt:index]] forState:UIControlStateHighlighted];
     [tagView setTitle:tag forState:UIControlStateNormal];
     tagView.tag = index;
+    tagView.titleLabel.font = [UIFont systemFontOfSize:14];
     tagView.clipsToBounds = YES;
     tagView.layer.cornerRadius = _tagCornerRadius;
     
     [tagView sizeToFit];
     tagView.userInteractionEnabled = YES;
-    tagView.bounds = CGRectMake(0, 0, CGRectGetWidth(tagView.frame) + _tagPadding, CGRectGetHeight(tagView.frame) + _tagPadding);
+    tagView.bounds = CGRectMake(0, 0, CGRectGetWidth(tagView.frame) + _tagPadding * 2, CGRectGetHeight(tagView.frame) + _tagPadding);
     [tagView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onTagViewClicked:)]];
     return tagView;
 }
