@@ -36,6 +36,7 @@
 #define IS_PORTRAIT !UIDeviceOrientationIsLandscape(DEVICE_ORIENTATION)
 #define STATUS_BAR_HEIGHT (IS_LANDSCAPE ? 0 : [UIApplication sharedApplication].statusBarFrame.size.height)
 #define NAVIGATION_BAR_HEIGHT self.navigationController.navigationBar.frame.size.height
+#define SHOW_STATUS_BAR (IS_PORTRAIT || IS_IPAD)
 
 /** String: Simulator **/
 #define DEVICE_SIMULATOR @"Simulator"
