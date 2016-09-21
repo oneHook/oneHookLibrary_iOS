@@ -28,7 +28,7 @@
 
 /* absolute time */
 
-"shortDateNoYearFormat" = "MMMM d";
+"shortDateNoYearFormat" = "MMM d";
 "shortDateWithYearFormat" = "MMMM d, yyyy";
 
 /* weekday symbols */
