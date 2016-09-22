@@ -34,8 +34,9 @@
 
 #define IS_LANDSCAPE UIDeviceOrientationIsLandscape(DEVICE_ORIENTATION)
 #define IS_PORTRAIT !UIDeviceOrientationIsLandscape(DEVICE_ORIENTATION)
-#define STATUS_BAR_HEIGHT (IS_LANDSCAPE ? 0 : [UIApplication sharedApplication].statusBarFrame.size.height)
+#define STATUS_BAR_HEIGHT (SHOW_STATUS_BAR ? [UIApplication sharedApplication].statusBarFrame.size.height : 0)
 #define NAVIGATION_BAR_HEIGHT self.navigationController.navigationBar.frame.size.height
+#define SHOW_STATUS_BAR (IS_PORTRAIT || IS_IPAD)
 
 /** String: Simulator **/
 #define DEVICE_SIMULATOR @"Simulator"
@@ -101,7 +102,7 @@
 #define ScreenHeight [[UIScreen mainScreen] bounds].size.height
 
 /** screen scale **/
-#define ScreenScale (MIN(ScreenWidth, ScreenHeight) / 320.)
+#define ScreenScale (MIN(ScreenWidth, ScreenHeight) / (IS_IPAD? 768 : 320))
 
 /** default minimum touchable area height **/
 #define TouchHeightDefault 44

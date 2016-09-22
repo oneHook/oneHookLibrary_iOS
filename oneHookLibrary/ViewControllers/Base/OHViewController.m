@@ -120,8 +120,8 @@
     CGFloat height = CGRectGetHeight(self.view.bounds);
     
     if(_lastWidth != width && _lastHeight != height) {
-        self.toolbar.showStatusBar = IS_PORTRAIT;
-        CGFloat statusBarHeight = IS_PORTRAIT ? kSystemStatusBarHeight : 0;
+        self.toolbar.showStatusBar = SHOW_STATUS_BAR;
+        CGFloat statusBarHeight = SHOW_STATUS_BAR ? kSystemStatusBarHeight : 0;
         CGFloat toolbarMaximumHeight = statusBarHeight + kToolbarDefaultHeight + self.toolbarExtension;
         
         if(self.toolbarStyle == OHViewControllerToolbarAsStatusBar) {
