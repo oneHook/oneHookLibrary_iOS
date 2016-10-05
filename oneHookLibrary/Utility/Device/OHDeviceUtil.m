@@ -22,6 +22,14 @@
     return appVersion;
 }
 
++ (NSString*)UUIDString
+{
+    CFUUIDRef theUUID = CFUUIDCreate(NULL);
+    CFStringRef string = CFUUIDCreateString(NULL, theUUID);
+    CFRelease(theUUID);
+    return (__bridge NSString *)string;
+}
+
 + (NSString*)deviceSystemName
 {
     return [UIDevice currentDevice].systemName;
