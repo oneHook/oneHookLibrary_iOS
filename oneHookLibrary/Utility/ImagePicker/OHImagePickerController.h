@@ -14,6 +14,8 @@
 
 - (void)oh_imagePickerController:(OHImagePickerController*)pickerController imagePicked:(UIImage*)image;
 - (void)oh_imagePickerControllerCancelled:(OHImagePickerController *)pickerController;
+- (void)oh_imagePickerControllerPhotoPermissionDenied:(OHImagePickerController*)pickerController;
+- (void)oh_imagePickerControllerCameraPermissionDenied:(OHImagePickerController*)pickerController;
 
 @end
 
