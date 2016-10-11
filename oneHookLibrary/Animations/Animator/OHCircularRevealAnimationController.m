@@ -118,10 +118,10 @@
     CGPathRelease(newPath);
     CGPathRelease(oldPath);
     [transitionContext completeTransition:YES];
-    if ([UIApplication sharedApplication].keyWindow.subviews.count == 0) {
+//    if ([UIApplication sharedApplication].keyWindow.subviews.count == 0) {
       [[UIApplication sharedApplication].keyWindow
           addSubview:toViewController.view];
-    }
+//    }
     }];
     CABasicAnimation *ba = [CABasicAnimation animationWithKeyPath:@"path"];
 

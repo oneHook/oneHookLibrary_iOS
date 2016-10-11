@@ -9,6 +9,7 @@
 #import "OHImagePickerController.h"
 #import "OHCompactActionSheetController.h"
 #import <MobileCoreServices/MobileCoreServices.h>
+#import <Photos/Photos.h>
 
 @interface OHImagePickerController() <OHCompactActionSheetControllerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate> {
     
@@ -50,15 +51,38 @@
 {
     self.actionSheetController = nil;
     if(self.options.count > 1 && index == 0) {
-        [self pickImageFromCamera];
+        [self checkCameraPermission];
     } else if(self.options.count - 1 == index) {
-        [self pickImageFromLibrary];
+        [self checkPhotoPermission];
     } else {
         [self.delegate oh_imagePickerControllerCancelled:self];
     }
 }
 
-- (void)pickImageFromLibrary
+- (void)checkPhotoPermission
+{
+    PHAuthorizationStatus status = [PHPhotoLibrary authorizationStatus];
+    if(status == PHAuthorizationStatusAuthorized) {
+        [self doPickPhoto];
+    } else if(status == PHAuthorizationStatusNotDetermined) {
+        [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status) {
+            if(status == PHAuthorizationStatusAuthorized) {
+                [self doPickPhoto];
+            } else {
+                [self onNoPhotoPermission];
+            }
+        }];
+    } else {
+        [self onNoPhotoPermission];
+    }
+}
+
+- (void)onNoPhotoPermission
+{
+    [self.delegate oh_imagePickerControllerPhotoPermissionDenied:self];
+}
+
+- (void)doPickPhoto
 {
     UIImagePickerController *picker = [[UIImagePickerController alloc] init];
     self.imagePicker = picker;
@@ -69,7 +93,31 @@
     }];
 }
 
-- (void)pickImageFromCamera
+- (void)checkCameraPermission
+{
+    AVAuthorizationStatus authStatus = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
+    if(authStatus == AVAuthorizationStatusAuthorized) {
+        [self doCaptureImageFromCamera];
+    } else if(authStatus == AVAuthorizationStatusNotDetermined){
+        
+        
+        [AVCaptureDevice requestAccessForMediaType:AVMediaTypeVideo completionHandler:^(BOOL granted) {
+            if(granted){
+                [self doCaptureImageFromCamera];
+            } else {
+                [self onCameraPermissionDenied];
+            }
+        }];
+    } else {
+        [self onCameraPermissionDenied];
+    }}
+
+- (void)onCameraPermissionDenied
+{
+    [self.delegate oh_imagePickerControllerCameraPermissionDenied:self];
+}
+
+- (void)doCaptureImageFromCamera
 {
     UIImagePickerController *picker = [[UIImagePickerController alloc] init];
     self.imagePicker = picker;
@@ -80,7 +128,6 @@
     [self.presentingController presentViewController:picker animated:YES completion:^{
         
     }];
-    
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info
@@ -120,6 +167,11 @@
     [self.delegate oh_imagePickerControllerCancelled:self];
     [[UIApplication sharedApplication] setStatusBarHidden:YES];
     [picker dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)pickImageFromCamera
+{
+    [self checkCameraPermission];
 }
 
 @end
