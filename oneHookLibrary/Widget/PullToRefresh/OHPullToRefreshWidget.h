@@ -12,6 +12,7 @@
 @protocol OHPullToRefreshWidgetDelegate <NSObject>
 
 - (void)willStartPullToRefresh:(CGFloat)progress starting:(BOOL)starting;
+- (void)shouldStartRefresh;
 
 @end
 
@@ -20,7 +21,8 @@
 @property (weak, nonatomic) id<OHPullToRefreshWidgetDelegate> delegate;
 
 - (void)didScroll:(UIScrollView*)scrollView;
-- (void)didEndDragging:(UIScrollView*)scrollView;
+- (void)didEndDragging:(UIScrollView*)scrollView decelerating:(BOOL)shouldDecelerating;
+- (void)didEndDecelerating;
 - (void)endRefreshing;
 
 @end
