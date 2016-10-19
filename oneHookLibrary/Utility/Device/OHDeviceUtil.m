@@ -40,7 +40,7 @@
 {
     NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
     formatter.numberStyle = NSNumberFormatterDecimalStyle;
-    NSNumber *rawBuildNumber = [formatter numberFromString:[OHDeviceUtil appBuildNumber]];
+    NSNumber *rawBuildNumber = [formatter numberFromString:[OHDeviceUtil appBuildNumberString]];
     return rawBuildNumber;
 }
 
