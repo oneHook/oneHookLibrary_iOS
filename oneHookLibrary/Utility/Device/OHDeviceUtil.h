@@ -11,6 +11,10 @@
 @interface OHDeviceUtil : NSObject
 
 + (NSString*)appVersion;
++ (NSString*)appMajorVersion;
++ (NSString*)appBuildNumberString;
++ (NSNumber*)appBuildNumber;
+
 + (NSString*)UUIDString;
 + (NSString*)deviceSystemName;
 + (NSString*)devicePlatformVersion;
