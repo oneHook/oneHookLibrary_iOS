@@ -22,6 +22,28 @@
     return appVersion;
 }
 
++ (NSString*)appMajorVersion
+{
+    NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
+    NSString *majorVersion = [infoDictionary objectForKey:@"CFBundleShortVersionString"];
+    return majorVersion;
+}
+
++ (NSString*)appBuildNumberString
+{
+    NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
+    NSString *minorVersion = [infoDictionary objectForKey:@"CFBundleVersion"];
+    return minorVersion;
+}
+
++ (NSNumber*)appBuildNumber
+{
+    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+    formatter.numberStyle = NSNumberFormatterDecimalStyle;
+    NSNumber *rawBuildNumber = [formatter numberFromString:[OHDeviceUtil appBuildNumberString]];
+    return rawBuildNumber;
+}
+
 + (NSString*)UUIDString
 {
     CFUUIDRef theUUID = CFUUIDCreate(NULL);
