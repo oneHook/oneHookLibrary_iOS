@@ -64,11 +64,12 @@
     CGFloat width = CGRectGetWidth(self.bounds);
     CGFloat height = CGRectGetHeight(self.bounds);
     
-    self.frontPage.alpha = 1;
     self.frontPage.frame = CGRectMake(_leftPadding,
                                       _topPadding,
                                       width - _leftPadding - _rightPadding,
                                       height - _topPadding - _bottomPadding - _frontBottomMargin);
+    
+    self.bottomPage.alpha = 1;
     self.bottomPage.frame = self.frontPage.frame;
     _lastWidth = width;
     _lastHeight = height;
