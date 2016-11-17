@@ -91,6 +91,19 @@
     return _rightButton;
 }
 
+- (CGPoint)leftButtonCenter
+{
+    CGFloat actionButtonLength = kToolbarDefaultHeight - MARGIN_SMALL * 2;
+    return CGPointMake(MARGIN_SMALL + actionButtonLength / 2, CGRectGetHeight(self.frame) - actionButtonLength / 2 - MARGIN_SMALL);
+}
+
+- (CGPoint)rightButtonCenter
+{
+    CGFloat actionButtonLength = kToolbarDefaultHeight - MARGIN_SMALL * 2;
+    return CGPointMake(CGRectGetWidth(self.frame) - MARGIN_SMALL - actionButtonLength / 2,
+                       CGRectGetHeight(self.frame) - actionButtonLength / 2 - MARGIN_SMALL);
+}
+
 - (UILabel*)titleLabel
 {
     if(!_titleLabel) {

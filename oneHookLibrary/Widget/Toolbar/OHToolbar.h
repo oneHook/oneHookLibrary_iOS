@@ -18,4 +18,7 @@
 @property (strong, nonatomic) UIButton* rightButton;
 @property (strong, nonatomic) UILabel* titleLabel;
 
+- (CGPoint)leftButtonCenter;
+- (CGPoint)rightButtonCenter;
+
 @end
