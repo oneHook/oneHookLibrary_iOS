@@ -106,6 +106,8 @@
 		D383040D1AE9F5B4003AE826 /* OHTableViewWIthCardEffectController.m in Sources */ = {isa = PBXBuildFile; fileRef = D383040B1AE9F4CE003AE826 /* OHTableViewWIthCardEffectController.m */; };
 		D3846F8E1AF2A81200E6FF78 /* OHPagerView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3846F8D1AF2A81200E6FF78 /* OHPagerView.m */; };
 		D3846F8F1AF318D400E6FF78 /* OHPagerView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3846F8D1AF2A81200E6FF78 /* OHPagerView.m */; };
+		D38702A21DDE4F7400A749D5 /* OHFlipperView.m in Sources */ = {isa = PBXBuildFile; fileRef = D38702A11DDE4F7400A749D5 /* OHFlipperView.m */; };
+		D38702A31DDE554100A749D5 /* OHFlipperView.m in Sources */ = {isa = PBXBuildFile; fileRef = D38702A11DDE4F7400A749D5 /* OHFlipperView.m */; };
 		D38FA04B1B255A68002F5C4F /* OHSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = D38FA04A1B255A68002F5C4F /* OHSegmentedControl.m */; };
 		D38FA04F1B26776D002F5C4F /* OHTooltipView.m in Sources */ = {isa = PBXBuildFile; fileRef = D38FA04E1B26776D002F5C4F /* OHTooltipView.m */; };
 		D38FA0501B267B2F002F5C4F /* OHTooltipView.m in Sources */ = {isa = PBXBuildFile; fileRef = D38FA04E1B26776D002F5C4F /* OHTooltipView.m */; };
@@ -287,6 +289,8 @@
 		D383040B1AE9F4CE003AE826 /* OHTableViewWIthCardEffectController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHTableViewWIthCardEffectController.m; sourceTree = "<group>"; };
 		D3846F8C1AF2A81200E6FF78 /* OHPagerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHPagerView.h; sourceTree = "<group>"; };
 		D3846F8D1AF2A81200E6FF78 /* OHPagerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHPagerView.m; sourceTree = "<group>"; };
+		D38702A01DDE4F7400A749D5 /* OHFlipperView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHFlipperView.h; sourceTree = "<group>"; };
+		D38702A11DDE4F7400A749D5 /* OHFlipperView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHFlipperView.m; sourceTree = "<group>"; };
 		D38FA0491B255A68002F5C4F /* OHSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHSegmentedControl.h; sourceTree = "<group>"; };
 		D38FA04A1B255A68002F5C4F /* OHSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHSegmentedControl.m; sourceTree = "<group>"; };
 		D38FA04D1B26776D002F5C4F /* OHTooltipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHTooltipView.h; sourceTree = "<group>"; };
@@ -653,6 +657,15 @@
 			path = ViewPager;
 			sourceTree = "<group>";
 		};
+		D387029F1DDE4F6900A749D5 /* FlipperView */ = {
+			isa = PBXGroup;
+			children = (
+				D38702A01DDE4F7400A749D5 /* OHFlipperView.h */,
+				D38702A11DDE4F7400A749D5 /* OHFlipperView.m */,
+			);
+			path = FlipperView;
+			sourceTree = "<group>";
+		};
 		D38FA04C1B26775F002F5C4F /* Tooltip */ = {
 			isa = PBXGroup;
 			children = (
@@ -724,6 +737,7 @@
 		D3FE001B1AC507D7004D4BD2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D387029F1DDE4F6900A749D5 /* FlipperView */,
 				D3B467251D78818000986711 /* ScaleView */,
 				4CA6EE3F1D4FB7B2003AFA21 /* ActionSheet */,
 				4C9346DE1D407B0F00DB5C97 /* TagsView */,
@@ -1017,6 +1031,7 @@
 				4C79400C1D5C0327004C000F /* NYTPhotoViewController.m in Sources */,
 				D3A7A98B1B18F9E8002158DC /* OHConfettiScreen.m in Sources */,
 				D3C0F99E1AEC7A3E00C4F7EA /* OHHamburgerButton.m in Sources */,
+				D38702A31DDE554100A749D5 /* OHFlipperView.m in Sources */,
 				4C7940051D5C0327004C000F /* NYTPhotoCaptionView.m in Sources */,
 				4C40E97B1DA4903D0064A29B /* OHPullToRefreshWidget.m in Sources */,
 				D383040D1AE9F5B4003AE826 /* OHTableViewWIthCardEffectController.m in Sources */,
@@ -1043,6 +1058,7 @@
 			files = (
 				4C1736C91D048C7600B6A4E3 /* OHToolbar.m in Sources */,
 				4C1736B91D048B9E00B6A4E3 /* OHSolidButton.m in Sources */,
+				D38702A21DDE4F7400A749D5 /* OHFlipperView.m in Sources */,
 				D3846F8E1AF2A81200E6FF78 /* OHPagerView.m in Sources */,
 				4C793FF61D5C0302004C000F /* NYTPhotoTransitionAnimator.m in Sources */,
 				D3C4A84F1B7D01D300660353 /* UIImageViewWithOverlay.m in Sources */,
