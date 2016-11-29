@@ -8,6 +8,8 @@
 
 #import "OHProgressBar.h"
 
+#define NSLog(FORMAT, ...) printf("%s\n", [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
+
 @interface OHProgressBar() {
     CALayer* _mainProgressLayer;
     CALayer* _subProgressLayer;
@@ -21,14 +23,18 @@
 {
     self = [super initWithFrame:frame];
     if(self) {
-        _mainProgressLayer = [[CALayer alloc] init];
-        _subProgressLayer = [[CALayer alloc] init];
+        self.backgroundColor = [UIColor clearColor];
+        _mainProgressLayer = [[CAShapeLayer alloc] init];
+        _subProgressLayer = [[CAShapeLayer alloc] init];
+        
+        _mainProgressLayer.anchorPoint = CGPointMake(0, 0.5);
+        _subProgressLayer.anchorPoint = CGPointMake(0, 0.5);
         
         [self.layer addSublayer:_subProgressLayer];
         [self.layer addSublayer:_mainProgressLayer];
         
-        self.mainProgressColor = [UIColor redColor];
-        self.subProgressColor = [UIColor redColor];
+        self.mainProgressColor = [UIColor yellowColor];
+        self.subProgressColor = [UIColor greenColor];
         self.mainProgress = 0.75;
         self.subProgress = 0.5;
         
@@ -71,20 +77,28 @@
 
 - (void)layoutSublayersOfLayer:(CALayer *)layer
 {
-    [CATransaction begin];
-    [CATransaction setAnimationDuration:0];
+//    [CATransaction begin];
+//    [CATransaction setAnimationDuration:0];
     CGFloat width = CGRectGetWidth(self.bounds);
-    if(layer == _mainProgressLayer) {
-        _mainProgressLayer.frame = CGRectMake(0, 0, width * _mainProgress, CGRectGetHeight(self.bounds));
-    } else if(layer == _subProgressLayer) {
-        _subProgressLayer.frame = CGRectMake(0, 0, width * _subProgress, CGRectGetHeight(self.bounds));
+    CGFloat height = CGRectGetHeight(self.bounds);
+    NSLog(@"progress %f %f %f %f", _mainProgress, _subProgress, width, height);
+    if(layer == self.layer) {
+
+        CGFloat mainProgressHeight = height * 0.85;
+        _mainProgressLayer.bounds = CGRectMake(0, 0, (width - height + mainProgressHeight) * _mainProgress, mainProgressHeight);
+        _mainProgressLayer.position = CGPointMake((height - mainProgressHeight) / 2, height / 2);
+        _mainProgressLayer.cornerRadius = mainProgressHeight / 2;
+        
+        _subProgressLayer.bounds = CGRectMake(0, 0, width * _subProgress, height);
+        _subProgressLayer.position = CGPointMake(0, height / 2);
+        _subProgressLayer.cornerRadius = height / 2;
     }
-    [CATransaction commit];
+//    [CATransaction commit];
 }
 
 - (void)setMainProgress:(CGFloat)mainProgress subProgress:(CGFloat)subProgress animated:(BOOL)animated
 {
-    
+    [self layoutSublayersOfLayer:self.layer];
 }
 
 @end
