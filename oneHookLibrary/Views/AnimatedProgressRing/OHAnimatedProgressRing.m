@@ -84,7 +84,7 @@
         self.shapeLayer.fillColor = nil;
         self.shapeLayer.strokeColor = self.progressColor.CGColor;
         self.shapeLayer.lineWidth = _strokeLength;
-        self.shapeLayer.lineCap = kCALineCapRound;
+        self.shapeLayer.lineCap = kCALineCapSquare;
         self.shapeLayer.masksToBounds = YES;
         self.shapeLayer.frame = self.bounds;
         self.shapeLayer.actions = @{ @"strokeStart" : [NSNull null],

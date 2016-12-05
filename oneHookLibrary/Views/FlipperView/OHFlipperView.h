@@ -26,4 +26,7 @@
 
 - (void)flip;
 
+- (BOOL)frontPageDidDisappear;
+- (void)onFlipFinishedWithFront:(UIView*)frontPage bottom:(UIView*)bottomPage;
+
 @end

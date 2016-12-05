@@ -85,21 +85,24 @@
 }
 
 - (void)flip {
-    [UIView animateWithDuration:2 animations:^{
+    [UIView animateWithDuration:0.25 animations:^{
         self.frontPage.transform = CGAffineTransformMakeTranslation(-CGRectGetWidth(self.bounds), 0);
         self.bottomPage.transform = CGAffineTransformIdentity;
     } completion:^(BOOL finished) {
         if(finished) {
+            BOOL hasNextPage = [self frontPageDidDisappear];
+            self.frontPage.hidden = !hasNextPage;
+            
             [self bringSubviewToFront:self.bottomPage];
             self.frontPage.transform = CGAffineTransformIdentity;
             self.frontPage.alpha = 0;
             UIView* temp = self.frontPage;
             self.frontPage = self.bottomPage;
             self.bottomPage = temp;
-            [UIView animateWithDuration:2 animations:^{
+            [UIView animateWithDuration:0.25 animations:^{
                 [self doLayout];
             } completion:^(BOOL finished) {
-                
+                [self onFlipFinishedWithFront:self.frontPage bottom:self.bottomPage];
             }];
         }
     }];
