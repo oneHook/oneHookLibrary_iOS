@@ -46,6 +46,7 @@ typedef NS_ENUM(NSInteger, OHSnackBarBackgroundStyle) {
 + (void)setSnackForegroundColor:(UIColor*)color;
 + (void)setSnackFont:(UIFont*)font;
 
+/* this will be deprecated soon ..... */
 + (void)showText:(NSString*)text;
 + (void)showAttributedText:(NSAttributedString*)attributedText;
 
