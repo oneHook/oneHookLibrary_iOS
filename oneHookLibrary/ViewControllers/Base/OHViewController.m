@@ -9,6 +9,8 @@
 #import "OHViewController.h"
 #import "OneHookFoundation.h"
 
+
+#define NSLog(FORMAT, ...) printf("%s\n", [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
 #define FLOATING_ACTION_BUTTON_ANIMATION_THRESHOLD 24
 #define FAB_STATE_TOP 0
 #define FAB_STATE_BOTTOM 1
@@ -288,10 +290,15 @@
     
     _toolbarHeight -= yDiff;
     
+    if(_toolbarHeight > toolbarMaximumHeight) {
+        _toolbarHeight = toolbarMaximumHeight;
+    }
+    
     if(_toolbarHeight < toolbarMinimumHeight) {
-        /* make sure toolbar minimum height */
         _toolbarHeight = toolbarMinimumHeight;
-    } else if(yOffset > -toolbarDefaultHeight && _toolbarHeight > toolbarDefaultHeight) {
+    }
+    
+    if(yOffset > -toolbarDefaultHeight && _toolbarHeight > toolbarDefaultHeight) {
         /* make sure reveal all toolbar only when at top */
         _toolbarHeight = toolbarDefaultHeight;
     } else if(yOffset < -toolbarDefaultHeight && _toolbarHeight != toolbarMaximumHeight) {

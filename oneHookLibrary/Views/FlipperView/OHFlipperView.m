@@ -33,6 +33,7 @@
 
 - (void)commonInit
 {
+    self.clipsToBounds = YES;
     self.frontBottomMargin = 0;
     self.bottomScale = 1;
     
@@ -84,9 +85,10 @@
     return nil;
 }
 
-- (void)flip {
+- (void)flip:(enum OHFlipperViewDirection)direction {
+    CGFloat dc = (direction == OHFlipperViewDirectionLeft) ? -1 : 1;
     [UIView animateWithDuration:0.25 animations:^{
-        self.frontPage.transform = CGAffineTransformMakeTranslation(-CGRectGetWidth(self.bounds), 0);
+        self.frontPage.transform = CGAffineTransformMakeTranslation(dc * CGRectGetWidth(self.bounds), 0);
         self.bottomPage.transform = CGAffineTransformIdentity;
     } completion:^(BOOL finished) {
         if(finished) {

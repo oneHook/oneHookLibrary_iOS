@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+enum OHFlipperViewDirection : NSUInteger {
+    OHFlipperViewDirectionLeft = 1,
+    OHFlipperViewDirectionRight = 2
+};
+
 @interface OHFlipperView : UIView
 
 @property (assign, nonatomic) CGFloat topPadding;
@@ -24,7 +29,7 @@
 /* child class should override this function */
 - (UIView*)createPage;
 
-- (void)flip;
+- (void)flip:(enum OHFlipperViewDirection)direction;
 
 - (BOOL)frontPageDidDisappear;
 - (void)onFlipFinishedWithFront:(UIView*)frontPage bottom:(UIView*)bottomPage;
