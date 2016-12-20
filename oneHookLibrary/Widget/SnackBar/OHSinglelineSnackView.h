@@ -14,4 +14,6 @@
 @property (strong, nonatomic) UILabel* textLabel;
 @property (assign, nonatomic) CGFloat padding;
 
+- (id)initWithBackgroundStyle:(OHSnackBarBackgroundStyle)style;
+
 @end

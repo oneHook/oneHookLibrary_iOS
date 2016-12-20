@@ -7,10 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UIView+SnackBar.h"
 
 @interface OHBaseSnackView : UIView
 
 @property (assign, nonatomic) double idleTime;
+@property (assign, nonatomic) OHSnackBarBackgroundStyle backgroundStyle;
+
+- (id)initWithBackgroundStyle:(OHSnackBarBackgroundStyle)style;
 
 - (CGFloat)measureHeightByWidth:(CGFloat)width;
 

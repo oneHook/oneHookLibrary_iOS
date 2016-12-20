@@ -42,12 +42,23 @@
 {
     if(_snackView) {
         /* something is currently showing, put new snack to queue */
-        [self.snackQueue addObject:snack];
+        
+        if(snack.snackFlag == OHSnackBarFlagImmediate) {
+            /* show current snack next */
+            [self.snackQueue insertObject:snack atIndex:0];
+        } else if(snack.snackFlag == OHSnackBarFlagClearHistory) {
+            /* remove all snacks not shown */
+            [self.snackQueue removeAllObjects];
+            [self.snackQueue addObject:snack];
+        } else {
+            /* default behavior */
+            [self.snackQueue addObject:snack];
+        }
         return;
     }
     
     if(snack.style == OHSnackBarStyleSingleText) {
-        OHSinglelineSnackView* singleLineView = [[OHSinglelineSnackView alloc] init];
+        OHSinglelineSnackView* singleLineView = [[OHSinglelineSnackView alloc] initWithBackgroundStyle:snack.backgroundStyle];
         if(snack.messageText) {
             singleLineView.textLabel.text = snack.messageText;
         } else {
@@ -56,11 +67,11 @@
         singleLineView.textLabel.font = snack.foregroundFont;
         singleLineView.textLabel.textColor = snack.foregroundColor;
         singleLineView.backgroundColor = snack.backgroundColor;
+        singleLineView.idleTime = snack.duration;
         [self showSnackView:singleLineView];
     } else {
         /* NOT SUPPORTED */
     }
-    
 }
 
 - (void)showSnackView:(OHBaseSnackView*)snackView
@@ -235,12 +246,24 @@
     [self sharedInstance].foregroundTextFont = font;
 }
 
-+ (void)showText:(NSString *)text
+#pragma marks - display calls
+
++ (void)showSnackText:(NSString* _Nonnull)text {
+    [UIView showSnackText:text duration:SNACK_DURATION_SHORT flag:OHSnackBarFlagDefault];
+}
+
++ (void)showSnackText:(NSString* _Nonnull)text duration:(double)duration {
+    [UIView showSnackText:text duration:duration flag:OHSnackBarFlagDefault];
+}
+
++ (void)showSnackText:(NSString* _Nonnull)text duration:(double)duration flag:(OHSnackBarFlag)flag
 {
     OHSnack* snack = [[OHSnack alloc] init];
     snack.presentationType = OHSnackBarPresentationTypeBottom;
     snack.style = OHSnackBarStyleSingleText;
     snack.messageText = text;
+    snack.duration = duration;
+    snack.snackFlag = flag;
     snack.backgroundStyle = [self sharedInstance].backgroundStyle;
     snack.backgroundColor = [self sharedInstance].backgroundColor;
     snack.foregroundColor = [self sharedInstance].foregroundColor;
@@ -248,12 +271,24 @@
     [[self sharedInstance] showSnack:snack];
 }
 
-+ (void)showAttributedText:(NSAttributedString *)attributedText
++ (void)showSnackAttributedText:(NSAttributedString* _Nonnull)text
+{
+    [UIView showSnackAttributedText:text duration:SNACK_DURATION_SHORT flag:OHSnackBarFlagDefault];
+}
+
++ (void)showSnackAttributedText:(NSAttributedString* _Nonnull)text duration:(double)duration
+{
+    [UIView showSnackAttributedText:text duration:duration flag:OHSnackBarFlagDefault];
+}
+
++ (void)showSnackAttributedText:(NSAttributedString* _Nonnull)text duration:(double)duration flag:(OHSnackBarFlag)flag
 {
     OHSnack* snack = [[OHSnack alloc] init];
     snack.presentationType = OHSnackBarPresentationTypeBottom;
     snack.style = OHSnackBarStyleSingleText;
-    snack.messageAttributedText = attributedText;
+    snack.messageAttributedText = text;
+    snack.duration = duration;
+    snack.snackFlag = flag;
     snack.backgroundStyle = [self sharedInstance].backgroundStyle;
     snack.backgroundColor = [self sharedInstance].backgroundColor;
     snack.foregroundColor = [self sharedInstance].foregroundColor;

@@ -10,9 +10,9 @@
 
 @implementation OHSinglelineSnackView
 
-- (id)init
+- (id)initWithBackgroundStyle:(OHSnackBarBackgroundStyle)style
 {
-    self = [super init];
+    self = [super initWithBackgroundStyle:style];
     if(self) {
         [self commonInit];
     }

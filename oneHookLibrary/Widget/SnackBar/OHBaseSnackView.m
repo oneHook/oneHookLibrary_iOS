@@ -10,11 +10,12 @@
 
 @implementation OHBaseSnackView
 
-- (id)init
+- (id)initWithBackgroundStyle:(OHSnackBarBackgroundStyle)style
 {
     self = [super init];
     if(self) {
         self.idleTime = 2;
+        self.backgroundStyle = style;
     }
     return self;
 }
