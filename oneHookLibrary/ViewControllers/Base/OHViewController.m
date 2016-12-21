@@ -290,7 +290,7 @@
     
     _toolbarHeight -= yDiff;
     
-    if(_toolbarHeight > toolbarMaximumHeight) {
+    if(!self.toolbarCanBounce && _toolbarHeight > toolbarMaximumHeight) {
         _toolbarHeight = toolbarMaximumHeight;
     }
     
