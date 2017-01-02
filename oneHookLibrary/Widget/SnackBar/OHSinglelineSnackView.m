@@ -8,6 +8,15 @@
 
 #import "OHSinglelineSnackView.h"
 
+@interface OHSinglelineSnackView() {
+    
+}
+
+@property (assign, nonatomic) CGFloat measuredWidth;
+@property (assign, nonatomic) CGFloat measuredHeight;
+
+@end
+
 @implementation OHSinglelineSnackView
 
 - (id)initWithBackgroundStyle:(OHSnackBarBackgroundStyle)style
@@ -15,6 +24,7 @@
     self = [super initWithBackgroundStyle:style];
     if(self) {
         [self commonInit];
+        self.measuredWidth = -1;
     }
     return self;
 }
@@ -29,13 +39,11 @@
 
 - (CGFloat)measureHeightByWidth:(CGFloat)width
 {
-    static CGFloat measuredWidth = 0;
-    static CGFloat measuredHeight = 0;
     /* do not measure same width more than once */
-    if(measuredWidth == width) {
-        return measuredHeight;
+    if(self.measuredWidth == width) {
+        return self.measuredHeight;
     }
-    measuredWidth = width;
+    self.measuredWidth = width;
     if(self.textLabel.text) {
         /* measure using plain text */
         CGRect sizeFrame = [self.textLabel.text
@@ -43,7 +51,7 @@
                             options:NSStringDrawingUsesLineFragmentOrigin
                             attributes:@{ NSFontAttributeName:self.textLabel.font }
                             context:nil];
-        measuredHeight = sizeFrame.size.height + _padding * 2;
+        self.measuredHeight = sizeFrame.size.height + _padding * 2;
         
     } else if(self.textLabel.attributedText) {
         /* measure using attributed text */
@@ -51,10 +59,10 @@
                             boundingRectWithSize:CGSizeMake(width - _padding * 2, CGFLOAT_MAX)
                             options:(NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading)
                             context:nil];
-        measuredHeight = sizeFrame.size.height + _padding * 2;
+        self.measuredHeight = sizeFrame.size.height + _padding * 2;
     }
     
-    return measuredHeight;
+    return self.measuredHeight;
 }
 
 - (void)layoutSubviews
