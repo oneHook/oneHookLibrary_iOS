@@ -242,6 +242,7 @@
 - (void)endRefreshing
 {
     _isRefreshing = NO;
+    _pullToRefreshProgress = 0;
 }
 
 #pragma marks - for child class to implement
