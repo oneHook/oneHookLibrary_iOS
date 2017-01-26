@@ -1,53 +1,53 @@
 /* common */
-"Cancel" = "Cancel";
+"Cancel" = "Annuler";
 
 /* relative time */
 
-"Now" = "Now";
-"%d seconds ago" = "%d seconds ago";
-"%d seconds from now" = "%d seconds from now";
-"A minute ago" = "A minute ago";
-"A minute from now" = "A minute from now";
-"%d minutes ago" = "%d minutes ago";
-"%d minutes from now" = "%d minutes from now";
-"An hour ago" = "An hour ago";
-"An hour from now" = "An hour from now";
-"%d hours ago" = "%d hours ago";
-"%d hours from now" = "%d hours from now";
-"A day ago" = "A day ago";
-"A day from now" = "A day from now";
-"%d days ago" = "%d days ago";
-"%d days from now" = "%d days from now";
-"A week ago" = "A week ago";
-"A week from now" = "A week from now";
-"%d weeks ago" = "%d weeks ago";
-"%d weeks from now" = "%d weeks from now";
-"A month ago" = "A month ago";
-"A month from now" = "A month from now";
-"%d months ago" = "%d months ago";
-"%d months from now" = "%d months from now";
-"A year ago" = "A year ago";
-"A year from now" = "A year from now";
-"%d years ago" = "%d years ago";
-"%d years from now" = "%d years from now";
+"Now" = "Maintenant";
+"%d seconds ago" = "Il y a %d secondes";
+"%d seconds from now" = "Dans %d secondes";
+"A minute ago" = "Il y a une minute";
+"A minute from now" = "Dans une minute";
+"%d minutes ago" = "Il y a %d minutes";
+"%d minutes from now" = "Dans %d minutes";
+"An hour ago" = "Il y a une heaure";
+"An hour from now" = "Dans une heure";
+"%d hours ago" = "Il y a %d heures";
+"%d hours from now" = "Dans %d heures";
+"A day ago" = "Il y a un jour";
+"A day from now" = "Dans un jour";
+"%d days ago" = "Il y a %d jours";
+"%d days from now" = "Dans %d jours";
+"A week ago" = "Il y a une semaine";
+"A week from now" = "Dans une semaine";
+"%d weeks ago" = "Il y a %d semaines";
+"%d weeks from now" = "Dans %d semaines";
+"A month ago" = "Il y a un mois";
+"A month from now" = "Dans un mois";
+"%d months ago" = "Il y a %d mois";
+"%d months from now" = "Dans %d mois";
+"A year ago" = "Il y a une année";
+"A year from now" = "Dans une année";
+"%d years ago" = "Il y a %d ans";
+"%d years from now" = "Dans %d ans";
 
 /* absolute time */
 
-"shortDateNoYearFormat" = "MMM d";
-"shortDateWithYearFormat" = "MMMM d, yyyy";
+"shortDateNoYearFormat" = "le d MMM";
+"shortDateWithYearFormat" = "d MMMM yyyy";
 
 /* weekday symbols */
-"Monday" = "Monday";
-"Tuesday" = "Tuesday";
-"Wednesday" = "Wednesday";
-"Thursday" = "Thursday";
-"Friday" = "Friday";
-"Saturday" = "Saturday";
-"Sunday" = "Sunday";
+"Monday" = "lundi";
+"Tuesday" = "mardi";
+"Wednesday" = "mercredi";
+"Thursday" = "jeudi";
+"Friday" = "vendredi";
+"Saturday" = "samedi";
+"Sunday" = "dimanche";
 
 /* Image picker controller */
-"Take photo" = "Take photo";
-"Choose from library" = "Choose from library";
-"Choose your image" = "Choose your image";
+"Take photo" = "Prenez la photo";
+"Choose from library" = "Téléchargez votre photo";
+"Choose your image" = "Choisissez votre photo";
 
 
