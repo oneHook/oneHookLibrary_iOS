@@ -38,3 +38,8 @@
 "Friday" = "星期五";
 "Saturday" = "星期六";
 "Sunday" = "星期日";
+
+/* Image picker controller */
+"Take photo" = "拍摄照片";
+"Choose from library" = "从相册选择图片";
+"Choose your image" = "选择你的图片";

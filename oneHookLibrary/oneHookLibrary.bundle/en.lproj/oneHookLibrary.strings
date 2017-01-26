@@ -27,14 +27,22 @@
 "%d years from now" = "%d years from now";
 
 /* absolute time */
-"shortDateNoYearFormat" = "M月d日";
-"shortDateWithYearFormat" = "yyyy年M月d日";
+
+"shortDateNoYearFormat" = "MMM d";
+"shortDateWithYearFormat" = "MMMM d, yyyy";
 
 /* weekday symbols */
-"Monday" = "星期一";
-"Tuesday" = "星期二";
-"Wednesday" = "星期三";
-"Thursday" = "星期四";
-"Friday" = "星期五";
-"Saturday" = "星期六";
-"Sunday" = "星期日";
+"Monday" = "Monday";
+"Tuesday" = "Tuesday";
+"Wednesday" = "Wednesday";
+"Thursday" = "Thursday";
+"Friday" = "Friday";
+"Saturday" = "Saturday";
+"Sunday" = "Sunday";
+
+/* Image picker controller */
+"Take photo" = "Take photo";
+"Choose from library" = "Choose from library";
+"Choose your image" = "Choose your image";
+
+

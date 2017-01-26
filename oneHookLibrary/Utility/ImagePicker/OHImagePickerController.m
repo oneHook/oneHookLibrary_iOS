@@ -10,6 +10,7 @@
 #import "OHCompactActionSheetController.h"
 #import <MobileCoreServices/MobileCoreServices.h>
 #import <Photos/Photos.h>
+#import "OHLocalization.h"
 
 @interface OHImagePickerController() <OHCompactActionSheetControllerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate> {
     
@@ -30,18 +31,19 @@
         self.presentingController = presentingController;
         self.options = [[NSMutableArray alloc] init];
         if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
-            [self.options addObject:@"Take photo"];
+            [self.options addObject:[OHLocalization localizedString:@"Take photo"]];
         }
-        [self.options addObject:@"Choose from library"];
+        [self.options addObject:[OHLocalization localizedString:@"Choose from library"]];
     }
     return self;
 }
 
 - (void)takePhotoOrChooseFromLibrary
 {
-    OHCompactActionSheetController* actionSheet = [[OHCompactActionSheetController alloc] initWithTitle:@"Choose your image"
-                                                                                                message:@""
-                                                                                                options:self.options];
+    OHCompactActionSheetController* actionSheet = [[OHCompactActionSheetController alloc]
+                                                   initWithTitle:[OHLocalization localizedString:@"Choose your image"]
+                                                   message:@""
+                                                   options:self.options];
     self.actionSheetController = actionSheet;
     self.actionSheetController.delegate = self;
     [self.actionSheetController presentInViewController:self.presentingController];
@@ -147,8 +149,8 @@
         } else if (originalImage) {
             imageToSave = originalImage;
         } else {
-//            if ([self.delegate respondsToSelector:@selector(takeController:didFailAfterAttempting:)])
-//                [self.delegate takeController:self didFailAfterAttempting:YES];
+            //            if ([self.delegate respondsToSelector:@selector(takeController:didFailAfterAttempting:)])
+            //                [self.delegate takeController:self didFailAfterAttempting:YES];
             return;
         }
     }
@@ -163,7 +165,7 @@
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
 {
-
+    
     [self.delegate oh_imagePickerControllerCancelled:self];
     [[UIApplication sharedApplication] setStatusBarHidden:YES];
     [picker dismissViewControllerAnimated:YES completion:nil];

@@ -39,3 +39,8 @@
 "Friday" = "Friday";
 "Saturday" = "Saturday";
 "Sunday" = "Sunday";
+
+/* Image picker controller */
+"Take photo" = "Take photo";
+"Choose from library" = "Choose from library";
+"Choose your image" = "Choose your image";

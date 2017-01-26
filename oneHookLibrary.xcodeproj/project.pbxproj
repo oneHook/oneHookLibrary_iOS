@@ -68,7 +68,6 @@
 		4C7A06051D416F0C00C47097 /* OHFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7A06041D416F0C00C47097 /* OHFlowLayout.m */; };
 		4C7A06061D41786000C47097 /* OHFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C7A06041D416F0C00C47097 /* OHFlowLayout.m */; };
 		4C7A06071D41786400C47097 /* OHTagsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9346E01D407B1B00DB5C97 /* OHTagsView.m */; };
-		4C8E48E01D48395C003426D8 /* NSDate+Utility.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4C8E48DF1D48395C003426D8 /* NSDate+Utility.bundle */; };
 		4C9346E11D407B1B00DB5C97 /* OHTagsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9346E01D407B1B00DB5C97 /* OHTagsView.m */; };
 		4C98AA901B56E16A000B6D9C /* UIColor+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C98AA8F1B56E16A000B6D9C /* UIColor+Utility.m */; };
 		4CA6EE421D4FB7BE003AFA21 /* OHCustomActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CA6EE411D4FB7BE003AFA21 /* OHCustomActionSheet.m */; };
@@ -153,6 +152,9 @@
 		D3FE00831AC50D71004D4BD2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3FE002D1AC50AEA004D4BD2 /* QuartzCore.framework */; };
 		D3FE008C1AC5109F004D4BD2 /* OHBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FE00271AC50A7A004D4BD2 /* OHBaseViewController.m */; };
 		D3FEFFF81AC50788004D4BD2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FEFFF71AC50788004D4BD2 /* main.m */; };
+		FDB8EAFC1E3A6213005909D3 /* oneHookLibrary.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FDB8EAFB1E3A6213005909D3 /* oneHookLibrary.bundle */; };
+		FDB8EB071E3A660D005909D3 /* OHLocalization.m in Sources */ = {isa = PBXBuildFile; fileRef = FDB8EB061E3A660D005909D3 /* OHLocalization.m */; };
+		FDB8EB081E3A660D005909D3 /* OHLocalization.m in Sources */ = {isa = PBXBuildFile; fileRef = FDB8EB061E3A660D005909D3 /* OHLocalization.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -244,7 +246,6 @@
 		4C793FEF1D5C0302004C000F /* NSBundle+NYTPhotoViewer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+NYTPhotoViewer.m"; sourceTree = "<group>"; };
 		4C7A06031D416F0C00C47097 /* OHFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHFlowLayout.h; sourceTree = "<group>"; };
 		4C7A06041D416F0C00C47097 /* OHFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHFlowLayout.m; sourceTree = "<group>"; };
-		4C8E48DF1D48395C003426D8 /* NSDate+Utility.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = "NSDate+Utility.bundle"; sourceTree = "<group>"; };
 		4C9346DF1D407B1B00DB5C97 /* OHTagsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHTagsView.h; sourceTree = "<group>"; };
 		4C9346E01D407B1B00DB5C97 /* OHTagsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHTagsView.m; sourceTree = "<group>"; };
 		4C98AA8E1B56E16A000B6D9C /* UIColor+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Utility.h"; sourceTree = "<group>"; };
@@ -343,6 +344,9 @@
 		D3FEFFF21AC50788004D4BD2 /* oneHookLibrary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = oneHookLibrary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3FEFFF61AC50788004D4BD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3FEFFF71AC50788004D4BD2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FDB8EAFB1E3A6213005909D3 /* oneHookLibrary.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = oneHookLibrary.bundle; sourceTree = "<group>"; };
+		FDB8EB051E3A660D005909D3 /* OHLocalization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHLocalization.h; sourceTree = "<group>"; };
+		FDB8EB061E3A660D005909D3 /* OHLocalization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHLocalization.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -543,6 +547,8 @@
 		D309EC191ADA454800858EF2 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				FDB8EB051E3A660D005909D3 /* OHLocalization.h */,
+				FDB8EB061E3A660D005909D3 /* OHLocalization.m */,
 				D357AE521D11E4F8000A8306 /* Device */,
 				4C1736A41D0489AD00B6A4E3 /* Text */,
 				D3A742501BCEC6470057710E /* ImagePicker */,
@@ -700,7 +706,6 @@
 		D3A8BC241B0A6657004FF5A3 /* Date */ = {
 			isa = PBXGroup;
 			children = (
-				4C8E48DF1D48395C003426D8 /* NSDate+Utility.bundle */,
 				D3A8BC291B0A672E004FF5A3 /* NSDate+Utility.h */,
 				D3A8BC2A1B0A672E004FF5A3 /* NSDate+Utility.m */,
 			);
@@ -869,6 +874,7 @@
 		D3FEFFF41AC50788004D4BD2 /* oneHookLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				FDB8EAFB1E3A6213005909D3 /* oneHookLibrary.bundle */,
 				D34A08051B7B74CF001B6C30 /* Thirdparty */,
 				D309EC191ADA454800858EF2 /* Utility */,
 				D3FE00881AC50E79004D4BD2 /* Headers */,
@@ -978,9 +984,9 @@
 				4C793FF91D5C0302004C000F /* NYTPhotoViewer.bundle in Resources */,
 				D328480D1AEC1B9500DE7CD3 /* Main.storyboard in Resources */,
 				D328480C1AEC1B9500DE7CD3 /* LaunchScreen.xib in Resources */,
+				FDB8EAFC1E3A6213005909D3 /* oneHookLibrary.bundle in Resources */,
 				D3FE00031AC50788004D4BD2 /* Images.xcassets in Resources */,
 				4C793FF01D5C0302004C000F /* Info.plist in Resources */,
-				4C8E48E01D48395C003426D8 /* NSDate+Utility.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1044,6 +1050,7 @@
 				D383040D1AE9F5B4003AE826 /* OHTableViewWIthCardEffectController.m in Sources */,
 				D3F6DFC01C2D02C300043B38 /* OHKeyFrameAnimator.m in Sources */,
 				D3C4A8501B7D054E00660353 /* UIImageViewWithOverlay.m in Sources */,
+				FDB8EB081E3A660D005909D3 /* OHLocalization.m in Sources */,
 				4C7940081D5C0327004C000F /* NYTPhotosOverlayView.m in Sources */,
 				4C1736DA1D0525BE00B6A4E3 /* OHToolbar.m in Sources */,
 				D34A080D1B7B74E6001B6C30 /* NSString+Morphing.m in Sources */,
@@ -1124,6 +1131,7 @@
 				4C793FF11D5C0302004C000F /* NYTPhotoCaptionView.m in Sources */,
 				D33A1CDD1BF589DE0005FDB2 /* OHAnimatedProgressRing.m in Sources */,
 				D3FEFFF81AC50788004D4BD2 /* main.m in Sources */,
+				FDB8EB071E3A660D005909D3 /* OHLocalization.m in Sources */,
 				4C793FFA1D5C0302004C000F /* NYTScalingImageView.m in Sources */,
 				D34A080B1B7B74CF001B6C30 /* NSString+Morphing.m in Sources */,
 				4C1736C41D048C2B00B6A4E3 /* OHLinearScrollView.m in Sources */,
