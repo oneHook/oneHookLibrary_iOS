@@ -1,3 +1,7 @@
+/* common */
+"Cancel" = "Cancel";
+
+/* relative time */
 "Now" = "たった今";
 "%d seconds ago" = "%d秒前";
 "%d seconds from now" = "%d秒後";

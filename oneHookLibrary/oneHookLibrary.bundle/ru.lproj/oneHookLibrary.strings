@@ -1,3 +1,7 @@
+/* common */
+"Cancel" = "Cancel";
+
+/* relative time */
 "Now" = "Сейчас";
 "%d seconds ago" = "%d секунд назад";
 "%d seconds from now" = "через %d секунд";

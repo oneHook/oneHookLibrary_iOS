@@ -8,6 +8,7 @@
 
 #import "OHCompactActionSheetController.h"
 #import "OHMacros.h"
+#import "OHLocalization.h"
 
 @interface OHCompactActionSheetController() {
     NSString* _title;
@@ -41,7 +42,7 @@
             }]];
             index++;
         }
-        [alertController addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+        [alertController addAction:[UIAlertAction actionWithTitle:[OHLocalization localizedString:@"Cancel"] style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
             [self.delegate actionSheetController:self indexSelected:-1 itemTitle:@"Cancel"];
         }]];
         [controller presentViewController:alertController animated:YES completion:^{
@@ -57,7 +58,7 @@
         for(NSString* option in _options) {
             [sheet addButtonWithTitle:option];
         }
-        sheet.cancelButtonIndex = [sheet addButtonWithTitle:@"Cancel"];
+        sheet.cancelButtonIndex = [sheet addButtonWithTitle:[OHLocalization localizedString:@"Cancel"]];
         [sheet showInView:controller.view];
     }
 }
