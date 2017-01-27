@@ -43,34 +43,20 @@
 /** String: Simulator **/
 #define DEVICE_SIMULATOR @"Simulator"
 
-/** BOOL: Detect if device is an iPad **/
 #define IS_IPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
-
-/** BOOL: Detect if device is an iPhone or iPod **/
 #define IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+#define IS_RETINA ([[UIScreen mainScreen] scale] >= 2.0)
 
-/** BOOL: Detect if device is an iPhone 5 **/
-#define IS_IPHONE_5                                                      \
-(IS_IPHONE                                                           \
-? CGSizeEqualToSize([[UIScreen mainScreen] preferredMode].size, \
-CGSizeMake(640, 1136))                      \
-? YES                                                     \
-: NO                                                      \
-: NO)
+#define SCREEN_WIDTH ([[UIScreen mainScreen] bounds].size.width)
+#define SCREEN_HEIGHT ([[UIScreen mainScreen] bounds].size.height)
+#define SCREEN_MAX_LENGTH (MAX(SCREEN_WIDTH, SCREEN_HEIGHT))
+#define SCREEN_MIN_LENGTH (MIN(SCREEN_WIDTH, SCREEN_HEIGHT))
+#define IS_ZOOMED (IS_IPHONE && SCREEN_MAX_LENGTH == 736.0)
 
-/** BOOL: Detect if device is an iPhone 5 **/
-#define IS_IPHONE_4                                                      \
-(IS_IPHONE                                                           \
-? CGSizeEqualToSize([[UIScreen mainScreen] preferredMode].size, \
-CGSizeMake(640, 960))                      \
-? YES                                                     \
-: NO                                                      \
-: NO)
-
-/** BOOL: IS_RETINA **/
-#define IS_RETINA                                                   \
-([[UIScreen mainScreen] respondsToSelector:@selector(scale)] && \
-[[UIScreen mainScreen] scale] == 2)
+#define IS_IPHONE_4_OR_LESS (IS_IPHONE && SCREEN_MAX_LENGTH < 568.0)
+#define IS_IPHONE_5 (IS_IPHONE && SCREEN_MAX_LENGTH == 568.0)
+#define IS_IPHONE_6_7 (IS_IPHONE && SCREEN_MAX_LENGTH == 667.0)
+#define IS_IPHONE_6_7P (IS_IPHONE && SCREEN_MAX_LENGTH == 736.0)
 
 /** BOOL: Detect if device is the Simulator **/
 #define IS_SIMULATOR (TARGET_IPHONE_SIMULATOR)
