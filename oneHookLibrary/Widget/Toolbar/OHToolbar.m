@@ -67,7 +67,7 @@
         _titleLabel.frame = CGRectMake(MARGIN_SMALL + actionButtonLength,
                                        topOffset,
                                        width - 2 * actionButtonLength - 2 * MARGIN_SMALL,
-                                       height - topOffset);
+                                       kToolbarDefaultHeight);
         _lastWidth = width;
         _lastHeight = height;
     }
