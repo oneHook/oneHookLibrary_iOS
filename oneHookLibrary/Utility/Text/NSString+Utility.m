@@ -21,7 +21,7 @@
 
 + (BOOL)isEmpty:(NSString *)text
 {
-    return text == nil || text == [NSNull null] || text.length == 0;
+    return text == nil || [text isEqual:[NSNull null]] || text.length == 0;
 }
 
 - (NSString *)MD5 {
