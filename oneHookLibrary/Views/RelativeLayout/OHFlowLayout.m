@@ -63,8 +63,8 @@
         currentLineY -= _lineSpacing;
     }
     
-    self.bounds = CGRectMake(0, 0, maxWidth, currentLineY);
-    return CGSizeMake(maxWidth, currentLineY);
+    self.bounds = CGRectMake(0, 0, maxWidth, MAX(0, currentLineY));
+    return CGSizeMake(maxWidth, MAX(0, currentLineY));
 }
 
 - (void)layoutLine:(NSArray*)views yStart:(CGFloat)yStart maxHeight:(CGFloat)maxHeight
