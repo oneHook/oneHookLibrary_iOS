@@ -109,6 +109,19 @@
     [self addViewToOrder:view];
 }
 
+-(void)addChild:(UIView*)view at:(NSUInteger)index{
+    [self.contentView addSubview:view];
+    [self.viewOrders insertObject:view atIndex:index];
+}
+
+- (void)removeChild:(UIView*)view
+{
+    if([self.subviews containsObject:view])
+    {
+        [view removeFromSuperview];
+        [self.viewOrders removeObject:view];
+    }
+}
 
 
 @end
