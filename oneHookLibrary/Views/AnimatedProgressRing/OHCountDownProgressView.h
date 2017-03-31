@@ -15,7 +15,8 @@
 @property (strong, nonatomic) OHAnimatedProgressRing* progressRing;
 @property (strong, nonatomic) UILabel* secondsLabel;
 
--(void)startWithEndingBlock:(void(^)(NSTimeInterval countTime))endBlock;
+-(void)startWithProgressBlock:(void (^)(NSTimeInterval))progressBloack
+                  EndingBlock:(void (^)(NSTimeInterval))endBlock;
 -(void)reset;
 
 @end

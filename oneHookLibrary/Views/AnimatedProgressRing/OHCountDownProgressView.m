@@ -12,7 +12,8 @@
 
 @interface OHCountDownProgressView() {
     double _startTime;
-    void (^endedBlock)(NSTimeInterval);
+    void (^_progressBlock)(NSTimeInterval);
+    void (^_endedBlock)(NSTimeInterval);
 }
 
 @property (strong, nonatomic) NSTimer *timer;
@@ -39,6 +40,8 @@
 
 - (void)dealloc
 {
+    _progressBlock = nil;
+    _endedBlock = nil;
 #ifdef DEBUG
     NSLog(@"DEALLOC ANIMATED PROGRESS RING");
 #endif
@@ -57,13 +60,15 @@
     [self addSubview:self.secondsLabel];
 }
 
--(void)startWithEndingBlock:(void (^)(NSTimeInterval))endBlock
+-(void)startWithProgressBlock:(void (^)(NSTimeInterval))progressBloack
+                  EndingBlock:(void (^)(NSTimeInterval))endBlock
 {
     if (_timer) {
         [_timer invalidate];
         _timer = nil;
     }
-    endedBlock = endBlock;
+    _progressBlock = progressBloack;
+    _endedBlock = endBlock;
     __weak typeof(self) weakSelf = self;
     _timer = [NSTimer scheduledTimerWithTimeInterval:kDefaultFireIntervalHighUse
                                               target:weakSelf
@@ -82,11 +87,14 @@
     self.secondsLabel.text = [NSString stringWithFormat:@"%d", (int) ceil(_secondsToCountDown - past)];
     CGFloat progress = past / self.secondsToCountDown;
     self.progressRing.progress = progress;
+    if(_progressBlock) {
+        _progressBlock(past);
+    }
     if(progress >= 1.0) {
         if(_timer) {
             [_timer invalidate];
             _timer = nil;
-            endedBlock(past);
+            _endedBlock(past);
         }
     }
 }
