@@ -46,6 +46,9 @@
 {
     self = [super init];
     if(self) {
+#ifdef DEBUG
+        NSLog(@"%@ ALLOC <%p>", [self class], self);
+#endif
         [self commonInit];
         _toolbarStyle = style;
     }
@@ -55,7 +58,7 @@
 - (void)dealloc
 {
 #ifdef DEBUG
-    NSLog(@"%@ DEALLOC", [self class]);
+    NSLog(@"%@ DEALLOC <%p>", [self class], self);
 #endif
 }
 
