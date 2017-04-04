@@ -33,7 +33,7 @@
 
 /* absolute time */
 
-"shortDateNoYearFormat" = "le d MMM";
+"shortDateNoYearFormat" = "d MMM";
 "shortDateWithYearFormat" = "d MMMM yyyy";
 
 /* weekday symbols */

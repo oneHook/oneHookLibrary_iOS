@@ -63,7 +63,7 @@
 }
 
 
-- (void)doLayoutInSize:(CGSize)size
+- (CGSize)doLayoutInSize:(CGSize)size
 {
     CGFloat contentLength = 0;
     for(UIView* view in self.viewOrders) {
@@ -96,11 +96,12 @@
     if(self.orientation == OHLinearScrollViewOrientationHorizontal) {
         self.contentSize = CGSizeMake(contentLength, 0);
         self.contentView.frame = CGRectMake(0, 0, contentLength, self.frame.size.height);
+        return CGSizeMake(contentLength, CGRectGetHeight(self.frame));
     } else {
         self.contentSize = CGSizeMake(0, contentLength);
         self.contentView.frame = CGRectMake(0, 0, self.frame.size.width, contentLength);
+        return CGSizeMake(CGRectGetWidth(self.frame), contentLength);
     }
-    
 }
 
 - (void)addChild:(UIView*)view

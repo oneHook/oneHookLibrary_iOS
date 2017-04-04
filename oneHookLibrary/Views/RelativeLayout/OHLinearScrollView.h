@@ -26,10 +26,8 @@ typedef enum {
 /* deprecated */
 - (void)doLayout;
 
-
-
 /* new version */
-- (void)doLayoutInSize:(CGSize)size;
+- (CGSize)doLayoutInSize:(CGSize)size;
 - (void)addChild:(UIView*)view;
 - (void)addChild:(UIView*)view at:(NSUInteger)index;
 - (void)removeChild:(UIView*)view;
