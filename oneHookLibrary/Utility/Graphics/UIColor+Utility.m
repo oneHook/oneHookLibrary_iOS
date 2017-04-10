@@ -74,4 +74,12 @@
     return nil;
 }
 
++ (BOOL)isLightColor:(UIColor *)c
+{
+    CGFloat r, g, b, a;
+    [c getRed:&r green:&g blue:&b alpha:&a];
+    double darkness = 1 - (r * 0.299 + g * 0.587 + b * 0.114);
+    return darkness < 0.5;
+}
+
 @end

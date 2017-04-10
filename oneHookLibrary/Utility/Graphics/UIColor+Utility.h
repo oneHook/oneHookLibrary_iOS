@@ -17,5 +17,6 @@
 + (UIColor *)lighterColorForColor:(UIColor *)c;
 + (UIColor *)darkerColorForColor:(UIColor *)c;
 + (UIColor *)darkestColorForColor:(UIColor *)c;
++ (BOOL)isLightColor:(UIColor*)c;
 
 @end
