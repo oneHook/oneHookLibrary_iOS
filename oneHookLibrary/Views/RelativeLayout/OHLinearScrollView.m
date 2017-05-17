@@ -84,12 +84,12 @@
                 view.hidden = YES;
             } else {
                 view.hidden = NO;
-                view.bounds = CGRectMake(0, 0, viewWidth, viewHeight);
-                view.frame = CGRectMake((size.width - viewWidth) / 2,
-                                        contentLength + marginTop,
-                                        viewWidth,
-                                        viewHeight);
             }
+            view.bounds = CGRectMake(0, 0, viewWidth, viewHeight);
+            view.frame = CGRectMake((size.width - viewWidth) / 2,
+                                    contentLength + marginTop,
+                                    viewWidth,
+                                    viewHeight);
             contentLength += viewHeight + marginTop;
         }
     }
