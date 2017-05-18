@@ -100,7 +100,7 @@
 - (CGPoint)rightButtonCenter
 {
     CGFloat actionButtonLength = kToolbarDefaultHeight - MARGIN_SMALL * 2;
-    return CGPointMake(CGRectGetWidth(self.frame) - MARGIN_SMALL - actionButtonLength / 2,
+    return CGPointMake(CGRectGetWidth(self.frame) - MARGIN_MEDIUM - actionButtonLength / 2,
                        CGRectGetHeight(self.frame) - actionButtonLength / 2 - MARGIN_SMALL);
 }
 
