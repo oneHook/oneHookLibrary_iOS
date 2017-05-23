@@ -81,7 +81,6 @@
 //    [CATransaction setAnimationDuration:0];
     CGFloat width = CGRectGetWidth(self.bounds);
     CGFloat height = CGRectGetHeight(self.bounds);
-    NSLog(@"progress %f %f %f %f", _mainProgress, _subProgress, width, height);
     if(layer == self.layer) {
 
         CGFloat mainProgressHeight = height * 0.85;
