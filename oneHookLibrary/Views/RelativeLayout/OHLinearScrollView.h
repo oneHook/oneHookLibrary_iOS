@@ -31,4 +31,5 @@ typedef enum {
 - (void)addChild:(UIView*)view;
 - (void)addChild:(UIView*)view at:(NSUInteger)index;
 - (void)removeChild:(UIView*)view;
+
 @end

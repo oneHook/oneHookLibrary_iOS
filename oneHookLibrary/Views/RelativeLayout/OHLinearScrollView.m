@@ -11,7 +11,7 @@
 #define PADDING self.padding
 
 @interface OHLinearScrollView() {
-    
+
 }
 
 @property (strong, nonatomic) NSMutableArray* viewOrders;
@@ -62,7 +62,6 @@
     [self.viewOrders addObject:view];
 }
 
-
 - (CGSize)doLayoutInSize:(CGSize)size
 {
     CGFloat contentLength = 0;
@@ -95,12 +94,12 @@
     }
     if(self.orientation == OHLinearScrollViewOrientationHorizontal) {
         self.contentSize = CGSizeMake(contentLength, 0);
-        self.contentView.frame = CGRectMake(0, 0, contentLength, self.frame.size.height);
-        return CGSizeMake(contentLength, CGRectGetHeight(self.frame));
+        self.contentView.frame = CGRectMake(0, 0, contentLength, size.height);
+        return CGSizeMake(contentLength, size.height);
     } else {
         self.contentSize = CGSizeMake(0, contentLength);
-        self.contentView.frame = CGRectMake(0, 0, self.frame.size.width, contentLength);
-        return CGSizeMake(CGRectGetWidth(self.frame), contentLength);
+        self.contentView.frame = CGRectMake(0, 0, size.width, contentLength);
+        return CGSizeMake(size.width, contentLength);
     }
 }
 
