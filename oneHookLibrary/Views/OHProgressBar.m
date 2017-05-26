@@ -97,6 +97,8 @@
 
 - (void)setMainProgress:(CGFloat)mainProgress subProgress:(CGFloat)subProgress animated:(BOOL)animated
 {
+    _mainProgress = mainProgress;
+    _subProgress = subProgress;
     [self layoutSublayersOfLayer:self.layer];
 }
 
