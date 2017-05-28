@@ -47,6 +47,8 @@
         
         [self.delegate willStartPullToRefresh:MIN(1, progress) starting:NO];
 //        NSLog(@"offset needed %f offset traveled %f progress %f", offsetNeeded, offsetTraveled, progress);
+    } else {
+        [self.delegate willStartPullToRefresh:0 starting:NO];
     }
 }
 
@@ -55,7 +57,6 @@
     if(self.inRefresh) {
         return;
     }
-    
 //    NSLog(@"Scroll view end dragging %f %f", scrollView.contentInset.top, scrollView.contentOffset.y);
     if(scrollView.contentOffset.y < scrollView.contentInset.top) {
         CGFloat offsetNeeded = CGRectGetHeight(scrollView.frame) * self.pullToRefreshOffsetRatio;

@@ -8,7 +8,7 @@
 
 #import "OHProgressBar.h"
 
-#define NSLog(FORMAT, ...) printf("%s\n", [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
+//#define NSLog(FORMAT, ...) printf("%s\n", [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
 
 @interface OHProgressBar() {
     CALayer* _mainProgressLayer;
@@ -77,22 +77,26 @@
 
 - (void)layoutSublayersOfLayer:(CALayer *)layer
 {
-//    [CATransaction begin];
-//    [CATransaction setAnimationDuration:0];
     CGFloat width = CGRectGetWidth(self.bounds);
     CGFloat height = CGRectGetHeight(self.bounds);
     if(layer == self.layer) {
 
         CGFloat mainProgressHeight = height * 0.85;
-        _mainProgressLayer.bounds = CGRectMake(0, 0, (width - height + mainProgressHeight) * _mainProgress, mainProgressHeight);
-        _mainProgressLayer.position = CGPointMake((height - mainProgressHeight) / 2, height / 2);
+        _mainProgressLayer.bounds = CGRectMake(0,
+                                               0,
+                                               (width - (height - mainProgressHeight)) * _mainProgress,
+                                               mainProgressHeight);
+        _mainProgressLayer.position = CGPointMake((height - mainProgressHeight) / 2,
+                                                  height / 2);
         _mainProgressLayer.cornerRadius = mainProgressHeight / 2;
         
-        _subProgressLayer.bounds = CGRectMake(0, 0, width * _subProgress, height);
+        _subProgressLayer.bounds = CGRectMake(0,
+                                              0,
+                                              width * _subProgress,
+                                              height);
         _subProgressLayer.position = CGPointMake(0, height / 2);
         _subProgressLayer.cornerRadius = height / 2;
     }
-//    [CATransaction commit];
 }
 
 - (void)setMainProgress:(CGFloat)mainProgress subProgress:(CGFloat)subProgress animated:(BOOL)animated

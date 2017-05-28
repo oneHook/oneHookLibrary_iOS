@@ -10,7 +10,7 @@
 #import "OneHookFoundation.h"
 
 
-#define NSLog(FORMAT, ...) printf("%s\n", [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
+//#define NSLog(FORMAT, ...) printf("%s\n", [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
 #define FLOATING_ACTION_BUTTON_ANIMATION_THRESHOLD 24
 #define FAB_STATE_TOP 0
 #define FAB_STATE_BOTTOM 1
@@ -323,6 +323,8 @@
             CGFloat progress = pullToRefreshOffset / self.pullToRefreshTriggerOffset;
             _pullToRefreshProgress = progress;
             [self willStartPullToRefresh:progress starting:NO];
+        } else {
+            [self willStartPullToRefresh:0 starting:NO];
         }
     }
     
