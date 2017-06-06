@@ -78,6 +78,8 @@
 		4CD7290D1CEAD6FB00B91F0F /* OHSlideShowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD7290B1CEAC9DB00B91F0F /* OHSlideShowView.m */; };
 		4CD8E2DB1D7BB972009EEA0C /* OHIconLabelButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD8E2DA1D7BB972009EEA0C /* OHIconLabelButton.m */; };
 		4CD8E2DC1D7BB974009EEA0C /* OHIconLabelButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD8E2DA1D7BB972009EEA0C /* OHIconLabelButton.m */; };
+		BD8BEEDE1EE742730060176E /* OHTimerLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8BEEDD1EE742720060176E /* OHTimerLabel.m */; };
+		BD8BEEDF1EE742730060176E /* OHTimerLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8BEEDD1EE742720060176E /* OHTimerLabel.m */; };
 		D309EC1F1ADA456100858EF2 /* UIImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = D309EC1C1ADA454800858EF2 /* UIImageEffects.m */; };
 		D30C945F1B7AB5EE003C05AB /* OHProgressBar.m in Sources */ = {isa = PBXBuildFile; fileRef = D30C945E1B7AB5EE003C05AB /* OHProgressBar.m */; };
 		D30C94601B7ABAFD003C05AB /* OHProgressBar.m in Sources */ = {isa = PBXBuildFile; fileRef = D30C945E1B7AB5EE003C05AB /* OHProgressBar.m */; };
@@ -259,6 +261,8 @@
 		4CD7290B1CEAC9DB00B91F0F /* OHSlideShowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHSlideShowView.m; sourceTree = "<group>"; };
 		4CD8E2D91D7BB972009EEA0C /* OHIconLabelButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHIconLabelButton.h; sourceTree = "<group>"; };
 		4CD8E2DA1D7BB972009EEA0C /* OHIconLabelButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHIconLabelButton.m; sourceTree = "<group>"; };
+		BD8BEEDC1EE742720060176E /* OHTimerLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHTimerLabel.h; sourceTree = "<group>"; };
+		BD8BEEDD1EE742720060176E /* OHTimerLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHTimerLabel.m; sourceTree = "<group>"; };
 		D309EC1B1ADA454800858EF2 /* UIImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageEffects.h; sourceTree = "<group>"; };
 		D309EC1C1ADA454800858EF2 /* UIImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageEffects.m; sourceTree = "<group>"; };
 		D30C945D1B7AB5EE003C05AB /* OHProgressBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHProgressBar.h; sourceTree = "<group>"; };
@@ -770,6 +774,8 @@
 				D3A7424D1BCDAAF80057710E /* OHCircularImageView.m */,
 				4C1287181DD2B8A00040E2EE /* OHCircleToggleView.h */,
 				4C1287191DD2B8A00040E2EE /* OHCircleToggleView.m */,
+				BD8BEEDC1EE742720060176E /* OHTimerLabel.h */,
+				BD8BEEDD1EE742720060176E /* OHTimerLabel.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1053,6 +1059,7 @@
 				FDB8EB081E3A660D005909D3 /* OHLocalization.m in Sources */,
 				4C7940081D5C0327004C000F /* NYTPhotosOverlayView.m in Sources */,
 				4C1736DA1D0525BE00B6A4E3 /* OHToolbar.m in Sources */,
+				BD8BEEDF1EE742730060176E /* OHTimerLabel.m in Sources */,
 				D34A080D1B7B74E6001B6C30 /* NSString+Morphing.m in Sources */,
 				D3FB2DD81D74D19A00CB409F /* OHBaseSnackView.m in Sources */,
 				4C1736D61D0525A100B6A4E3 /* OHReactiveButton.m in Sources */,
@@ -1092,6 +1099,7 @@
 				4C9346E11D407B1B00DB5C97 /* OHTagsView.m in Sources */,
 				4C793FF31D5C0302004C000F /* NYTPhotosDataSource.m in Sources */,
 				D335A9321C16015900A73B97 /* OHCountDownProgressView.m in Sources */,
+				BD8BEEDE1EE742730060176E /* OHTimerLabel.m in Sources */,
 				4C98AA901B56E16A000B6D9C /* UIColor+Utility.m in Sources */,
 				D3A7A98A1B18F88E002158DC /* OHConfettiScreen.m in Sources */,
 				D3FC55E11B0011890043F02A /* OHRotatingRevealAnimationController.m in Sources */,
