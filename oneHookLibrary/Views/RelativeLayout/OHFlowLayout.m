@@ -24,8 +24,7 @@
 
 - (CGSize)doLayout:(CGFloat)maxWidth
 {
-    int subviewCount = self.subviews.count;
-    
+    NSInteger subviewCount = self.subviews.count;
     
     CGFloat currentLineX = 0;
     CGFloat currentLineY = 0;

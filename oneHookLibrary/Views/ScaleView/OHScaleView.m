@@ -86,7 +86,7 @@
 - (void)drawRect:(CGRect)rect {
     [super drawRect:rect];
     
-        CGFloat red = 0.0, green = 0.0, blue = 0.0, alpha = 0.0;
+//        CGFloat red = 0.0, green = 0.0, blue = 0.0, alpha = 0.0;
     
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGContextSetRGBStrokeColor(context, 1, 0, 0, 1.0);
