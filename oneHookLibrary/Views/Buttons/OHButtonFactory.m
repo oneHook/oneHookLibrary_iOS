@@ -17,7 +17,7 @@
     button.titleLabel.adjustsFontSizeToFitWidth = YES;
     
     [button setBackgroundColor:[UIColor clearColor] forState:UIControlStateNormal];
-    [button setBackgroundColor:[UIColor colorWithWhite:1 alpha:0.6] forState:UIControlStateHighlighted];
+    [button setBackgroundColor:[UIColor colorWithWhite:1 alpha:0.2] forState:UIControlStateHighlighted];
     
     [button setTitleColor:WHITE forState:UIControlStateNormal];
     [button setTitleColor:WHITE forState:UIControlStateHighlighted];

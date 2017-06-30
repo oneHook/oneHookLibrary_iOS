@@ -12,7 +12,7 @@
     CGFloat _lastWidth;
     CGFloat _lastHeight;
 }
-    
+
 @end
 
 @implementation OHToolbar
@@ -56,17 +56,33 @@
         self.toolbarContainer.frame = CGRectMake(0, topOffset, width, height - topOffset);
         
         CGFloat actionButtonLength = kToolbarDefaultHeight - MARGIN_SMALL * 2;
-        _leftButton.frame = CGRectMake(MARGIN_SMALL,
-                                       topOffset + MARGIN_SMALL,
-                                       actionButtonLength,
-                                       actionButtonLength);
-        _rightButton.frame = CGRectMake(width - MARGIN_SMALL - actionButtonLength,
-                                        topOffset + MARGIN_SMALL,
-                                        actionButtonLength,
-                                        actionButtonLength);
-        _titleLabel.frame = CGRectMake(MARGIN_SMALL + actionButtonLength,
+        CGFloat left = 0;
+        CGFloat right = width;
+        if(_leftButton) {
+            CGFloat defaultWidth = actionButtonLength;
+            [_leftButton sizeToFit];
+            defaultWidth = MAX(defaultWidth, CGRectGetWidth(_leftButton.bounds));
+            _leftButton.frame = CGRectMake(MARGIN_SMALL,
+                                           topOffset + MARGIN_SMALL,
+                                           defaultWidth,
+                                           actionButtonLength);
+            _leftButton.layer.cornerRadius = defaultWidth;
+            left = CGRectGetMaxX(_leftButton.frame);
+        }
+        if(_rightButton) {
+            CGFloat defaultWidth = actionButtonLength;
+            [_rightButton sizeToFit];
+            defaultWidth = MAX(defaultWidth, CGRectGetWidth(_rightButton.bounds));
+            _rightButton.frame = CGRectMake(width - MARGIN_SMALL - defaultWidth,
+                                            topOffset + MARGIN_SMALL,
+                                            defaultWidth,
+                                            actionButtonLength);
+            _rightButton.layer.cornerRadius = defaultWidth;
+            right = CGRectGetMinX(_rightButton.frame);
+        }
+        _titleLabel.frame = CGRectMake(MARGIN_SMALL + left,
                                        topOffset,
-                                       width - 2 * actionButtonLength - 2 * MARGIN_SMALL,
+                                       right - left,
                                        kToolbarDefaultHeight);
         _lastWidth = width;
         _lastHeight = height;
