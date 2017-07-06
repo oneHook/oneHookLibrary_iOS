@@ -80,9 +80,12 @@
             _rightButton.layer.cornerRadius = defaultWidth;
             right = CGRectGetMinX(_rightButton.frame);
         }
-        _titleLabel.frame = CGRectMake(MARGIN_SMALL + left,
+        CGFloat rightWidth = width - right;
+        CGFloat leftWidth = left;
+        CGFloat maxMargin = MAX(rightWidth, leftWidth);
+        _titleLabel.frame = CGRectMake(MARGIN_SMALL + maxMargin,
                                        topOffset,
-                                       right - left,
+                                       width - 2 * MARGIN_SMALL - 2 * maxMargin,
                                        kToolbarDefaultHeight);
         _lastWidth = width;
         _lastHeight = height;
