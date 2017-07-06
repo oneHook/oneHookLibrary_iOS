@@ -41,6 +41,7 @@ typedef NS_ENUM(NSInteger, OHViewControllerFloatingActionButtonStyle) {
 @property (nonatomic) BOOL toolbarShouldAutoExpandOrCollapse;                   // should the toolbar always expand to default size or minimum size
 
 @property (nonatomic) CGFloat toolbarExtension;
+@property (nonatomic) BOOL toolbarExternsionFixed;
 @property (nonatomic) UIEdgeInsets padding;
 
 - (CGFloat)defaultToolbarHeight;

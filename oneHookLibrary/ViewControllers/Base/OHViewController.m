@@ -65,6 +65,7 @@
 - (void)commonInit
 {
     self.toolbarExtension = 0;
+    self.toolbarExternsionFixed = NO;
     self.toolbarCanBounce = NO;
     self.padding = UIEdgeInsetsMake(0, 0, 0, 0);
     self.toolbarShouldStay = NO;
@@ -188,6 +189,10 @@
     CGFloat statusBarHeight = self.toolbar.showStatusBar ? kSystemStatusBarHeight : 0;
     CGFloat toolbarDefaultHeight = statusBarHeight + kToolbarDefaultHeight;
     CGFloat toolbarMinimumHeight = self.toolbarShouldStay ? (statusBarHeight + kToolbarDefaultHeight) : statusBarHeight;
+    if(self.toolbarExternsionFixed && self.toolbarExtension > 0) {
+        toolbarMinimumHeight += self.toolbarExtension;
+        toolbarDefaultHeight += self.toolbarExtension;
+    }
     
     /* take care toolbar expand or collapse */
     if(_toolbarHeight < toolbarDefaultHeight) {
@@ -291,6 +296,10 @@
     CGFloat toolbarDefaultHeight = statusBarHeight + kToolbarDefaultHeight;
     CGFloat toolbarMaximumHeight = toolbarDefaultHeight + self.toolbarExtension;
     CGFloat toolbarMinimumHeight = self.toolbarShouldStay ? (statusBarHeight + kToolbarDefaultHeight) : statusBarHeight;
+    if(self.toolbarExternsionFixed && self.toolbarExtension > 0) {
+        toolbarMinimumHeight += self.toolbarExtension;
+        toolbarDefaultHeight += self.toolbarExtension;
+    }
     
     _toolbarHeight -= yDiff;
     
