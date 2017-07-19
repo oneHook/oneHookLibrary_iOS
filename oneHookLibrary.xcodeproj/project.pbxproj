@@ -261,6 +261,7 @@
 		4CD7290B1CEAC9DB00B91F0F /* OHSlideShowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHSlideShowView.m; sourceTree = "<group>"; };
 		4CD8E2D91D7BB972009EEA0C /* OHIconLabelButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHIconLabelButton.h; sourceTree = "<group>"; };
 		4CD8E2DA1D7BB972009EEA0C /* OHIconLabelButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHIconLabelButton.m; sourceTree = "<group>"; };
+		BD31150F1F1E5A98005D7891 /* OHParseMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHParseMacros.h; sourceTree = "<group>"; };
 		BD8BEEDC1EE742720060176E /* OHTimerLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHTimerLabel.h; sourceTree = "<group>"; };
 		BD8BEEDD1EE742720060176E /* OHTimerLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHTimerLabel.m; sourceTree = "<group>"; };
 		D309EC1B1ADA454800858EF2 /* UIImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageEffects.h; sourceTree = "<group>"; };
@@ -855,6 +856,7 @@
 				D3FE008B1AC50F8F004D4BD2 /* OHMacros.h */,
 				D3FE00971AC5E0A0004D4BD2 /* OHColor.h */,
 				D33BA5F31ADA2D9000DF885A /* OHCommonDimensions.h */,
+				BD31150F1F1E5A98005D7891 /* OHParseMacros.h */,
 			);
 			path = Headers;
 			sourceTree = "<group>";
