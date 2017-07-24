@@ -20,6 +20,7 @@
 - (BOOL)isSameDay:(NSDate*)other;
 
 + (NSDateFormatter*)isoDateFormatter;
++ (NSDateFormatter*)isoDateFormatterNoTimeZone;
 - (NSString *)shortTime;
 - (NSString *)relativeTime;
 - (NSString *)relativeTimeShort;

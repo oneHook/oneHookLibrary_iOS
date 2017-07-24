@@ -83,6 +83,15 @@
     return isoDateFormatter;
 }
 
++ (NSDateFormatter*)isoDateFormatterNoTimeZone {
+    static NSDateFormatter* isoDateFormatter;
+    if(!isoDateFormatter) {
+        isoDateFormatter = [[NSDateFormatter alloc] init];
+        [isoDateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"];
+    }
+    return isoDateFormatter;
+}
+
 const int SECOND = 1;
 const int MINUTE = 60*SECOND;
 const int HOUR = 60*MINUTE;
