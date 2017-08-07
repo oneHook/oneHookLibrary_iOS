@@ -33,8 +33,8 @@
     self.scaleColor = [UIColor blackColor];
     self.thickLineThickness = 8;
     self.thinLineThickness = 4;
-    self.paddingTop = 100;
-    self.paddingBottom = 100;
+    self.paddingTop = 0;
+    self.paddingBottom = 0;
     self.scaleInterval = 14;
     self.scaleIntervalCount = 10;
     _rawXTranslation = 0;
@@ -102,8 +102,6 @@
 - (void)drawRect:(CGRect)rect
 {
     [super drawRect:rect];
- 
-//    NSLog(@"drawing %f %f %f %f %f", rect.origin.x, rect.origin.y, rect.size.width, rect.size.height, _rawXTranslation);
     CGFloat top = CGRectGetMinY(rect) + _paddingTop;
     CGFloat bottom = CGRectGetMaxY(rect) - _paddingBottom;
     CGFloat width = CGRectGetWidth(rect);
@@ -160,6 +158,7 @@ void drawLine(CGContextRef context,
 {
     _rawXTranslation = currentScale * _scaleInterval;
     [self enforceLimit];
+    [self dispatchEvent];
     [self setNeedsDisplay];
 }
 
