@@ -12,6 +12,7 @@
 #define kSystemStatusBarHeight 20
 #define kToolbarDefaultHeight 48
 #define kTabbarDefaultHeight 48
+#define kToolbarActionIconFontSize 24
 
 #define NAVIGATION_BAR_ICON_SIZE 44
 

@@ -59,7 +59,7 @@
         case UIGestureRecognizerStateChanged:
             if(_lastXTranslation != translation.x) {
                 CGFloat diff = _lastXTranslation - translation.x;
-                _rawXTranslation -= diff;
+                _rawXTranslation += diff;
                 
                 [self enforceLimit];
                 NSLog(@"DIFF %f rawX %f", diff, _rawXTranslation);
