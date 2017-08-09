@@ -62,7 +62,6 @@
                 _rawXTranslation += diff;
                 
                 [self enforceLimit];
-                NSLog(@"DIFF %f rawX %f", diff, _rawXTranslation);
                 _lastXTranslation = translation.x;
                 [self dispatchEvent];
                 [self setNeedsDisplay];
@@ -88,7 +87,6 @@
 
 - (void)dispatchEvent
 {
-    NSLog(@"%f", _rawXTranslation);
     [self.delegate onScaleMoved:(int)(_rawXTranslation / _scaleInterval)];
 }
 
