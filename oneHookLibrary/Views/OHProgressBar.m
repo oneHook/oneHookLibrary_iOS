@@ -24,6 +24,7 @@
     self = [super initWithFrame:frame];
     if(self) {
         self.backgroundColor = [UIColor clearColor];
+        _padding = 0;
         _mainProgressLayer = [[CAShapeLayer alloc] init];
         _subProgressLayer = [[CAShapeLayer alloc] init];
         
@@ -77,8 +78,8 @@
 
 - (void)layoutSublayersOfLayer:(CALayer *)layer
 {
-    CGFloat width = CGRectGetWidth(self.bounds);
-    CGFloat height = CGRectGetHeight(self.bounds);
+    CGFloat width = CGRectGetWidth(self.bounds) - _padding * 2;
+    CGFloat height = CGRectGetHeight(self.bounds) - _padding * 2;
     if(layer == self.layer) {
 
         CGFloat mainProgressHeight = height * 0.85;
@@ -86,15 +87,15 @@
                                                0,
                                                (width - (height - mainProgressHeight)) * _mainProgress,
                                                mainProgressHeight);
-        _mainProgressLayer.position = CGPointMake((height - mainProgressHeight) / 2,
-                                                  height / 2);
+        _mainProgressLayer.position = CGPointMake((height - mainProgressHeight) / 2 + _padding,
+                                                  height / 2 + _padding);
         _mainProgressLayer.cornerRadius = mainProgressHeight / 2;
         
         _subProgressLayer.bounds = CGRectMake(0,
                                               0,
                                               width * _subProgress,
                                               height);
-        _subProgressLayer.position = CGPointMake(0, height / 2);
+        _subProgressLayer.position = CGPointMake(_padding, height / 2 + _padding);
         _subProgressLayer.cornerRadius = height / 2;
     }
 }
@@ -114,6 +115,12 @@
     }
     _mainProgress = mainProgress;
     _subProgress = subProgress;
+    [self layoutSublayersOfLayer:self.layer];
+}
+
+- (void)setPadding:(CGFloat)padding
+{
+    _padding = padding;
     [self layoutSublayersOfLayer:self.layer];
 }
 

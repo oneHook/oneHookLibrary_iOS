@@ -10,6 +10,7 @@
 
 @interface OHProgressBar : UIView
 
+@property (assign, nonatomic) CGFloat padding;
 @property (strong, nonatomic) UIColor* mainProgressColor;
 @property (strong, nonatomic) UIColor* subProgressColor;
 @property (assign, nonatomic) CGFloat mainProgress;
