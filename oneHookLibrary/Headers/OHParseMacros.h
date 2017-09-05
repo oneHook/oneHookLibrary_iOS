@@ -16,6 +16,7 @@
 
 #define PARSE_INTEGER(v, d) (v && ![v isEqual:[NSNull null]]) ? ((NSNumber*)v).integerValue : d;
 #define PARSE_INT(v, d) (v && ![v isEqual:[NSNull null]]) ? ((NSNumber*)v).intValue : d;
+#define PARSE_FLOAT(v, d) (v && ![v isEqual:[NSNull null]]) ? ((NSNumber*)v).floatValue : d;
 #define PARSE_BOOL(v, d) (v && ![v isEqual:[NSNull null]]) ? ((NSNumber*)v).boolValue : d;
 
 #define PARSE_STRING(v, d) (v && ![v isEqual:[NSNull null]]) ? v : d;

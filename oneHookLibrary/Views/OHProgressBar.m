@@ -66,13 +66,13 @@
 
 - (void)setMainProgress:(CGFloat)mainProgress
 {
-    _mainProgress = mainProgress;
+    _mainProgress = MAX(0, MIN(1, mainProgress));
     [self layoutSublayersOfLayer:_mainProgressLayer];
 }
 
 - (void)setSubProgress:(CGFloat)subProgress
 {
-    _subProgress = subProgress;
+    _subProgress = MAX(0, MIN(1, subProgress));
     [self layoutSublayersOfLayer:_subProgressLayer];
 }
 
