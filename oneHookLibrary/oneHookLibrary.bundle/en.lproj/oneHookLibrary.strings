@@ -34,7 +34,7 @@
 /* absolute time */
 
 "shortDateNoYearFormat" = "MMM d";
-"shortDateWithYearFormat" = "MMMM d, yyyy";
+"shortDateWithYearFormat" = "MMM d, yyyy";
 
 /* weekday symbols */
 "Monday" = "Monday";
