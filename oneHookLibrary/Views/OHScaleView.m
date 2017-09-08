@@ -33,10 +33,14 @@
     self.scaleColor = [UIColor blackColor];
     self.thickLineThickness = 8;
     self.thinLineThickness = 4;
+    self.thinLineRatio = 0.6f;
     self.paddingTop = 0;
     self.paddingBottom = 0;
     self.scaleInterval = 14;
     self.scaleIntervalCount = 10;
+    self.scaleIndicatorColor = [UIColor redColor];
+    self.scaleIndicatorWidth = 15;
+    self.scaleIndicatorHeight = 30;
     _rawXTranslation = 0;
     
     /* add in pan gesture rec */
@@ -103,6 +107,7 @@
     CGFloat top = CGRectGetMinY(rect) + _paddingTop;
     CGFloat bottom = CGRectGetMaxY(rect) - _paddingBottom;
     CGFloat width = CGRectGetWidth(rect);
+    CGFloat height  = CGRectGetMaxY(rect);
     
     CGContextRef context = UIGraphicsGetCurrentContext();
     
@@ -117,7 +122,7 @@
     int lineCount = ceil(width / _scaleInterval);
     for(int i = 0; i < lineCount; i++) {
         CGFloat thickness = ((i % _scaleIntervalCount) == 0) ? _thickLineThickness : _thinLineThickness;
-        CGFloat lineTop = ((i % _scaleIntervalCount) == 0) ? top : (top + (bottom - top) * 0.8);
+        CGFloat lineTop = ((i % _scaleIntervalCount) == 0) ? top : (top + (bottom - top) * (1 - self.thinLineRatio));
         drawLine(context,
                  CGPointMake(centerX - i * _scaleInterval, bottom),
                  CGPointMake(centerX - i * _scaleInterval, lineTop),
@@ -131,7 +136,20 @@
 
     }
     
-    drawLine(context, CGPointMake(width / 2, bottom - 5), CGPointMake(width / 2, bottom), [UIColor redColor].CGColor, _thickLineThickness / 2);
+    drawLine(context, CGPointMake(width / 2, bottom - 5),
+             CGPointMake(width / 2, bottom),
+             self.scaleIndicatorColor.CGColor,
+             _thickLineThickness / 2);
+    
+    /* Draw indicator */
+    
+    CGContextSetFillColorWithColor(context, self.scaleIndicatorColor.CGColor);
+    CGContextBeginPath(context);
+    CGContextMoveToPoint(context, width / 2, height - _scaleIndicatorHeight);        // top
+    CGContextAddLineToPoint(context, width / 2 - _scaleIndicatorWidth / 2, height);  // right
+    CGContextAddLineToPoint(context, width / 2 + _scaleIndicatorWidth / 2 ,height);  // left
+    CGContextClosePath(context);
+    CGContextFillPath(context);
 }
 
 void drawLine(CGContextRef context,

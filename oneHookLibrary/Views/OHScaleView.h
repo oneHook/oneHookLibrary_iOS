@@ -17,10 +17,14 @@
 @interface OHScaleView : UIView
 
 @property (strong, nonatomic) UIColor* scaleColor;
+@property (assign, nonatomic) CGFloat thinLineRatio;
 @property (assign, nonatomic) CGFloat paddingTop;
 @property (assign, nonatomic) CGFloat paddingBottom;
 @property (assign, nonatomic) CGFloat thickLineThickness;
 @property (assign, nonatomic) CGFloat thinLineThickness;
+@property (strong, nonatomic) UIColor* scaleIndicatorColor;
+@property (assign, nonatomic) CGFloat scaleIndicatorHeight;
+@property (assign, nonatomic) CGFloat scaleIndicatorWidth;
 
 @property (assign, nonatomic) int scaleInterval;
 @property (assign, nonatomic) NSInteger scaleIntervalCount;
