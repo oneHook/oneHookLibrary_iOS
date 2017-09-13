@@ -73,7 +73,7 @@
             CGFloat defaultWidth = actionButtonLength;
             [_rightButton sizeToFit];
             defaultWidth = MAX(defaultWidth, CGRectGetWidth(_rightButton.bounds));
-            _rightButton.frame = CGRectMake(width - MARGIN_SMALL - defaultWidth,
+            _rightButton.frame = CGRectMake(width - MARGIN_MEDIUM - defaultWidth,
                                             topOffset + MARGIN_SMALL,
                                             defaultWidth,
                                             actionButtonLength);
