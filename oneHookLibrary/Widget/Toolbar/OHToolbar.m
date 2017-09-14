@@ -51,7 +51,6 @@
     CGFloat height = CGRectGetHeight(self.bounds);
     
     if(_lastWidth != width || _lastHeight != height) {
-        
         CGFloat topOffset = self.showStatusBar ? kSystemStatusBarHeight : 0;
         self.toolbarContainer.frame = CGRectMake(0, topOffset, width, height - topOffset);
         
@@ -140,7 +139,5 @@
     [super setFrame:frame];
     [self layoutSubviews];
 }
-
-
 
 @end

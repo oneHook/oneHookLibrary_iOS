@@ -9,7 +9,7 @@
 #ifndef oneHookLibrary_OHCommonDimensions_h
 #define oneHookLibrary_OHCommonDimensions_h
 
-#define kSystemStatusBarHeight 20
+#define kSystemStatusBarHeight (IS_IPHONE_X ? 40 : 20)
 #define kToolbarDefaultHeight 48
 #define kTabbarDefaultHeight 48
 #define kToolbarActionIconFontSize 24

@@ -78,6 +78,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.automaticallyAdjustsScrollViewInsets = NO;
     if(self.toolbarStyle != OHViewControllerNoToolbar) {
         [self _setupToolbar];
     }
@@ -140,6 +141,7 @@
                                                                    self.padding.left,
                                                                    self.padding.bottom,
                                                                    self.padding.right);
+            NSLog(@"top content inset %f", _contentScrollableView.contentInset.top);
         } else {
 #ifdef DEBUG
             NSLog(@"Warning: content scrollable view is not set");
@@ -181,6 +183,11 @@
 - (void)setContentScrollableView:(UIScrollView *)contentScrollableView
 {
     _contentScrollableView = contentScrollableView;
+    
+    /* we are manually calculating top inset for all platforms and all different devices */
+    if(SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"11.0")) {
+        _contentScrollableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    }
     _contentScrollableView.delegate = self;
 }
 
