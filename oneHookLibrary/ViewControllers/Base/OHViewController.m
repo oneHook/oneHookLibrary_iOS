@@ -141,7 +141,6 @@
                                                                    self.padding.left,
                                                                    self.padding.bottom,
                                                                    self.padding.right);
-            NSLog(@"top content inset %f", _contentScrollableView.contentInset.top);
         } else {
 #ifdef DEBUG
             NSLog(@"Warning: content scrollable view is not set");
