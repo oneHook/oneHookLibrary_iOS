@@ -102,13 +102,13 @@
 
 - (void)setMainProgress:(CGFloat)mainProgress subProgress:(CGFloat)subProgress animated:(BOOL)animated
 {
-    if(mainProgress > 0) {
+    if(mainProgress > 1) {
         mainProgress = 1;
     } else if(mainProgress < 0) {
         mainProgress = 0;
     }
     
-    if(subProgress > 0) {
+    if(subProgress > 1) {
         subProgress = 1;
     } else if(subProgress < 0) {
         subProgress = 0;
