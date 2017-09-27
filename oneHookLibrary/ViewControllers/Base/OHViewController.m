@@ -268,7 +268,10 @@
 
 - (void)toolbarDidLoad:(OHToolbar *)toolbar
 {
-    
+    self.toolbar.layer.shadowOffset = CGSizeMake(0, 3);
+    self.toolbar.layer.shadowColor = [UIColor blackColor].CGColor;
+    self.toolbar.layer.shadowRadius = 1.5;
+    self.toolbar.layer.shadowOpacity = .2;
 }
 
 - (void)toolbarDidLayout:(OHToolbar *)toolbar
