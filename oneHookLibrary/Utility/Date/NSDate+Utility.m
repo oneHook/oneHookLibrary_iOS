@@ -313,4 +313,10 @@ const int YEAR = DAY*365;
     return year;
 }
 
+-(NSDate *)dateWithOutTime
+{
+    NSDateComponents* comps = [[NSCalendar currentCalendar] components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay fromDate:self];
+    return [[NSCalendar currentCalendar] dateFromComponents:comps];
+}
+
 @end

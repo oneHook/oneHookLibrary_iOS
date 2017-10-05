@@ -18,6 +18,7 @@
 - (NSDate *)endOfDay;
 - (NSDate *)yesterday;
 - (BOOL)isSameDay:(NSDate*)other;
+- (NSDate *)dateWithOutTime;
 
 + (NSDateFormatter*)isoDateFormatter;
 + (NSDateFormatter*)isoDateFormatterNoTimeZone;
