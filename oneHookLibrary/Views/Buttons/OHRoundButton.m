@@ -14,7 +14,25 @@
 {
     [super layoutSubviews];
     CGFloat length = MIN(CGRectGetWidth(self.bounds), CGRectGetHeight(self.bounds));
-    self.layer.cornerRadius = length / 2;
+    
+    CAAnimation *anim = [self.layer animationForKey:@"bounds.size"];
+    
+    [CATransaction begin];
+    if(anim) {
+        [CATransaction begin];
+        // animating, apply same duration and timing function.
+        [CATransaction setAnimationDuration:anim.duration];
+        [CATransaction setAnimationTimingFunction:anim.timingFunction];
+        
+        CABasicAnimation *radiusAnimation = [CABasicAnimation animationWithKeyPath:@"cornerRadius"];
+        [self.layer addAnimation:radiusAnimation forKey:@"cornerRadius"];
+        self.layer.cornerRadius = length / 2;
+        [CATransaction commit];
+    } else {
+        self.layer.cornerRadius = length / 2;
+    }
+    
+    //NSLog(@"%@ %f %f", self.titleLabel.text, self.bounds.size.height, length);
 }
 
 @end
