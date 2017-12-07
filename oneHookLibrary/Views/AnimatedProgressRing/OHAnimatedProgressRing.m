@@ -123,6 +123,7 @@
 
 - (void)setProgress:(CGFloat)progress animationDuration:(double)duration
 {
+    progress = 1 - progress;
     if(self.clockwise) {
         self.shapeLayer.strokeStart = 0.0f;
         progress = 1 - progress;
@@ -131,7 +132,7 @@
         an.duration = duration;
         an.fromValue = [NSNumber numberWithFloat:_progress];
         an.toValue = [NSNumber numberWithFloat:progress];
-        an.timingFunction = [CAMediaTimingFunction functionWithControlPoints:0.5:-0.8:0.5:1.85];
+//        an.timingFunction = [CAMediaTimingFunction functionWithControlPoints:0.5:-0.8:0.5:1.85];
         self.shapeLayer.strokeEnd = progress;
         [self.shapeLayer addAnimation:an forKey:@"strokeEnd"];
         _progress = progress;
@@ -141,7 +142,7 @@
         an.duration = duration;
         an.fromValue = [NSNumber numberWithFloat:_progress];
         an.toValue = [NSNumber numberWithFloat:progress];
-        an.timingFunction = [CAMediaTimingFunction functionWithControlPoints:0.5:-0.8:0.5:1.85];
+//        an.timingFunction = [CAMediaTimingFunction functionWithControlPoints:0.5:-0.8:0.5:1.85];
         self.shapeLayer.strokeStart = progress;
         [self.shapeLayer addAnimation:an forKey:@"strokeStart"];
         _progress = progress;
