@@ -51,14 +51,16 @@
 
 - (void)actionSheetController:(OHCompactActionSheetController *)controller indexSelected:(NSInteger)index itemTitle:(NSString *)title
 {
-    self.actionSheetController = nil;
-    if(self.options.count > 1 && index == 0) {
-        [self checkCameraPermission];
-    } else if(self.options.count - 1 == index) {
-        [self checkPhotoPermission];
-    } else {
-        [self.delegate oh_imagePickerControllerCancelled:self];
-    }
+    dispatch_async(dispatch_get_main_queue(), ^{
+        self.actionSheetController = nil;
+        if(self.options.count > 1 && index == 0) {
+            [self checkCameraPermission];
+        } else if(self.options.count - 1 == index) {
+            [self checkPhotoPermission];
+        } else {
+            [self.delegate oh_imagePickerControllerCancelled:self];
+        }
+    });
 }
 
 - (void)checkPhotoPermission
@@ -68,11 +70,13 @@
         [self doPickPhoto];
     } else if(status == PHAuthorizationStatusNotDetermined) {
         [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status) {
-            if(status == PHAuthorizationStatusAuthorized) {
-                [self doPickPhoto];
-            } else {
-                [self onNoPhotoPermission];
-            }
+            dispatch_async(dispatch_get_main_queue(), ^{
+                if(status == PHAuthorizationStatusAuthorized) {
+                    [self doPickPhoto];
+                } else {
+                    [self onNoPhotoPermission];
+                }
+            });
         }];
     } else {
         [self onNoPhotoPermission];
@@ -102,13 +106,14 @@
         [self doCaptureImageFromCamera];
     } else if(authStatus == AVAuthorizationStatusNotDetermined){
         
-        
         [AVCaptureDevice requestAccessForMediaType:AVMediaTypeVideo completionHandler:^(BOOL granted) {
-            if(granted){
-                [self doCaptureImageFromCamera];
-            } else {
-                [self onCameraPermissionDenied];
-            }
+            dispatch_async(dispatch_get_main_queue(), ^{
+                if(granted){
+                    [self doCaptureImageFromCamera];
+                } else {
+                    [self onCameraPermissionDenied];
+                }
+            });
         }];
     } else {
         [self onCameraPermissionDenied];
