@@ -25,7 +25,7 @@
 #define MARGIN_SMALL 4.0
 #define MARGIN_MEDIUM 8.0
 #define MARGIN_LARGE 16.0
-#define MARGIN_XLARGE 32.0
+#define MARGIN_XLARGE 24.0
 #define MARGIN_XXLARGE 64.0
 
 #endif
