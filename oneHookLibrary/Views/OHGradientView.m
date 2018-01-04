@@ -49,8 +49,10 @@
     layer.colors = @[(id)fromColor.CGColor, (id)toColor.CGColor];
 }
 
-- (BOOL)pointInside:(CGPoint)point withEvent:(UIEvent *)event {
-    return NO;
+- (void)setGradientColors:(NSArray*) colors forPoints:(NSArray<NSNumber *>*) points {
+    CAGradientLayer* layer = (CAGradientLayer*) self.layer;
+    layer.locations = points;
+    layer.colors = colors;
 }
 
 @end

@@ -13,5 +13,6 @@
 - (id)initWithHorizontalGradient;
 - (id)initWithVerticalGradient;
 - (void)setGradientColorFrom:(UIColor*)fromColor to:(UIColor*)toColor;
+- (void)setGradientColors:(NSArray*) colors forPoints:(NSArray<NSNumber *>*) points;
 
 @end
