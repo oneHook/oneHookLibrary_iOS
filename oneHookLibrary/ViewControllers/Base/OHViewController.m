@@ -166,6 +166,7 @@
                 CGFloat toolbarDefaultHeight = statusBarHeight + kToolbarDefaultHeight;
                 self.toolbar.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.bounds),
                                                 toolbarDefaultHeight);
+                [self toolbarDidLayout:self.toolbar];
             }
         }
         
