@@ -19,6 +19,7 @@ typedef enum {
 
 @property (assign, nonatomic) OHLinearScrollViewOrientation orientation;
 @property (strong, nonatomic) UIView* contentView;
+@property (assign, nonatomic) float itemSpacing;
 
 - (id)initWithOrientation:(OHLinearScrollViewOrientation)orientation;
 - (void)addViewToOrder:(UIView*)view;

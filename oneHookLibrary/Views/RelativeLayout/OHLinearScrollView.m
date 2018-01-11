@@ -45,7 +45,7 @@
                                     contentLength + marginTop,
                                     self.bounds.size.width - self.contentInset.left - self.contentInset.right,
                                     view.bounds.size.height);
-            contentLength += view.bounds.size.height + marginTop;
+            contentLength += view.bounds.size.height + marginTop + _itemSpacing;
         }
     }
     if(self.orientation == OHLinearScrollViewOrientationHorizontal) {
@@ -89,7 +89,7 @@
                                     contentLength + marginTop,
                                     viewWidth,
                                     viewHeight);
-            contentLength += viewHeight + marginTop;
+            contentLength += viewHeight + marginTop + _itemSpacing;
         }
     }
     if(self.orientation == OHLinearScrollViewOrientationHorizontal) {
