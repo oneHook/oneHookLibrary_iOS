@@ -113,7 +113,7 @@
         } else {
             /* new size is port */
             self.contentScrollableView.contentOffset = CGPointMake(self.contentScrollableView.contentOffset.x,
-                                                            self.contentScrollableView.contentOffset.y - kSystemStatusBarHeight);
+                                                                   self.contentScrollableView.contentOffset.y - kSystemStatusBarHeight);
         }
     } completion:^(id<UIViewControllerTransitionCoordinatorContext> context) {
     }];
@@ -185,7 +185,7 @@
     _contentScrollableView = contentScrollableView;
     
     /* we are manually calculating top inset for all platforms and all different devices */
-    if(SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"11.0")) {
+    if (@available(iOS 11.0, *)) {
         _contentScrollableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
     }
     _contentScrollableView.delegate = self;
@@ -282,7 +282,7 @@
 
 - (void)willStartPullToRefresh:(CGFloat)progress starting:(BOOL)starting
 {
-
+    
 }
 
 #pragma marks - UIScrollViewDelegate
@@ -332,7 +332,7 @@
     if(DEBUGGIN) {
         NSLog(@"scroll view offset %f diff %f toolbar height %f maximum height %f", yOffset, yDiff, _toolbarHeight, toolbarMaximumHeight);
     }
-        
+    
     self.toolbar.frame = CGRectMake(0, 0, width, _toolbarHeight);
     
     if(self.hasPullToRefresh && _toolbarStyle == OHViewControllerHasToolbar && !_isRefreshing) {

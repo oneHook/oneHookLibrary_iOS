@@ -206,12 +206,6 @@
 
 /* SnackBar */
 
-@interface UIView (SnackBar)
-
-+ (SnackBar*)sharedConfig;
-
-@end
-
 @implementation UIView (SnackBar)
 
 /* Config functions */

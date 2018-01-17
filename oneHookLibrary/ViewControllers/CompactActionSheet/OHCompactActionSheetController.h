@@ -16,7 +16,7 @@
 
 @end
 
-@interface OHCompactActionSheetController : NSObject <UIActionSheetDelegate>
+@interface OHCompactActionSheetController : NSObject
 
 - (id)initWithTitle:(NSString*)title message:(NSString*)message options:(NSArray*)options;
 - (void)presentInViewController:(UIViewController*)controller;

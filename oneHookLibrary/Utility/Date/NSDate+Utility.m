@@ -38,10 +38,10 @@
 
 - (int)weekdayIndex
 {
-    NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
-    NSDateComponents *comps = [gregorian components:NSWeekdayCalendarUnit fromDate:self];
-    int weekday = [comps weekday] - 1;
-    return weekday;
+    NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    NSDateComponents *comps = [gregorian components:NSCalendarUnitWeekday fromDate:self];
+    long weekday = [comps weekday] - 1;
+    return (int) weekday;
 }
 
 - (NSDate *)beginningOfDay
@@ -215,14 +215,8 @@ const int YEAR = DAY*365;
 - (NSString *)shortWeek
 {
     NSCalendar* cal = [NSCalendar currentCalendar];
-    int weekday = 0;
-    if(OLDER_VERSION) {
-        NSDateComponents* comp = [cal components:NSWeekdayCalendarUnit fromDate:self];
-        weekday = (int) [comp weekday];
-    } else {
-        NSDateComponents* comp = [cal components:NSCalendarUnitWeekday fromDate:self];
-        weekday = (int) [comp weekday];
-    }
+    NSDateComponents* comp = [cal components:NSCalendarUnitWeekday fromDate:self];
+    int weekday = (int) [comp weekday];
     switch(weekday) {
         case 1:
             return @"SU";
@@ -240,7 +234,6 @@ const int YEAR = DAY*365;
             return @"SA";
             default:
             return @"";
-            
     }
 }
 
@@ -270,14 +263,8 @@ const int YEAR = DAY*365;
 {
     NSCalendar* cal = [NSCalendar currentCalendar];
     cal.timeZone = [NSTimeZone timeZoneWithName:@"UTC"];
-    int weekday = 0;
-    if(OLDER_VERSION) {
-        NSDateComponents* comp = [cal components:NSWeekdayCalendarUnit fromDate:self];
-        weekday = (int) [comp weekday];
-    } else {
-        NSDateComponents* comp = [cal components:NSCalendarUnitWeekday fromDate:self];
-        weekday = (int) [comp weekday];
-    }
+    NSDateComponents* comp = [cal components:NSCalendarUnitWeekday fromDate:self];
+    int weekday = (int) [comp weekday];
     switch(weekday) {
         case 1:
             return @"SU";
@@ -302,14 +289,8 @@ const int YEAR = DAY*365;
 - (int)year
 {
     NSCalendar* cal = [NSCalendar currentCalendar];
-    int year = 0;
-    if(OLDER_VERSION) {
-        NSDateComponents* comp = [cal components:NSYearCalendarUnit fromDate:self];
-        year = (int) [comp year];
-    } else {
-        NSDateComponents* comp = [cal components:NSCalendarUnitYear fromDate:self];
-        year = (int) [comp year];
-    }
+    NSDateComponents* comp = [cal components:NSCalendarUnitYear fromDate:self];
+    int year = (int) [comp year];
     return year;
 }
 

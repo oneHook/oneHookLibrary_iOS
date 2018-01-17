@@ -20,4 +20,8 @@
     return self;
 }
 
+- (CGFloat)measureHeightByWidth:(CGFloat)width {
+    return 64;
+}
+
 @end

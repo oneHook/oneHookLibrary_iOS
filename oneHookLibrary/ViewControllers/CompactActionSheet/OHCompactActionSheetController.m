@@ -33,46 +33,20 @@
 
 - (void)presentInViewController:(UIViewController *)controller
 {
-    if(!OLDER_VERSION && [UIAlertController class]) {
-        UIAlertController* alertController = [UIAlertController alertControllerWithTitle:_title message:_message preferredStyle:UIAlertControllerStyleActionSheet];
-        NSInteger index = 0;
-        for(NSString* option in _options) {
-            [alertController addAction:[UIAlertAction actionWithTitle:option style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-                [self.delegate actionSheetController:self indexSelected:index itemTitle:option];
-            }]];
-            index++;
-        }
-        [alertController addAction:[UIAlertAction actionWithTitle:[OHLocalization localizedString:@"Cancel"] style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
-            [self.delegate actionSheetController:self indexSelected:-1 itemTitle:@"Cancel"];
+    UIAlertController* alertController = [UIAlertController alertControllerWithTitle:_title message:_message preferredStyle:UIAlertControllerStyleActionSheet];
+    NSInteger index = 0;
+    for(NSString* option in _options) {
+        [alertController addAction:[UIAlertAction actionWithTitle:option style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+            [self.delegate actionSheetController:self indexSelected:index itemTitle:option];
         }]];
-        [controller presentViewController:alertController animated:YES completion:^{
-            
-        }];
-    } else {
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wdeprecated-declarations"
-        UIActionSheet* sheet = [[UIActionSheet alloc] init];
-#pragma clang diagnostic pop
-        sheet.title = _title;
-        sheet.delegate = self;
-        for(NSString* option in _options) {
-            [sheet addButtonWithTitle:option];
-        }
-        sheet.cancelButtonIndex = [sheet addButtonWithTitle:[OHLocalization localizedString:@"Cancel"]];
-        [sheet showInView:controller.view];
+        index++;
     }
-}
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wdeprecated-declarations"
-- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
-{
-    if(actionSheet.cancelButtonIndex == buttonIndex) {
+    [alertController addAction:[UIAlertAction actionWithTitle:[OHLocalization localizedString:@"Cancel"] style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
         [self.delegate actionSheetController:self indexSelected:-1 itemTitle:@"Cancel"];
-    } else {
-        [self.delegate actionSheetController:self indexSelected:buttonIndex itemTitle:[_options objectAtIndex:buttonIndex]];
-    }
+    }]];
+    [controller presentViewController:alertController animated:YES completion:^{
+        
+    }];
 }
-#pragma clang diagnostic pop
-
 
 @end
