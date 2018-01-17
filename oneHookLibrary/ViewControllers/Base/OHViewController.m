@@ -99,6 +99,8 @@
 - (void)_setupToolbar
 {
     self.toolbar = [[OHToolbar alloc] init];
+    
+    self.toolbar.showStatusBar = SHOW_STATUS_BAR;
     [self.view addSubview:self.toolbar];
     
     [self toolbarDidLoad:self.toolbar];
@@ -127,7 +129,6 @@
     CGFloat height = CGRectGetHeight(self.view.bounds);
     
     if(_lastWidth != width && _lastHeight != height) {
-        self.toolbar.showStatusBar = SHOW_STATUS_BAR;
         CGFloat statusBarHeight = SHOW_STATUS_BAR ? kSystemStatusBarHeight : 0;
         CGFloat toolbarMaximumHeight = statusBarHeight + kToolbarDefaultHeight + self.toolbarExtension;
         

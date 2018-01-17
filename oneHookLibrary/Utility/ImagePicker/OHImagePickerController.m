@@ -140,6 +140,10 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info
 {
     [[UIApplication sharedApplication] setStatusBarHidden:YES];
+    //https://stackoverflow.com/questions/29836488/uiimagepickercontrolleroriginalimage-nil-causing-crash-on-photo-capture
+    //We have seen this particular stack/crash. This is just for safety purposes
+    if ([[UIApplication sharedApplication] applicationState] != UIApplicationStateActive)
+        return;
     
     NSString *mediaType = info[UIImagePickerControllerMediaType];
     UIImage *originalImage, *editedImage, *imageToSave;
