@@ -123,6 +123,23 @@
     [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
 }
 
+- (void)setToolbarExtension:(CGFloat)toolbarExtension {
+    if (_toolbarExtension != toolbarExtension) {
+        _toolbarExtension = toolbarExtension;
+        CGFloat statusBarHeight = SHOW_STATUS_BAR ? kSystemStatusBarHeight : 0;
+        CGFloat toolbarMaximumHeight = statusBarHeight + kToolbarDefaultHeight + _toolbarExtension;
+        _toolbarHeight = toolbarMaximumHeight;
+        _scrollViewLastContentOffsetY = -toolbarMaximumHeight;
+        _contentScrollableView.contentInset = UIEdgeInsetsMake(self.padding.top + toolbarMaximumHeight,
+                                                               self.padding.left,
+                                                               self.padding.bottom,
+                                                               self.padding.right);
+        
+        CGFloat width = CGRectGetWidth(self.view.bounds);
+        self.toolbar.frame = CGRectMake(0, 0, width, _toolbarHeight);
+    }
+}
+
 - (void)viewWillLayoutSubviews
 {
     CGFloat width = CGRectGetWidth(self.view.bounds);
@@ -348,7 +365,7 @@
         }
     }
     
-    _scrollViewLastContentOffsetY = yOffset;
+    _scrollViewLastContentOffsetY = -yOffset;
     
     [self toolbarDidLayout:self.toolbar];
     
