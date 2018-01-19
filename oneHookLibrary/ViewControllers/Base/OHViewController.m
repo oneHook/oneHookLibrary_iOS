@@ -132,7 +132,7 @@
         _scrollViewLastContentOffsetY = -toolbarMaximumHeight;
         _contentScrollableView.contentInset = UIEdgeInsetsMake(self.padding.top + toolbarMaximumHeight,
                                                                self.padding.left,
-                                                               self.padding.bottom,
+                                                               self.padding.bottom + kMinimumBottomMargin,
                                                                self.padding.right);
         
         CGFloat width = CGRectGetWidth(self.view.bounds);
@@ -157,7 +157,7 @@
             _contentScrollableView.frame = self.view.bounds;
             _contentScrollableView.contentInset = UIEdgeInsetsMake(self.padding.top + toolbarMaximumHeight,
                                                                    self.padding.left,
-                                                                   self.padding.bottom,
+                                                                   self.padding.bottom + kMinimumBottomMargin,
                                                                    self.padding.right);
         } else {
 #ifdef DEBUG
