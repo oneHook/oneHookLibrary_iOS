@@ -88,7 +88,7 @@
             shouldIgnore = !shouldIgnore;
             i++;
         } else if(shouldIgnore) {
-            [sb appendFormat:@"%c", [timeFormat characterAtIndex:i]];
+            [sb appendFormat:@"%C", [timeFormat characterAtIndex:i]];
             i++;
             continue;
         } else if([[timeFormat substringWithRange:NSMakeRange(i, 2)] isEqualToString:@"DD"]) {
@@ -111,7 +111,7 @@
             i++;
         }
     }
-    _parsedTimeFormat = sb.description;
+    _parsedTimeFormat = [NSString stringWithString:sb];
 }
 
 - (void)setStopWatchTime:(NSTimeInterval)time{
