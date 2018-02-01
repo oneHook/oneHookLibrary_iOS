@@ -183,10 +183,7 @@
             if(_contentScrollableView) {
                 [self scrollViewDidScroll:_contentScrollableView];
             } else {
-                CGFloat statusBarHeight = self.toolbar.showStatusBar ? kSystemStatusBarHeight : 0;
-                CGFloat toolbarDefaultHeight = statusBarHeight + kToolbarDefaultHeight;
-                self.toolbar.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.bounds),
-                                                toolbarDefaultHeight);
+                self.toolbar.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), self.maximumToolbarHeight);
                 [self toolbarDidLayout:self.toolbar];
             }
         }
@@ -327,6 +324,7 @@
     CGFloat toolbarDefaultHeight = statusBarHeight + kToolbarDefaultHeight;
     CGFloat toolbarMaximumHeight = toolbarDefaultHeight + self.toolbarExtension;
     CGFloat toolbarMinimumHeight = self.toolbarShouldStay ? (statusBarHeight + kToolbarDefaultHeight) : statusBarHeight;
+    
     if(self.toolbarExternsionFixed && self.toolbarExtension > 0) {
         toolbarMinimumHeight += self.toolbarExtension;
         toolbarDefaultHeight += self.toolbarExtension;
