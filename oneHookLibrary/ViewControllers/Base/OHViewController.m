@@ -79,6 +79,7 @@
 {
     [super viewDidLoad];
     self.automaticallyAdjustsScrollViewInsets = NO;
+    self.view.backgroundColor = UIColor.whiteColor;
     if(self.toolbarStyle != OHViewControllerNoToolbar) {
         [self _setupToolbar];
     }
@@ -135,8 +136,10 @@
                                                                self.padding.bottom + kMinimumBottomMargin,
                                                                self.padding.right);
         
-        CGFloat width = CGRectGetWidth(self.view.bounds);
-        self.toolbar.frame = CGRectMake(0, 0, width, _toolbarHeight);
+        if (self.viewLoaded) {
+            CGFloat width = CGRectGetWidth(self.view.bounds);
+            self.toolbar.frame = CGRectMake(0, 0, width, _toolbarHeight);
+        }
     }
 }
 
