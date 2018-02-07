@@ -14,7 +14,7 @@
 - (NSString*)capitalize
 {
     if(self.length > 0) {
-        return [[[self substringToIndex:1] uppercaseString] stringByAppendingString:[[self substringFromIndex:1] lowercaseString]];
+        return [[[self substringToIndex:1] uppercaseString] stringByAppendingString:[self substringFromIndex:1]];
     }
     return self;
 }

@@ -127,8 +127,7 @@
 - (void)setToolbarExtension:(CGFloat)toolbarExtension {
     if (_toolbarExtension != toolbarExtension) {
         _toolbarExtension = toolbarExtension;
-        CGFloat statusBarHeight = SHOW_STATUS_BAR ? kSystemStatusBarHeight : 0;
-        CGFloat toolbarMaximumHeight = statusBarHeight + kToolbarDefaultHeight + _toolbarExtension;
+        CGFloat toolbarMaximumHeight = [self defaultToolbarHeight] + _toolbarExtension;
         _toolbarHeight = toolbarMaximumHeight;
         _scrollViewLastContentOffsetY = -toolbarMaximumHeight;
         _contentScrollableView.contentInset = UIEdgeInsetsMake(self.padding.top + toolbarMaximumHeight,
@@ -150,7 +149,7 @@
     
     if(_lastWidth != width && _lastHeight != height) {
         CGFloat statusBarHeight = SHOW_STATUS_BAR ? kSystemStatusBarHeight : 0;
-        CGFloat toolbarMaximumHeight = statusBarHeight + kToolbarDefaultHeight + self.toolbarExtension;
+        CGFloat toolbarMaximumHeight = [self defaultToolbarHeight] + self.toolbarExtension;
         
         if(self.toolbarStyle == OHViewControllerToolbarAsStatusBar) {
             toolbarMaximumHeight = statusBarHeight;
@@ -212,8 +211,8 @@
 - (void)_doExpandOrCollapse
 {
     CGFloat statusBarHeight = self.toolbar.showStatusBar ? kSystemStatusBarHeight : 0;
-    CGFloat toolbarDefaultHeight = statusBarHeight + kToolbarDefaultHeight;
-    CGFloat toolbarMinimumHeight = self.toolbarShouldStay ? (statusBarHeight + kToolbarDefaultHeight) : statusBarHeight;
+    CGFloat toolbarDefaultHeight = [self defaultToolbarHeight];
+    CGFloat toolbarMinimumHeight = self.toolbarShouldStay ? toolbarDefaultHeight : statusBarHeight;
     if(self.toolbarExternsionFixed && self.toolbarExtension > 0) {
         toolbarMinimumHeight += self.toolbarExtension;
         toolbarDefaultHeight += self.toolbarExtension;
@@ -247,6 +246,10 @@
 
 - (CGFloat)defaultToolbarHeight
 {
+    if (self.toolbarStyle == OHViewControllerNoToolbar) {
+        return 0.0f;
+    }
+    
     CGFloat statusBarHeight = self.toolbar.showStatusBar ? kSystemStatusBarHeight : 0;
     CGFloat toolbarDefaultHeight = statusBarHeight + kToolbarDefaultHeight;
     return toolbarDefaultHeight;
@@ -321,9 +324,10 @@
     CGFloat yDiff = yOffset - _scrollViewLastContentOffsetY;
     
     CGFloat statusBarHeight = self.toolbar.showStatusBar ? kSystemStatusBarHeight : 0;
-    CGFloat toolbarDefaultHeight = statusBarHeight + kToolbarDefaultHeight;
+    CGFloat toolbarDefaultHeight = [self defaultToolbarHeight];
+    CGFloat toolbarMinimumHeight = self.toolbarShouldStay ? toolbarDefaultHeight : statusBarHeight;
     CGFloat toolbarMaximumHeight = toolbarDefaultHeight + self.toolbarExtension;
-    CGFloat toolbarMinimumHeight = self.toolbarShouldStay ? (statusBarHeight + kToolbarDefaultHeight) : statusBarHeight;
+    
     
     if(self.toolbarExternsionFixed && self.toolbarExtension > 0) {
         toolbarMinimumHeight += self.toolbarExtension;
@@ -429,8 +433,9 @@
        self.floatingActionButtonStyle == OHViewControllerFloatingActionButtonStyleDefault &&
        _fabButton.tag == FAB_STATE_BOTTOM) {
         CGFloat width = CGRectGetWidth(self.view.bounds);
-        CGFloat statusBarHeight = self.toolbar.showStatusBar ? kSystemStatusBarHeight : 0;
-        CGFloat toolbarDefaultHeight = statusBarHeight + kToolbarDefaultHeight;
+        
+        CGFloat toolbarDefaultHeight = [self defaultToolbarHeight];
+        
         if(_toolbarHeight > toolbarDefaultHeight + FLOATING_ACTION_BUTTON_ANIMATION_THRESHOLD) {
             _fabButton.tag = FAB_STATE_TOP;
             [UIView animateWithDuration:0.15 animations:^{
