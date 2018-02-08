@@ -78,6 +78,7 @@
     static NSDateFormatter* isoDateFormatter;
     if(!isoDateFormatter) {
         isoDateFormatter = [[NSDateFormatter alloc] init];
+        [isoDateFormatter setLocale:[NSLocale localeWithLocaleIdentifier:@"en_US_POSIX"]];
         [isoDateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss.SSSZ"];
     }
     return isoDateFormatter;
@@ -87,6 +88,7 @@
     static NSDateFormatter* isoDateFormatter;
     if(!isoDateFormatter) {
         isoDateFormatter = [[NSDateFormatter alloc] init];
+        [isoDateFormatter setLocale:[NSLocale localeWithLocaleIdentifier:@"en_US_POSIX"]];
         [isoDateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"];
     }
     return isoDateFormatter;
