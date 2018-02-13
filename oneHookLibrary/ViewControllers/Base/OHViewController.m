@@ -88,6 +88,8 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    NSArray* originalViews = self.view.subviews;
+    self.view.accessibilityElements = originalViews;
     [self.view bringSubviewToFront:self.toolbar];
     [self.view bringSubviewToFront:self.fabButton];
 }
