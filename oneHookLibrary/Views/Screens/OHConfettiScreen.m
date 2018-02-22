@@ -39,7 +39,7 @@
 
 - (void)commonInit
 {
-    self.userInteractionEnabled = NO;
+    //self.userInteractionEnabled = NO;
     self.backgroundColor = [UIColor clearColor];
     _confettiEmitter = (CAEmitterLayer*)self.layer;
     _confettiEmitter.emitterPosition = CGPointMake(self.bounds.size.width /2, 0);
@@ -104,6 +104,7 @@ static NSTimeInterval const kDecayStepInterval = 0.1;
     _confettiEmitter.birthRate -=_decayAmount;
     if (_confettiEmitter.birthRate < 0) {
         _confettiEmitter.birthRate = 0;
+        [self removeFromSuperview];
     } else {
         [self performSelector:@selector(decayStep) withObject:nil afterDelay:kDecayStepInterval];
     }
@@ -116,6 +117,7 @@ static NSTimeInterval const kDecayStepInterval = 0.1;
 
 - (void) stopEmitting {
     _confettiEmitter.birthRate = 0.0;
+    [self removeFromSuperview];
 }
 
 @end

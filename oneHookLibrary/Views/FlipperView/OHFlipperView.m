@@ -46,6 +46,7 @@
     self.frontPage.layer.anchorPoint = CGPointMake(0.5, 1);
     self.bottomPage = [self createPage];
     self.bottomPage.layer.anchorPoint = CGPointMake(0.5, 1);
+    self.bottomPage.accessibilityElementsHidden = YES;
     [self addSubview:self.bottomPage];
     [self addSubview:self.frontPage];
 }
@@ -112,7 +113,8 @@
 
 - (void)onFlipFinishedWithFront:(UIView *)frontPage bottom:(UIView *)bottomPage
 {
-    
+    frontPage.accessibilityElementsHidden = NO;
+    bottomPage.accessibilityElementsHidden = YES;
 }
 
 @end

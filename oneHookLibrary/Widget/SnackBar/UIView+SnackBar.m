@@ -112,6 +112,7 @@
         [self.snackView removeFromSuperview];
         self.snackView = nil;
         [self checkQueue];
+        [self.superview sendSubviewToBack:self];
     }];
 }
 
