@@ -57,6 +57,8 @@
     self.secondsLabel = [[UILabel alloc] init];
     self.secondsLabel.textAlignment = NSTextAlignmentCenter;
     self.secondsLabel.adjustsFontSizeToFitWidth = YES;
+    self.secondsLabel.accessibilityTraits = UIAccessibilityTraitUpdatesFrequently;
+    
     [self addSubview:self.secondsLabel];
 }
 
