@@ -133,7 +133,7 @@
     [self.delegate pagerView:self viewAddedAt:index];
 }
 
-#pragma marks - UIScrollViewDelegate
+#pragma mark - UIScrollViewDelegate
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     if (!_sized) {

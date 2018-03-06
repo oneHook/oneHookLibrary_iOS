@@ -283,7 +283,7 @@
     _pullToRefreshProgress = 0;
 }
 
-#pragma marks - for child class to implement
+#pragma mark - for child class to implement
 
 - (void)toolbar:(OHToolbar *)toolbar willLayoutTo:(CGRect)frame expand:(BOOL)isExpand
 {
@@ -308,7 +308,7 @@
     
 }
 
-#pragma marks - UIScrollViewDelegate
+#pragma mark - UIScrollViewDelegate
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {

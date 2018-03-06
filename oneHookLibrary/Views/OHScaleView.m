@@ -168,7 +168,7 @@ void drawLine(CGContextRef context,
     CGContextRestoreGState(context);
 }
 
-#pragma marks - accesssor 
+#pragma mark - accesssor 
 
 - (void)setCurrentScale:(int)currentScale
 {

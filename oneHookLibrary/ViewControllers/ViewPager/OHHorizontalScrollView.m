@@ -10,7 +10,7 @@
 
 @implementation OHHorizontalScrollView
 
-#pragma marks - UIGesture
+#pragma mark - UIGesture
 
 - (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
 

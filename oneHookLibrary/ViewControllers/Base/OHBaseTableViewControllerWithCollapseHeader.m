@@ -71,7 +71,7 @@
     self.navigationBarBackground.alpha = navigationBarAlpha;
 }
 
-#pragma marks - UITableViewDatasource
+#pragma mark - UITableViewDatasource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 0;

@@ -241,7 +241,7 @@
     [self sharedInstance].foregroundTextFont = font;
 }
 
-#pragma marks - display calls
+#pragma mark - display calls
 
 + (void)showSnackText:(NSString* _Nonnull)text {
     [UIView showSnackText:text duration:SNACK_DURATION_SHORT flag:OHSnackBarFlagDefault];
