@@ -78,6 +78,8 @@
 		4CD7290D1CEAD6FB00B91F0F /* OHSlideShowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD7290B1CEAC9DB00B91F0F /* OHSlideShowView.m */; };
 		4CD8E2DB1D7BB972009EEA0C /* OHIconLabelButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD8E2DA1D7BB972009EEA0C /* OHIconLabelButton.m */; };
 		4CD8E2DC1D7BB974009EEA0C /* OHIconLabelButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD8E2DA1D7BB972009EEA0C /* OHIconLabelButton.m */; };
+		BD43BCC8206C03E200B79F36 /* UIImage+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = BD43BCC7206C03E200B79F36 /* UIImage+Utility.m */; };
+		BD43BCC9206C03E200B79F36 /* UIImage+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = BD43BCC7206C03E200B79F36 /* UIImage+Utility.m */; };
 		BD811D721F37A42300A02750 /* OHScaleView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD811D711F37A42300A02750 /* OHScaleView.m */; };
 		BD811D731F37A42300A02750 /* OHScaleView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD811D711F37A42300A02750 /* OHScaleView.m */; };
 		BD8BEEDE1EE742730060176E /* OHTimerLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8BEEDD1EE742720060176E /* OHTimerLabel.m */; };
@@ -262,6 +264,8 @@
 		4CD8E2D91D7BB972009EEA0C /* OHIconLabelButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHIconLabelButton.h; sourceTree = "<group>"; };
 		4CD8E2DA1D7BB972009EEA0C /* OHIconLabelButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHIconLabelButton.m; sourceTree = "<group>"; };
 		BD31150F1F1E5A98005D7891 /* OHParseMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHParseMacros.h; sourceTree = "<group>"; };
+		BD43BCC6206C03E200B79F36 /* UIImage+Utility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Utility.h"; sourceTree = "<group>"; };
+		BD43BCC7206C03E200B79F36 /* UIImage+Utility.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Utility.m"; sourceTree = "<group>"; };
 		BD811D701F37A42300A02750 /* OHScaleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHScaleView.h; sourceTree = "<group>"; };
 		BD811D711F37A42300A02750 /* OHScaleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHScaleView.m; sourceTree = "<group>"; };
 		BD8BEEDC1EE742720060176E /* OHTimerLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHTimerLabel.h; sourceTree = "<group>"; };
@@ -572,6 +576,8 @@
 				D309EC1C1ADA454800858EF2 /* UIImageEffects.m */,
 				4C98AA8E1B56E16A000B6D9C /* UIColor+Utility.h */,
 				4C98AA8F1B56E16A000B6D9C /* UIColor+Utility.m */,
+				BD43BCC6206C03E200B79F36 /* UIImage+Utility.h */,
+				BD43BCC7206C03E200B79F36 /* UIImage+Utility.m */,
 			);
 			path = Graphics;
 			sourceTree = "<group>";
@@ -1001,6 +1007,7 @@
 				D3846F8F1AF318D400E6FF78 /* OHPagerView.m in Sources */,
 				D3A8BC2C1B0A67E0004FF5A3 /* NSDate+Utility.m in Sources */,
 				4C1736E11D0525E500B6A4E3 /* OHEqualWeightLayout.m in Sources */,
+				BD43BCC9206C03E200B79F36 /* UIImage+Utility.m in Sources */,
 				4C7940091D5C0327004C000F /* NYTPhotosViewController.m in Sources */,
 				4C79400D1D5C0327004C000F /* NYTScalingImageView.m in Sources */,
 				4C79400B1D5C0327004C000F /* NYTPhotoTransitionController.m in Sources */,
@@ -1123,6 +1130,7 @@
 				4CBCD7B01C1A5660006385EA /* OHImageViewerViewController.m in Sources */,
 				D38FA04B1B255A68002F5C4F /* OHSegmentedControl.m in Sources */,
 				4C1736C31D048C2B00B6A4E3 /* OHEqualWeightLayout.m in Sources */,
+				BD43BCC8206C03E200B79F36 /* UIImage+Utility.m in Sources */,
 				D323D4651B122DFC00C3B0D0 /* OHButtonDemoViewController.m in Sources */,
 				D3F6DFBF1C2CFF5100043B38 /* OHKeyFrameAnimator.m in Sources */,
 				D3FB2DCF1D748FBF00CB409F /* UIView+SnackBar.m in Sources */,
