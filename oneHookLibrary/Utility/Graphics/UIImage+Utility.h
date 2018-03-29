@@ -12,6 +12,7 @@
 
 + (UIImage *)imageByCroppingToSquare:(UIImage *)image;
 + (UIImage *)imageByRotate:(UIImage*)image rotation:(CGFloat)degrees;
++ (UIImage *)imageWithImage:(UIImage*)image scaledToSize:(CGSize)newSize;
 
 @end
 
