@@ -117,4 +117,8 @@
     bottomPage.accessibilityElementsHidden = YES;
 }
 
+
+- (BOOL)frontPageDidDisappear {
+    return NO;
+}
 @end

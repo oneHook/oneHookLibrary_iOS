@@ -44,7 +44,7 @@
 
 - (id)initWithStyle:(OHViewControllerToolbarStyle)style
 {
-    self = [super init];
+    self = [super initWithNibName:nil bundle:nil];
     if(self) {
 #ifdef DEBUG
         NSLog(@"%@ ALLOC <%p>", [self class], self);
