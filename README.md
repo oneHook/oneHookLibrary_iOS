@@ -1,4 +1,2 @@
-# oneHookLibraryIOSV1
-oneHookLibraryIOS
-
-##DEPRECATED##
+# oneHookLibrary_iOS
+## Deprecated
